@@ -6,7 +6,7 @@ We need to expose the data only in the JSON format. To achive this, we need a <c
 <br>
 
 <div>
-    <h3>Why &nbsp;Serializer?</h3>
+    <h1>Why &nbsp;Serializer?</h1>
 </div>
 
 
