@@ -19,7 +19,6 @@
 > ```
 
 <br>
-
 <div>
     <h1>Why Serializer ?</h1>
 </div>
