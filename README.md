@@ -112,7 +112,26 @@
 
 <br>
 
-> <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; No error. Same response as in the case of <code>GET</code>
+> <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; No error. &nbsp;Same response as in the case of <code>GET</code>
+
+<br>
+
+> So looking at the response, how to distinguish which method is called <code>GET</code> or <code>POST</code> ?
+> ```
+> @api_view(['GET', 'POST'])
+> def index(request):
+>     my_resume = {
+>         "name" : "Avinash Kumar Mishra",
+>         "skills" : ["Python", "SQL", "Django Rest Framework", "PySpark", "PowerBI", "AWS"],
+>         "education" : ["B.Tech - CSE", "M.Tech - CSE"]
+>     }
+>     if request.method == 'GET' :
+>         print("You hit a GET method")
+>         return Response(my_resume)
+>     elif request.method == 'POST' :
+>         print("You hit a POST method")
+>         return Response(my_resume)
+> ```
 
 <br>
 
