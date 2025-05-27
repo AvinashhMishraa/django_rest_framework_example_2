@@ -29,7 +29,7 @@
 </div>
 
 <code>@api_view()</code> is a kind of **decorator** which converts your **existing django (python) function into an api view function**. <br>
-It modifies the function behavior such that it becomes capable of handling all the APIs.
+&nbsp;It modifies the function behavior such that it becomes capable of handling all the APIs.
 
 <br>
 
