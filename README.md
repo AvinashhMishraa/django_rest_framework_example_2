@@ -12,4 +12,4 @@ We need to expose the data only in the JSON format. To achive this, we need a <c
 
 <br>
 
-> To expose data to the frontend in only JSON format &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp; **QUERYSET** format ➜ <code>Serializer</code> ➜ **JSON** format
+> To expose data to the frontend in only JSON format &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp; **QUERYSET** format &nbsp;➜&nbsp; <code>Serializer</code> &nbsp;➜&nbsp; **JSON** format
