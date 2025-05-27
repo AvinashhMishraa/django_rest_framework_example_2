@@ -82,7 +82,7 @@
 
 <br>
 
-> since DRF has some tables like **session** , etc. which come along with it's installation
+> Since the Django Rest Framework has some tables like **session** , etc. which come along with it's installation, you'll have to migrate those migrations. <br>
 > <code>py manage.py migrate</code>
 
 <br>
