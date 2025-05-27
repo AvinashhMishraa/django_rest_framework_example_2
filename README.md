@@ -85,7 +85,7 @@
 > Since the Django Rest Framework has some tables like **session** , etc. which come along with it's installation : <br>
 > <code>py manage.py migrate</code>
 
-<code>py manage.py runserver</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/
+> <code>py manage.py runserver</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/
 
 <br>
 
