@@ -5,6 +5,5 @@ We need to expose the data only in the JSON format. To achive this, we need a <c
 <br>
 
 <pre>
-    ORM  ---->  <code>Person.objects.all()</code>
-  
+    ORM  ---->  <code>Person.objects.all()</code>  ---->  [1,2,3,4]  ---->  QuerySet
 </pre>
