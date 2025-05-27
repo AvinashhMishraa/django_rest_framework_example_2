@@ -15,12 +15,3 @@ pip install djangorestframework
 > - To expose data to the frontend in only JSON format &nbsp;&nbsp;&nbsp;:&nbsp;&nbsp;&nbsp; **QUERYSET** &nbsp;format &nbsp;&nbsp;➜&nbsp;&nbsp; <code>Serializer</code> &nbsp;&nbsp;➜&nbsp;&nbsp; **JSON** &nbsp;format
 
 <br>
-
-> create a file called <code>company_api/company_drf_api/views.py</code>
-> ```
-> from django.http import HttpResponse
->
-> def home_page(request):
->	  print("home page requested")
->	  return HttpResponse("This is homepage")           # return HttpResponse("This is homepage")
-> ```
