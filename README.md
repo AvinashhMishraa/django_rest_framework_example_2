@@ -8,6 +8,8 @@
 > pip install djangorestframework
 > ```
 
+<br>
+
 > <code>person_api/core/settings.py</code>
 > ```
 > INSTALLED_APPS = [
