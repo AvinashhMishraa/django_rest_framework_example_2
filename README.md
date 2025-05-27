@@ -82,6 +82,11 @@
 
 <br>
 
+> since DRF has some tables like **session** , etc. which come along with it's installation
+> <code>py manage.py migrate</code>
+
+<br>
+
 <div>
     <h1>Why Serializer ?</h1>
 </div>
