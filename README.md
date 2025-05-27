@@ -101,8 +101,7 @@
 > It's working as expected for <code>GET</code> operation. <br>
 > But what about <code>POST</code> <br>
 > Let's try it. <br>
-> code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; 405 :
-Method \"POST\" not allowed."
+> <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; 405 : Method \"POST\" not allowed."
 
 <br>
 
