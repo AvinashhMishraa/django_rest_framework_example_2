@@ -52,8 +52,20 @@
 
 <br>
 
-> Create a folder <code>api</code> in the <code>person_api</code> folder. <br>
+> Create a folder <code>api</code> in the <code>person_api</code> folder <br>
 > Then create 2 files &nbsp;&nbsp;➜&nbsp;&nbsp; <code>person_api/api/\_\_init__.py</code> &nbsp;&nbsp;&&nbsp;&nbsp; <code>person_api/api/urls.py</code>
+
+<br>
+
+> <code>person_api/api/urls.py</code>
+> ```
+> from home.views import index
+> from django.urls import path
+>
+> urlpatterns = [
+>     path('index/', index),
+> ]
+> ```
 
 <br>
 
