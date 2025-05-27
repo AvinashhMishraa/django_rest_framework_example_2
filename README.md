@@ -1,9 +1,9 @@
 ```
-    py -m venv env
-    ./env/Scripts/activate
-    pip install django
-    django-admin startproject core .
-    pip install djangorestframework
+py -m venv env
+./env/Scripts/activate
+pip install django
+django-admin startproject core .
+pip install djangorestframework
 ```
 
 <div>
