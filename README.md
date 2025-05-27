@@ -6,7 +6,7 @@ We need to expose the data only in the JSON format. To achive this, we need a <c
 <br>
 
 <pre>
-    ORM  ➜  <code>Person.objects.all()</code>  ---->  [1,2,3,4]  ---->  QuerySet    
-                                                                                ↓
+    ORM  ➜  <code>Person.objects.all()</code>  ➜  [1,2,3,4]  ➜  QuerySet  ➜  which cannot be exposed to the frontend
+                                                                    
 </pre>
 
