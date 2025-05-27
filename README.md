@@ -135,6 +135,12 @@
 
 <br>
 
+> Now hit those urls and check the logs in the **terminal**.
+> <code>GET</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; **You hit a <code>GET</code> method** <br>
+> <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; **You hit a <code>POST</code> method**
+
+<br>
+
 <div>
     <h1>Why Serializer ?</h1>
 </div>
