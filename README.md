@@ -82,7 +82,7 @@
 
 <br>
 
-> Since the Django Rest Framework has some tables like **session** , etc. which come along with it's installation, you'll have to migrate those migrations. <br>
+> Since the Django Rest Framework has some tables like **session** , etc. which come along with it's installation : <br>
 > <code>py manage.py migrate</code>
 
 <br>
