@@ -1,5 +1,5 @@
 
-> Open the terminal in your favorite code editor and execute the following commands &nbsp;**: ⟶**
+> Open the terminal in your favorite code editor and execute the following commands &nbsp;**: &nbsp;⟶**
 > ```
 > py -m venv env
 > ./env/Scripts/activate
