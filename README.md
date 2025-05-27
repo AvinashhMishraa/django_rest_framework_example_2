@@ -52,9 +52,9 @@
 
 <br>
 
-> Create a folder <code>api</code> in the <code>person_api</code> folder. Then create 2 files : <br>
-> > <code>person_api/api/\_\_init__.py</code> <br>
-> > <code>person_api/api/urls.py</code> in it.
+> Create a folder <code>api</code> in the <code>person_api</code> folder. Then create 2 files :
+> <code>person_api/api/\_\_init__.py</code> <br>
+> <code>person_api/api/urls.py</code> in it.
 
 <br>
 
