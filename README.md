@@ -52,6 +52,11 @@
 
 <br>
 
+Create a folder <code>api</code> in the <code>person_api</code> folder. <br>
+Then create 2 files <code>__init__.py</code> & <code>urls.py</code> in it.
+
+<br>
+
 <div>
     <h1>Why Serializer ?</h1>
 </div>
