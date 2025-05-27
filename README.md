@@ -20,7 +20,7 @@
 
 <br>
 
-<code>py manage.py startapp home</code>
+> <code>py manage.py startapp home</code>
 
 <br>
 
