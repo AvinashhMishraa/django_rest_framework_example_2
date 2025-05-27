@@ -82,7 +82,7 @@
 
 <br>
 
-> Since the Django Rest Framework has some tables like **session** , etc. which come along with it's installation : <br>
+> Since the Django Rest Framework has some tables like **session** , etc. which come along with it's installation &nbsp;: <br>
 > <code>py manage.py migrate</code>
 
 <br>
