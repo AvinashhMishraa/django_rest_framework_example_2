@@ -1,5 +1,5 @@
 
-> Open the terminal in your favorite code editor and execute the following commands :
+> Open the terminal in your favorite code editor and execute the following commands &nbsp;:
 > ```
 > py -m venv env
 > ./env/Scripts/activate
@@ -19,6 +19,7 @@
 > ```
 
 <br>
+
 <div>
     <h1>Why Serializer ?</h1>
 </div>
