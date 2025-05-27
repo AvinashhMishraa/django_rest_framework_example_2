@@ -116,7 +116,8 @@
 
 <br>
 
-> So looking at the response, how to distinguish which method is called <code>GET</code> or <code>POST</code> ?
+> So looking at the response, how to distinguish which method is called <code>GET</code> or <code>POST</code> ? <br>
+> <code>person_api/home/views.py</code>
 > ```
 > @api_view(['GET', 'POST'])
 > def index(request):
