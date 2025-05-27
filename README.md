@@ -105,7 +105,7 @@
 
 <br>
 
-> To resolve this problem &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; <code>person_api/home/view.py</code> **: &nbsp;⟶** <br>
+> To resolve this problem &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; <code>person_api/home/view.py</code> **:** <br>
 > ```
 > @api_view(['GET', 'POST'])
 > ```
