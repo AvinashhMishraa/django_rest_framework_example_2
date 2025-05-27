@@ -17,10 +17,10 @@ pip install djangorestframework
 <br>
 
 > create a file called <code>company_api/company_drf_api/views.py</code>
-> <pre>
+> ```
 > from django.http import HttpResponse
 >
 > def home_page(request):
 >	  print("home page requested")
 >	  return HttpResponse("This is homepage")           # return HttpResponse("This is homepage")
-> </pre>
+> ```
