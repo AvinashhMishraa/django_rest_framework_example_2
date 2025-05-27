@@ -10,3 +10,7 @@ We need to expose the data only in the JSON format. To achive this, we need a <c
                                                                     
 </pre>
 
+<br>
+
+> To expose data to the frontend in only JSON format : <br>
+> **QUERYSET** format ➜ <code>Serializer</code> ➜ **JSON** format
