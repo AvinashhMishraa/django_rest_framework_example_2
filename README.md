@@ -28,8 +28,12 @@
     <h1>@api_view( )</h1>
 </div>
 
+<br>
+
 <code>@api_view()</code> is a kind of **decorator** which converts your existing <ins>django (python) function into an api view function</ins>. <br>
 &nbsp;It modifies the function behavior such that it becomes capable of handling all the APIs.
+
+<br>
 
 > <code>person_api/home/views.py</code>
 > ```
