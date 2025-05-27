@@ -6,6 +6,14 @@ django-admin startproject core .
 pip install djangorestframework
 ```
 
+> <code>person_api/core/settings.py</code>
+> ```
+> INSTALLED_APPS = [
+>     ...,
+>     'rest_framework',
+> ]
+> ```
+
 <div>
     <h1>Why Serializer ?</h1>
 </div>
