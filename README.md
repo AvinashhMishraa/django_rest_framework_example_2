@@ -97,11 +97,23 @@
 
 <br>
 
-> Now try the same in Postman. <br>
+> Now try the same in **Postman**. <br>
 > It's working as expected for <code>GET</code> operation. <br>
 > But what about <code>POST</code> <br>
 > Let's try it. <br>
 > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; "**405 : Method \"POST\" not allowed.**"
+
+<br>
+
+> To resolve this problem : <br>
+> <code>person_api/home/view.py</code> <br>
+> ```
+> @api_view(['GET', 'POST'])
+> ```
+
+<br>
+
+<code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/index/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; No error. Same response as in the case of <code>GET</code>
 
 <br>
 
