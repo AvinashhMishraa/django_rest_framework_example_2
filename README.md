@@ -75,7 +75,7 @@
 
 <br>
 
-> Now to register these urls in the core url :
+> Now to register these urls in the **core** url :
 > ```
 > from django.contrib import admin
 > from django.urls import path, include                       # <include> imported
