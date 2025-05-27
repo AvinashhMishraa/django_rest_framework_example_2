@@ -69,6 +69,19 @@
 
 <br>
 
+> Now to register these urls in the core url :
+> ```
+> from django.contrib import admin
+> from django.urls import path, include                       # <include> imported
+>
+> urlpatterns = [
+>     path('api/', include('api.urls')),                      # this line added
+>     path('admin/', admin.site.urls),
+> ]
+> ```
+
+<br>
+
 <div>
     <h1>Why Serializer ?</h1>
 </div>
