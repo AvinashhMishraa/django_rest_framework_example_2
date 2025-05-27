@@ -52,8 +52,7 @@
 
 <br>
 
-Create a folder <code>api</code> in the <code>person_api</code> folder. <br>
-Then create 2 files <code>__init__.py</code> & <code>urls.py</code> in it.
+Create a folder <code>api</code> in the <code>person_api</code> folder. Then create 2 files <code>\_\_init__.py</code> & <code>urls.py</code> in it.
 
 <br>
 
