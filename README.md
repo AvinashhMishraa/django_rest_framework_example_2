@@ -1,10 +1,10 @@
-<pre>
+```
     py -m venv env
     ./env/Scripts/activate
     pip install django
     django-admin startproject core .
     pip install djangorestframework
-</pre>
+```
 
 <div>
     <h1>Why Serializer ?</h1>
