@@ -25,7 +25,7 @@
 <br>
 
 <div>
-    <h1>@api_view()</h1>
+    <h1>@api_view( )</h1>
 </div>
 
 <code>@api_view()</code> is a kind of **decorator** which converts your _existing django (python) function into an api view function_. <br>
