@@ -1,10 +1,12 @@
-```
-py -m venv env
-./env/Scripts/activate
-pip install django
-django-admin startproject core .
-pip install djangorestframework
-```
+
+> Open the terminal in your favorite code editor and execute the following commands :
+> ```
+> py -m venv env
+> ./env/Scripts/activate
+> pip install django
+> django-admin startproject core .
+> pip install djangorestframework
+> ```
 
 > <code>person_api/core/settings.py</code>
 > ```
