@@ -75,7 +75,7 @@
 
 <br>
 
-> Now to register these urls in the <ins>**core**</ins> url :
+> Now to register these urls in the <ins>**core**</ins> url &nbsp;:
 > ```
 > from django.contrib import admin
 > from django.urls import path, include                       # <include> imported
@@ -88,7 +88,7 @@
 
 <br>
 
-> Since the Django Rest Framework has some tables like **session** , etc. which come along with it's installation &nbsp;: <br>
+> Since the Django Rest Framework has some tables like <ins>**session**</ins> , etc. which come along with it's installation &nbsp;: <br>
 > <code>py manage.py migrate</code>
 
 <br>
