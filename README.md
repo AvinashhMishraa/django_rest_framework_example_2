@@ -183,10 +183,10 @@
 
 > However, if you want to send some data through GET, you will have to send it as parameter(s) :
 >
-> > http://localhost:8000/api/index/?search=Data_Engineer
+> > http://localhost:8000/api/index/?search=Data_Engineer <br>
 > > You can then catch it in the code using <code>request.GET.get('search')</code>
 >
-> > http://localhost:8000/api/index/?search=Data_Analysis
+> > http://localhost:8000/api/index/?search=Data_Analysis <br>   
 > > You can then catch it in the code using <code>request.GET.get('search')</code>
 
 <br>
