@@ -191,8 +191,9 @@
 
 <br>
 
-> <code>@api_view(['GET', 'POST', 'PUT'])</code>
+> <code>person_api/home/views.py</code>
 > ```
+> @api_view(['GET', 'POST', 'PUT'])
 > def index(request):
 >     my_resume = {
 >         "name" : "Avinash Kumar Mishra",
