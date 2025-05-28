@@ -189,7 +189,7 @@
 > > http://localhost:8000/api/index/?search=Aman <br>
 > > You can then catch it in the code using <code>request.GET.get('search')</code>
 >
-> > http://localhost:8000/api/index/?search=Isha Jha<br>
+> > http://localhost:8000/api/index/?search=Isha%20Jha<br>
 > > You can then catch it in the code using <code>request.GET.get('search')</code>
 
 <br>
