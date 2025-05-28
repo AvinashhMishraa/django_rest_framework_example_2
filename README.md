@@ -164,7 +164,20 @@
 > > ```
 >
 >
-> You may see this output in the logs
+> You may see this output in the **backend** logs.
+>
+>
+> > To show this data in the frontend, you may again need to pass it in a Response() and return it.
+> > ```
+> > @api_view(['GET', 'POST', 'PUT'])
+> > def index(request):
+> >     ...
+> >     elif request.method == 'POST' :
+> >         data = request.data
+> >         print(data)
+> >         return Response(data)
+> >     ...
+> > ```
 
 
 
