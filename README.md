@@ -154,7 +154,7 @@
 > 
 > > <code>person_api/home/views.py</code>
 > > ```
-> > @api_view(['GET', 'POST', 'PUT'])
+> > @api_view(['POST'])
 > > def index(request):
 > >     ...
 > >     elif request.method == 'POST' :
@@ -169,7 +169,7 @@
 >
 > > But to show this data in the **frontend** too, you may again need to pass it in the <code>Response()</code> method and return it.
 > > ```
-> > @api_view(['GET', 'POST', 'PUT'])
+> > @api_view(['POST'])
 > > def index(request):
 > >     ...
 > >     elif request.method == 'POST' :
