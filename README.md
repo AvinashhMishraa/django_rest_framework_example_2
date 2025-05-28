@@ -143,6 +143,18 @@
 
 <br>
 
+> ⭐ &nbsp;If you pass the body in the <code>POST</code>(/<code>PUT</code>/<code>PATCH</code>) operation, you can catch it using <code>request.data</code> &nbsp;**:**
+> ```
+> {
+> 	"name" : "Avinash Kumar Mishra",
+> 	"age"  : 30
+> }
+> ```
+
+
+
+<br>
+
 <div>
     <h1>Why Serializer ?</h1>
 </div>
