@@ -150,6 +150,22 @@
 > 	"age"  : 30
 > }
 > ```
+>
+> 
+> > <code>person_api/home/views.py</code>
+> > ```
+> > @api_view(['GET', 'POST', 'PUT'])
+> > def index(request):
+> >     ...
+> >     ...
+> >     ...
+> >     elif request.method == 'POST' :
+> >         data = request.data
+> >         print(data)
+> >     ...
+> >     ...
+> >     ...
+> > ```
 
 
 
