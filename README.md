@@ -206,3 +206,52 @@
 > - To expose data to the frontend in only JSON format &nbsp;&nbsp;&nbsp;**⋮**&nbsp;&nbsp;&nbsp; **QUERYSET** &nbsp;format &nbsp;&nbsp;**⟷**&nbsp;&nbsp; <code>Serializer</code> &nbsp;&nbsp;**⟷**&nbsp;&nbsp; **JSON** &nbsp;format
 
 <br>
+
+---
+
+> > ⭐ &nbsp;If you pass some data as the **body** in the <code>POST</code> / <code>PUT</code> / <code>PATCH</code> operation, you can catch it using <code>request.data</code> &nbsp;**:**
+> > ```
+> > {
+> >     "Job_ID" : "1",
+> >     "Job_Profile" : "Data Engineer"
+> > }
+> > ```
+> > 
+> > 
+> > > <code>person_api/home/views.py</code>
+> > > ```
+> > > @api_view(['POST'])
+> > > def index(request):
+> > >     ...
+> > >     elif request.method == 'POST' :
+> > >         data = request.data
+> > >         print(data)
+> > >     ...
+> > > ```
+> > 
+> >
+> > You may see this output in the **backend** logs.
+> > 
+> >
+> > > But to show this data in the **frontend** too, you may again need to pass it in the <code>Response()</code> method and return it.
+> > > ```
+> > > @api_view(['POST'])
+> > > def index(request):
+> > >     ...
+> > >     elif request.method == 'POST' :
+> > >         data = request.data
+> > >         print(data)
+> > >         return Response(data)
+> > >     ...
+> > > ```
+>
+> <br>
+>
+> > However, if you want to send some data through <code>GET</code> , you will have to send it as parameter(s) :
+> >
+> > > http://localhost:8000/api/index/?search=Data_Engineer <br>
+> > > You can then catch it in the code using <code>request.GET.get('search')</code>
+> >
+> > > http://localhost:8000/api/index/?search=Data_Analysis <br>
+> > > You can then catch it in the code using <code>request.GET.get('search')</code>
+
