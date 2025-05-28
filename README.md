@@ -186,7 +186,7 @@
 > > http://localhost:8000/api/index/?search=Data_Engineer <br>
 > > You can then catch it in the code using <code>request.GET.get('search')</code>
 >
-> > http://localhost:8000/api/index/?search=Data_Analysis <br>   
+> > http://localhost:8000/api/index/?search=Data_Analysis <br>
 > > You can then catch it in the code using <code>request.GET.get('search')</code>
 
 <br>
