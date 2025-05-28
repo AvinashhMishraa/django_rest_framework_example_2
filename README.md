@@ -162,6 +162,9 @@
 > >         print(data)
 > >     ...
 > > ```
+>
+>
+> You may see this output in the logs
 
 
 
