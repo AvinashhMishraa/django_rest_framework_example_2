@@ -204,17 +204,15 @@
 >         params = request.GET.get('search')         # to catch data (search parameters) passed in GET operation
 >         print(params)
 >         print("You hit a GET method")
->         return Response(my_resume)
 >     elif request.method == 'POST' :
 >         data = request.data                        # to catch data (body) passed in POST operation
 >         print(data)
 >         print("You hit a POST method")
->         return Response(my_resume)
 >     elif request.method == 'PUT' :
 >         data = request.data                        # to catch data (body) passed in PUT operation
 >         print(data)
 >         print("You hit a PUT method")
->         return Response(my_resume)
+>     return Response(my_resume)
 > ```
 
 
