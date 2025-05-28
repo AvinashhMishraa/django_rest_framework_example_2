@@ -191,6 +191,34 @@
 
 <br>
 
+> <code>@api_view(['GET', 'POST', 'PUT'])</code>
+> ```
+> def index(request):
+>     my_resume = {
+>         "name" : "Avinash Kumar Mishra",
+>         "skills" : ["Python", "SQL", "Django Rest Framework", "PySpark", "PowerBI", "AWS"],
+>         "education" : ["B.Tech - CSE", "M.Tech - CSE"]
+>     }
+>     if request.method == 'GET' :
+>         params = request.GET.get('search')         # to catch data (search parameters) passed in GET operation
+>         print(params)
+>         print("You hit a GET method")
+>         return Response(my_resume)
+>     elif request.method == 'POST' :
+>         data = request.data                        # to catch data (body) passed in POST operation
+>         print(data)
+>         print("You hit a POST method")
+>         return Response(my_resume)
+>     elif request.method == 'PUT' :
+>         data = request.data                        # to catch data (body) passed in PUT operation
+>         print(data)
+>         print("You hit a PUT method")
+>         return Response(my_resume)
+> ```
+
+
+<br>
+
 <div>
     <h1>Why Serializer ?</h1>
 </div>
