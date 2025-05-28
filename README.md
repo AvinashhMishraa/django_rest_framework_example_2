@@ -165,6 +165,7 @@
 > <br>
 >
 > You may see this output in the **backend** logs.
+> 
 > <br>
 >
 > > To show this data in the **frontend**, you may again need to pass it in the <code>Response()</code> method and return it.
