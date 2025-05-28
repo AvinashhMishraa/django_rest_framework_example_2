@@ -42,12 +42,13 @@
 >
 > @api_view(['GET'])
 > def index(request):
->     my_resume = {
->         "name" : "Avinash Kumar Mishra",
->         "skills" : ["Python", "SQL", "Django Rest Framework", "PySpark", "PowerBI", "AWS"],
->         "education" : ["B.Tech - CSE", "M.Tech - CSE"]
+>     courses = {
+>         'course_name'       : 'Data Engineering',
+>         'skills'            : ['Python', 'SQL', 'Django Rest Framework', 'PySpark', 'PowerBI', 'AWS'],
+>         'course_provider'   : 'Learning to Earning',
+>         'course_instrcutor' : 'Avinash Kumar Mishra'
 >     }
->     return Response(my_resume)
+>     return Response(courses)
 > ```
 
 <br>
@@ -122,17 +123,17 @@
 > ```
 > @api_view(['GET', 'POST'])
 > def index(request):
->     my_resume = {
->         "name" : "Avinash Kumar Mishra",
->         "skills" : ["Python", "SQL", "Django Rest Framework", "PySpark", "PowerBI", "AWS"],
->         "education" : ["B.Tech - CSE", "M.Tech - CSE"]
+>     courses = {
+>         'course_name'       : 'Data Engineering',
+>         'skills'            : ['Python', 'SQL', 'Django Rest Framework', 'PySpark', 'PowerBI', 'AWS'],
+>         'course_provider'   : 'Learning to Earning',
+>         'course_instrcutor' : 'Avinash Kumar Mishra'
 >     }
 >     if request.method == 'GET' :
 >         print("You hit a GET method")
->         return Response(my_resume)
 >     elif request.method == 'POST' :
 >         print("You hit a POST method")
->         return Response(my_resume)
+>     return Response(courses)
 > ```
 
 <br>
@@ -160,8 +161,8 @@
 > >     elif request.method == 'POST' :
 > >         data = request.data
 > >         print(data)
-> >         print(data['Job_ID'])
-> >         print(data['Job_Profile'])
+> >         print(data['name'])
+> >         print(data['age'])
 > >     ...
 > > ```
 > 
@@ -185,10 +186,10 @@
 
 > However, if you want to send some data through <code>GET</code> , you will have to send it as parameter(s) :
 >
-> > http://localhost:8000/api/index/?search=Data_Engineer <br>
+> > http://localhost:8000/api/index/?search=Aman <br>
 > > You can then catch it in the code using <code>request.GET.get('search')</code>
 >
-> > http://localhost:8000/api/index/?search=Data_Analysis <br>
+> > http://localhost:8000/api/index/?search=Isha <br>
 > > You can then catch it in the code using <code>request.GET.get('search')</code>
 
 <br>
@@ -197,24 +198,25 @@
 > ```
 > @api_view(['GET', 'POST', 'PUT'])
 > def index(request):
->     my_resume = {
->         "name" : "Avinash Kumar Mishra",
->         "skills" : ["Python", "SQL", "Django Rest Framework", "PySpark", "PowerBI", "AWS"],
->         "education" : ["B.Tech - CSE", "M.Tech - CSE"]
+>     courses = {
+>         'course_name'       : 'Data Engineering',
+>         'skills'            : ['Python', 'SQL', 'Django Rest Framework', 'PySpark', 'PowerBI', 'AWS'],
+>         'course_provider'   : 'Learning to Earning',
+>         'course_instrcutor' : 'Avinash Kumar Mishra'
 >     }
 >     if request.method == 'GET' :
->         params = request.GET.get('search')       # To catch data (search parameters) passed in GET operation
+>         params = request.GET.get('search')              # To catch data (search parameters) passed in GET operation
 >         print(params)
 >         print("You hit a GET method")
 >     elif request.method == 'POST' :
->         data = request.data                      # To catch data (body) passed in POST operation
->         print(data)                              # { 'Job_ID' : data['Job_ID'] , 'Job_Profile' : data['Job_Profile'] }
+>         data = request.data                             # To catch data (body) passed in POST operation
+>         print(data)                                     # { 'name' : data['name'] , 'age' : data['age'] }
 >         print("You hit a POST method")
 >     elif request.method == 'PUT' :
->         data = request.data                      # To catch data (body) passed in PUT operation
+>         data = request.data                             # To catch data (body) passed in PUT operation
 >         print(data)
 >         print("You hit a PUT method")
->     return Response(my_resume)
+>     return Response(courses)
 > ```
 
 
