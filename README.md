@@ -160,6 +160,8 @@
 > >     elif request.method == 'POST' :
 > >         data = request.data
 > >         print(data)
+> >         print(data['Job_ID'])
+> >         print(data['Job_Profile'])
 > >     ...
 > > ```
 > 
