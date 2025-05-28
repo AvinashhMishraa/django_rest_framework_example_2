@@ -208,7 +208,7 @@
 >         print("You hit a GET method")
 >     elif request.method == 'POST' :
 >         data = request.data                       # To catch data (body) passed in POST operation
->         print(data)                               # { 'Job_ID' : data['Job_ID'] , 'Job_Profile' : data['Job_Profile'] }
+>         print(data)                              # { 'Job_ID' : data['Job_ID'] , 'Job_Profile' : data['Job_Profile'] }
 >         print("You hit a POST method")
 >     elif request.method == 'PUT' :
 >         data = request.data                       # To catch data (body) passed in PUT operation
