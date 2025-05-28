@@ -146,8 +146,8 @@
 > ⭐ &nbsp;If you pass some data as the **body** in the <code>POST</code> / <code>PUT</code> / <code>PATCH</code> operation, you can catch it using <code>request.data</code> &nbsp;**:**
 > ```
 > {
->     "Job_ID" : "1",
->     "Job_Profile" : "Data Engineer"
+>     "name" : "Aman",
+>     "age" : 28
 > }
 > ```
 > 
