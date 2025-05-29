@@ -46,7 +46,7 @@
 >         'course_name'       : 'Data Engineering',
 >         'skills'            : ['Python', 'SQL', 'Django Rest Framework', 'PySpark', 'PowerBI', 'AWS'],
 >         'course_provider'   : 'Learning to Earning',
->         'course_instrcutor' : 'Avinash Kumar Mishra'
+>         'course_instructor' : 'Avinash Kumar Mishra'
 >     }
 >     return Response(courses)
 > ```
@@ -127,7 +127,7 @@
 >         'course_name'       : 'Data Engineering',
 >         'skills'            : ['Python', 'SQL', 'Django Rest Framework', 'PySpark', 'PowerBI', 'AWS'],
 >         'course_provider'   : 'Learning to Earning',
->         'course_instrcutor' : 'Avinash Kumar Mishra'
+>         'course_instructor' : 'Avinash Kumar Mishra'
 >     }
 >     if request.method == 'GET' :
 >         print("You hit a GET method")
@@ -202,7 +202,7 @@
 >         'course_name'       : 'Data Engineering',
 >         'skills'            : ['Python', 'SQL', 'Django Rest Framework', 'PySpark', 'PowerBI', 'AWS'],
 >         'course_provider'   : 'Learning to Earning',
->         'course_instrcutor' : 'Avinash Kumar Mishra'
+>         'course_instructor' : 'Avinash Kumar Mishra'
 >     }
 >     if request.method == 'GET' :
 >         params = request.GET.get('search')              # To catch data (search parameters) passed in GET operation
