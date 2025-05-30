@@ -352,5 +352,5 @@
 > }
 > ```
 
-<code>PUT</code>    &nbsp;&nbsp;===>&nbsp;&nbsp;  full update     &nbsp;&nbsp;===>&nbsp;&nbsp;  need to update all the fields
-<code>PATCH</code>  &nbsp;&nbsp;===>&nbsp;&nbsp;  partial update  &nbsp;&nbsp;===>&nbsp;&nbsp;  need to update only the required felds along with the primary key
+<code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; full update &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; need to update all the fields <br>
+<code>PATCH</code> &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; partial update &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; need to update only the required felds along with the primary key
