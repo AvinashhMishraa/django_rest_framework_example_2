@@ -339,3 +339,5 @@
 > >     path('person/',person)
 > > ]
 > > ```
+
+<code>GET</code>    http://localhost:8000/api/person/        ====>      returns empty array <code>[]</code>
