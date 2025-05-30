@@ -328,7 +328,7 @@
 >
 > <br>
 >
-> > <code>person_api/api/urls.py</code>code>
+> > <code>person_api/api/urls.py</code>
 > > ```
 > > from home.views import index, person
 > > from django.urls import path
