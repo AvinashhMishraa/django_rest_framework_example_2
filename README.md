@@ -238,3 +238,104 @@
 
 <br>
 
+Let's now first create a **model** <code>Person</code> and then it's corresponding **model serializer** <code>PersonSerializer</code>
+>
+> <br>
+>
+> > <code>person_api/home/models.py</code>
+> > ```
+> > from django.db import models
+> >
+> > class Person(models.Model):
+> >     name = models.CharField(max_length=100)
+> >     age = models.IntegerField()
+> > ```
+>
+> <br>
+>
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > class PersonSerializer(serializers.ModelSerializer):
+> >
+> >		class Meta:
+> >			model = Person
+> >			fields = '__all__'                                    # to include all fields of the Person model
+> >			# fields = ['name', 'age']                            # to include specific fields of the Person model
+> >			# exclude = ['age']                                   # to exclude the specific columns of the Person model
+> > ```
+>
+> <br>
+>
+> > <code>person_api/core/settings.py</code>
+> > ```
+> > INSTALLED_APPS = [
+> >     ...
+> >    'rest_framework',
+> >    'home',
+> > ]
+> > ```
+>
+> <br>
+>
+> > <code>py manage.py makemigrations</code>
+> > <code>py manage.py migrate</code>
+>
+> <br>
+>
+> > <code>person_api/home/views.py</code>
+> > ```
+> > from home.models import Person
+> > from home.serializers import PersonSerializer
+> >
+> > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+> > def person(request):
+> >     if request.method == 'GET':
+> >         objs = Person.objects.all()
+> >         serializer = PersonSerializer(objs, many = True)
+> >         return Response(serializer.data)
+> >   
+> >     elif request.method == 'POST':
+> >         data = request.data
+> >         serializer = PersonSerializer(data = data)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response(serializer.data)
+> >         return Response(serializer.errors)
+> >     
+> >     elif request.method == 'PUT':
+> >         data = request.data
+> >         obj = Person.objects.get(id = data['id'])
+> >         serializer = PersonSerializer(obj, data = data)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response(serializer.data)
+> >         return Response(serializer.errors)
+> >     
+> >     elif request.method == 'PATCH':
+> >         data = request.data
+> >         obj = Person.objects.get(id = data['id'])
+> >         serializer = PersonSerializer(obj, data = data, partial = True)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response(serializer.data)
+> >         return Response(serializer.errors)
+> >     else:
+> >         data = request.data
+> >         obj = Person.objects.get(id = data['id'])
+> >         obj.delete()
+> >         return Response({'message' : 'person deleted'})
+> > ```
+>
+> <br>
+>
+> > <code>person_api/api/urls.py>
+> > ```
+> > from home.views import index, person
+> > from django.urls import path
+> >
+> >
+> > urlpatterns = [
+> >     path('index/', index),
+> >     path('person/',person)
+> > ]
+> > ```
