@@ -238,8 +238,8 @@
 
 <br>
 
-> Let's now first create a **model** <code>Person</code> and then it's corresponding **model serializer** <code>PersonSerializer</code>
->
+> Let's now first create a **model** <code>Person</code> and then it's corresponding **model serializer** <code>PersonSerializer</code> and function based view.
+> 
 > <br>
 >
 > > <code>person_api/home/models.py</code>
