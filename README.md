@@ -328,11 +328,10 @@
 >
 > <br>
 >
-> > <code>person_api/api/urls.py>
+> > <code>person_api/api/urls.py</code>code>
 > > ```
 > > from home.views import index, person
 > > from django.urls import path
-> >
 > >
 > > urlpatterns = [
 > >     path('index/', index),
