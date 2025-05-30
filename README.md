@@ -260,8 +260,8 @@
 > >	    class Meta:
 > >	        model = Person
 > >	        fields = '__all__'                             # to include all fields of the Person model
-> >		    # fields = ['name', 'age']                     # to include specific fields of the Person model
-> >		    # exclude = ['age']                            # to exclude the specific columns of the Person model
+> >		  # fields = ['name', 'age']                     # to include specific fields of the Person model
+> >		  # exclude = ['age']                            # to exclude the specific columns of the Person model
 > > ```
 >
 > <br>
