@@ -492,5 +492,5 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 > 
-> Now no need to manually define <code>@api_view</code> functions or URL patterns for each case.
+> ⭐ &nbsp;Now no need to manually define <code>@api_view</code> functions or URL patterns for each case.
 
