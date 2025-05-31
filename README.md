@@ -371,5 +371,5 @@
 > - While creating a person using <code>POST</code> operation, don't pass <code>id</code> in the body because even if you pass, it will not accept. <br>
 > Although it will not throw error, but it keeps a track record of the <code>id</code> column and strictly follow the **auto increment**. <br>
 > 
-> - Try to delete a person with a specific <code>id</code> and then try to create it with the same <code>id</code>. It will automatically take <code>id+1</code>
+> - Try to delete a person with a specific <code>id</code> and then try to create it with the same <code>id</code>. <br>It will automatically take <code>id+1</code>
 
