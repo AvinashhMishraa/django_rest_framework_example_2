@@ -407,7 +407,7 @@ you will find <code>"Page Not Found"</code> error.
 > To handle <code>/api/person/{id}/</code> , you need a **separate view** for person detail operations (**GET** / **PUT** / **PATCH** / **DELETE** &nbsp;for a single object)
 > <br><br>
 >
-> > <ins>**Step 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Create <code>person_detail</code> view in the <code>person_api/home/views.py</code>&nbsp;:
+> > <ins>**Step 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Create <code>person_detail</code> view in the <code>person_api/home/views.py</code> &nbsp;:
 > > ```
 > > @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 > > def person_detail(request, id):                                                  # /api/person/{id}/
@@ -455,7 +455,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 <ins>**Solution - 2**</ins> &nbsp;: 
-> using <code>ModelViewSet</code> to simplify code and avoid manually writing separate views for detail and list endpoints.
+> using <code>ModelViewSet</code> to simplify code and avoid manually writing separate views for detail and list endpoints &nbsp;:
 > <br><br>
 >
 > > When you use a <code>ModelViewSet</code> with a <code>DefaultRouter</code>, Django REST Framework **automatically** wires up all the standard CRUD routes for you, including &nbsp;: <br>
