@@ -477,7 +477,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > <ins>**Step 2**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Update urls.py to use a Router
+> > <ins>**Step 2**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Update <code>person_api/api/urls.py</code> to use a <ins>**Router**</ins>
 > > ```
 > > from rest_framework.routers import DefaultRouter
 > > from .views import PersonViewSet
