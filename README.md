@@ -407,7 +407,7 @@ you will find <code>"Page Not Found"</code> error.
 > To handle <code>/api/person/{id}/</code>, you need a **separate view** for person detail operations ( **GET** / **PUT** / **PATCH** / **DELETE** for a single object)
 >
 >
-> > **Step 1 &nbsp;:** &nbsp;Create <code>person_detail</code> **view** :
+> > <ins>**Step 1 &nbsp;:**</ins> &nbsp;Create <code>person_detail</code> view &nbsp;:
 > > ```
 > > @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 > > def person_detail(request, id):
@@ -440,7 +440,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 >
 >
-> > **Step 2 &nbsp;:** &nbsp;Update <code>person_api/api/urls.py</code>
+> > <ins>**Step 2 &nbsp;:**</ins> &nbsp;Update <code>person_api/api/urls.py</code>
 > > ```
 > > from django.urls import path
 > > from . import views
