@@ -389,7 +389,7 @@ you will find <code>"Page Not Found"</code> error.
 > > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/person/4/   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; **404 Not Found** : /api/person/4/
 > > ```
 > > {
-> >	"id" : 4
+> >	    "id" : 4
 > > }
 > > ```
 
