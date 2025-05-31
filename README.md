@@ -373,3 +373,20 @@
 > 
 > - Try to delete a person with a specific <code>id</code> and then try to create it with the same <code>id</code> <br>It will automatically take <code>id+1</code>
 
+<br>
+
+> However, if you will try to GET a person with a specific id in the URL http://localhost:8000/api/person/4/ , you will find <code>"Page Not Found"</code> error.
+>
+>
+> Similarly, if you will try to <code>DELETE</code> a person with a specific <code>id</code> in the **URL**, you will find <code>"404 Not Found"</code> error
+>
+>
+> > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/person/4/  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; **ERROR** ➜ 404 Not Found: /api/person/4/
+>
+>
+> > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/person/4/   &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; **ERROR** ➜ 404 Not Found: /api/person/4/
+> > ```
+> > {
+> >	"id" : 4
+> > }
+> > ```
