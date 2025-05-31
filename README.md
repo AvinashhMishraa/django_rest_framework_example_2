@@ -463,7 +463,7 @@ you will find <code>"Page Not Found"</code> error.
 > > <code>/api/person/{id}/</code> &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; retrieve, update, partial_update, destroy  <br>
 > <br>
 >
-> > <ins>**Step 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Create the ViewSet
+> > <ins>**Step 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Create the ViewSet in <code>person_api/home/views.py</code>
 > > ```
 > > from rest_framework.response import Response
 > > from .models import Person
