@@ -494,3 +494,14 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > ⭐ &nbsp;Now no need to manually define <code>@api_view</code> functions or URL patterns for each case.
 
+<br>
+
+| HTTP Method     | Endpoint                       | Action          |
+|-----------------|--------------------------------|-----------------|
+| **GET**         | <code>/api/person/</code>      | List people     |
+| **POST**        | <code>/api/person/</code>      | Create person   |
+| **GET**         | <code>/api/person/{id}/</code> | Retrieve person |
+| **PUT**         | <code>/api/person/{id}/</code> | Full update     |
+| **PATCH**       | <code>/api/person/{id}/</code> | Partial update  |
+| **DELETE**      | <code>/api/person/{id}/</code> | Delete person   |
+
