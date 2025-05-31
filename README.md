@@ -375,7 +375,7 @@
 
 <br>
 
-> However, if you will try to <code>GET</code> a person with a specific id in the URL http://localhost:8000/api/person/4/ , you will find <code>"Page Not Found"</code> error.
+> However, if you will try to <code>GET</code> a person with a specific <code>id</code> in the URL http://localhost:8000/api/person/4/ , you will find <code>"Page Not Found"</code> error.
 >
 >
 > Similarly, if you will try to <code>DELETE</code> a person with a specific <code>id</code> in the **URL**, you will find <code>"404 Not Found"</code> error
