@@ -395,7 +395,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-**Guess why ?** <br>
+<ins>**Guess why ?**</ins> <br>
 It is because you have made your own **custom endpoints** using <code>@api_view</code>. <br>
 The current view (person) is only handling requests to : &nbsp;<code>/api/person/</code> <br>
 So while trying to access : &nbsp;<code>/api/person/{id}/</code> , the <code>person(request)</code> function doesn't take an <code>id</code> parameter from the URL. <br>
