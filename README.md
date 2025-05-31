@@ -289,7 +289,7 @@
 > > from home.serializers import PersonSerializer
 > >
 > > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
-> > def person(request):                                                             # /api/person/{id}/
+> > def person(request):                                                              # /api/person/
 > >     if request.method == 'GET':
 > >         objs = Person.objects.all()
 > >         serializer = PersonSerializer(objs, many = True)
