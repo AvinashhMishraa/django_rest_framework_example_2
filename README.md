@@ -403,7 +403,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> **SOLUTION - 1** :   To handle <code>/api/person/{id}/</code>, you need a **separate view** for person detail operations ( **GET** / **PUT** / **PATCH** / **DELETE** for a single object)
+**SOLUTION - 1** :   To handle <code>/api/person/{id}/</code>, you need a **separate view** for person detail operations ( **GET** / **PUT** / **PATCH** / **DELETE** for a single object)
 >
 >
 > > **Step 1 &nbsp;:** &nbsp;Create <code>person_detail</code> **view** :
