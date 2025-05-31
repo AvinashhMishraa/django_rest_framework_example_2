@@ -405,7 +405,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <ins>**Solution - 1**</ins> &nbsp;:
 > To handle <code>/api/person/{id}/</code> , you need a **separate view** for person detail operations (**GET** / **PUT** / **PATCH** / **DELETE** &nbsp;for a single object)
->
+> <br>
 >
 > > <ins>**Step 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Create <code>person_detail</code> view in the <code>person_api/home/views.py</code>&nbsp;:
 > > ```
@@ -438,7 +438,7 @@ you will find <code>"Page Not Found"</code> error.
 > >         obj.delete()
 > >         return Response({'message': 'Person deleted'})
 > > ```
->
+> <br>
 >
 > > <ins>**Step 2**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Update <code>person_api/api/urls.py</code>
 > > ```
