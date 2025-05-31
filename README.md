@@ -401,4 +401,51 @@ you will find <code>"Page Not Found"</code> error.
 > ∎&nbsp;&nbsp; So while trying to access : &nbsp;<code>/api/person/{id}/</code> , the <code>person(request)</code> function doesn't take an <code>id</code> parameter from the URL. <br>
 > ∎&nbsp;&nbsp; Django doesn't know what to do with that <code>{id}</code> unless you define it in your **URLconf** and **view**.
 
+<br>
 
+> **SOLUTION - 1** :   To handle <code>/api/person/{id}/</code>, you need a **separate view** for person detail operations ( **GET** / **PUT** / **PATCH** / **DELETE** for a single object)
+>
+>
+> > **Step 1 &nbsp;:** &nbsp;Create <code>person_detail</code> **view** :
+> > ```
+> > @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
+> > def person_detail(request, id):
+> >     try:
+> >         obj = Person.objects.get(id=id)
+> >     except Person.DoesNotExist:
+> >         return Response({'error': 'Person not found'}, status=404)
+> > 
+> >     if request.method == 'GET':
+> >         serializer = PersonSerializer(obj)
+> >         return Response(serializer.data)
+> > 
+> >     elif request.method == 'PUT':
+> >         serializer = PersonSerializer(obj, data=request.data)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response(serializer.data)
+> >         return Response(serializer.errors)
+> > 
+> >     elif request.method == 'PATCH':
+> >         serializer = PersonSerializer(obj, data=request.data, partial=True)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response(serializer.data)
+> >         return Response(serializer.errors)
+> > 
+> >     elif request.method == 'DELETE':
+> >         obj.delete()
+> >         return Response({'message': 'Person deleted'})
+> > ```
+>
+>
+> > **Step 2 &nbsp;:** &nbsp;Update <code>person_api/api/urls.py</code>
+> > ```
+> > from django.urls import path
+> > from . import views
+> >
+> > urlpatterns = [
+> >     path('api/person/', views.person),
+> >     path('person/<int:id>/', person_detail),
+> > ]
+> > ```
