@@ -409,9 +409,8 @@ you will find <code>"Page Not Found"</code> error.
 >
 > > <ins>**Step 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Create <code>person_detail</code> view in the <code>person_api/home/views.py</code>&nbsp;:
 > > ```
-> > # /api/person/{id}/
 > > @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
-> > def person_detail(request, id):
+> > def person_detail(request, id):                                                     # /api/person/{id}/
 > >     try:
 > >         obj = Person.objects.get(id=id)
 > >     except Person.DoesNotExist:
