@@ -395,10 +395,10 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-<ins>**Guess why ?**</ins> <br>
-It is because you have made your own **custom endpoints** using <code>@api_view</code>. <br>
-The current view (person) is only handling requests to : &nbsp;<code>/api/person/</code> <br>
-So while trying to access : &nbsp;<code>/api/person/{id}/</code> , the <code>person(request)</code> function doesn't take an <code>id</code> parameter from the URL. <br>
-Django doesn't know what to do with that <code>{id}</code> unless you define it in your **URLconf** and **view**.
+**Guess why ?** <br>
+> It is because you have made your own **custom endpoints** using <code>@api_view</code>. <br>
+> The current view (person) is only handling requests to : &nbsp;<code>/api/person/</code> <br>
+> So while trying to access : &nbsp;<code>/api/person/{id}/</code> , the <code>person(request)</code> function doesn't take an <code>id</code> parameter from the URL. <br>
+> Django doesn't know what to do with that <code>{id}</code> unless you define it in your **URLconf** and **view**.
 
 
