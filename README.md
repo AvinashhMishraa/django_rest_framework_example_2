@@ -465,9 +465,11 @@ you will find <code>"Page Not Found"</code> error.
 >
 > > <ins>**Step 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Create the ViewSet
 > > ```
-> > from rest_framework.viewsets import ModelViewSet
+> > from rest_framework.response import Response
 > > from .models import Person
 > > from .serializers import PersonSerializer
+> > from rest_framework.viewsets import ModelViewSet
+> >
 > > 
 > > class PersonViewSet(ModelViewSet):
 > >     queryset = Person.objects.all()
