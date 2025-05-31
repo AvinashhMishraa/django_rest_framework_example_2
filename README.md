@@ -367,7 +367,7 @@
 
 <br>
 
-> **Note**
+> <ins>**Note**</ins>
 > - While creating a person using <code>POST</code> operation, don't pass <code>id</code> in the body because even if you pass, it will not accept. <br>
 > Although it will not throw error, but it keeps a track record of the <code>id</code> column and strictly follow the **auto increment**. <br>
 > 
