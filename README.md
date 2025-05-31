@@ -505,18 +505,16 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-| HTTP Method     | Endpoint                       | Action          |
-|-----------------|--------------------------------|-----------------|
-| **GET**         | <code>/api/person/</code>      | List people     |
-| **POST**        | <code>/api/person/</code>      | Create person   |
-| **GET**         | <code>/api/person/{id}/</code> | Retrieve person |
-| **PUT**         | <code>/api/person/{id}/</code> | Full update     |
-| **PATCH**       | <code>/api/person/{id}/</code> | Partial update  |
-| **DELETE**      | <code>/api/person/{id}/</code> | Delete person   |
+> Now you can perform all these actions :
+> 
+> | HTTP Method     | Endpoint                       | Action          |
+> |-----------------|--------------------------------|-----------------|
+> | **GET**         | <code>/api/person/</code>      | List people     |
+> | **POST**        | <code>/api/person/</code>      | Create person   |
+> | **GET**         | <code>/api/person/{id}/</code> | Retrieve person |
+> | **PUT**         | <code>/api/person/{id}/</code> | Full update     |
+> | **PATCH**       | <code>/api/person/{id}/</code> | Partial update  |
+> | **DELETE**      | <code>/api/person/{id}/</code> | Delete person   |
 
 <br>
 
-| Approach                    | Manual Routes Needed ? | Pros                         | Best For           |
-|-----------------------------|------------------------|------------------------------|--------------------|
-| <code>`@api_view`</code>    | Yes                    | Full control over logic      | Custom endpoints   |
-| <code>`ModelViewSet`</code> | No (uses routers)      | Less boilerplate, clean REST | Standard CRUD APIs |
