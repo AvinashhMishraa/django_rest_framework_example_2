@@ -361,7 +361,7 @@
 > > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; person deleted
 > > ```
 > > {
-> >	"id" : 4
+> >	    "id" : 4
 > > }
 > > ```
 
