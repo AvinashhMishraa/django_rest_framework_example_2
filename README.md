@@ -480,7 +480,7 @@ you will find <code>"Page Not Found"</code> error.
 > > <ins>**Step 2**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Update <code>person_api/api/urls.py</code> to use a **Router**
 > > ```
 > > from rest_framework.routers import DefaultRouter
-> > from home.views import PersonViewSet
+> > from home.views import index, PersonViewSet
 > > from django.urls import path, include
 > >
 > > router = DefaultRouter()
