@@ -451,3 +451,43 @@ you will find <code>"Page Not Found"</code> error.
 > >     path('person/<int:id>/', person_detail),
 > > ]
 > > ```
+
+<br>
+
+<ins>**Solution - 2**</ins> &nbsp;: 
+> using <code>ModelViewSet</code> to simplify code and avoid manually writing separate views for detail and list endpoints.
+>
+>
+> When you use a <code>ModelViewSet</code> with a <code>DefaultRouter</code>, Django REST Framework **automatically** wires up all the standard CRUD routes for you, including : <br>
+> <code>/api/person/</code>        →   list, create  <br>
+> <code>/api/person/{id}/</code>   →   retrieve, update, partial_update, destroy  <br>
+>
+>
+> > <ins>**Step 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Create the ViewSet
+> > ```
+> > from rest_framework.viewsets import ModelViewSet
+> > from .models import Person
+> > from .serializers import PersonSerializer
+> > 
+> > class PersonViewSet(ModelViewSet):
+> >     queryset = Person.objects.all()
+> >     serializer_class = PersonSerializer
+> > ```
+>
+>
+> > <ins>**Step 2**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Update urls.py to use a Router
+> > ```
+> > from rest_framework.routers import DefaultRouter
+> > from .views import PersonViewSet
+> > from django.urls import path, include
+> >
+> > router = DefaultRouter()
+> > router.register(r'person', PersonViewSet, basename='person')
+> > 
+> > urlpatterns = [
+> >     path('api/', include(router.urls)),
+> > ]
+> > ```
+>
+> Now no need to manually define <code>@api_view</code> functions or URL patterns for each case.
+
