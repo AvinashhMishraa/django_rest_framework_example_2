@@ -494,7 +494,7 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > ⭐ &nbsp;Now no need to manually define <code>@api_view</code> functions or URL patterns for each case.
 
-<br>
+<br><br>
 
 | HTTP Method     | Endpoint                       | Action          |
 |-----------------|--------------------------------|-----------------|
@@ -505,3 +505,9 @@ you will find <code>"Page Not Found"</code> error.
 | **PATCH**       | <code>/api/person/{id}/</code> | Partial update  |
 | **DELETE**      | <code>/api/person/{id}/</code> | Delete person   |
 
+<br><br>
+
+| Approach                    | Manual Routes Needed ? | Pros                         | Best For           |
+|-----------------------------|------------------------|------------------------------|--------------------|
+| <code>`@api_view`</code>    | Yes                    | Full control over logic      | Custom endpoints   |
+| <code>`ModelViewSet`</code> | No (uses routers)      | Less boilerplate, clean REST | Standard CRUD APIs |
