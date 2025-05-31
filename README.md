@@ -407,8 +407,8 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > | Approach                    | Manual Routes Needed ? | Pros                         | Best For           |
 > |-----------------------------|------------------------|------------------------------|--------------------|
-> | <code>`@api_view`</code>    | Yes                    | Full control over logic      | Custom endpoints   |
-> | <code>`ModelViewSet`</code> | No (uses routers)      | Less boilerplate, clean REST | Standard CRUD APIs |
+> | `@api_view`                 | Yes                    | Full control over logic      | Custom endpoints   |
+> | `ModelViewSet`              | No (uses routers)      | Less boilerplate, clean REST | Standard CRUD APIs |
 
 <br>
 
