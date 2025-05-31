@@ -403,6 +403,15 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
+> Now the question is what is the solution to this problem ?
+> 
+> | Approach                    | Manual Routes Needed ? | Pros                         | Best For           |
+> |-----------------------------|------------------------|------------------------------|--------------------|
+> | <code>`@api_view`</code>    | Yes                    | Full control over logic      | Custom endpoints   |
+> | <code>`ModelViewSet`</code> | No (uses routers)      | Less boilerplate, clean REST | Standard CRUD APIs |
+
+<br>
+
 <ins>**Solution - 1**</ins> &nbsp;:
 > To handle <code>/api/person/{id}/</code> , you need a **separate view** for person detail operations (**GET** / **PUT** / **PATCH** / **DELETE** &nbsp;for a single object)
 > <br><br>
