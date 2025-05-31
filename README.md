@@ -442,11 +442,12 @@ you will find <code>"Page Not Found"</code> error.
 >
 > > <ins>**Step 2**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Update <code>person_api/api/urls.py</code>
 > > ```
+> > from home.views import index, person, person_detail
 > > from django.urls import path
-> > from . import views
 > >
 > > urlpatterns = [
-> >     path('api/person/', views.person),
+> >     path('index/', index),
+> >     path('person/',person),
 > >     path('person/<int:id>/', person_detail),
 > > ]
 > > ```
