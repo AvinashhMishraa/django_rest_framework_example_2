@@ -567,10 +567,10 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;or &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/{id}/
+> > <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;or &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/5/
 > > ```
 > > {
-> >     "id" : 15,
+> >     "id" : 5,
 > >     "age" : 13
 > > }
 > > ```
