@@ -602,11 +602,13 @@ you will find <code>"Page Not Found"</code> error.
 >         fields = '__all__'
 > 
 >     def validate(self, data):
-> 
+>
+>         # Handle 'name' validation
 >         special_characters = "!@#$%^&*()-+?_=,<>/"
 >         if any(c in special_characters for c in data['name']):
 >             raise serializers.ValidationError('Name cannot contain special chars')
-> 
+>
+>         # Handle 'age' validation
 >         if data['age'] < 18:
 >             raise serializers.ValidationError('Age should be greater than 18')
 >         
