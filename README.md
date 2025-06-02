@@ -614,50 +614,56 @@ you will find <code>"Page Not Found"</code> error.
 > ```	
 > <br>
 >
-> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>"non_field_errors": ["Name cannot contain special characters."]</code>
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
 > >    "name" : "R@hit",
 > >    "age" : 15
 > > }
 > > ```
+> > <code>"non_field_errors": ["Name cannot contain special characters."]</code>
 > <br>
 >
-> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>"non_field_errors": ["Age should be 18 or older."]</code>
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > >  {
 > >      "name" : "Rohit",
 > >      "age" : 15
 > >  }
 > > ```
+> > <code>"non_field_errors": ["Age should be 18 or older."]</code>
 > <br>
 >
-> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; person created with {"id" : 6, "name" : "Rohit", "age" : 25}
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > >  {
 > >      "name" : "Rohit",
 > >      "age" : 25
 > >  }
 > > ```
+> > person created with {"id" : 6, "name" : "Rohit", "age" : 25}
 > <br>
 >
 > >  To update the <code>age</code> of the person with <code>id=6</code> &nbsp;**:** <br>
-> >  <code>PATCH</code> &nbspp;&nbsp;&nbsp;http://localhost:8000/api/person/6/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>KeyError: 'name'</code>
+> >  <code>PATCH</code> &nbspp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
 > >  {
 > >      "age" : 26
 > >  }
 > > ```
+> > <code>KeyError: 'name'</code>
+> >
 > >  In a <code>PATCH</code> request, data will only include the fields that are being updated. <br>If "name" is not in the request, <code>data['name']</code> will raise a **KeyError**.
 > <br>
 >
 > >  Similarly, since "age" is not in the request, data['age'] will raise a **KeyError**. <br>
-> >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>KeyError: 'age'</code>
+> >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
 > >  {
 > >      "name" : "Rohit Sharma"
 > >  }
 > > ```
+> > <code>KeyError: 'age'</code>
 
 
 
