@@ -614,7 +614,7 @@ you will find <code>"Page Not Found"</code> error.
 > ```	
 > <br>
 >
-> > <code>POST</code>  http://localhost:8000/api/person/     ==>     "non_field_errors": ["Name cannot contain special characters."]
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>"non_field_errors": ["Name cannot contain special characters."]</code>code>
 > > ```
 > > {
 > >    "name" : "R@hit",
@@ -623,7 +623,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > <code>POST</code>  http://localhost:8000/api/person/     ==>     "non_field_errors": ["Age should be 18 or older."]
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>"non_field_errors": ["Age should be 18 or older."]</code>
 > > ```
 > >  {
 > >      "name" : "Rohit",
@@ -632,7 +632,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > <code>POST</code>  http://localhost:8000/api/person/     ==>      person created with {"id" : 6, "name" : "Rohit", "age" : 25}
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; person created with {"id" : 6, "name" : "Rohit", "age" : 25}
 > > ```
 > >  {
 > >      "name" : "Rohit",
@@ -641,18 +641,18 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> >  To update the age of the person with id = 6
-> >  PATCH  http://localhost:8000/api/person/6/    ==>    KeyError: 'name'
+> >  To update the <code>age</code> of the person with <code>id=6</code> &nbsp;**:** <br>
+> >  <code>PATCH</code> &nbspp;&nbsp;&nbsp;http://localhost:8000/api/person/6/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>KeyError: 'name'</code>
 > > ```
 > >  {
 > >      "age" : 26
 > >  }
 > > ```
-> >  In a PATCH request, data will only include the fields that are being updated. If "name" is not in the request, data['name'] will raise a KeyError.
+> >  In a <code>PATCH</code> request, data will only include the fields that are being updated. <br>If "name" is not in the request, <code>data['name']</code> will raise a **KeyError**.
 > <br>
 >
-> >  Similarly, since "age" is not in the request, data['age'] will raise a KeyError.
-> >  PATCH  http://localhost:8000/api/person/6/    ==>    KeyError: 'age'
+> >  Similarly, since "age" is not in the request, data['age'] will raise a **KeyError**. <br>
+> >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/ &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>KeyError: 'age'</code>
 > > ```
 > >  {
 > >      "name" : "Rohit Sharma"
