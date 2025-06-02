@@ -614,32 +614,32 @@ you will find <code>"Page Not Found"</code> error.
 > ```	
 > <br>
 >
-> - <code>POST</code>  http://localhost:8000/api/person/     ==>     "non_field_errors": ["Name cannot contain special characters."]
-> ```
-> {
->     "name" : "R@hit",
->     "age" : 15
-> }
-> ```
+> > <code>POST</code>  http://localhost:8000/api/person/     ==>     "non_field_errors": ["Name cannot contain special characters."]
+> > ```
+> > {
+> >    "name" : "R@hit",
+> >    "age" : 15
+> > }
+> > ```
+> <br>
 >
->
-> >  POST  http://localhost:8000/api/person/     ==>     "non_field_errors": ["Age should be 18 or older."]
+> > <code>POST</code>  http://localhost:8000/api/person/     ==>     "non_field_errors": ["Age should be 18 or older."]
 > > ```
 > >  {
 > >      "name" : "Rohit",
 > >      "age" : 15
 > >  }
 > > ```
+> <br>
 >
->
-> >  POST  http://localhost:8000/api/person/     ==>      person created with {"id" : 6, "name" : "Rohit", "age" : 25}
+> > <code>POST</code>  http://localhost:8000/api/person/     ==>      person created with {"id" : 6, "name" : "Rohit", "age" : 25}
 > > ```
 > >  {
 > >      "name" : "Rohit",
 > >      "age" : 25
 > >  }
 > > ```
->
+> <br>
 >
 > >  To update the age of the person with id = 6
 > >  PATCH  http://localhost:8000/api/person/6/    ==>    KeyError: 'name'
@@ -649,7 +649,7 @@ you will find <code>"Page Not Found"</code> error.
 > >  }
 > > ```
 > >  In a PATCH request, data will only include the fields that are being updated. If "name" is not in the request, data['name'] will raise a KeyError.
->
+> <br>
 >
 > >  Similarly, since "age" is not in the request, data['age'] will raise a KeyError.
 > >  PATCH  http://localhost:8000/api/person/6/    ==>    KeyError: 'age'
