@@ -587,7 +587,7 @@ you will find <code>"Page Not Found"</code> error.
 > > }
 > > ```
 
-<br>
+<br><br>
 
 > Now let's add validation for the <code>name</code> field &nbsp;**:**
 > ```
