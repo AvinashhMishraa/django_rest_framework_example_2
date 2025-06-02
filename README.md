@@ -655,10 +655,10 @@ you will find <code>"Page Not Found"</code> error.
 > >
 > > <code>KeyError: 'name'</code>
 > >
-> > ⭐ &nbsp;In a <code>PATCH</code> request, data will only include the fields that are being updated. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If "name" is not in the request, <code>data['name']</code> will raise a **KeyError**.
+> > ⭐ &nbsp;In a <code>PATCH</code> request, data will only include the fields that are being updated. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If "name" is not in the request, <code>data['name']</code> will raise a <ins>**KeyError**</ins>.
 > <br>
 >
-> >  Similarly, since "age" is not in the request, data['age'] will raise a **KeyError**.
+> >  Similarly, since "age" is not in the request, data['age'] will raise a <ins>**KeyError**</ins>.
 > >
 > >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
