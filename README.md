@@ -567,7 +567,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;or &nbsp;&nbsp;http://localhost:8000/api/person/15/
 > > ```
 > > {
 > >     "id" : 15,
