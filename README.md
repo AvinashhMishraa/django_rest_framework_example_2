@@ -586,20 +586,17 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> Now let's add validation for **name** :
+> Now let's add validation for the **name** field :
 > ```
 > from rest_framework import serializers
 > from .models import Person
 >
 >
->
 > class PersonSerializer(serializers.ModelSerializer):
-> 
 > 
 >     class Meta:
 >         model = Person
 >         fields = '__all__'
-> 
 > 
 >     def validate(self, data):
 > 
