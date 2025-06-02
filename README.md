@@ -644,7 +644,7 @@ you will find <code>"Page Not Found"</code> error.
 > > person created with {"id" : 6, "name" : "Rohit", "age" : 25}
 > <br>
 >
-> >  To update the <code>age</code> of the person with <code>id=6</code> &nbsp;**:** 
+> >  To update the <code>age</code> of the person with <code>id</code> = 6 &nbsp;**:** 
 > >
 > > <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
@@ -655,10 +655,10 @@ you will find <code>"Page Not Found"</code> error.
 > >
 > > <code>KeyError: 'name'</code>
 > >
-> > ⭐ &nbsp;In a <code>PATCH</code> request, data will only include the fields that are being updated. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If "name" is not in the request, <code>data['name']</code> will raise a <ins>**KeyError**</ins>.
+> > ⭐ &nbsp;In a <code>PATCH</code> request, data will only include the fields that are being updated. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>name"</code> is not in the request, <code>data['name']</code> will raise a <ins>**KeyError**</ins>.
 > <br>
 >
-> >  Similarly, since "age" is not in the request, data['age'] will raise a <ins>**KeyError**</ins>.
+> >  Similarly, since <code>age</code> is not in the request, <code>data['age']</code> will raise a <ins>**KeyError**</ins>.
 > >
 > >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
