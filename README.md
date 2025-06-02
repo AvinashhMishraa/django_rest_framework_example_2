@@ -644,8 +644,7 @@ you will find <code>"Page Not Found"</code> error.
 > > person created with {"id" : 6, "name" : "Rohit", "age" : 25}
 > <br>
 >
-> >  To update the <code>age</code> of the person with <code>id=6</code> &nbsp;**:** <br>
-> >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
+> >  To update the <code>age</code> of the person with <code>id=6</code> &nbsp;**:** <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
 > >  {
 > >      "age" : 26
