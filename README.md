@@ -656,7 +656,7 @@ you will find <code>"Page Not Found"</code> error.
 > >  In a <code>PATCH</code> request, data will only include the fields that are being updated. <br>If "name" is not in the request, <code>data['name']</code> will raise a **KeyError**.
 > <br>
 >
-> >  Similarly, since "age" is not in the request, data['age'] will raise a **KeyError**. <br>
+> >  Similarly, since "age" is not in the request, data['age'] will raise a **KeyError**.
 > >
 > >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
