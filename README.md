@@ -641,7 +641,7 @@ you will find <code>"Page Not Found"</code> error.
 > >      "age" : 25
 > >  }
 > > ```
-> > person created with {"id" : 6, "name" : "Rohit", "age" : 25}
+> > A person is successfully created with {"id" : 6, "name" : "Rohit", "age" : 25}
 > <br>
 >
 > >  To update the <code>age</code> of the person with <code>id</code> = 6 &nbsp;**:** 
