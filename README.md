@@ -631,7 +631,7 @@ you will find <code>"Page Not Found"</code> error.
 > >      "age" : 15
 > >  }
 > > ```
-> > <code>"non_field_errors": ["Age should be 18 or older."]</code>
+> > ❌ &nbsp;<code>"non_field_errors": ["Age should be 18 or older."]</code>
 > <br>
 >
 > > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
@@ -653,7 +653,7 @@ you will find <code>"Page Not Found"</code> error.
 > >  }
 > > ```
 > >
-> > <code>KeyError: 'name'</code>
+> > ❌ &nbsp;<code>KeyError: 'name'</code>
 > >
 > > ⭐ &nbsp;In a <code>PATCH</code> request, data will only include the fields that are being updated. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>name"</code> is not in the request, <code>data['name']</code> will raise a <ins>**KeyError**</ins>.
 > <br>
@@ -666,7 +666,7 @@ you will find <code>"Page Not Found"</code> error.
 > >      "name" : "Rohit Sharma"
 > >  }
 > > ```
-> > <code>KeyError: 'age'</code>
+> > ❌ &nbsp;<code>KeyError: 'age'</code>
 
 
 
