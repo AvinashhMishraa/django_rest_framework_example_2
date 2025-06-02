@@ -518,9 +518,12 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-**Validation**
->
->
+<div>
+    <h1>Validation</h1>
+</div>
+
+<br>
+
 > > <code>person_api/home/serializers.py</code>
 > > ```
 > > from rest_framework import serializers
