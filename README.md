@@ -657,6 +657,7 @@ you will find <code>"Page Not Found"</code> error.
 > <br>
 >
 > >  Similarly, since "age" is not in the request, data['age'] will raise a **KeyError**. <br>
+> >
 > >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
 > >  {
