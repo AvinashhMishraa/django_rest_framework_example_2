@@ -546,7 +546,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > Another way of implementing validation is by using <code>validation_<field_name>()</code> method : <br>
+> > Another way of implementing validation is by using <code>validate_<field_name>()</code> method : <br>
 > > <code>person_api/home/serializers.py</code>
 > > ```
 > > from rest_framework import serializers
