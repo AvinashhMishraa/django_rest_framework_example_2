@@ -524,6 +524,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
+> Let's add a validation for <code>age</code> field of the <code>Person</code> model &nbsp;**:**
 > > <code>person_api/home/serializers.py</code>
 > > ```
 > > from rest_framework import serializers
@@ -586,7 +587,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> Now let's add validation for the <code>name</code> field &nbs;**:**
+> Now let's add validation for the <code>name</code> field &nbsp;**:**
 > ```
 > from rest_framework import serializers
 > from .models import Person
