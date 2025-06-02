@@ -586,7 +586,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> Now let's add validation for the <code>name</code> field :
+> Now let's add validation for the <code>name</code> field &nbs;**:**
 > ```
 > from rest_framework import serializers
 > from .models import Person
