@@ -645,12 +645,13 @@ you will find <code>"Page Not Found"</code> error.
 > <br>
 >
 > >  To update the <code>age</code> of the person with <code>id=6</code> &nbsp;**:** <br>
-> >  <code>PATCH</code> &nbspp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
+> >  <code>PATCH</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/6/
 > > ```
 > >  {
 > >      "age" : 26
 > >  }
 > > ```
+> >
 > > <code>KeyError: 'name'</code>
 > >
 > >  In a <code>PATCH</code> request, data will only include the fields that are being updated. <br>If "name" is not in the request, <code>data['name']</code> will raise a **KeyError**.
