@@ -518,3 +518,47 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
+**Validation**
+>
+>
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > from rest_framework import serializers
+> > from .models import Person
+> >
+> >
+> >
+> > class PersonSerializer(serializers.ModelSerializer):
+> > 
+> >     class Meta:
+> >         model = Person
+> >         fields = '__all__'                                    # to include all fields of the Person model
+> >         # fields = ['name', 'age']                            # to include specific fields of the Person model
+> >         # exclude = ['age']                                   # to exclude the specific columns of the Person model
+> > 
+> >     def validate(self, data):
+> >         if data['age'] < 18:
+> >             raise serializers.ValidationError('Age should be greater than 18')
+> >         return data
+> > ```
+>
+>
+> > Another way of implementing validation is by using <code>validation_<field_name>()</code> method : <br>
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > from rest_framework import serializers
+> > from .models import Person
+> >
+> >
+> >
+> > class PersonSerializer(serializers.ModelSerializer):
+> > 
+> >     class Meta:
+> >         model = Person
+> >         fields = '__all__'
+> > 
+> >     def validate_age(self, data):
+> >         if data < 18:
+> >             raise serializers.ValidationError('Age should be greater than 18')
+> >         return data
+> > ```
