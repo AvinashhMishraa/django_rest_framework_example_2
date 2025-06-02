@@ -525,6 +525,8 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > Let's add a validation for <code>age</code> field of the <code>Person</code> model &nbsp;**:**
+> <br>
+> 
 > > <code>person_api/home/serializers.py</code>
 > > ```
 > > from rest_framework import serializers
