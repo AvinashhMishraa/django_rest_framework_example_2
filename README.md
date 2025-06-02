@@ -614,7 +614,7 @@ you will find <code>"Page Not Found"</code> error.
 > ```	
 > <br>
 >
-> > <code>POST</code>  http://localhost:8000/api/person/     ==>     "non_field_errors": ["Name cannot contain special characters."]
+> - <code>POST</code>  http://localhost:8000/api/person/     ==>     "non_field_errors": ["Name cannot contain special characters."]
 > > ```
 > > {
 > >     "name" : "R@hit",
