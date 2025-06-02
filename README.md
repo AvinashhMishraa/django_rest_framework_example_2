@@ -605,7 +605,7 @@ you will find <code>"Page Not Found"</code> error.
 >
 >         special_characters = "!@#$%^&*()-+?_=,<>/"
 >         if any(c in special_characters for c in data['name']):
->             raise serializers.ValidationError('Name cannot contain special chars')
+>             raise serializers.ValidationError('Name cannot contain special characters.')
 >
 >         if data['age'] < 18:
 >             raise serializers.ValidationError('Age should be greater than 18')
