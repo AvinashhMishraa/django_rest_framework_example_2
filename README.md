@@ -541,7 +541,7 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > >     def validate(self, data):
 > >         if data['age'] < 18:
-> >             raise serializers.ValidationError('Age should be greater than 18')
+> >             raise serializers.ValidationError('Age should be 18 or older.')
 > >         return data
 > > ```
 > <br>
@@ -562,7 +562,7 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > >     def validate_age(self, data):
 > >         if data < 18:
-> >             raise serializers.ValidationError('Age should be greater than 18')
+> >             raise serializers.ValidationError('Age should be 18 or older.')
 > >         return data
 > > ```
 > <br>
