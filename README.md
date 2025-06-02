@@ -567,18 +567,18 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/
-> > > ```
-> > > {
-> > >     "id" : 15,
-> > >     "age" : 13
-> > > }
-> > > ```
-> >
-> > > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
-> > > ```
-> > > {
-> > >     "name" : "Little Boy",
-> > >     "age" : 12
-> > > }
-> > > ```
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "id" : 15,
+> >     "age" : 13
+> > }
+> > ```
+>
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "name" : "Little Boy",
+> >     "age" : 12
+> > }
+> > ```
