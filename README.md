@@ -671,7 +671,7 @@ you will find <code>"Page Not Found"</code> error.
 
 **Solution** : 
 >
-> use <code>.get('field_name')</code> to safely access optional fields, and fall back to the instance’s current value if it’s not present.
+> ⭐ &nbsp;use <code>.get('field_name')</code> to safely access optional fields, and fall back to the instance’s current value if it’s not present.
 > <br>
 >
 > **Explaination** : 
