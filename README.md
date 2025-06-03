@@ -724,8 +724,8 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > ```
 > > name = data.get(
-> >      'name',                                             # Look for 'name' in the incoming request data
-> >      self.instance.name if self.instance else None       # If 'name' not in data, use existing value from instance
+> >      'name',                                            # Look for 'name' in the incoming request data
+> >      self.instance.name if self.instance else None      # If 'name' not in data, use existing value from instance
 > > )
 > > ```
 
