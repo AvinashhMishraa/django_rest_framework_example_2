@@ -590,29 +590,29 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > Now let's add validation for the <code>name</code> field &nbsp;**:** <br>
-> <code>person_api/home/serializers.py</code>
-> ```
-> from rest_framework import serializers
-> from .models import Person
->
->
-> class PersonSerializer(serializers.ModelSerializer):
-> 
->     class Meta:
->         model = Person
->         fields = '__all__'
-> 
->     def validate(self, data):
->
->         special_characters = "!@#$%^&*()-+?_=,<>/"
->         if any(c in special_characters for c in data['name']):
->             raise serializers.ValidationError('Name cannot contain special characters.')
->
->         if data['age'] < 18:
->             raise serializers.ValidationError('Age should be greater than 18')
->         
->         return data
-> ```	
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > from rest_framework import serializers
+> > from .models import Person
+> > 
+> > 
+> > class PersonSerializer(serializers.ModelSerializer):
+> > 
+> >     class Meta:
+> >         model = Person
+> >         fields = '__all__'
+> > 
+> >     def validate(self, data):
+> > 
+> >         special_characters = "!@#$%^&*()-+?_=,<>/"
+> >         if any(c in special_characters for c in data['name']):
+> >             raise serializers.ValidationError('Name cannot contain special characters.')
+> > 
+> >         if data['age'] < 18:
+> >             raise serializers.ValidationError('Age should be greater than 18')
+> >         
+> >         return data
+> > ```	
 > <br>
 >
 > > <code>POST</code> &nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
