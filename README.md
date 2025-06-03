@@ -654,7 +654,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > ❌ &nbsp;<code>KeyError: 'name'</code>
 > >
-> > ⭐ &nbsp;In a <code>PATCH</code> request, data will only include the fields that are being updated. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>name"</code> is not in the request, <code>data['name']</code> will raise a <ins>**KeyError**</ins>.
+> > ⭐ &nbsp;In a <code>PATCH</code> request, data will only include the fields that are being updated. <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;If <code>name</code> is not in the request, <code>data['name']</code> will raise a <ins>**KeyError**</ins>.
 > <br>
 >
 > >  Similarly, since <code>age</code> is not in the request, <code>data['age']</code> will raise a <ins>**KeyError**</ins>.
