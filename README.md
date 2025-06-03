@@ -556,7 +556,6 @@ you will find <code>"Page Not Found"</code> error.
 > > from .models import Person
 > >
 > >
-> >
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
 > >     class Meta:
