@@ -680,13 +680,15 @@ you will find <code>"Page Not Found"</code> error.
 >
 > > <code>person_api/home/serializers.py</code>
 > > ```
-> > class PersonSerializer(serializers.ModelSerializer):
+> > from rest_framework import serializers
+> > from .models import Person
 > >
 > > 
+> > class PersonSerializer(serializers.ModelSerializer):
+> >
 > >      class Meta:
 > >          model = Person
 > >          fields = '__all__'
-> >  
 > >  
 > >      def validate(self, data):
 > >  
