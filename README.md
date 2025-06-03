@@ -706,11 +706,11 @@ you will find <code>"Page Not Found"</code> error.
 >
 > **Explaination :**
 >
-> ∎ <code>self.instance</code> exists if it's an update (PUT, PATCH) <br>
+> ∎ <code>self.instance</code> exists if it's an update (<code>PUT</code>, <code>PATCH</code>) <br>
 >
-> ∎ We fallback to self.instance.field if a field is missing from data (i.e., not part of the PATCH). <br>
+> ∎ We fallback to self.instance.field if a field is missing from data (i.e., not part of the <code>PATCH</code>). <br>
 >
-> ∎ This works for POST, PUT, and PATCH safely. <br>
+> ∎ This works for <code>POST</code>, <code>PUT</code>, and <code>PATCH</code> safely. <br>
 >
 > ∎ Let's see why it works? <br>
 > > 
@@ -718,9 +718,9 @@ you will find <code>"Page Not Found"</code> error.
 > > dictionary.get(key, default_value_if_key_missing)
 > > ```
 > > 
-> > ∎ If key exists → returns dictionary[key] <br>
+> > ∎ If key exists &nbsp;&nbsp;➜&nbsp;&nbsp; returns dictionary[key] <br>
 > > 
-> > ∎ If key doesn't exist → returns the default_value_if_key_missing instead of throwing a <code>KeyError</code> <br>
+> > ∎ If key doesn't exist &nbsp;&nbsp;➜&nbsp;&nbsp; returns the <code>default_value_if_key_missing</code> instead of throwing a <code>KeyError</code> <br>
 > > 
 > > ```
 > > name = data.get(
