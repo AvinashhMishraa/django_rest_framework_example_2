@@ -708,9 +708,9 @@ you will find <code>"Page Not Found"</code> error.
 >
 > ∎ &nbsp;<code>self.instance</code> exists if it's an update (<code>PUT</code>, <code>PATCH</code>) <br>
 >
-> ∎ &nbsp;We fallback to self.instance.field if a field is missing from data (i.e., not part of the <code>PATCH</code>). <br>
+> ∎ &nbsp;We fallback to self.instance.field if a field is missing from data (i.e., not part of the <code>PATCH</code>) <br>
 >
-> ∎ &nbsp;This works for <code>POST</code>, <code>PUT</code>, and <code>PATCH</code> safely. <br>
+> ∎ &nbsp;This works for <code>POST</code>, <code>PUT</code>, and <code>PATCH</code> safely <br>
 >
 > ∎ &nbsp;Let's see why it works ? <br>
 > > 
