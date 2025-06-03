@@ -709,11 +709,11 @@ you will find <code>"Page Not Found"</code> error.
 > ∎ We fallback to self.instance.field if a field is missing from data (i.e., not part of the PATCH). <br>
 > ∎ This works for POST, PUT, and PATCH safely. <br>
 > ∎ Let's see why it works? <br>
-> ```
+> <pre>
 > dictionary.get(key, default_value_if_key_missing)
-> ```
+> </pre>
 > ∎ If key exists → returns dictionary[key] <br>
-> ∎ If key doesn't exist → returns the default_value_if_key_missing instead of throwing a <code>KeyError</code>. <br>
+> ∎ If key doesn't exist → returns the default_value_if_key_missing instead of throwing a <code>KeyError</code>.
 > ```
 > name = data.get(
 >      'name',                                              # Look for 'name' in the incoming request data
