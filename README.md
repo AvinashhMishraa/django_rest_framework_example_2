@@ -718,7 +718,7 @@ you will find <code>"Page Not Found"</code> error.
 > > dictionary.get(key, default_value_if_key_missing)
 > > ```
 > > 
-> > ∎ &nbsp;If <code>key</code> exists &nbsp;&nbsp;➜&nbsp;&nbsp; returns dictionary[key] <br>
+> > ∎ &nbsp;If <code>key</code> exists &nbsp;&nbsp;➜&nbsp;&nbsp; returns <code>dictionary[key]</code> <br>
 > > 
 > > ∎ &nbsp;If <code>key</code> doesn't exist &nbsp;&nbsp;➜&nbsp;&nbsp; returns the <code>default_value_if_key_missing</code> instead of throwing a <code>KeyError</code> <br>
 > > 
