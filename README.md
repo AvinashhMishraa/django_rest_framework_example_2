@@ -712,7 +712,7 @@ you will find <code>"Page Not Found"</code> error.
 >
 > ∎ &nbsp;This works for <code>POST</code>, <code>PUT</code>, and <code>PATCH</code> safely. <br>
 >
-> ∎ &nbsp;Let's see why it works? <br>
+> ∎ &nbsp;Let's see why it works ? <br>
 > > 
 > > ```
 > > dictionary.get(key, default_value_if_key_missing)
