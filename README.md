@@ -667,5 +667,55 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > ❌ &nbsp;<code>KeyError: 'age'</code>
 
+<br>
+
+**Solution** : 
+>
+> use <code>.get('field_name')</code> to safely access optional fields, and fall back to the instance’s current value if it’s not present.
+> <br>
+>
+> **Explaination** : 
+> > - <code>self.instance</code> exists if it's an update (PUT, PATCH)
+> > - We fallback to self.instance.field if a field is missing from data (i.e., not part of the PATCH).
+> > - This works for POST, PUT, and PATCH safely.
+> > - Let's see why it works?
+> > ```
+> > dictionary.get(key, default_value_if_key_missing)
+> > ```
+> > - If key exists → returns dictionary[key]
+> > - If key doesn't exist → returns the default_value_if_key_missing instead of throwing a KeyError
+> > ```
+> > name = data.get(
+> >     'name',                                                 # Look for 'name' in the incoming request data
+> >     self.instance.name if self.instance else None           # If 'name' not in data, use existing value from instance
+> > )
+> > ```
+> <br>
+>
+> ```
+> class PersonSerializer(serializers.ModelSerializer):
+>
+>
+>     class Meta:
+>         model = Person
+>         fields = '__all__'
+> 
+> 
+>     def validate(self, data):
+> 
+>         # Handle 'name' validation
+>         special_characters = "!@#$%^&*()-+?_=,<>/"
+>         name = data.get('name', self.instance.name if self.instance else None)
+>         if name and any(c in special_characters for c in name):
+>             raise serializers.ValidationError('Name cannot contain special characters.')
+> 
+>         # Handle 'age' validation
+>         age = data.get('age', self.instance.age if self.instance else None)
+>         if age < 18:
+>             raise serializers.ValidationError('Age should be 18 or older.')
+>         
+>         return data
+> ```
+
 
 
