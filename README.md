@@ -675,7 +675,7 @@ you will find <code>"Page Not Found"</code> error.
 > use <code>.get('field_name')</code> to safely access optional fields, and fall back to the instance’s current value if it’s not present.
 > <br>
 >
-> <ins>Explaination</ins> : <br>
+> **_Explaination_ :** <br>
 > ∎ <code>self.instance</code> exists if it's an update (PUT, PATCH) <br>
 > ∎ We fallback to self.instance.field if a field is missing from data (i.e., not part of the PATCH). <br>
 > ∎ This works for POST, PUT, and PATCH safely. <br>
