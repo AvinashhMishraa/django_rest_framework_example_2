@@ -590,6 +590,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > Now let's add validation for the <code>name</code> field &nbsp;**:**
+> <code>person_api/home/serializers.py</code>
 > ```
 > from rest_framework import serializers
 > from .models import Person
@@ -674,7 +675,7 @@ you will find <code>"Page Not Found"</code> error.
 >
 > use <code>.get('field_name')</code> to safely access optional fields, and fall back to the instance’s current value if it’s not present.
 > <br>
-> > <code>person_api/api/views/py</code>
+> > <code>person_api/home/serializers.py</code>
 > > ```
 > > class PersonSerializer(serializers.ModelSerializer):
 > >
