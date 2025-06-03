@@ -706,21 +706,21 @@ you will find <code>"Page Not Found"</code> error.
 >
 > **Explaination :**
 >
-> ∎ <code>self.instance</code> exists if it's an update (<code>PUT</code>, <code>PATCH</code>) <br>
+> ∎ &nbsp;<code>self.instance</code> exists if it's an update (<code>PUT</code>, <code>PATCH</code>) <br>
 >
-> ∎ We fallback to self.instance.field if a field is missing from data (i.e., not part of the <code>PATCH</code>). <br>
+> ∎ &nbsp;We fallback to self.instance.field if a field is missing from data (i.e., not part of the <code>PATCH</code>). <br>
 >
-> ∎ This works for <code>POST</code>, <code>PUT</code>, and <code>PATCH</code> safely. <br>
+> ∎ &nbsp;This works for <code>POST</code>, <code>PUT</code>, and <code>PATCH</code> safely. <br>
 >
-> ∎ Let's see why it works? <br>
+> ∎ &nbsp;Let's see why it works? <br>
 > > 
 > > ```
 > > dictionary.get(key, default_value_if_key_missing)
 > > ```
 > > 
-> > ∎ If key exists &nbsp;&nbsp;➜&nbsp;&nbsp; returns dictionary[key] <br>
+> > ∎ &nbsp;If key exists &nbsp;&nbsp;➜&nbsp;&nbsp; returns dictionary[key] <br>
 > > 
-> > ∎ If key doesn't exist &nbsp;&nbsp;➜&nbsp;&nbsp; returns the <code>default_value_if_key_missing</code> instead of throwing a <code>KeyError</code> <br>
+> > ∎ &nbsp;If key doesn't exist &nbsp;&nbsp;➜&nbsp;&nbsp; returns the <code>default_value_if_key_missing</code> instead of throwing a <code>KeyError</code> <br>
 > > 
 > > ```
 > > name = data.get(
