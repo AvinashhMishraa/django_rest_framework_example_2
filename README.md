@@ -815,7 +815,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> Now let's add some color to a couple of persons from the <ins>**admin**</ins> side &nbsp;&nbsp;:&nbsp;&nbsp;
+> Now let's add some color to a couple of persons from the <ins>**admin**</ins> side &nbsp;&nbsp;:
 > <br>
 >
 > 
