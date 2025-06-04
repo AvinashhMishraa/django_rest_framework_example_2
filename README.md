@@ -733,7 +733,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 <div>
-    <h1>**Serializing Foreign Key**</h1>
+    <h1>Serializing Foreign Key</h1>
 </div>
 
 <br>
