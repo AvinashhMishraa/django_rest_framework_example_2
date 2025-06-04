@@ -816,7 +816,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > Now let's add some color to a couple of persons from the <ins>**admin**</ins> side &nbsp;&nbsp;:&nbsp;&nbsp;
-> <br>
+> <br><br>
 > 
 > > <code>person_api/home/admin.py</code>
 > > ```
