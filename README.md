@@ -829,3 +829,27 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 >
 > > Go to https://localhost/admin/ and select a color from the dropdown for a couple of persons.
+>
+> > Verify it &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>GET</code> &nbsp;&nbsp;https://localhost/api/person/
+> > ```
+> > [
+> >     {
+> >         "id": 1,
+> >         "name": "A1",
+> >         "age": 25,
+> >         "color": 1
+> >     },
+> >     {
+> >         "id": 2,
+> >         "name": "A2",
+> >         "age": 27,
+> >         "color": null
+> >     },
+> >     {
+> >         "id": 3,
+> >         "name": "A3",
+> >         "age": 40,
+> >         "color": 2
+> >     }
+> > ]
+> > ```
