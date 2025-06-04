@@ -776,3 +776,28 @@ To create a **foreign key**, let's create a model <code>Color</code> first &nbsp
 <code>py manage.py migrate</code>
 
 <br>
+
+> Now let's add one **Foreign Key** <code>color</code> in the <code>Person</code> model.
+> 
+> <code>person_api/home/models.py</code>
+> ```
+> from django.db import models
+> 
+> 
+> class Color(models.Model):
+>     color_name = models.CharField(max_length=100)
+> 
+>     def __str__(self) -> str:
+>         return self.color_name
+> 
+> 
+> class Person(models.Model):
+>     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="color")
+>     name = models.CharField(max_length=100)
+>     age = models.IntegerField()
+> ```
+
+<br>
+
+<code>py manage.py makemigrations</code> <br>
+<code>py manage.py migrate</code>
