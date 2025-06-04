@@ -775,7 +775,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > Now let's add one **Foreign Key** <code>color</code> in the <code>Person</code> model.
-> <br>
+> <br><br>
 >
 > <code>person_api/home/models.py</code>
 > ```
