@@ -738,42 +738,42 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-To create a **foreign key**, let's create a model <code>Color</code> first &nbsp;**:**
-
-<br>
-
-> <code>person_api/home/models.py</code>
-> ```
-> from django.db import models
->
->
-> class Color(models.Model):
->     color_name = models.CharField(max_length=100)
+> To create a **foreign key**, let's create a model <code>Color</code> first &nbsp;**:**
 > 
->     def __str__(self) -> str:
->         return self.color_name
->
+> <br>
 > 
-> class Person(models.Model):
->     name = models.CharField(max_length=100)
->     age = models.IntegerField()
-> ```
-
-<br>
-
-> <code>person_api/home/admin.py</code>
-> ```
-> from django.contrib import admin
-> from home.models import Color
+> > <code>person_api/home/models.py</code>
+> > ```
+> > from django.db import models
+> >
+> >
+> > class Color(models.Model):
+> >     color_name = models.CharField(max_length=100)
+> > 
+> >     def __str__(self) -> str:
+> >         return self.color_name
+> >
+> > 
+> > class Person(models.Model):
+> >     name = models.CharField(max_length=100)
+> >     age = models.IntegerField()
+> > ```
 > 
->
-> admin.site.register(Color)
-> ```
-
-<br>
-
-<code>py manage.py makemigrations</code> <br>
-<code>py manage.py migrate</code>
+> <br>
+> 
+> > <code>person_api/home/admin.py</code>
+> > ```
+> > from django.contrib import admin
+> > from home.models import Color
+> > 
+> >
+> > admin.site.register(Color)
+> > ```
+> 
+> <br>
+> 
+> <code>py manage.py makemigrations</code> <br>
+> <code>py manage.py migrate</code>
 
 <br>
 
