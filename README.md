@@ -740,4 +740,22 @@ you will find <code>"Page Not Found"</code> error.
 
 To create a **foreign key**, let's create a model <code>Color</code> first &nbsp;**:**
 
+<br>
+
+> <code>person_api/home/models.py</code>
+> ```
+> from django.db import models
+>
+>
+> class Color(models.Model):
+>     color_name = models.CharField(max_length=100)
+> 
+>     def __str__(self) -> str:
+>         return self.color_name
+>
+>
+> class Person(models.Model):
+>     name = models.CharField(max_length=100)
+>     age = models.IntegerField()
+> ```
 
