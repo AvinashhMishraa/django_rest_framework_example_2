@@ -827,9 +827,11 @@ you will find <code>"Page Not Found"</code> error.
 > > admin.site.register(Color)
 > > admin.site.register(Person)
 > > ```
->
+> <br>
+> 
 > > Go to https://localhost/admin/ and select a color from the dropdown for a couple of persons.
->
+> <br>
+> 
 > > Verify it &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>GET</code> &nbsp;&nbsp;https://localhost/api/person/
 > > ```
 > > [
