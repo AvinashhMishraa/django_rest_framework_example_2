@@ -816,9 +816,9 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > Now let's add some color to a couple of persons from the <ins>**admin**</ins> side &nbsp;&nbsp;:
+> 
 > <br>
 >
-> 
 > > <code>person_api/home/admin.py</code>
 > > ```
 > > from django.contrib import admin
