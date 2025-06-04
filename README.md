@@ -759,3 +759,20 @@ To create a **foreign key**, let's create a model <code>Color</code> first &nbsp
 >     age = models.IntegerField()
 > ```
 
+<br>
+
+> <code>person_api/home/admin.py</code>
+> ```
+> from django.contrib import admin
+> from home.models import Color
+> 
+>
+> admin.site.register(Color)
+> ```
+
+<br>
+
+<code>py manage.py makemigrations</code> <br>
+<code>py manage.py migrate</code>
+
+<br>
