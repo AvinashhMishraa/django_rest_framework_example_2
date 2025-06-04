@@ -739,7 +739,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > To create a **foreign key**, let's create a model <code>Color</code> first &nbsp;**:**
-> <br>
+> 
 > 
 > > <code>person_api/home/models.py</code>
 > > ```
@@ -758,7 +758,6 @@ you will find <code>"Page Not Found"</code> error.
 > >     age = models.IntegerField()
 > > ```
 > 
-> <br>
 > 
 > > <code>person_api/home/admin.py</code>
 > > ```
@@ -769,7 +768,6 @@ you will find <code>"Page Not Found"</code> error.
 > > admin.site.register(Color)
 > > ```
 > 
-> <br>
 > 
 > <code>py manage.py makemigrations</code> <br>
 > <code>py manage.py migrate</code>
