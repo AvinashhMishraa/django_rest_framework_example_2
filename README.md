@@ -796,11 +796,10 @@ To create a **foreign key**, let's create a model <code>Color</code> first &nbsp
 >     name = models.CharField(max_length=100)
 >     age = models.IntegerField()
 > ```
-
-<br>
-
-<code>py manage.py makemigrations</code> <br>
-<code>py manage.py migrate</code>
+>
+>
+> <code>py manage.py makemigrations</code> <br>
+> <code>py manage.py migrate</code>
 
 <br>
 
