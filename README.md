@@ -804,7 +804,7 @@ you will find <code>"Page Not Found"</code> error.
 > <code>py manage.py runserver</code> <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;Now after running the server, you will find all persons created till now have a color field attached to it. <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;However there is no value assigned to this field. <br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;Let's create some colors through **admin**. You can also use POSTMAN. <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;Let's create some colors through <ins>**admin**</ins>. You can also use POSTMAN. <br>
 >
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<code>py manage.py createsuperuser</code>                      <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;username &nbsp;&nbsp; - &nbsp;&nbsp; XXXXX  <br>
