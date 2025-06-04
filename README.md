@@ -815,14 +815,11 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-Add some color from the <code>admin</code> side.
-
-> Now to add some color to a person :
+> Now to add some color to a person from the **admin** side:
 > <code>person_api/home/admin.py</code>
 > ```
 > from django.contrib import admin
 > from home.models import Color, Person
-> 
 > 
 > admin.site.register(Color)
 > admin.site.register(Person)
