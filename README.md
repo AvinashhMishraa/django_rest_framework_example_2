@@ -777,7 +777,7 @@ you will find <code>"Page Not Found"</code> error.
 > Now let's add one **Foreign Key** <code>color</code> in the <code>Person</code> model.
 > <br><br>
 >
-> <code>person_api/home/models.py</code>
+> > <code>person_api/home/models.py</code>
 > > ```
 > > from django.db import models
 > > 
