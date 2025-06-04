@@ -775,7 +775,8 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > Now let's add one **Foreign Key** <code>color</code> in the <code>Person</code> model.
-> 
+> <br>
+>
 > <code>person_api/home/models.py</code>
 > ```
 > from django.db import models
@@ -793,7 +794,7 @@ you will find <code>"Page Not Found"</code> error.
 >     name = models.CharField(max_length=100)
 >     age = models.IntegerField()
 > ```
->
+> <br>
 >
 > <code>py manage.py makemigrations</code> <br>
 > <code>py manage.py migrate</code>
