@@ -808,3 +808,7 @@ you will find <code>"Page Not Found"</code> error.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;You can also use POSTMAN.
 
 <br>
+
+<code>py manage.py createsuperuser</code>
+
+<br>
