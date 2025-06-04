@@ -814,3 +814,18 @@ you will find <code>"Page Not Found"</code> error.
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◆ &nbsp;Now let's run the server &nbsp;-&nbsp; <code>py manage.py runserver</code> <br> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;And hit the url &nbsp;-&nbsp; https://localhost/admin/
 
 <br>
+
+Add some color from the <code>admin</code> side.
+
+> Now to add some color to a person :
+> <code>person_api/home/admin.py</code>
+> ```
+> from django.contrib import admin
+> from home.models import Color, Person
+> 
+> 
+> admin.site.register(Color)
+> admin.site.register(Person)
+> ```
+
+
