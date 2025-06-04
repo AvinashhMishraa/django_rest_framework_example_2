@@ -801,3 +801,12 @@ To create a **foreign key**, let's create a model <code>Color</code> first &nbsp
 
 <code>py manage.py makemigrations</code> <br>
 <code>py manage.py migrate</code>
+
+<br>
+
+Now after running the server, you will find all persons created till now have a color field attached to it. <br>
+However there is no value assigned to this field. <br>
+Let's create some colors through **admin**. <br>
+You can also use POSTMAN.
+
+<br>
