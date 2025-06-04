@@ -739,7 +739,6 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > To create a **foreign key**, let's create a model <code>Color</code> first &nbsp;**:**
-> 
 > <br>
 > 
 > > <code>person_api/home/models.py</code>
