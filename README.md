@@ -801,7 +801,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-<code>py manage.py runserver</code>
+<code>py manage.py runserver</code> <br>
 Now after running the server, you will find all persons created till now have a color field attached to it. <br>
 However there is no value assigned to this field. <br>
 Let's create some colors through **admin**. <br>
