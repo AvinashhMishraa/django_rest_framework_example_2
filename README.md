@@ -810,7 +810,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > <code>py manage.py createsuperuser</code>                      <br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;username &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  - XXXXX  <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;username &nbsp;&nbsp;  - XXXXX  <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;email &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;    - XXXXX  <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎ &nbsp;&nbsp;password &nbsp;&nbsp;&nbsp;&nbsp;  - XXXXX  <br>
 
