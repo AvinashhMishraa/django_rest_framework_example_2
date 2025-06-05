@@ -915,18 +915,7 @@ Let's see how ?
 > 
 >     def validate(self, data):
 > 
->         # Handle 'name' validation
->         special_characters = "!@#$%^&*()-+?_=,<>/"
->         name = data.get('name', self.instance.name if self.instance else None)
->         if name and any(c in special_characters for c in name):
->             raise serializers.ValidationError('Name cannot contain special characters.')
-> 
->         # Handle 'age' validation
->         age = data.get('age', self.instance.age if self.instance else None)
->         if age < 18:
->             raise serializers.ValidationError('Age should be 18 or older.')
->         
->         return data
+>         ...
 > ```
 
 
