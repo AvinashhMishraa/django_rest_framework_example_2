@@ -866,30 +866,31 @@ Let's see how ?
 <br>
 
 > But first let's remove persons with no color. <br>
+>
 > > <code>person_api/home/views.py</code>
-> > ```
-> > 
-> > ...
-> > 
-> > 
-> > # /api/person/
-> > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
-> > def person(request):
-> >     if request.method == 'GET':
-> >         objs = Person.objects.filter(color__isnull = False)                  # objs = Person.objects.all()
-> >         serializer = PersonSerializer(objs, many = True)
-> >         return Response(serializer.data)
-> >     
-> >     elif request.method == 'POST':
-> >         ...
-> >     
-> >     elif request.method == 'PUT':
-> >         ...
-> >     
-> >     elif request.method == 'PATCH':
-> >         ...
-> >		
-> >     else:
-> >	        ...
-> > ```
+> ```
+> 
+> ...
+> 
+> 
+> # /api/person/
+> @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+> def person(request):
+>     if request.method == 'GET':
+>         objs = Person.objects.filter(color__isnull = False)                  # objs = Person.objects.all()
+>         serializer = PersonSerializer(objs, many = True)
+>         return Response(serializer.data)
+>     
+>     elif request.method == 'POST':
+>         ...
+>     
+>     elif request.method == 'PUT':
+>         ...
+>     
+>     elif request.method == 'PATCH':
+>         ...
+>		
+>     else:
+>	        ...
+> ```
 
