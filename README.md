@@ -883,16 +883,16 @@ you will find <code>"Page Not Found"</code> error.
 > >         return Response(serializer.data)
 > >     
 > >     elif request.method == 'POST':
-> >         ...
+> >         ●●●
 > >     
 > >     elif request.method == 'PUT':
-> >         ...
+> >         ●●●
 > >     
 > >     elif request.method == 'PATCH':
-> >         ...
+> >         ●●●
 > >		
 > >     else:
-> >	        ...
+> >	        ●●●
 > > ```
 > <br>
 > 
@@ -913,7 +913,6 @@ you will find <code>"Page Not Found"</code> error.
 > >         depth = 1
 > > 
 > >     def validate(self, data):
-> >         ...
 > >         ●●●
 > > ```
 
