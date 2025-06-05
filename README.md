@@ -320,6 +320,7 @@
 > >             serializer.save()
 > >             return Response(serializer.data)
 > >         return Response(serializer.errors)
+> >
 > >     else:
 > >         data = request.data
 > >         obj = Person.objects.get(id = data['id'])
