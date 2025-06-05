@@ -856,3 +856,42 @@ you will find <code>"Page Not Found"</code> error.
 > >     }
 > > ]
 > > ```
+
+<br>
+
+Now how to know which color the person 'A1' likes from such an output. <br>
+For this, the color **id** needs to be replaced by color **name**.     <br>
+Let's see how ?
+
+<br>
+
+> But first let's remove persons with no color. 
+> We can do it by replacing <code>objs = Person.objects.all()</code> with <code>objs = Person.objects.filter(color__isnull = False)</code> in the function view <code>person()</code>
+> 
+> > <code>person_api/home/views.py</code>
+> > ```
+> > 
+> > ...
+> > 
+> > 
+> > # /api/person/
+> > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+> > def person(request):
+> >     if request.method == 'GET':
+> >         objs = Person.objects.filter(color__isnull = False)                  # objs = Person.objects.all()
+> >         serializer = PersonSerializer(objs, many = True)
+> >         return Response(serializer.data)
+> >     
+> >     elif request.method == 'POST':
+> >   	    ...
+> >     
+> >     elif request.method == 'PUT':
+> >  		...
+> >     
+> >     elif request.method == 'PATCH':
+> >    	    ...
+> >		
+> >     else:
+> >		    ...
+> > ```
+
