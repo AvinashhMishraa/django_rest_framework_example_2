@@ -932,12 +932,12 @@ you will find <code>"Page Not Found"</code> error.
 >         }
 >     },
 >     {
->         "id": 9,
->         "name": "Rohan",
->         "age": 12,
+>         "id": 3,
+>         "name": "A3",
+>         "age": 40,
 >         "color": {
->             "id": 1,
->             "color_name": "RED"
+>             "id": 2,
+>             "color_name": "BLUE"
 >         }
 >     }
 > ]
