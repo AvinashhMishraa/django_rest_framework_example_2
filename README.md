@@ -943,3 +943,19 @@ you will find <code>"Page Not Found"</code> error.
 > ]
 > ```
 
+<br>
+
+> The best way to change the display sequence of fields of a Model or in simple words to control the order of fields in a Django Rest Framework API is through serializer. <br>
+> Just remove <code>fields = '__all__'</code> and manually specify field order in the <code>PersonSerializer</code> class. <br>
+> ```
+> class PersonSerializer(serializers.ModelSerializer):
+> 
+>     color = ColorSerializer()
+> 
+>     class Meta:
+>         model = Person
+>         # fields = '__all__'
+>         fields = ['id', 'name', 'age', 'color']            # Custom order here
+> ```
+
+
