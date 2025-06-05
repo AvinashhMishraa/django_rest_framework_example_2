@@ -13,7 +13,7 @@
 > <code>person_api/core/settings.py</code>
 > ```
 > INSTALLED_APPS = [
->     ...,
+>     ●●●,
 >     'rest_framework',
 > ]
 > ```
@@ -158,13 +158,13 @@
 > > ```
 > > @api_view(['POST'])
 > > def index(request):
-> >     ...
+> >     ●●●
 > >     elif request.method == 'POST' :
 > >         data = request.data
 > >         print(data)
 > >         print(data['name'])
 > >         print(data['age'])
-> >     ...
+> >     ●●●
 > > ```
 > 
 >
@@ -175,12 +175,12 @@
 > > ```
 > > @api_view(['POST'])
 > > def index(request):
-> >     ...
+> >     ●●●
 > >     elif request.method == 'POST' :
 > >         data = request.data
 > >         print(data)
 > >         return Response(data)
-> >     ...
+> >     ●●●
 > > ```
 
 <br>
