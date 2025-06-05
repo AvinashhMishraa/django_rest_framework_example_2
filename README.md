@@ -864,6 +864,7 @@ you will find <code>"Page Not Found"</code> error.
 > Let's see how ?
 > 
 > <br>
+> 
 > > But first let's remove persons with no color. <br>
 > > To do this, just replace <code>objs = Person.objects.all()</code> with <code>objs = Person.objects.filter(color__isnull = False)</code>
 > >
