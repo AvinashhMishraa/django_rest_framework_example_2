@@ -862,7 +862,6 @@ you will find <code>"Page Not Found"</code> error.
 > Now how to know which color the person <ins>**A1**</ins> likes from such an output. <br>
 > For this, the color <ins>**id**</ins> needs to be replaced by color <ins>**name**</ins>.     <br>
 > Let's see how ?
-> 
 > <br>
 > 
 > > But first let's remove persons with no color. <br>
@@ -894,7 +893,6 @@ you will find <code>"Page Not Found"</code> error.
 > >     else:
 > >	      ...
 > > ```
->
 > <br>
 > 
 > > Now to identify the **color name** for each person, just add <code>depth</code> in the <code>Meta</code> class of the <code>PersonSerializer</code> class.
