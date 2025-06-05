@@ -895,3 +895,38 @@ Let's see how ?
 >	      ...
 > ```
 
+<br>
+
+> Now to identify the **color name** for each person, just add <code>depth</code> in the <code>Meta</code> class of the <code>PersonSerializer</code> class.
+> <br>
+>
+> <code>person_api/home/serializers.py</code>
+> ```
+> from rest_framework import serializers
+> from .models import Person
+>
+>
+> class PersonSerializer(serializers.ModelSerializer):
+>
+>     class Meta:
+>         model = Person
+>         fields = '__all__'
+>         depth = 1
+> 
+>     def validate(self, data):
+> 
+>         # Handle 'name' validation
+>         special_characters = "!@#$%^&*()-+?_=,<>/"
+>         name = data.get('name', self.instance.name if self.instance else None)
+>         if name and any(c in special_characters for c in name):
+>             raise serializers.ValidationError('Name cannot contain special characters.')
+> 
+>         # Handle 'age' validation
+>         age = data.get('age', self.instance.age if self.instance else None)
+>         if age < 18:
+>             raise serializers.ValidationError('Age should be 18 or older.')
+>         
+>         return data
+> ```
+
+
