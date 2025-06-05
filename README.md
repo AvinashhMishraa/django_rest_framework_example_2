@@ -865,7 +865,7 @@ Let's see how ?
 
 <br>
 
-> But first let's remove persons with no color. 
+> But first let's remove persons with no color. <br>
 > We can do it by replacing <code>objs = Person.objects.all()</code> with <code>objs = Person.objects.filter(color__isnull = False)</code> in the function view <code>person()</code>
 > 
 > > <code>person_api/home/views.py</code>
