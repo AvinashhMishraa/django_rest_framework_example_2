@@ -859,7 +859,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-Now how to know which color the person <ins>**'A1'**</ins> likes from such an output. <br>
+Now how to know which color the person <ins>**A1**</ins> likes from such an output. <br>
 For this, the color <ins>**id**</ins> needs to be replaced by color <ins>**name**</ins>.     <br>
 Let's see how ?
 
