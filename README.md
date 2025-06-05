@@ -950,7 +950,7 @@ you will find <code>"Page Not Found"</code> error.
 >
 > 
 > > Just remove <code>fields = '__all__'</code> and manually specify field order in the <code>PersonSerializer</code> class. <br>
-> >
+> > <br>
 > > 
 > > <code>person_api/home/serializers.py</code>
 > > ```
