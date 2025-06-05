@@ -859,62 +859,62 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-Now how to know which color the person <ins>**A1**</ins> likes from such an output. <br>
-For this, the color <ins>**id**</ins> needs to be replaced by color <ins>**name**</ins>.     <br>
-Let's see how ?
-
-<br>
-
-> But first let's remove persons with no color. <br>
-> To do this, just replace <code>objs = Person.objects.all()</code> with <code>objs = Person.objects.filter(color__isnull = False)</code>
->
-> <code>person_api/home/views.py</code>
-> ```
+> Now how to know which color the person <ins>**A1**</ins> likes from such an output. <br>
+> For this, the color <ins>**id**</ins> needs to be replaced by color <ins>**name**</ins>.     <br>
+> Let's see how ?
 > 
-> ...
-> 
-> 
-> # /api/person/
-> @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
-> def person(request):
->     if request.method == 'GET':
->         objs = Person.objects.filter(color__isnull = False)                  # objs = Person.objects.all()
->         serializer = PersonSerializer(objs, many = True)
->         return Response(serializer.data)
->     
->     elif request.method == 'POST':
->         ...
->     
->     elif request.method == 'PUT':
->         ...
->     
->     elif request.method == 'PATCH':
->         ...
->		
->     else:
->	      ...
-> ```
-
-<br>
-
-> Now to identify the **color name** for each person, just add <code>depth</code> in the <code>Meta</code> class of the <code>PersonSerializer</code> class.
 > <br>
->
-> <code>person_api/home/serializers.py</code>
-> ```
-> from rest_framework import serializers
-> from .models import Person
->
->
-> class PersonSerializer(serializers.ModelSerializer):
->
->     class Meta:
->         model = Person
->         fields = '__all__'
->         depth = 1
 > 
->     def validate(self, data):
->         ...
-> ```
+> > But first let's remove persons with no color. <br>
+> > To do this, just replace <code>objs = Person.objects.all()</code> with <code>objs = Person.objects.filter(color__isnull = False)</code>
+> >
+> > <code>person_api/home/views.py</code>
+> > ```
+> > 
+> > ...
+> > 
+> > 
+> > # /api/person/
+> > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+> > def person(request):
+> >     if request.method == 'GET':
+> >         objs = Person.objects.filter(color__isnull = False)                  # objs = Person.objects.all()
+> >         serializer = PersonSerializer(objs, many = True)
+> >         return Response(serializer.data)
+> >     
+> >     elif request.method == 'POST':
+> >         ...
+> >     
+> >     elif request.method == 'PUT':
+> >         ...
+> >     
+> >     elif request.method == 'PATCH':
+> >         ...
+> >		
+> >     else:
+> >	      ...
+> > ```
+>
+> <br>
+> 
+> > Now to identify the **color name** for each person, just add <code>depth</code> in the <code>Meta</code> class of the <code>PersonSerializer</code> class.
+> > <br>
+> >
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > from rest_framework import serializers
+> > from .models import Person
+> >
+> >
+> > class PersonSerializer(serializers.ModelSerializer):
+> >
+> >     class Meta:
+> >         model = Person
+> >         fields = '__all__'
+> >         depth = 1
+> > 
+> >     def validate(self, data):
+> >         ...
+> > ```
 
 
