@@ -914,7 +914,6 @@ Let's see how ?
 >         depth = 1
 > 
 >     def validate(self, data):
-> 
 >         ...
 > ```
 
