@@ -965,27 +965,27 @@ you will find <code>"Page Not Found"</code> error.
 > >     def validate(self, data):
 > >         ●●●
 > > ```
-> > 
-> > ```
-> > [
-> >     {
-> >         "id": 1,
-> >         "name": "A1",
-> >         "age": 25,
-> >         "color": {
-> >             "color_name": "RED"
-> >         }
-> >     },
-> >     {
-> >         "id": 3,
-> >         "name": "A3",
-> >         "age": 40,
-> >         "color": {
-> >             "color_name": "BLUE"
-> >         }
-> >     }
-> > ]
-> > ```
+> 
+> ```
+> [
+>     {
+>         "id": 1,
+>         "name": "A1",
+>         "age": 25,
+>         "color": {
+>             "color_name": "RED"
+>         }
+>     },
+>     {
+>         "id": 3,
+>         "name": "A3",
+>         "age": 40,
+>         "color": {
+>             "color_name": "BLUE"
+>         }
+>     }
+> ]
+> ```
 
 <br>
 
