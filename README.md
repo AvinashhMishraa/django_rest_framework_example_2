@@ -830,10 +830,10 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 > 
-> > Go to https://localhost/admin/ and select a color from the dropdown for a couple of persons.
+> > Go to http://localhost:8000/admin/ and select a color from the dropdown for a couple of persons.
 > <br>
 > 
-> > Verify it &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>GET</code> &nbsp;&nbsp;https://localhost/api/person/
+> > Verify it &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > [
 > >     {
