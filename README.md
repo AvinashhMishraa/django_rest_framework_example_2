@@ -962,8 +962,6 @@ you will find <code>"Page Not Found"</code> error.
 > >         fields = ['id', 'name', 'age', 'color']            # Custom order
 > > ```
 > > 
-> > <br>
-> > 
 > > ```
 > > [
 > >     {
