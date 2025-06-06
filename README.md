@@ -983,21 +983,19 @@ you will find <code>"Page Not Found"</code> error.
 > [
 >     {
 >         "id": 1,
->         "name": "A1",
->         "age": 25,
 >         "color": {
->             "id": 1,
 >             "color_name": "RED"
->         }
+>         },
+>         "name": "A1",
+>         "age": 25
 >     },
 >     {
 >         "id": 3,
->         "name": "A3",
->         "age": 40,
 >         "color": {
->             "id": 2,
 >             "color_name": "BLUE"
->         }
+>         },
+>         "name": "A3",
+>         "age": 40
 >     }
 > ]
 > ```
