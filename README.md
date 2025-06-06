@@ -951,31 +951,31 @@ you will find <code>"Page Not Found"</code> error.
 >
 > We have to remove <code>depth = 1</code> from <code>PersonSerializer</code> class and then create a class of <code>ColorSerializer</code> which will help Django Rest Framework to understand the structure of the data that needs to be passed ?
 > 
-> <code>person_api/home/serializers.py</code>
-> ```
-> from rest_framework import serializers
-> from .models import Person, Color
-> 
-> 
-> class ColorSerializer(serializers.ModelSerializer):
->     
->     class Meta:
->         model = Color
->         fields = ['color_name']
-> 
-> 
-> class PersonSerializer(serializers.ModelSerializer):
->     
->     color = ColorSerializer()
-> 
->     class Meta:
->         model = Person
->         fields = '__all__'
->         # depth = 1
-> 
->     def validate(self, data):
->      	  ●●●
-> ```
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > from rest_framework import serializers
+> > from .models import Person, Color
+> > 
+> > 
+> > class ColorSerializer(serializers.ModelSerializer):
+> >     
+> >     class Meta:
+> >         model = Color
+> >         fields = ['color_name']
+> > 
+> > 
+> > class PersonSerializer(serializers.ModelSerializer):
+> >     
+> >     color = ColorSerializer()
+> > 
+> >     class Meta:
+> >         model = Person
+> >         fields = '__all__'
+> >         # depth = 1
+> > 
+> >     def validate(self, data):
+> >      	  ●●●
+> > ```
 >
 > ```
 > [
