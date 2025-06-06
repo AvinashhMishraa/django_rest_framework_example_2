@@ -986,10 +986,11 @@ you will find <code>"Page Not Found"</code> error.
 > >     }
 > > ]
 > > ```
->
-> <br>
->
+
+<br>
+
 > And if you want to display other fields too like the <code>id</code> of the color :
+> <code>person_api/home/serializers.py</code>
 > ```
 > ●●●
 >
