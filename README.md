@@ -989,16 +989,17 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> And if you want to display other fields too like the <code>id</code> of the color :
-> <code>person_api/home/serializers.py</code>
-> ```
-> ●●●
+> And if you want to display other fields too like the <code>id</code> of the color : <br>
 >
-> class ColorSerializer(serializers.ModelSerializer):
->     
->     class Meta:
->         model = Color
->         fields = ['color_name', 'id']
->
-> ●●●
-> ```
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > ●●●
+> >
+> > class ColorSerializer(serializers.ModelSerializer):
+> >     
+> >     class Meta:
+> >         model = Color
+> >         fields = ['color_name', 'id']
+> >
+> > ●●●
+> > ```
