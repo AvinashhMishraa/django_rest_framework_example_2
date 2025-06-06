@@ -960,7 +960,7 @@ you will find <code>"Page Not Found"</code> error.
 > >     class Meta:
 > >         model = Person
 > >         # fields = '__all__'
-> >         fields = ['id', 'name', 'age', 'color']            # Custom order here
+> >         fields = ['id', 'name', 'age', 'color']            # Custom order
 > > ```
 
 
