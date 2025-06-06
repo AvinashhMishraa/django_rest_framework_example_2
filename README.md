@@ -951,6 +951,8 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > <code>person_api/home/serializers.py</code>
 > > ```
+> > ●●●
+> > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
 > >     color = ColorSerializer()
@@ -959,6 +961,9 @@ you will find <code>"Page Not Found"</code> error.
 > >         model = Person
 > >         # fields = '__all__'
 > >         fields = ['id', 'name', 'age', 'color']            # Custom order
+> >
+> >     def validate(self, data):
+> >         ●●●
 > > ```
 > > 
 > > ```
@@ -986,9 +991,13 @@ you will find <code>"Page Not Found"</code> error.
 >
 > And if you want to display other fields too like the <code>id</code> of the color :
 > ```
+> ●●●
+>
 > class ColorSerializer(serializers.ModelSerializer):
 >     
 >     class Meta:
 >         model = Color
 >         fields = ['color_name', 'id']
+>
+> ●●●
 > ```
