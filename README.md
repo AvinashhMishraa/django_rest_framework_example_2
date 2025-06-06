@@ -944,7 +944,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > The best way to control the order of fields of a Model in a Django Rest Framework API is through <ins>**serializer**</ins>.
-> 
+> <br>
 > 
 > > Just remove <code>fields = '\_\_all__'</code> and manually specify field order in the <code>PersonSerializer</code> class. <br>
 > > 
@@ -965,6 +965,7 @@ you will find <code>"Page Not Found"</code> error.
 > >     def validate(self, data):
 > >         ●●●
 > > ```
+> <br>
 > 
 > ```
 > [
