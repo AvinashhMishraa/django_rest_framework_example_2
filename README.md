@@ -945,6 +945,39 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
+> But what if we want only the <code>color_name</code> in the output and not any other field of the <code>Color</code> model? <br>
+> In that case, we can't use <code>depth</code>. <br>
+> We have to remove <code>depth = 1</code> from <code>PersonSerializer</code> class and then create a class of <code>ColorSerializer</code> which will help Django Rest Framework for understanding what data will be in that particular field ?
+>
+>
+> ```
+> from rest_framework import serializers
+> from .models import Person, Color
+> 
+> 
+> class ColorSerializer(serializers.ModelSerializer):
+>     
+>     class Meta:
+>         model = Color
+>         fields = ['color_name']
+> 
+> 
+> class PersonSerializer(serializers.ModelSerializer):
+>     
+>     color = ColorSerializer()
+> 
+>     class Meta:
+>         model = Person
+>         fields = '__all__'
+>         # depth = 1
+> 
+>     def validate(self, data):
+>      	  ...
+> 
+> ```
+
+<br>
+
 > The best way to control the order of fields of a Model in a Django Rest Framework API is through <ins>**serializer**</ins>.
 > 
 > <br>
