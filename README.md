@@ -949,9 +949,9 @@ you will find <code>"Page Not Found"</code> error.
 >
 > In that case, we can't use <code>depth</code>. <br>
 >
-> We have to remove <code>depth = 1</code> from <code>PersonSerializer</code> class and then create a class of <code>ColorSerializer</code> which will help Django Rest Framework for understanding what data will be in that particular field ?
->
->
+> We have to remove <code>depth = 1</code> from <code>PersonSerializer</code> class and then create a class of <code>ColorSerializer</code> which will help Django Rest Framework to understand the structure of the data that needs to be passed ?
+> 
+> 
 > ```
 > from rest_framework import serializers
 > from .models import Person, Color
