@@ -960,5 +960,25 @@ you will find <code>"Page Not Found"</code> error.
 > >         # fields = '__all__'
 > >         fields = ['id', 'name', 'age', 'color']            # Custom order
 > > ```
-
+>
+> ```
+> [
+>     {
+>         "id": 1,
+>         "name": "A1",
+>         "age": 25,
+>         "color": {
+>             "color_name": "RED"
+>         }
+>     },
+>     {
+>         "id": 3,
+>         "name": "A3",
+>         "age": 40,
+>         "color": {
+>             "color_name": "BLUE"
+>         }
+>     }
+> ]
+>```
 
