@@ -946,7 +946,9 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > But what if we want only the <code>color_name</code> in the output and not any other field of the <code>Color</code> model? <br>
+>
 > In that case, we can't use <code>depth</code>. <br>
+>
 > We have to remove <code>depth = 1</code> from <code>PersonSerializer</code> class and then create a class of <code>ColorSerializer</code> which will help Django Rest Framework for understanding what data will be in that particular field ?
 >
 >
