@@ -1144,7 +1144,7 @@ you will find <code>"Page Not Found"</code> error.
 >     class Meta:
 >         model = Person
 >         # fields = '__all__'
->         fields = ['id', 'name', 'age', 'color', 'country']             # line added
+>         fields = ['id', 'name', 'age', 'color', 'country']             # field added
 > 
 >     def get_country(self, obj):                                        # method added
 >         return "India"
