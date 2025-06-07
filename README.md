@@ -1155,7 +1155,7 @@ you will find <code>"Page Not Found"</code> error.
 > >     def validate(self, data):
 > >         ●●●
 > > ```
->
+> <br>
 >
 > > http://localhost:8000/api/person/
 > > ```
