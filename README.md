@@ -1182,3 +1182,62 @@ you will find <code>"Page Not Found"</code> error.
 > >     }
 > > ]
 > > ```
+
+<br>
+
+Let's see another example :
+
+> ```
+> class PersonSerializer(serializers.ModelSerializer):
+> 
+>     color = ColorSerializer()
+>     color_info = serializers.SerializerMethodField()                              # line added
+> 
+>     class Meta:
+>         model = Person
+>         # fields = '__all__'
+>         fields = ['id', 'name', 'age', 'color', 'color_info']                     # field added
+>         # depth = 1
+> 
+>     def get_color_info(self, obj):                                                # method added
+>         color_obj = Color.objects.get(id = obj.color.id)
+>         return {'color_name' : color_obj.color_name, 'hex_code' : '#000'}
+> 
+>     def validate(self, data):
+> 		  ●●●
+> ```
+>
+>
+> http://localhost:8000/api/person/
+> ```
+> [
+>     {
+>         "id": 1,
+>         "name": "A1",
+>         "age": 25,
+>         "color": {
+>             "id": 1,
+>             "color_name": "RED"
+>         },
+>         "color_info": {
+>             "color_name": "RED",
+>             "hex_code": "#000"
+>         }
+>     },
+>     {
+>         "id": 3,
+>         "name": "A3",
+>         "age": 40,
+>         "color": {
+>             "id": 2,
+>             "color_name": "BLUE"
+>         },
+>         "color_info": {
+>             "color_name": "BLUE",
+>             "hex_code": "#000"
+>         }
+>     }
+> ]
+> ```
+
+
