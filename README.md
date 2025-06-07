@@ -1137,48 +1137,48 @@ you will find <code>"Page Not Found"</code> error.
 > To create a field, you need to call it from <code>SerializerMethodField()</code> and then write a method <code>get_\<field_name></code>.
 >
 > 
-> <code>person_api/home/serializers.py</code>
-> ```
-> class PersonSerializer(serializers.ModelSerializer):
-> 
->     color = ColorSerializer()
->     country = serializers.SerializerMethodField()                      # line added
-> 
->     class Meta:
->         model = Person
->         # fields = '__all__'
->         fields = ['id', 'name', 'age', 'color', 'country']             # field added
-> 
->     def get_country(self, obj):                                        # method added
->         return "India"
-> 
->     def validate(self, data):
->         ●●●
-> ```
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > class PersonSerializer(serializers.ModelSerializer):
+> > 
+> >     color = ColorSerializer()
+> >     country = serializers.SerializerMethodField()                      # line added
+> > 
+> >     class Meta:
+> >         model = Person
+> >         # fields = '__all__'
+> >         fields = ['id', 'name', 'age', 'color', 'country']             # field added
+> > 
+> >     def get_country(self, obj):                                        # method added
+> >         return "India"
+> > 
+> >     def validate(self, data):
+> >         ●●●
+> > ```
 >
 >
-> http://localhost:8000/api/person/
-> ```
-> 
->     {
->         "id": 1,
->         "name": "A1",
->         "age": 25,
->         "color": {
->             "id": 1,
->             "color_name": "RED"
->         },
->         "country": "India"
->     },
->     {
->         "id": 3,
->         "name": "A3",
->         "age": 40,
->         "color": {
->             "id": 2,
->             "color_name": "BLUE"
->         },
->         "country": "India"
->     }
-> ]
-> ```
+> > http://localhost:8000/api/person/
+> > ```
+> > 
+> >     {
+> >         "id": 1,
+> >         "name": "A1",
+> >         "age": 25,
+> >         "color": {
+> >             "id": 1,
+> >             "color_name": "RED"
+> >         },
+> >         "country": "India"
+> >     },
+> >     {
+> >         "id": 3,
+> >         "name": "A3",
+> >         "age": 40,
+> >         "color": {
+> >             "id": 2,
+> >             "color_name": "BLUE"
+> >         },
+> >         "country": "India"
+> >     }
+> > ]
+> > ```
