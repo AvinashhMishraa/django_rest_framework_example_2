@@ -1206,7 +1206,7 @@ you will find <code>"Page Not Found"</code> error.
 >         return {'color_name' : color_obj.color_name, 'hex_code' : '#000'}
 > 
 >     def validate(self, data):
-> 		  ●●●
+>         ●●●
 > ```
 >
 >
