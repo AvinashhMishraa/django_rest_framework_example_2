@@ -1112,6 +1112,7 @@ you will find <code>"Page Not Found"</code> error.
 > | Performance control           | ❌ Less control         | ✅ Can optimize queries manually           |
 > | Fine-grained validation       | ❌ No                   | ✅ Yes                                     |
 > | Recommended for production?   | ❌ Small use cases only | ✅ Always preferred for complex relations  |
+>
 > <br><br>
 > <br>
 > <h4>♦️ &nbsp;When to use what ?</h4>
