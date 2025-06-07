@@ -1103,6 +1103,7 @@ you will find <code>"Page Not Found"</code> error.
 > <br><br>
 >
 > <h4>**<code>depth</code> &nbsp;vs&nbsp; <code>nested serializer</code>**</h4>
+>
 > | Feature                       | `depth`                  | Nested `serializer`                        |
 > | ----------------------------- | ------------------------ | ------------------------------------------ |
 > | Ease of use                   | Very easy                | Requires more code                         |
