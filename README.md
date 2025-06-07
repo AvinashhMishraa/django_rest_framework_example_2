@@ -1131,4 +1131,24 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-
+> If you want to create a new field for a <code>serializer</code> without actually adding a field into the corresponding model :
+>
+>
+> <code>person_api/home/serializers.py</code>
+> ```
+> class PersonSerializer(serializers.ModelSerializer):
+> 
+>     color = ColorSerializer()
+>     country = serializers.SerializerMethodField()                      # line added
+> 
+>     class Meta:
+>         model = Person
+>         # fields = '__all__'
+>         fields = ['id', 'name', 'age', 'color', 'country']             # line added
+> 
+>     def get_country(self, obj):                                        # method added
+>         return "India"
+> 
+>     def validate(self, data):
+> 		  ●●●
+> ```
