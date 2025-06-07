@@ -1113,9 +1113,9 @@ you will find <code>"Page Not Found"</code> error.
 > | Fine-grained validation       | ❌ No                   | ✅ Yes                                     |
 > | Recommended for production?   | ❌ Small use cases only | ✅ Always preferred for complex relations  |
 > 
-> <br>
+> <br><br>
 >
-> 
+> <h4>When to use what ?</h4>
 > | Use Case                                                      | Use                                         |
 > | ------------------------------------------------------------- | ------------------------------------------- |
 > | Quick read-only API of related fields                         | `depth=1`                                   |
