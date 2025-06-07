@@ -1185,7 +1185,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> Let's see another example :
+> Let's see another example where we add <code>color_info</code> field in the PersonSerializer class :
 > 
 > 
 >  <code>person_api/home/serializers.py</code>
@@ -1226,7 +1226,7 @@ you will find <code>"Page Not Found"</code> error.
 >         },
 >         "color_info": {
 >             "color_name": "RED",
->             "hex_code": "#000"
+>             "hex_code": "#ff0000"
 >         }
 >     },
 >     {
@@ -1239,7 +1239,7 @@ you will find <code>"Page Not Found"</code> error.
 >         },
 >         "color_info": {
 >             "color_name": "BLUE",
->             "hex_code": "#000"
+>             "hex_code": "#0000ff"
 >         }
 >     }
 > ]
