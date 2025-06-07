@@ -1092,7 +1092,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-<h3>Difference &nbsp;between &nbsp;using &nbsp;<ins><code>depth</code> in a serializer class</ins> &nbsp;&&nbsp; <ins>nested serializer</ins></h3>
+<h3>Difference &nbsp;between &nbsp;using &nbsp;&nbsp;&nbsp;<ins><code>depth</code> in a serializer class</ins> &nbsp;&nbsp;&&nbsp;&nbsp; <ins>nested serializer</ins></h3>
 
 <br>
 
