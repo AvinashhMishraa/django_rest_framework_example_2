@@ -1092,7 +1092,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-<h3>Difference &nbsp;between &nbsp;using &nbsp;<ins><code>depth</code> &nbsp;in &nbsp;a &nbsp;serializer &nbsp;class</ins> &nbsp;&&nbsp; <ins>nested serializer</ins></h3>
+<h3>Difference &nbsp;between &nbsp;using &nbsp;<ins><code>depth</code> &nbsp;in &nbsp;a &nbsp;serializer &nbsp;class</ins> &nbsp;&&nbsp; <ins>nested &nbsp;serializer</ins></h3>
 
 <br>
 
@@ -1102,7 +1102,7 @@ you will find <code>"Page Not Found"</code> error.
 > Whereas calling the serializer class (let say model **'A'**) inside another serializer class (let say model **'B'**) gives you the control of customization and allows you to chose as to <ins>which fields of the model **'B'** you want to serialize</ins>. In short, it gives **full control** over how related objects are serialized.
 > <br><br>
 >
-> <h4>🔹 &nbsp;<code>depth</code> &nbsp;&nbsp;vs&nbsp;&nbsp; <code>nested &nbsp;serializer</code></h4>
+> <h4>🔹 &nbsp;<code>depth</code> &nbsp;&nbsp;vs&nbsp;&nbsp; <code>nested serializer</code></h4>
 >
 > | Feature                       | `depth`                  | Nested `serializer`                        |
 > | ----------------------------- | ------------------------ | ------------------------------------------ |
