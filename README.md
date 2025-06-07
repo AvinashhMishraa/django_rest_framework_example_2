@@ -1116,6 +1116,7 @@ you will find <code>"Page Not Found"</code> error.
 > <br><br>
 >
 > <h4>When to use what ?</h4>
+>
 > | Use Case                                                      | Use                                         |
 > | ------------------------------------------------------------- | ------------------------------------------- |
 > | Quick read-only API of related fields                         | `depth=1`                                   |
