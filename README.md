@@ -1094,8 +1094,10 @@ you will find <code>"Page Not Found"</code> error.
 
 <h3>Difference &nbsp;between &nbsp;using &nbsp;<ins><code>depth</code> &nbsp;in &nbsp;a &nbsp;serializer &nbsp;class</ins> &nbsp;&&nbsp; <ins>nested serializer</ins></h3>
 
-<code>depth</code> is a shortcut to include related models in the API response automatically. It is used in a serilizer class to serialize all fields of different related models. It automatically follows foreign key and reverse relationships and includes the full nested objects.
-
-Whereas calling the serializer class (let say model 'A') inside another serializer class (let say model 'B') gives you the control of customization and allows you to chose as to which fields of the model 'B' you want to serialize. In short, it gives full control over how related objects are serialized.
-
+> <code>depth</code> is a shortcut to include related models in the API response automatically. It is used in a serilizer class to serialize all fields of different related models. It automatically follows foreign key and reverse relationships and includes the full nested objects.
+> <br>
+> 
+> Whereas calling the serializer class (let say model 'A') inside another serializer class (let say model 'B') gives you the control of customization and allows you to chose as to which fields of the model 'B' you want to serialize. In short, it gives full control over how related objects are serialized.
+>
+> 
 
