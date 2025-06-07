@@ -1159,7 +1159,7 @@ you will find <code>"Page Not Found"</code> error.
 >
 > > http://localhost:8000/api/person/
 > > ```
-> > 
+> > [
 > >     {
 > >         "id": 1,
 > >         "name": "A1",
