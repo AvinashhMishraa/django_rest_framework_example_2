@@ -1190,24 +1190,42 @@ you will find <code>"Page Not Found"</code> error.
 > 
 >  <code>person_api/home/serializers.py</code>
 > ```
+> from rest_framework import serializers
+> from .models import Person, Color
+> from matplotlib import colors as mcolors                                 # Module imported
+> 
+> 
+> def color_name_to_hex(color_name):                                       # Method added
+>     try:
+>         return mcolors.to_hex(color_name)
+>     except ValueError:
+>         return None
+>
+> 
+> class ColorSerializer(serializers.ModelSerializer):
+>     
+>     class Meta:
+>         model = Color
+>         fields = ['id', 'color_name']
+>
+>
 > class PersonSerializer(serializers.ModelSerializer):
 > 
 >     color = ColorSerializer()
->     color_info = serializers.SerializerMethodField()                              # line added
+>     color_info = serializers.SerializerMethodField()
 > 
 >     class Meta:
 >         model = Person
->         # fields = '__all__'
->         fields = ['id', 'name', 'age', 'color', 'color_info']                     # field added
->         # depth = 1
+>         fields = ['id', 'name', 'age', 'color', 'color_info']             # Custom order here
 > 
->     def get_color_info(self, obj):                                                # method added
+>     def get_color_info(self, obj):
 >         color_obj = Color.objects.get(id = obj.color.id)
+>         hex_code = color_name_to_hex(color_obj.color_name)                # Calls the color_name_to_hex() method
 >         return {
 >             'color_name' : color_obj.color_name, 
->             'hex_code' : '#000'
+>             'hex_code': hex_code or '#000'                                # Fallback if invalid
 >         }
-> 
+>     
 >     def validate(self, data):
 >         ●●●
 > ```
@@ -1244,5 +1262,8 @@ you will find <code>"Page Not Found"</code> error.
 >     }
 > ]
 > ```
+
+
+
 
 
