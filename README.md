@@ -1114,12 +1114,12 @@ you will find <code>"Page Not Found"</code> error.
 > <br>
 >
 > 
-> | Use Case                              | Use                                         |
-> | ------------------------------------- | ------------------------------------------- |
-> | Quick read-only API of related fields | `depth=1`                                   |
-> | You want to <code>POST</code>/<code>PUT</code>code> nested objects   | Nested `serializer`                         |
-> | You want custom logic/validation      | Nested `serializer`                         |
-> | You care about performance            | Nested `serializer` (with `select_related`) |
+> | Use Case                                                      | Use                                         |
+> | ------------------------------------------------------------- | ------------------------------------------- |
+> | Quick read-only API of related fields                         | `depth=1`                                   |
+> | You want to <code>POST</code>/<code>PUT</code> nested objects | Nested `serializer`                         |
+> | You want custom logic/validation                              | Nested `serializer`                         |
+> | You care about performance                                    | Nested `serializer` (with `select_related`) |
 
 
 
