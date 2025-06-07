@@ -1203,7 +1203,10 @@ you will find <code>"Page Not Found"</code> error.
 > 
 >     def get_color_info(self, obj):                                                # method added
 >         color_obj = Color.objects.get(id = obj.color.id)
->         return {'color_name' : color_obj.color_name, 'hex_code' : '#000'}
+>         return {
+>             'color_name' : color_obj.color_name, 
+>             'hex_code' : '#000'
+>         }
 > 
 >     def validate(self, data):
 >         ●●●
