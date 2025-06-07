@@ -1135,7 +1135,7 @@ you will find <code>"Page Not Found"</code> error.
 >
 > 
 > To create a field, you need to call it from <code>SerializerMethodField()</code> and then write a method <code>get_\<field_name></code>.
->
+> <br>
 > 
 > > <code>person_api/home/serializers.py</code>
 > > ```
