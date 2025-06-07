@@ -1123,5 +1123,12 @@ you will find <code>"Page Not Found"</code> error.
 > | You want custom logic/validation                              | Nested `serializer`                         |
 > | You care about performance                                    | Nested `serializer` (with `select_related`) |
 
+<br>
+
+<div>
+    <h1>SerializerMethodField()</h1>
+</div>
+
+<br>
 
 
