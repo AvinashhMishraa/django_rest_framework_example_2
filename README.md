@@ -1111,7 +1111,7 @@ you will find <code>"Page Not Found"</code> error.
 > | Fine-grained validation       | ❌ No                   | ✅ Yes                                     |
 > | Recommended for production?   | ❌ Small use cases only | ✅ Always preferred for complex relations  |
 > 
-> <br><br>
+> <br>
 >
 > 
 > | Use Case                              | Use                                         |
