@@ -1359,7 +1359,6 @@ To avoid hitting the database multiple times when accessing related objects like
 
 
 > But when to use it ?
-> 
 > Use it for **ForeignKey** and **OneToOne** relationships where you know you'll need the related object.
 
 
