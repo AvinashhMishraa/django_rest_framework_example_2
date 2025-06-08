@@ -1379,8 +1379,8 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 >     except Person.DoesNotExist:
 >         return Response({'error': 'Person not found'}, status=404)
 > ```
-
-Since <code>color</code> is a **ForeignKey**, <code>.select_related('color')</code> will pull both <code>Person</code> and <code>Color</code> data in **one query**.
+>
+> Since <code>color</code> is a **ForeignKey**, <code>.select_related('color')</code> will pull both <code>Person</code> and <code>Color</code> data in **one query**.
 
 
 
