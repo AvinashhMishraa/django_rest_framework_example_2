@@ -1329,6 +1329,24 @@ you will find <code>"Page Not Found"</code> error.
 >     "color_info": null
 > }
 > ```
+> <br>
+> 
+> <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/3/
+> ```
+> {
+>     "id": 3,
+>     "name": "A3",
+>     "age": 40,
+>     "color": {
+>         "id": 2,
+>         "color_name": "BLUE"
+>     },
+>     "color_info": {
+>         "color_name": "BLUE",
+>         "hex_code": "#0000ff"
+>     }
+> }
+> ```
 
 
 
