@@ -1348,6 +1348,43 @@ you will find <code>"Page Not Found"</code> error.
 > }
 > ```
 
+<br>
+
+<div>
+    <h1><code>.select_related()</code></h1>
+</div>
+
+
+To avoid hitting the database multiple times when accessing related objects like <code>obj.color</code>, you should use <code>.select_related()</code> in your views or queryset logic. This performs a **SQL join** and fetches the related objects in a single query.
+
+
+> But when to use it ?
+> 
+> Use it for **ForeignKey** and **OneToOne** relationships where you know you'll need the related object.
+
+
+<code>person_api/home/views.py</code>
+```
+@api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+def person(request):
+    if request.method == 'GET':
+        # objs = Person.objects.all()
+        # objs = Person.objects.filter(color__isnull = False)       
+        objs = Person.objects.select_related('color').filter(color__isnull = False)
+        serializer = PersonSerializer(objs, many = True)
+        return Response(serializer.data)
+		
+		
+@api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
+def person_detail(request, id):
+    try:
+        # obj = Person.objects.get(id=id)
+        obj = Person.objects.select_related('color').get(id=id)
+    except Person.DoesNotExist:
+        return Response({'error': 'Person not found'}, status=404)
+```
+
+Since <code>color</code> is a **ForeignKey**, <code>.select_related('color')</code> will pull both <code>Person</code> and <code>Color</code> data in **one query**.
 
 
 
