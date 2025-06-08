@@ -1449,6 +1449,8 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 >
 > > <code>person_api/home/serializers.py</code>
 > > ```
+> > ●●●
+> >
 > > class LoginSerializer(serializers.Serializer):
 > >     email = serializers.EmailField()
 > >     password = serializers.CharField()
@@ -1459,6 +1461,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > ```
 > > from home.serializers import LoginSerializer
 > >
+> > ●●●
 > >
 > > # /api/login/
 > > @api_view(['POST'])
