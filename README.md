@@ -1224,7 +1224,7 @@ you will find <code>"Page Not Found"</code> error.
 > >         hex_code = color_name_to_hex(color_obj.color_name)                # Calls the color_name_to_hex() method
 > >         return {
 > >             'color_name' : color_obj.color_name, 
-> >             'hex_code': hex_code or '#000'                                # Fallback if invalid
+> >             'hex_code' : hex_code or '#000'                                # Fallback if invalid
 > >         }
 > >     
 > >     def validate(self, data):
