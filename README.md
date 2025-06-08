@@ -1452,7 +1452,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >     email = serializers.EmailField()
 > >     password = serializers.CharField()
 > > ```
->
+> <br>
 >
 > > <code>person_api/home/views.py</code>
 > > ```
