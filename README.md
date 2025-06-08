@@ -1388,6 +1388,39 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > ```
 >
 > Since <code>color</code> is a <ins>**ForeignKey**</ins> , <code>.select_related('color')</code> will pull both <code>Person</code> and <code>Color</code> data in <ins>**one query**</ins>.
+>
+> <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> ```
+> [
+>     {
+>         "id": 1,
+>         "name": "A1",
+>         "age": 25,
+>         "color": {
+>             "id": 1,
+>             "color_name": "RED"
+>         },
+>         "color_info": {
+>             "color_name": "RED",
+>             "hex_code": "#ff0000"
+>         }
+>     },
+>     {
+>         "id": 3,
+>         "name": "A3",
+>         "age": 40,
+>         "color": {
+>             "id": 2,
+>             "color_name": "BLUE"
+>         },
+>         "color_info": {
+>             "color_name": "BLUE",
+>             "hex_code": "#0000ff"
+>         }
+>     }
+> ]
+> ```
+
 
 
 
