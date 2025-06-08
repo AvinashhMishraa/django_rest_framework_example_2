@@ -1303,7 +1303,7 @@ you will find <code>"Page Not Found"</code> error.
 > >     if not color_obj:
 > >         return {
 > >             'color_name': None,
-> >             'hex_code': '#000'   # fallback
+> >             'hex_code': '#000'
 > >         }
 > > 
 > >     hex_code = color_name_to_hex(color_obj.color_name)
