@@ -1296,6 +1296,7 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > > Update your <code>get_color_info()</code> method like this :
 > >
+> >
 > > <code>person_api/home/serializers.py</code>
 > > ```
 > > def get_color_info(self, obj):
