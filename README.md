@@ -1362,6 +1362,8 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 
 > <code>person_api/home/views.py</code>
 > ```
+> ●●●
+>
 > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
 > def person(request):
 >     if request.method == 'GET':
@@ -1370,6 +1372,8 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 >         objs = Person.objects.select_related('color').filter(color__isnull = False)            # line added
 >         serializer = PersonSerializer(objs, many = True)
 >         return Response(serializer.data)
+>
+>     ●●●
 > 
 > @api_view(['GET', 'PUT', 'PATCH', 'DELETE'])
 > def person_detail(request, id):
@@ -1378,6 +1382,8 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 >         obj = Person.objects.select_related('color').get(id=id)                                # line added
 >     except Person.DoesNotExist:
 >         return Response({'error': 'Person not found'}, status=404)
+> 
+>     ●●●
 > ```
 >
 > Since <code>color</code> is a <ins>**ForeignKey**</ins> , <code>.select_related('color')</code> will pull both <code>Person</code> and <code>Color</code> data in <ins>**one query**</ins>.
