@@ -1457,6 +1457,13 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 >
 > > <code>person_api/home/views.py</code>
 > > ```
+> > ●●●
+> > from home.serializers import PersonSerializer, LoginSerializer
+> >
+> >
+> > ●●●
+> > 
+> >
 > > @api_view(['POST'])
 > > def login(request):
 > >     data = request.data
