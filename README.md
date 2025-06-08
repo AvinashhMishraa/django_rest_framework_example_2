@@ -1186,6 +1186,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > Let's see another example where we add <code>color_info</code> field in the <code>PersonSerializer</code> class :
+> 
 > <br>
 > 
 > >  <code>person_api/home/serializers.py</code>
