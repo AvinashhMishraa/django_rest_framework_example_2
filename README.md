@@ -1279,7 +1279,8 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > ❌ &nbsp;However, now if try to access detail of a specific person with no color, it will throw <code>AttributeError</code> : <br>
->
+> <br>
+> 
 > > http://localhost:8000/api/person/2/
 > > 
 > > <code>person_api\home\serializers.py</code>
@@ -1291,7 +1292,8 @@ you will find <code>"Page Not Found"</code> error.
 > <br>
 >
 > ✅ &nbsp;**Solution: Handle the case where <code>color</code> is <code>None</code>**
->
+> <br>
+> 
 > > Update your <code>get_color_info()</code> method like this :
 > >
 > > <code>person_api/home/serializers.py</code>
