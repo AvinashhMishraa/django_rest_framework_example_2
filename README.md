@@ -1364,6 +1364,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > ```
 > ●●●
 >
+> 
 > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
 > def person(request):
 >     if request.method == 'GET':
