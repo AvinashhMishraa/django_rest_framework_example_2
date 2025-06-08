@@ -1276,6 +1276,42 @@ you will find <code>"Page Not Found"</code> error.
 > ]
 > ```
 
+<br>
+
+> However, now if try to access detail of a specific person with no color, it will throw <code>❌  AttributeError</code> : <br>
+>
+> > http://localhost:8000/api/person/2/
+>  
+> > <code>person_api\home\serializers.py</code>
+> > ```
+> > color_obj = Color.objects.get(id = obj.color.id)
+> >                                    ^^^^^^^^^^^^
+> > AttributeError: 'NoneType' object has no attribute 'id'
+> > ```
+>
+>
+> ✅ Solution: Handle the case where <code>color</code> is <code>None</code>
+>
+> Update your <code>get_color_info()</code> method like this :
+>
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > def get_color_info(self, obj):
+> >     color_obj = obj.color  # Use the related object directly
+> > 
+> >     if not color_obj:
+> >         return {
+> >             'color_name': None,
+> >             'hex_code': '#000'   # fallback
+> >         }
+> > 
+> >     hex_code = color_name_to_hex(color_obj.color_name)
+> >     return {
+> >         'color_name': color_obj.color_name,
+> >         'hex_code': hex_code or '#000'
+> >     }
+> > ```
+
 
 
 
