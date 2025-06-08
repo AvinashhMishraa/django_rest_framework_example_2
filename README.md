@@ -1475,16 +1475,16 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > ```
 > <br>
 > 
-> <code>person_api/api/urls.py</code>
-> ```
-> from home.views import index, person, person_detail, login                # login added
-> from django.urls import path
-> 
-> urlpatterns = [
->     path('index/', index),
->     path('person/',person),
->     path('person/<int:id>/', person_detail),
->     path('login/', login),                                                # login path added
-> ]
-> ```
+> > <code>person_api/api/urls.py</code>
+> > ```
+> > from home.views import index, person, person_detail, login                # login added
+> > from django.urls import path
+> > 
+> > urlpatterns = [
+> >     path('index/', index),
+> >     path('person/',person),
+> >     path('person/<int:id>/', person_detail),
+> >     path('login/', login),                                                # login path added
+> > ]
+> > ```
 
