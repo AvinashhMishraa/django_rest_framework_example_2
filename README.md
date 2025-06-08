@@ -1301,15 +1301,7 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
-> > 
-> >     color = ColorSerializer()
-> >     color_info = serializers.SerializerMethodField()
-> > 
-> > 
-> >     class Meta:
-> >         model = Person
-> >         fields = ['id', 'name', 'age', 'color', 'color_info']
-> > 
+> >     ●●●
 > > 
 > >     def get_color_info(self, obj):                                   # Method updated                            
 > >         color_obj = obj.color
@@ -1323,9 +1315,7 @@ you will find <code>"Page Not Found"</code> error.
 > >             'hex_code': hex_code or None
 > >         }
 > > 
-> > 
-> >     def validate(self, data):
-> >         ●●●
+> >     ●●●
 > > ```
 
 
