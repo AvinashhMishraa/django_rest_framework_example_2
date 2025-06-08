@@ -1439,11 +1439,11 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 
 > When you want to write all the functionalities and logic manually and don't want to use any internal functionality of <code>ModelSerializer</code> or <code>HyperModelSerializer</code>, you simply use <code>Serializer</code> class.
 >
-> For example, you use this <code>Serializer</code> class for validation where you need to write your own custom logic.
+> For example, you use this <code>Serializer</code> class for **validation** <ins>where you need to write your own custom logic</ins>.
 >
-> So when you create a login page, you'd want to validate the authentication details through serializer without even touching the database.
+> So when you create a **login page**, you'd want to validate the authentication details through serializer without even touching the database.
 >
-> However, you can do it through ModelSerializer too but generally we don't do it like that, especially when we want to just validate the data.
+> However, you can do it through <code>ModelSerializer</code> too but generally we don't do it like that, especially when we want to just validate the data.
 > 
 > <br>
 >
