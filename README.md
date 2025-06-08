@@ -1490,4 +1490,21 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >     path('login/', login),                                                # login path added
 > > ]
 > > ```
-
+> <br>
+> >
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/login/
+> > ```
+> > {
+> >     "email" : "avinash",
+> >     "password" : "123"
+> }
+> > ```
+>
+>
+> > ```
+> > {
+> >     "email": [
+> >        "Enter a valid email address."
+> >     ]
+> > }
+> > ```
