@@ -1297,7 +1297,8 @@ you will find <code>"Page Not Found"</code> error.
 > >
 > > <code>person_api/home/serializers.py</code>
 > > ```
-> > ```
+> > ●●●
+> > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
 > > 
