@@ -1359,6 +1359,8 @@ To avoid hitting the database multiple times when accessing related objects like
 <h3>But when to use it ?</h3>
 Use it for **ForeignKey** and **OneToOne** relationships where you know you'll need the related object.
 
+<br>
+
 > <code>person_api/home/views.py</code>
 > ```
 > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
