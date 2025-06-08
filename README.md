@@ -1444,6 +1444,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > So when you create a login page, you'd want to validate the authentication details through serializer without even touching the database.
 >
 > However, you can do it through ModelSerializer too but generally we don't do it like that, especially when we want to just validate the data.
+> 
 > <br>
 >
 > > <code>person_api/home/serializers.py</code>
