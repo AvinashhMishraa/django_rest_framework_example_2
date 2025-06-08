@@ -1380,7 +1380,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 >         return Response({'error': 'Person not found'}, status=404)
 > ```
 >
-> Since <code>color</code> is a <ins>**ForeignKey**</ins>, <code>.select_related('color')</code> will pull both <code>Person</code> and <code>Color</code> data in <ins>**one query**</ins>.
+> Since <code>color</code> is a <ins>**ForeignKey**</ins> , <code>.select_related('color')</code> will pull both <code>Person</code> and <code>Color</code> data in <ins>**one query**</ins>.
 
 
 
