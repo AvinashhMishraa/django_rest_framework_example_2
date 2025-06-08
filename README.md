@@ -1182,6 +1182,18 @@ you will find <code>"Page Not Found"</code> error.
 > >     }
 > > ]
 > > ```
+> <br>
+>
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/2/
+> > ```
+> > {
+> >     "id": 2,
+> >     "name": "A2",
+> >     "age": 27,
+> >     "color": null,
+> >     "country": "India"
+> > }
+> > ```
 
 <br>
 
