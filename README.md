@@ -1291,7 +1291,7 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > <br>
 >
-> > ✅ &nbsp;Solution &nbsp;➜&nbsp; Handle the case where <code>color</code> is <code>None</code>
+> > ✔️ &nbsp;Solution &nbsp;➜&nbsp; Handle the case where <code>color</code> is <code>None</code>
 > > 
 > > Update your <code>get_color_info()</code> method like this :
 > >
