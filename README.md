@@ -1460,6 +1460,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > from home.serializers import LoginSerializer
 > >
 > >
+> > # /api/login/
 > > @api_view(['POST'])
 > > def login(request):
 > >     data = request.data
