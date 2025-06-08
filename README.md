@@ -1297,17 +1297,34 @@ you will find <code>"Page Not Found"</code> error.
 > >
 > > <code>person_api/home/serializers.py</code>
 > > ```
-> > def get_color_info(self, obj):
-> > 	color_obj = obj.color  # Use the related object directly
+> > ```
+> > class PersonSerializer(serializers.ModelSerializer):
 > > 
-> > 	if not color_obj:
-> > 		return None
 > > 
-> > 	hex_code = color_name_to_hex(color_obj.color_name)
-> > 	return {
-> > 		'color_name': color_obj.color_name,
-> > 		'hex_code': hex_code or None
-> > 	}
+> >     color = ColorSerializer()
+> >     color_info = serializers.SerializerMethodField()
+> > 
+> > 
+> >     class Meta:
+> >         model = Person
+> >         fields = ['id', 'name', 'age', 'color', 'color_info']
+> > 
+> > 
+> >     def get_color_info(self, obj):                                   # Method updated                            
+> >         color_obj = obj.color
+> > 
+> >         if not color_obj:
+> >             return None
+> > 
+> >         hex_code = color_name_to_hex(color_obj.color_name)
+> >         return {
+> >             'color_name': color_obj.color_name,
+> >             'hex_code': hex_code or None
+> >         }
+> > 
+> > 
+> >     def validate(self, data):
+> >         ●●●
 > > ```
 
 
