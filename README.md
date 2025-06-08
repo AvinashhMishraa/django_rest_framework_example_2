@@ -1297,20 +1297,17 @@ you will find <code>"Page Not Found"</code> error.
 > >
 > > <code>person_api/home/serializers.py</code>
 > > ```
-> > def get_color_info(self, obj):
-> >     color_obj = obj.color  # Use the related object directly
+> >     def get_color_info(self, obj):
+> >         color_obj = obj.color  # Use the related object directly
 > > 
-> >     if not color_obj:
+> >         if not color_obj:
+> >             return None
+> > 
+> >         hex_code = color_name_to_hex(color_obj.color_name)
 > >         return {
-> >             'color_name': None,
-> >             'hex_code': None
+> >             'color_name': color_obj.color_name,
+> >             'hex_code': hex_code or None
 > >         }
-> > 
-> >     hex_code = color_name_to_hex(color_obj.color_name)
-> >     return {
-> >         'color_name': color_obj.color_name,
-> >         'hex_code': hex_code or '#000'
-> >     }
 > > ```
 
 
