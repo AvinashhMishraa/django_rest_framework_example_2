@@ -1357,9 +1357,8 @@ you will find <code>"Page Not Found"</code> error.
 To avoid hitting the database multiple times when accessing related objects like <code>obj.color</code>, you should use <code>.select_related()</code> in your views or queryset logic. This performs a **SQL join** and fetches the related objects in a single query.
 
 <h3>But when to use it ?</h3>
-Use it for **ForeignKey** and **OneToOne** relationships where you know you'll need the related object.
 
-<br>
+Use it for **ForeignKey** and **OneToOne** relationships where you know you'll need the related object.
 
 > <code>person_api/home/views.py</code>
 > ```
