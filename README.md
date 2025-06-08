@@ -1386,9 +1386,11 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > 
 >     ●●●
 > ```
->
+> <br>
+> 
 > Since <code>color</code> is a <ins>**ForeignKey**</ins> , <code>.select_related('color')</code> will pull both <code>Person</code> and <code>Color</code> data in <ins>**one query**</ins>.
->
+> <br>
+> 
 > > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > [
