@@ -1288,7 +1288,7 @@ you will find <code>"Page Not Found"</code> error.
 > >                                    ^^^^^^^^^^^^
 > > AttributeError: 'NoneType' object has no attribute 'id'
 > > ```
-> <br<br>
+> <br><br>
 >
 > > ✅ &nbsp;Solution &nbsp;➜&nbsp; Handle the case where <code>color</code> is <code>None</code>
 > > 
