@@ -1422,6 +1422,18 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >     }
 > > ]
 > > ```
+> <br>
+> 
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/2/
+> > ```
+> > {
+> >     "id": 2,
+> >     "name": "A2",
+> >     "age": 27,
+> >     "color": null,
+> >     "color_info": null
+> > }
+> > ```
 
 
 
