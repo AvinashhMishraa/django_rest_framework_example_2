@@ -1367,7 +1367,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 >     if request.method == 'GET':
 >         # objs = Person.objects.all()
 >         # objs = Person.objects.filter(color__isnull = False)       
->         objs = Person.objects.select_related('color').filter(color__isnull = False)
+>         objs = Person.objects.select_related('color').filter(color__isnull = False)            # line added
 >         serializer = PersonSerializer(objs, many = True)
 >         return Response(serializer.data)
 > 
@@ -1375,7 +1375,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > def person_detail(request, id):
 >     try:
 >         # obj = Person.objects.get(id=id)
->         obj = Person.objects.select_related('color').get(id=id)
+>         obj = Person.objects.select_related('color').get(id=id)                                # line added
 >     except Person.DoesNotExist:
 >         return Response({'error': 'Person not found'}, status=404)
 > ```
