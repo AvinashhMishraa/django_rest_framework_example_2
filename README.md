@@ -457,7 +457,7 @@ you will find <code>"Page Not Found"</code> error.
 > >
 > > urlpatterns = [
 > >     path('index/', index),
-> >     path('person/',person),
+> >     path('person/', person),
 > >     path('person/<int:id>/', person_detail),
 > > ]
 > > ```
@@ -1485,7 +1485,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > 
 > > urlpatterns = [
 > >     path('index/', index),
-> >     path('person/',person),
+> >     path('person/', person),
 > >     path('person/<int:id>/', person_detail),
 > >     path('login/', login),                                                # login path added
 > > ]
