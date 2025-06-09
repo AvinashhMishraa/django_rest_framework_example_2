@@ -1068,7 +1068,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > Let's try to change the color of the person 2 from **blue** to **red**
+> > Let's try to change the color of the person 2 from **blue** to **red**. <br>
 > > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/  &nbsp;&nbsp;http://localhost:8000/api/person/3/
 > > ```
 > > {
