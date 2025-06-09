@@ -1558,7 +1558,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >
 > > ●●●
 > > 
-> > class Person(APIView):
+> > class Persons(APIView):
 > > 
 > >     def get(self, request):
 > >         return Response({'message' : 'This is a get request'})
@@ -1578,7 +1578,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > <br>
 > 
 > > ```
-> > from home.views import index, person, person_detail, login, Person
+> > from home.views import index, person, person_detail, login, Persons
 > > from django.urls import path
 > > 
 > > 
@@ -1587,7 +1587,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >     path('person/', person),                            # Function based view
 > >     path('person/<int:id>/', person_detail),            # Function based view
 > >     path('login/', login),                              # Function based view
-> >     path('persons/', Person.as_view())                  # Class based view                  # line added
+> >     path('persons/', Persons.as_view())                 # Class based view                  # line added
 > > ]
 > > ```
 > <br>
