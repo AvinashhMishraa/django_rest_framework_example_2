@@ -1492,6 +1492,9 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > ```
 > <br>
 > 
+
+<br>
+
 > > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/login/
 > > ```
 > > {
@@ -1499,8 +1502,8 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >     "password" : "123"
 > }
 > > ```
-> > 
-> >
+>
+>
 > > ```
 > > {
 > >     "email": [
