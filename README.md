@@ -979,27 +979,153 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 > 
-> <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/
-> ```
-> [
->     {
->         "id": 1,
->         "color": {
->             "color_name": "RED"
->         },
->         "name": "A1",
->         "age": 25
->     },
->     {
->         "id": 3,
->         "color": {
->             "color_name": "BLUE"
->         },
->         "name": "A3",
->         "age": 40
->     }
-> ]
-> ```
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > [
+> >     {
+> >         "id": 1,
+> >         "color": {
+> >             "color_name": "RED"
+> >         },
+> >         "name": "A1",
+> >         "age": 25
+> >     },
+> >     {
+> >         "id": 3,
+> >         "color": {
+> >             "color_name": "BLUE"
+> >         },
+> >         "name": "A3",
+> >         "age": 40
+> >     }
+> > ]
+> > ```
+> <br>
+>
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "name": "ABC",
+> >     "age": 21,
+> >     "color": 1
+> > }
+> > ```
+> >
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "color": {
+> >         "non_field_errors": [
+> >             "Invalid data. Expected a dictionary, but got int."
+> >         ]
+> >     }
+> > }
+> > ```
+> <br>
+> 
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "name": "ABC",
+> >     "age": 21,
+> >     "color": {
+> >         "id": 1
+> >     }
+> > }
+> > ```
+> >
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "color": {
+> >         "color_name": [
+> >             "This field is required."
+> >         ]
+> >     }
+> > }
+> > ```
+> <br>
+> 
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "name": "ABC",
+> >     "age": 21,
+> >     "color": {
+> >         "id": 1,
+> >         "color_name": "RED"
+> >     }
+> > }
+> > ```
+> >
+> >
+> > **Output &nbsp;:**
+> > ```
+> > AssertionError: The `.create()` method does not support writable nested fields by default. <br>
+> > Write an explicit `.create()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields.
+> > ```
+> <br>
+>
+> > Let's try to change the color of the person 2 from **blue** to **red**
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/  &nbsp;&nbsp;http://localhost:8000/api/person/3/
+> > ```
+> > {
+> >     "id": 3,
+> >     "age": 40,
+> >     "color": 1
+> > }
+> > ```
+> > 
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "color": {
+> >         "non_field_errors": [
+> >             "Invalid data. Expected a dictionary, but got int."
+> >         ]
+> >     }
+> > }
+> > ```
+> <br>
+>
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/  &nbsp;&nbsp;http://localhost:8000/api/person/3/
+> > ```
+> > {
+> >     "id": 3,
+> >     "age": 40,
+> >     "color": {
+> >         "id": 1
+> >     }
+> > }
+> > ```
+> > 
+> >
+> > ```
+> > AssertionError: The `.update()` method does not support writable nested fields by default. <br>
+> > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields
+> > ```
+> <br>
+> 
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/  &nbsp;&nbsp;http://localhost:8000/api/person/3/
+> > ```
+> > {
+> >     "id": 3,
+> >     "age": 40,
+> >     "color": {
+> >         "id": 1,
+> >         "color_name": "RED"
+> >     }
+> > }
+> > ```
+> > 
+> >
+> > ```
+> > AssertionError: The `.update()` method does not support writable nested fields by default. <br>
+> > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields
+> > ```
 
 <br>
 
