@@ -1555,7 +1555,9 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > <code>person_api/home/views.py</code>
 > > ```
 > > from rest_framework.views import APIView
-> > 
+> > ●●●
+> >
+> > ●●●
 > > 
 > > class Person(APIView):
 > > 
