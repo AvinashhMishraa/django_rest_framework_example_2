@@ -1187,7 +1187,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/2/
+> > **Output &nbsp;:**
 > > ```
 > > {
 > >     "id": 2,
