@@ -1500,10 +1500,10 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > {
 > >     "email" : "avinash",
 > >     "password" : "123"
-> }
+> > }
 > > ```
-
-
+>
+>
 > > ```
 > > {
 > >     "email": [
