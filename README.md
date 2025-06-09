@@ -1546,7 +1546,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 	<h1><code>APIView</code> - Class-Based View</h1>
 </div>
 
-- A class-based approach using DRF’s APIView or its subclasses.
+- A class-based approach using DRF’s <code>APIView</code> or its subclasses.
 
 - Gives you **full OOP-style control**, method dispatching (<code>get()</code>, <code>post()</code>, etc.), and <ins>easy reuse</ins>.
 
