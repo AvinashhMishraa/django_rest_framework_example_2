@@ -1552,4 +1552,50 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 - It encapsulates all the **CRUD methods** and **automatically** calls it according to the type of <code>Request</code> <br>
  &nbsp;For example &nbsp;➜&nbsp; if it is a <code>GET</code> request, it will automatically call the <code>get()</code> method and so on.
 
+> > <code>person_api/home/views.py</code>
+> > ```
+> > from rest_framework.views import APIView
+> > 
+> > 
+> > class Person(APIView):
+> > 
+> >     def get(self, request):
+> >         return Response({'message' : 'This is a get request'})
+> >     
+> >     def post(self, request):
+> >         return Response({'message' : 'This is a post request'})
+> >     
+> >     def put(self, request):
+> >         return Response({'message' : 'This is a put request'})
+> >     
+> >     def patch(self, request):
+> >         return Response({'message' : 'This is a patch request'})
+> >     
+> >     def delete(self, request):
+> >         return Response({'message' : 'This is a delete request'})
+> > ```
+> <br>
+> 
+> > ```
+> > from home.views import index, person, person_detail, login, Person
+> > from django.urls import path
+> > 
+> > 
+> > urlpatterns = [
+> >     path('index/', index),                              # Function based view
+> >     path('person/', person),                            # Function based view
+> >     path('person/<int:id>/', person_detail),            # Function based view
+> >     path('login/', login),                              # Function based view
+> >     path('persons/', Person.as_view())                  # Class based view                  # line added
+> > ]
+> > ```
+> <br>
+> 
+> > Now if you hit these request methods with no body :
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a GET request"}</code>
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a POST request"}</code>
+> > <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a PUT request"}</code>
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a PATCH request"}</code>
+> > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a DELETE request"}</code>
+
 
