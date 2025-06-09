@@ -270,7 +270,7 @@
 > > <code>person_api/core/settings.py</code>
 > > ```
 > > INSTALLED_APPS = [
-> >     ...
+> >     ●●●
 > >    'rest_framework',
 > >    'home',
 > > ]
