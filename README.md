@@ -1503,7 +1503,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > }
 > > ```
 > >
-> >
+> > **Output &nbsp;:**
 > > ```
 > > {
 > >     "email": [
