@@ -1494,7 +1494,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 >
 > > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/login/
 > > 
-> > **Output :**
+> > **<ins>Output</ins> :**
 > > ```
 > > {
 > >     "email": [
@@ -1515,7 +1515,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > }
 > > ```
 > >
-> > **Output &nbsp;:**
+> > **<ins>Output</ins> &nbsp;:**
 > > ```
 > > {
 > >     "email": [
@@ -1533,7 +1533,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > }
 > > ```
 > >
-> > **Output &nbsp;:**
+> > **<ins>Output</ins> &nbsp;:**
 > > ```
 > > {
 > >     "message": "success"
