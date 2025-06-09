@@ -1,4 +1,3 @@
-
 > Open the terminal in your favorite code editor and execute the following commands &nbsp;&nbsp;**: &nbsp;⟶**
 > ```
 > py -m venv env
