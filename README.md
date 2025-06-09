@@ -1491,10 +1491,22 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > ]
 > > ```
 > <br>
-> 
-
-<br>
-
+>
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/login/
+> > 
+> > **Output :**
+> > ```
+> > {
+> >     "email": [
+> >         "This field is required."
+> >     ],
+> >     "password": [
+> >         "This field is required."
+> >     ]
+> > }
+> > ```
+> <br>
+>
 > > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/login/
 > > ```
 > > {
@@ -1511,3 +1523,22 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >     ]
 > > }
 > > ```
+> <br>
+> 
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/login/
+> > ```
+> > {
+> >     "email" : "avinash@gmail.com",
+> >     "password" : "123"
+> > }
+> > ```
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "message": "success"
+> > }
+> > ```
+
+
+
