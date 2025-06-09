@@ -336,7 +336,7 @@
 > >
 > > urlpatterns = [
 > >     path('index/', index),
-> >     path('person/',person)
+> >     path('person/', person)
 > > ]
 > > ```
 
