@@ -1551,6 +1551,6 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 - Gives you **full OOP-style control**, method dispatching (<code>get()</code>, <code>post()</code>, etc.), and <ins>easy reuse</ins>.
 
 - It encapsulates all the **CRUD methods** and **automatically** calls it according to the type of <code>Request</code> <br>
- &nbsp;For example : if it is a <code>GET</code> request, it will automatically call the <code>get()</code> method and so on.
+ &nbsp;For example &nbsp;➜&nbsp; if it is a <code>GET</code> request, it will automatically call the <code>get()</code> method and so on.
 
 
