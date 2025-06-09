@@ -1592,10 +1592,10 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > <br>
 > 
 > > Now if you hit these request methods with no body : <br>
-> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a GET request"}</code> <br>
-> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a POST request"}</code> <br>
-> > <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a PUT request"}</code> <br>
-> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a PATCH request"}</code> <br>
-> > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a DELETE request"}</code>
+> > <code>GET</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a GET request"}</code> <br>
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a POST request"}</code> <br>
+> > <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a PUT request"}</code> <br>
+> > <code>PATCH</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a PATCH request"}</code> <br>
+> > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;<code>{"message": "This is a DELETE request"}</code>
 
 
