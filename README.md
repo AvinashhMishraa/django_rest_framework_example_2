@@ -1579,6 +1579,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > ```
 > <br>
 > 
+> > <code>person_api/api/urls.py</code>
 > > ```
 > > from home.views import index, person, person_detail, login, Persons
 > > from django.urls import path
