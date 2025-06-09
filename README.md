@@ -1126,6 +1126,17 @@ you will find <code>"Page Not Found"</code> error.
 > > AssertionError: The `.update()` method does not support writable nested fields by default. <br>
 > > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields
 > > ```
+> <br>
+>
+> > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "id": 20
+> > }
+> > ```
+> > 
+> > 
+> > **Output &nbsp;:** &nbsp;&nbsp;➜&nbsp;&nbsp; {"message": "person deleted"}
 
 <br>
 
