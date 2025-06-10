@@ -979,7 +979,8 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 > 
-> > <code>GET</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
+> > <code>GET</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ <br>
+> > **Output &nbsp;**:
 > > ```
 > > [
 > >     {
