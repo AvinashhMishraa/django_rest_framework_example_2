@@ -1171,7 +1171,7 @@ you will find <code>"Page Not Found"</code> error.
 > <br>
 > 
 > - However The best way to solve this problem is by using <code>PrimaryKeyRelatedField</code> instead of nested <code>ColorSerializer</code>. ⭐<br>
-> &nbsp;&nbsp; This is cleaner and simpler <ins>when you only want to link an existing Color (not create/update nested Color).</ins> <br>
+> This is cleaner and simpler <ins>when you only want to link an existing Color (not create/update nested Color).</ins> <br>
 > - The bottom line is that unless you are actually modifying <code>Color</code> fields inside the <code>Person</code> form/API, prefer <code>PrimaryKeyRelatedField</code> for clean & simple REST.
 > <br>
 > 
