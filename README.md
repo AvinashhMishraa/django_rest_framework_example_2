@@ -1144,6 +1144,56 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
+> As you can see you are able to **get** and **delete** persons <ins>but not **create** and **update** them</ins>, you may ask why this is happening ?
+>
+> > In your <code>PersonSerializer</code>, you made <code>color = ColorSerializer()</code> — this makes it a **nested serializer**. <br>
+> > DRF treats this as an **embedded object**. But by default, <code>ModelSerializer</code> **doesn't know how to create or update related objects through a nested serializer** unless you override <code>.create()</code> and <code>.update()</code> methods <ins>explicitly</ins>.
+>
+>
+> The best way to solve this problem is by using <code>PrimaryKeyRelatedField</code> instead of nested <code>ColorSerializer</code>. &nbsp;⭐<br>
+> This is cleaner and simpler when you only want to link an existing Color (not create/update nested Color).
+>
+> > Change this:
+> > ```
+> > color = ColorSerializer()
+> > ```
+> 
+> > To
+> > ```
+> > color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
+> > ```
+> 
+> **Solution &nbsp;:**
+> > <code>person_api/home/serializers.py</code>
+> > ```
+> > from rest_framework import serializers
+> > from .models import Person, Color
+> > 
+> > 
+> > class ColorSerializer(serializers.ModelSerializer):
+> >     
+> >     class Meta:
+> >         model = Color
+> >         fields = ['color_name']
+> > 
+> > 
+> > class PersonSerializer(serializers.ModelSerializer):
+> >     
+> >     color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
+> > 
+> >     class Meta:
+> >         model = Person
+> >         fields = '__all__'
+> >         # depth = 1
+> > 
+> >     def validate(self, data):
+> >      	●●●
+> > ```
+>
+> Now try all **CRUD** APIs. And you will be able to do all of that.
+
+<br>
+
 > The best way to control the order of fields of a Model in a Django Rest Framework API is through <ins>**serializer**</ins>.
 > 
 > <br>
