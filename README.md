@@ -1103,6 +1103,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > 
 > >
+> > **Output &nbsp;:**
 > > ```
 > > AssertionError: The `.update()` method does not support writable nested fields by default. <br>
 > > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields
@@ -1122,6 +1123,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > 
 > >
+> > **Output &nbsp;:**
 > > ```
 > > AssertionError: The `.update()` method does not support writable nested fields by default. <br>
 > > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields
@@ -1136,7 +1138,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > 
 > > 
-> > **Output &nbsp;:** &nbsp;&nbsp;➜&nbsp;&nbsp; {"message": "person deleted"}
+> > **Output &nbsp;:** &nbsp;&nbsp;➜&nbsp;&nbsp; <code>{"message": "person deleted"}</code>
 
 <br>
 
