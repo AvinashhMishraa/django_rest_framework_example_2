@@ -979,7 +979,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 > 
-> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > <code>GET</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > [
 > >     {
@@ -1002,7 +1002,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
 > >     "name": "ABC",
@@ -1024,7 +1024,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 > 
-> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
 > >     "name": "ABC",
@@ -1048,7 +1048,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 > 
-> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
 > >     "name": "ABC",
@@ -1069,7 +1069,7 @@ you will find <code>"Page Not Found"</code> error.
 > <br>
 >
 > > Let's try to change the color of the person 2 from **blue** to **red**. <br>
-> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/  &nbsp;&nbsp;http://localhost:8000/api/person/3/
+> > <code>PATCH</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/  &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/3/
 > > ```
 > > {
 > >     "id": 3,
@@ -1091,7 +1091,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/  &nbsp;&nbsp;http://localhost:8000/api/person/3/
+> > <code>PATCH</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/3/
 > > ```
 > > {
 > >     "id": 3,
@@ -1110,7 +1110,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 > 
-> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/  &nbsp;&nbsp;http://localhost:8000/api/person/3/
+> > <code>PATCH</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/ &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/3/
 > > ```
 > > {
 > >     "id": 3,
