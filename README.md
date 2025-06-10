@@ -962,7 +962,8 @@ you will find <code>"Page Not Found"</code> error.
 > >     
 > >     class Meta:
 > >         model = Color
-> >         fields = ['color_name']
+> >         fields = '__all__'                    # fields = ['color_name', 'id']
+> >         # fields = ['color_name']             # if you want to only show color name in the nested json output
 > > 
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
@@ -987,6 +988,7 @@ you will find <code>"Page Not Found"</code> error.
 > >     {
 > >         "id": 1,
 > >         "color": {
+> >             "id": 1,
 > >             "color_name": "RED"
 > >         },
 > >         "name": "A1",
@@ -995,6 +997,7 @@ you will find <code>"Page Not Found"</code> error.
 > >     {
 > >         "id": 3,
 > >         "color": {
+> >             "id": 2,
 > >             "color_name": "BLUE"
 > >         },
 > >         "name": "A3",
@@ -1301,49 +1304,6 @@ you will find <code>"Page Not Found"</code> error.
 >         "name": "A3",
 >         "age": 40,
 >         "color": {
->             "color_name": "BLUE"
->         }
->     }
-> ]
-> ```
-
-<br>
-
-> And if you want to display other fields too like the <code>id</code> of the color : <br>
-> <br>
-> 
-> > <code>person_api/home/serializers.py</code>
-> > ```
-> > ●●●
-> >
-> > class ColorSerializer(serializers.ModelSerializer):
-> >     
-> >     class Meta:
-> >         model = Color
-> >         fields = ['color_name', 'id']
-> >
-> > ●●●
-> > ```
-> <br>
-> 
-> <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/person/
-> ```
-> [
->     {
->         "id": 1,
->         "name": "A1",
->         "age": 25,
->         "color": {
->             "id": 1,
->             "color_name": "RED"
->         }
->     },
->     {
->         "id": 3,
->         "name": "A3",
->         "age": 40,
->         "color": {
->             "id": 2,
 >             "color_name": "BLUE"
 >         }
 >     }
