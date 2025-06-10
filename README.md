@@ -949,7 +949,7 @@ you will find <code>"Page Not Found"</code> error.
 >
 > In that case, we can't use <code>depth</code> because it serializes <ins>**all the fields**</ins> of the <code>Color</code> model. &nbsp;⚠️ <br>
 >
-> We have to remove <code>depth = 1</code> from <code>PersonSerializer</code> class and then create a class of <code>ColorSerializer</code> which will help Django Rest Framework to understand the structure of the data that needs to be passed ?
+> We have to remove <code>depth = 1</code> from <code>PersonSerializer</code> class and then create a class of <code>ColorSerializer</code> with <code>fields = ['color_name']</code> in the <code>meta</code> class which will help Django Rest Framework to understand the structure of the data that needs to be passed ?
 > <br>
 > 
 > > <code>person_api/home/serializers.py</code>
@@ -962,8 +962,8 @@ you will find <code>"Page Not Found"</code> error.
 > >     
 > >     class Meta:
 > >         model = Color
-> >         fields = '__all__'                    # fields = ['color_name', 'id']
-> >         # fields = ['color_name']             # if you want to only show color name in the nested json output
+> >         # fields = '__all__'                # fields = ['color_name', 'id']
+> >         fields = ['color_name']             # if you want to only show color name in the nested json output
 > > 
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
@@ -988,7 +988,6 @@ you will find <code>"Page Not Found"</code> error.
 > >     {
 > >         "id": 1,
 > >         "color": {
-> >             "id": 1,
 > >             "color_name": "RED"
 > >         },
 > >         "name": "A1",
@@ -997,7 +996,6 @@ you will find <code>"Page Not Found"</code> error.
 > >     {
 > >         "id": 3,
 > >         "color": {
-> >             "id": 2,
 > >             "color_name": "BLUE"
 > >         },
 > >         "name": "A3",
