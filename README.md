@@ -1150,8 +1150,23 @@ you will find <code>"Page Not Found"</code> error.
 > > In your <code>PersonSerializer</code>, you made <code>color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())</code> — this makes it a **nested serializer**.
 > > 
 > > DRF treats this as an **embedded object**. But by default, <code>ModelSerializer</code> **doesn't know how to create or update related objects through a nested serializer** unless you override <code>.create()</code> and <code>.update()</code> methods <ins>explicitly</ins>.
+> >
+> > | Situation                                       | Fix                                                     |
+> > | ----------------------------------------------- | ------------------------------------------------------- |
+> > | You send `"color": { "id": 1, ... }` in request | You **must override** `.create()` and `.update()`       |
+> > | You send `"color": 1`                           | ✅ Use `PrimaryKeyRelatedField` (simpler, DRF-friendly) |
 > <br>
 >
+> So if you want to keep using <code>ColorSerializer()</code> and nested format like :
+> ```
+> "color": {
+>     "id": 1,
+>     "color_name": "RED"
+> }
+> ```
+> Then you have to write your own custom <code>.create()</code> and <code>.update()</code> methods for <code>POST</code> and <code>PUT</code>/<code>PATCH</code> requests respectively.
+> <br>
+> 
 > The best way to solve this problem is by using <code>PrimaryKeyRelatedField</code> instead of nested <code>ColorSerializer</code>. &nbsp;⭐<br>
 > This is cleaner and simpler when you only want to link an existing Color (not create/update nested Color).
 > <br>
