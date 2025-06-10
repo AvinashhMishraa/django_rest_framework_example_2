@@ -1147,7 +1147,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> As you can see you are able to **get** and **delete** persons <ins>but not **create** and **update** them</ins>, you may ask why this is happening ?
+> As you can see you are able to **get** and **delete** persons <ins>but not **create** and **update** them</ins> using **POSTMAN**, you may ask <ins>**why this is happening**</ins> ? Howeveer you can still do all CRUD operations through <code>admin</code>.
 > 
 > <br>
 > 
