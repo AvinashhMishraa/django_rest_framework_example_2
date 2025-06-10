@@ -1910,14 +1910,4 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 
 <br>
 
-ddddd
-
-<br><br><br>
-
-ddddddddd
-
-<h2><ModelViewSet</h2>
-
-
-
-
+<h2>ModelViewSet</h2>
