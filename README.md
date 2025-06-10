@@ -1178,7 +1178,7 @@ you will find <code>"Page Not Found"</code> error.
 > - The bottom line is that unless you are actually modifying <code>Color</code> fields inside the <code>Person</code> form/API, prefer <code>PrimaryKeyRelatedField</code> for clean & simple REST.
 > <br>
 > 
-> > Change this:
+> > Remove the <code>ColorSerializer</code> class and change this in <code>PersonSerializer</code> class:
 > > ```
 > > color = ColorSerializer()
 > > ```
