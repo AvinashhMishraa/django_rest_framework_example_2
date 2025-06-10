@@ -967,7 +967,7 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > >     
-> >     color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
+> >     color = ColorSerializer()
 > > 
 > >     class Meta:
 > >         model = Person
@@ -1158,7 +1158,7 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > > Change this:
 > > ```
-> > color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
+> > color = ColorSerializer()
 > > ```
 > >
 > > 
