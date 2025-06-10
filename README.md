@@ -1145,23 +1145,28 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > As you can see you are able to **get** and **delete** persons <ins>but not **create** and **update** them</ins>, you may ask why this is happening ?
->
-> > In your <code>PersonSerializer</code>, you made <code>color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())</code> — this makes it a **nested serializer**. <br>
+> <br>
+> 
+> > In your <code>PersonSerializer</code>, you made <code>color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())</code> — this makes it a **nested serializer**.
+> > 
 > > DRF treats this as an **embedded object**. But by default, <code>ModelSerializer</code> **doesn't know how to create or update related objects through a nested serializer** unless you override <code>.create()</code> and <code>.update()</code> methods <ins>explicitly</ins>.
->
+> <br>
 >
 > The best way to solve this problem is by using <code>PrimaryKeyRelatedField</code> instead of nested <code>ColorSerializer</code>. &nbsp;⭐<br>
 > This is cleaner and simpler when you only want to link an existing Color (not create/update nested Color).
->
+> <br>
+> 
 > > Change this:
 > > ```
 > > color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
 > > ```
-> 
+> >
+> > 
 > > To
 > > ```
 > > color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
 > > ```
+> <br>
 > 
 > **Solution &nbsp;:**
 > > <code>person_api/home/serializers.py</code>
@@ -1189,7 +1194,8 @@ you will find <code>"Page Not Found"</code> error.
 > >     def validate(self, data):
 > >      	●●●
 > > ```
->
+> <br>
+> 
 > Now try all **CRUD** APIs. And you will be able to do all of that.
 
 <br>
