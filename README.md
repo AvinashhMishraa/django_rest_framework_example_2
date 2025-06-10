@@ -1197,13 +1197,6 @@ you will find <code>"Page Not Found"</code> error.
 > > from .models import Person, Color
 > > 
 > > 
-> > class ColorSerializer(serializers.ModelSerializer):
-> >     
-> >     class Meta:
-> >         model = Color
-> >         fields = ['color_name']
-> > 
-> > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > >     
 > >     color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
@@ -1235,9 +1228,9 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > {
 > >     "id": 21,
+> >     "color": 1,
 > >     "name": "Abc",
-> >     "age": 25,
-> >     "color": 1
+> >     "age": 25
 > > }
 > > ```
 > <br>
@@ -1255,9 +1248,9 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > {
 > >     "id": 21,
+> >     "color": 2,
 > >     "name": "Abc",
-> >     "age": 25,
-> >     "color": 2
+> >     "age": 25
 > > }
 > > ```
 
@@ -1295,17 +1288,13 @@ you will find <code>"Page Not Found"</code> error.
 >         "id": 1,
 >         "name": "A1",
 >         "age": 25,
->         "color": {
->             "color_name": "RED"
->         }
+>         "color": 1
 >     },
 >     {
 >         "id": 3,
 >         "name": "A3",
 >         "age": 40,
->         "color": {
->             "color_name": "BLUE"
->         }
+>         "color": 2
 >     }
 > ]
 > ```
@@ -1384,20 +1373,14 @@ you will find <code>"Page Not Found"</code> error.
 > >         "id": 1,
 > >         "name": "A1",
 > >         "age": 25,
-> >         "color": {
-> >             "id": 1,
-> >             "color_name": "RED"
-> >         },
+> >         "color": 1,
 > >         "country": "India"
 > >     },
 > >     {
 > >         "id": 3,
 > >         "name": "A3",
 > >         "age": 40,
-> >         "color": {
-> >             "id": 2,
-> >             "color_name": "BLUE"
-> >         },
+> >         "color": 2,
 > >         "country": "India"
 > >     }
 > > ]
@@ -1434,13 +1417,6 @@ you will find <code>"Page Not Found"</code> error.
 > >     except ValueError:
 > >         return None
 > >
-> > 
-> > class ColorSerializer(serializers.ModelSerializer):
-> >     
-> >     class Meta:
-> >         model = Color
-> >         fields = ['id', 'color_name']
-> >
 > >
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
@@ -1471,10 +1447,7 @@ you will find <code>"Page Not Found"</code> error.
 >         "id": 1,
 >         "name": "A1",
 >         "age": 25,
->         "color": {
->             "id": 1,
->             "color_name": "RED"
->         },
+>         "color": 1,
 >         "color_info": {
 >             "color_name": "RED",
 >             "hex_code": "#ff0000"
@@ -1484,10 +1457,7 @@ you will find <code>"Page Not Found"</code> error.
 >         "id": 3,
 >         "name": "A3",
 >         "age": 40,
->         "color": {
->             "id": 2,
->             "color_name": "BLUE"
->         },
+>         "color": 2,
 >         "color_info": {
 >             "color_name": "BLUE",
 >             "hex_code": "#0000ff"
@@ -1557,10 +1527,7 @@ you will find <code>"Page Not Found"</code> error.
 >     "id": 3,
 >     "name": "A3",
 >     "age": 40,
->     "color": {
->         "id": 2,
->         "color_name": "BLUE"
->     },
+>     "color": 2,
 >     "color_info": {
 >         "color_name": "BLUE",
 >         "hex_code": "#0000ff"
@@ -1618,10 +1585,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >         "id": 1,
 > >         "name": "A1",
 > >         "age": 25,
-> >         "color": {
-> >             "id": 1,
-> >             "color_name": "RED"
-> >         },
+> >         "color": 1,
 > >         "color_info": {
 > >             "color_name": "RED",
 > >             "hex_code": "#ff0000"
@@ -1631,10 +1595,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > >         "id": 3,
 > >         "name": "A3",
 > >         "age": 40,
-> >         "color": {
-> >             "id": 2,
-> >             "color_name": "BLUE"
-> >         },
+> >         "color": 2,
 > >         "color_info": {
 > >             "color_name": "BLUE",
 > >             "hex_code": "#0000ff"
