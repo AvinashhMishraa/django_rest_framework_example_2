@@ -1788,4 +1788,124 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 > > <code>PATCH</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;&nbsp; <code>{"message": "This is a PATCH request"}</code> <br>
 > > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/persons/ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜ &nbsp;&nbsp;&nbsp;&nbsp; <code>{"message": "This is a DELETE request"}</code>
 
+<br>
+
+> > <code>person_api/home/views.py</code>
+> > ```
+> > # /api/persons/
+> > class Persons(APIView):
+> > 
+> >     def get(self, request): 
+> >         objs = Person.objects.select_related('color').filter(color__isnull = False)
+> >         serializer = PersonSerializer(objs, many = True)
+> >         return Response(serializer.data)
+> >     
+> >     def post(self, request):
+> >         data = request.data
+> >         serializer = PersonSerializer(data = data)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response(serializer.data)
+> >         return Response(serializer.errors)
+> >     
+> >     def put(self, request):
+> >         data = request.data
+> >         obj = Person.objects.get(id = data['id'])
+> >         serializer = PersonSerializer(obj, data = data)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response(serializer.data)
+> >         return Response(serializer.errors)
+> >     
+> >     def patch(self, request):
+> >         data = request.data
+> >         obj = Person.objects.get(id = data['id'])
+> >         serializer = PersonSerializer(obj, data = data, partial = True)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response(serializer.data)
+> >         return Response(serializer.errors)
+> >     
+> >     def delete(self, request):
+> >         data = request.data
+> >         obj = Person.objects.get(id = data['id'])
+> >         obj.delete()
+> >         return Response({'message' : 'person deleted'})
+> > ```
+> 
+> <br>
+> 
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/persons/
+> > ```
+> > {
+> >     "name": "AXX",
+> >     "age" : 35,
+> >     "color" : 3
+> > }
+> > ```
+> > 
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "id": 23,
+> >     "name": "AXX",
+> >     "age": 35,
+> >     "color": 3,
+> >     "color_info": {
+> >         "color_name": "GREEN",
+> >         "hex_code": "#008000"
+> >     }
+> > }
+> > ```
+> 
+> <br>
+> 
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/persons/
+> > ```
+> > {
+> >     "id": 23,
+> >     "name": "A23"
+> > }
+> > ```
+> > 
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "id": 23,
+> >     "name": "A23",
+> >     "age": 35,
+> >     "color": 3,
+> >     "color_info": {
+> >         "color_name": "GREEN",
+> >         "hex_code": "#008000"
+> >     }
+> > }
+> > ```
+> 
+> <br>
+> 
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/23/
+> > ```
+> > {
+> >     "age": 36
+> > }
+> > ```
+> > 
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "id": 23,
+> >     "name": "A23",
+> >     "age": 36,
+> >     "color": 3,
+> >     "color_info": {
+> >         "color_name": "GREEN",
+> >         "hex_code": "#008000"
+> >     }
+> > }
+> > ```
+
 
