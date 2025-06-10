@@ -967,7 +967,7 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > >     
-> >     color = ColorSerializer()
+> >     color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
 > > 
 > >     class Meta:
 > >         model = Person
@@ -1146,7 +1146,7 @@ you will find <code>"Page Not Found"</code> error.
 
 > As you can see you are able to **get** and **delete** persons <ins>but not **create** and **update** them</ins>, you may ask why this is happening ?
 >
-> > In your <code>PersonSerializer</code>, you made <code>color = ColorSerializer()</code> — this makes it a **nested serializer**. <br>
+> > In your <code>PersonSerializer</code>, you made <code>color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())</code> — this makes it a **nested serializer**. <br>
 > > DRF treats this as an **embedded object**. But by default, <code>ModelSerializer</code> **doesn't know how to create or update related objects through a nested serializer** unless you override <code>.create()</code> and <code>.update()</code> methods <ins>explicitly</ins>.
 >
 >
@@ -1155,7 +1155,7 @@ you will find <code>"Page Not Found"</code> error.
 >
 > > Change this:
 > > ```
-> > color = ColorSerializer()
+> > color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
 > > ```
 > 
 > > To
@@ -1207,7 +1207,7 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
-> >     color = ColorSerializer()
+> >     color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
 > > 
 > >     class Meta:
 > >         model = Person
@@ -1335,15 +1335,15 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
-> >     color = ColorSerializer()
-> >     country = serializers.SerializerMethodField()                      # line added
+> >     color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
+> >     country = serializers.SerializerMethodField()                                  # line added
 > > 
 > >     class Meta:
 > >         model = Person
 > >         # fields = '__all__'
-> >         fields = ['id', 'name', 'age', 'color', 'country']             # field added
+> >         fields = ['id', 'name', 'age', 'color', 'country']                         # field added
 > > 
-> >     def get_country(self, obj):                                        # method added
+> >     def get_country(self, obj):                                                    # method added
 > >         return "India"
 > > 
 > >     def validate(self, data):
@@ -1418,7 +1418,7 @@ you will find <code>"Page Not Found"</code> error.
 > >
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
-> >     color = ColorSerializer()
+> >     color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
 > >     color_info = serializers.SerializerMethodField()
 > > 
 > >     class Meta:
