@@ -1728,7 +1728,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 <br>
 
 <div>
-	<h1><code>APIView</code> - Class-Based View</h1>
+	<h1><code>APIView</code> &nbsp;➜&nbsp; Class-Based View</h1>
 </div>
 
 ∎ &nbsp;A class-based approach using DRF’s <code>APIView</code> or its subclasses.
