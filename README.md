@@ -1138,7 +1138,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > 
 > > 
-> > **Output &nbsp;:** &nbsp;&nbsp;➜&nbsp;&nbsp; <code>{"message": "person deleted"}</code>
+> > **Output** &nbsp;&nbsp;➜&nbsp;&nbsp; <code>{"message": "person deleted"}</code>
 
 <br>
 
