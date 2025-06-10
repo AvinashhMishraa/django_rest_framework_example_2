@@ -1145,6 +1145,7 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 > As you can see you are able to **get** and **delete** persons <ins>but not **create** and **update** them</ins>, you may ask why this is happening ?
+> 
 > <br>
 > 
 > > In your <code>PersonSerializer</code>, you made <code>color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())</code> — this makes it a **nested serializer**.
