@@ -1197,6 +1197,47 @@ you will find <code>"Page Not Found"</code> error.
 > <br>
 > 
 > Now try all **CRUD** APIs. And you will be able to do all of that.
+> <br>
+> 
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "name": "Abc",
+> >     "age": 25,
+> >     "color": 1
+> > }
+> > ```
+> >
+> >
+> > Person successfully created
+> > ```
+> > {
+> >     "id": 21,
+> >     "name": "Abc",
+> >     "age": 25,
+> >     "color": 1
+> > }
+> > ```
+> <br>
+>
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "id": 21,
+> >     "color": 2
+> > }
+> > ```
+> >
+> >
+> > Person successfully updated
+> > ```
+> > {
+> >     "id": 21,
+> >     "name": "Abc",
+> >     "age": 25,
+> >     "color": 2
+> > }
+> > ```
 
 <br>
 
