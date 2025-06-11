@@ -2091,7 +2091,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 >
 > <br>
 >
-> Similarly the correct way of doing a <code>PUT</code> is by using **http://localhost:8000/api/people/24/** and not http://localhost:8000/api/people/
+> Similarly the correct way of doing a <code>PUT</code> is by using **http://localhost:8000/api/people/24/** and **not** http://localhost:8000/api/people/
 
 
 
