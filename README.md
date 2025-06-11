@@ -1913,3 +1913,41 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 <h2>ModelViewSet</h2>
 
 Now that you have seen both function based view <code>@api_view()</code> and class based view <code>ApiView()</code> which are custom CRUD suuport, let's now see <ins>ModelViewSet</ins> which gives you **full-featured RESTful APIs** + **auto-routing**, **filters**, **auth**, etc.
+
+<br>
+
+> > <code>person_api/home/views.py</code>
+> > ```
+> > from rest_framework import viewsets
+> >
+> >
+> > class PeopleViewSet(viewsets.ModelViewSet):
+> >     serializer_class = PersonSerializer
+> >     queryset = Person.objects.all()
+> > ```
+>
+> <br><br>
+>
+> > <code>person_api/api/urls.py</code>
+> > ```
+> > from home.views import index, person, person_detail, login, Persons, PeopleViewSet          # PeopleViewSet
+> > from django.urls import path, include                                                       # include
+> > from rest_framework.routers import DefaultRouter                                            # DefaultRouter
+> > 
+> > 
+> > router = DefaultRouter()
+> > router.register(r'people', PeopleViewSet, basename='people')
+> > urlpatterns = router.urls
+> > 
+> > 
+> > urlpatterns = [
+> >     path('index/', index),                              # Function based view
+> >     path('person/', person),                            # Function based view
+> >     path('person/<int:id>/', person_detail),            # Function based view
+> >     path('login/', login),                              # Function based view
+> >     path('persons/', Persons.as_view()),                # Class based view
+> >     path('', include(router.urls))                      # ModelViewSet
+> > ]
+> > ```
+
+
