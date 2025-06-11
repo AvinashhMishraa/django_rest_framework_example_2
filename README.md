@@ -2053,6 +2053,52 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > }
 > ```
 
+<br>
+
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/people/
+> > ```
+> > {
+> >     "id": 24,
+> >     "name": "A24",
+> >     "color": 1
+> > }
+> > ```
+> > <br>
+> > 
+> > **Output &nbsp;:** &nbsp; <code>Method Not Allowed: /api/people/</code>
+> >
+> > <br>
+> > 
+> > The correct way of doing a <code>PATCH</code> is : 
+> >
+> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/people/24/
+> > ```
+> > {
+> >     "id" : 24,                # optional
+> >     "name": "A24",
+> >     "color": 1
+> > }
+> > ```
+> > <br>
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "id": 24,
+> >     "name": "A24",
+> >     "age": 29,
+> >     "color": 1,
+> >     "color_info": {
+> >         "color_name": "RED",
+> >         "hex_code": "#ff0000"
+> >     }
+> > }
+> > ```
+>
+> <br>
+>
+> Similarly the correct way of doing a <code>PUT</code> is by using http://localhost:8000/api/people/24/ and not http://localhost:8000/api/people/
+
 
 
 
