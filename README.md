@@ -1965,7 +1965,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > <br>
 > 
 > So http://localhost:8000/api/people/ is the URL you can use **for all the CRUD operations** <ins>without you having to bother about how actually the CRUD logic is implemented in the backend</ins>.
-> 
 > <br>
 >
 > This is **Abstraction** in Object Oriented Programming where you need to focus only on Application and not on the working details of a set of REST APIs for a model.
