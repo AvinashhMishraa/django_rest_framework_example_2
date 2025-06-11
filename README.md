@@ -1911,3 +1911,5 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 <br>
 
 <h2>ModelViewSet</h2>
+
+Now that you have seen both function based view <code>@api_view()</code> and class based view <code>ApiView()</code> which are custom CRUD suuport, let's now see ModelViewSet which gives you **full-featured RESTful APIs** + **auto-routing**, **filters**, **auth**, etc.
