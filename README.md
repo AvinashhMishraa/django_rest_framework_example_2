@@ -2063,14 +2063,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >     "color": 1
 > > }
 > > ```
-> > <br>
-> > 
 > > **Output &nbsp;:** &nbsp; <code>Method Not Allowed: /api/people/</code>
 > >
 > > <br>
 > > 
-> > The correct way of doing a <code>PATCH</code> is : 
-> >
+> > The correct way of doing a <code>PATCH</code> is : <br>
 > > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/people/24/
 > > ```
 > > {
@@ -2079,8 +2076,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >     "color": 1
 > > }
 > > ```
-> > <br>
-> > 
 > > **Output &nbsp;:**
 > > ```
 > > {
