@@ -1970,6 +1970,45 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 >
 > This is **Abstraction** in Object Oriented Programming where you need to focus only on Application and not on the working details of a set of REST APIs for a model.
 
+<br>
+
+> <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/
+> <br>
+> 
+> **Output &nbsp;:**
+> ```
+> [
+>     {
+>         "id": 1,
+>         "name": "A1",
+>         "age": 25,
+>         "color": 1,
+>         "color_info": {
+>             "color_name": "RED",
+>             "hex_code": "#ff0000"
+>         }
+>     },
+>     {
+>         "id": 2,
+>         "name": "A2",
+>         "age": 27,
+>         "color": null,
+>         "color_info": null
+>     },
+>     {
+>         "id": 3,
+>         "name": "A3",
+>         "age": 40,
+>         "color": 2,
+>         "color_info": {
+>             "color_name": "BLUE",
+>             "hex_code": "#0000ff"
+>         }
+>     }
+> ]
+> ```
+
+
 
 
 
