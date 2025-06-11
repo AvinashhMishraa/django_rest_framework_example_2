@@ -1952,7 +1952,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > <br>
 > 
-> > ```
 > > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/
 > > <br>
 > > 
