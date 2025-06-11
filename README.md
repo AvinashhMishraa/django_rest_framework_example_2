@@ -1926,7 +1926,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >     queryset = Person.objects.all()
 > > ```
 >
-> <br><br>
+> <br>
 >
 > > <code>person_api/api/urls.py</code>
 > > ```
