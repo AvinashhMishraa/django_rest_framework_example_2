@@ -2008,6 +2008,32 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > ]
 > ```
 
+<br>
+
+> <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/people/
+> ```
+> {
+>     "name": "AAA",
+>     "age" : 29,
+>     "color": 3
+> }
+> ```
+> <br>
+>
+> **Output &nbsp;:**
+> ```
+> {
+>     "id": 24,
+>     "name": "AAA",
+>     "age": 29,
+>     "color": 3,
+>     "color_info": {
+>         "color_name": "GREEN",
+>         "hex_code": "#008000"
+>     }
+> }
+> ```
+
 
 
 
