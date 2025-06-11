@@ -2067,8 +2067,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >
 > > <br>
 > > 
-> > The correct way of doing a <code>PATCH</code> is : <br>
-> > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/people/24/
+> > The correct way of doing a <code>PATCH</code> is &nbsp;&nbsp;➜&nbsp;&nbsp; <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/people/24/
 > > ```
 > > {
 > >     "id" : 24,                # optional
