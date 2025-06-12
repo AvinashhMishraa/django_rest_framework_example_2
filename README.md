@@ -968,8 +968,9 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
-> >     
-> >     color = ColorSerializer()
+> > 
+> >     # color = ColorSerializer()                                  # DRF treats nested serializers as required by default
+> >     color = ColorSerializer(required=False, allow_null=True)
 > > 
 > >     class Meta:
 > >         model = Person
@@ -1007,10 +1008,37 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
+> > **Note** - <code>color</code> field is **optional** but if you pass it in the body, you have to pass it as a <ins>nested JSON structure</ins> because the <code>color</code> variable in the <code>PersonSerializer</code> above is actually a **nested serializer**.
+> >
+> > <br>
+> >
 > > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
-> >     "name": "ABC",
+> >     "name": "Abc",
+> >     "age": 25,
+> > }
+> > ```
+> >
+> >
+> > **Output &nbsp;:**
+> > ```
+> > Person successfully created
+> > ```
+> > {
+> >     "id": 21,
+> >     "color": 1,
+> >     "name": "Abc",
+> >     "age": 25
+> > }
+> > ```
+> >
+> <br>
+>
+> > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
+> > ```
+> > {
+> >     "name": "Xyz",
 > >     "age": 21,
 > >     "color": 1
 > > }
@@ -1032,7 +1060,7 @@ you will find <code>"Page Not Found"</code> error.
 > > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
-> >     "name": "ABC",
+> >     "name": "Xyz",
 > >     "age": 21,
 > >     "color": {
 > >         "id": 1
@@ -1056,7 +1084,7 @@ you will find <code>"Page Not Found"</code> error.
 > > <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
-> >     "name": "ABC",
+> >     "name": "Xyz",
 > >     "age": 21,
 > >     "color": {
 > >         "id": 1,
@@ -1151,7 +1179,7 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > <br>
 > 
-> > In your <code>PersonSerializer</code>, you made <code>color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())</code> — this makes it a **nested serializer**.
+> > In your <code>PersonSerializer</code>, you made <code>color = ColorSerializer(required=False, allow_null=True)</code> — this makes it a **nested serializer**.
 > >
 > > 
 > > DRF treats this as an **embedded object**. But by default, <code>ModelSerializer</code> **doesn't know how to create or update related objects through a nested serializer** unless you override <code>.create()</code> and <code>.update()</code> methods <ins>explicitly</ins>.
@@ -1180,7 +1208,7 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > > Remove the <code>ColorSerializer</code> class and change this in <code>PersonSerializer</code> class:
 > > ```
-> > color = ColorSerializer()
+> > color = ColorSerializer(required=False, allow_null=True)
 > > ```
 > >
 > > 
@@ -1217,8 +1245,8 @@ you will find <code>"Page Not Found"</code> error.
 > > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
-> >     "name": "Abc",
-> >     "age": 25,
+> >     "name": "Xyz",
+> >     "age": 21,
 > >     "color": 1
 > > }
 > > ```
@@ -1227,10 +1255,10 @@ you will find <code>"Page Not Found"</code> error.
 > > Person successfully created
 > > ```
 > > {
-> >     "id": 21,
+> >     "id": 22,
 > >     "color": 1,
-> >     "name": "Abc",
-> >     "age": 25
+> >     "name": "Xyz",
+> >     "age": 21
 > > }
 > > ```
 > <br>
@@ -1238,7 +1266,7 @@ you will find <code>"Page Not Found"</code> error.
 > > <code>PATCH</code> &nbsp;&nbsp;http://localhost:8000/api/person/
 > > ```
 > > {
-> >     "id": 21,
+> >     "id": 22,
 > >     "color": 2
 > > }
 > > ```
@@ -1247,10 +1275,10 @@ you will find <code>"Page Not Found"</code> error.
 > > Person successfully updated
 > > ```
 > > {
-> >     "id": 21,
+> >     "id": 22,
 > >     "color": 2,
-> >     "name": "Abc",
-> >     "age": 25
+> >     "name": "Xyz",
+> >     "age": 21
 > > }
 > > ```
 
