@@ -1205,7 +1205,7 @@ you will find <code>"Page Not Found"</code> error.
 > > Then you have to write your own custom <code>.create()</code> and <code>.update()</code> methods for <code>POST</code> and <code>PUT</code>/<code>PATCH</code> requests respectively.
 > <br>
 > 
-> - However The best way to solve this problem is by using <code>PrimaryKeyRelatedField</code> instead of nested <code>ColorSerializer</code>. ⭐<br>
+> - However the best way to solve this problem is by using <code>PrimaryKeyRelatedField</code> instead of nested <code>ColorSerializer</code>. ⭐<br>
 > This is cleaner and simpler <ins>when you only want to link an existing <code>Color</code> (not create/update nested <code>Color</code>).</ins> <br>
 > 
 >
