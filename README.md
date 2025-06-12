@@ -1095,7 +1095,8 @@ you will find <code>"Page Not Found"</code> error.
 > > **Output &nbsp;:**
 > > ```
 > > AssertionError: The `.create()` method does not support writable nested fields by default.
-> > Write an explicit `.create()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields.
+> >
+> > Write an explicit `.create()` method for serializer `home.serializers.PersonSerializer`, <br>or set `read_only=True` on nested serializer fields.
 > > ```
 > <br>
 >
@@ -1137,7 +1138,8 @@ you will find <code>"Page Not Found"</code> error.
 > > **Output &nbsp;:**
 > > ```
 > > AssertionError: The `.update()` method does not support writable nested fields by default.
-> > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields
+> >
+> > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, <br>or set `read_only=True` on nested serializer fields
 > > ```
 > <br>
 > 
@@ -1157,7 +1159,8 @@ you will find <code>"Page Not Found"</code> error.
 > > **Output &nbsp;:**
 > > ```
 > > AssertionError: The `.update()` method does not support writable nested fields by default.
-> > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, or set `read_only=True` on nested serializer fields
+> >
+> > Write an explicit `.update()` method for serializer `home.serializers.PersonSerializer`, <br>or set `read_only=True` on nested serializer fields
 > > ```
 > <br>
 >
@@ -1173,7 +1176,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-> As you can see you are able to **get** and **delete** persons <ins>but not **create** and **update** them</ins> using **POSTMAN**, you may ask <ins>**why this is happening**</ins> ? Howeveer you can still do all CRUD operations through <code>admin</code>.
+> As you can see you are able to **get** and **delete** persons <ins>but not **create** and **update** them</ins> using **POSTMAN**, you may ask <ins>**why this is happening**</ins> ? However you can still do all CRUD operations through <code>admin</code>.
 > 
 > <br>
 > 
