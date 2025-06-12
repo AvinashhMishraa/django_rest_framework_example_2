@@ -1284,7 +1284,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > {
 > >     "id": 22,
-> >     "color": 2
+> >     "color": null
 > > }
 > > ```
 > >
@@ -1293,7 +1293,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > > {
 > >     "id": 22,
-> >     "color": 2,
+> >     "color": null,
 > >     "name": "Xyz",
 > >     "age": 21
 > > }
