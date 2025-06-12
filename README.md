@@ -1240,7 +1240,11 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > >     
-> >     color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
+> >     color = serializers.PrimaryKeyRelatedField(
+> >         queryset=Color.objects.all(),
+> >         required=False,
+> >         allow_null=True
+> >     )
 > > 
 > >     class Meta:
 > >         model = Person
