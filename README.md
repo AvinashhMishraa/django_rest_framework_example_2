@@ -969,7 +969,7 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
-> >     # color = ColorSerializer()                                  # DRF treats nested serializers as required by default
+> >     # color = ColorSerializer()                                  # nested serializers are required by default
 > >     color = ColorSerializer(required=False, allow_null=True)
 > > 
 > >     class Meta:
@@ -1008,7 +1008,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > **Note** - <code>color</code> field is **optional** but if you pass it in the body, you have to pass it as a <ins>nested JSON structure</ins> because the <code>color</code> variable in the <code>PersonSerializer</code> above is actually a **nested serializer**.
+> > It is important that the <code>color</code> field is **optional** but if you pass it in the body, you have to pass it as a <ins>nested JSON structure</ins> because the <code>color</code> variable in the <code>PersonSerializer</code> above is actually a **nested serializer**.
 > >
 > > <br>
 > >
@@ -1021,7 +1021,6 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > >
 > >
-> > **Output &nbsp;:**
 > > ```
 > > Person successfully created
 > > ```
