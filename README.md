@@ -1008,7 +1008,7 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > <br>
 >
-> > It is important that the <code>color</code> field is **optional** but if you pass it in the body, you have to pass it as a <ins>nested JSON structure</ins> because the <code>color</code> variable in the <code>PersonSerializer</code> above is actually a **nested serializer**.
+> > It is important to note that the <code>color</code> field is **optional** but if you pass it in the body, you have to pass it as a <ins>nested JSON structure</ins> because the <code>color</code> variable in the <code>PersonSerializer</code> above is actually a **nested serializer**.
 > >
 > > <br>
 > >
