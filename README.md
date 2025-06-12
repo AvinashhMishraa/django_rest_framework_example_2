@@ -1214,13 +1214,20 @@ you will find <code>"Page Not Found"</code> error.
 > 
 > > Remove the <code>ColorSerializer</code> class and change this in <code>PersonSerializer</code> class:
 > > ```
-> > color = ColorSerializer(required=False, allow_null=True)
+> > color = ColorSerializer(
+> > 	required=False, 
+> > 	allow_null=True
+> > )
 > > ```
 > >
 > > 
 > > To
 > > ```
-> > color = serializers.PrimaryKeyRelatedField(queryset=Color.objects.all())
+> >  color = serializers.PrimaryKeyRelatedField(
+> > 	queryset=Color.objects.all(),
+> > 	required=False,
+> > 	allow_null=True
+> >  )
 > > ```
 > <br>
 > 
