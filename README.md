@@ -1021,7 +1021,6 @@ you will find <code>"Page Not Found"</code> error.
 > > ```
 > >
 > >
-> > ```
 > > Person successfully created
 > > ```
 > > {
