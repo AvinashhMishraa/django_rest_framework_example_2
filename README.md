@@ -2169,7 +2169,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> > <code>person_api/home/views.py</code>
+> > <code>person_api/home/views.py</code> &nbsp;⭐
 > > ```
 > > from rest_framework.views import APIView
 > > from rest_framework.response import Response
@@ -2269,7 +2269,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> ✅ &nbsp;The <ins>**bulk-create**</ins> code is implemented in such a way that **either all records are created at once or none**. &nbsp;⭐
+> 🔸 &nbsp;The <ins>**bulk-create**</ins> code is implemented in such a way that **either all records are created at once or none**. &nbsp;⭐
 > 
 > <br>
 >
@@ -2358,8 +2358,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> ✅ &nbsp;The <ins>**bulk-update**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. &nbsp;⭐ <br>
-> It means only those records will be updated which are not corrupt.
+> 🔸 &nbsp;The <ins>**bulk-update**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. &nbsp;⭐ <br>
+> &nbsp;&nbsp;&nbsp;It means only those records will be updated which are not corrupt.
 > 
 > <br>
 >
@@ -2492,7 +2492,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> ✅ &nbsp;The <ins>**bulk-delete**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. &nbsp;⭐ <br>
+> 🔸 &nbsp;The <ins>**bulk-delete**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. &nbsp;⭐ <br>
 > 
 > <br>
 > 
