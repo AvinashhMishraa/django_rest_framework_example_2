@@ -2539,9 +2539,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 <br>
 
 <h2><ins>Soft Delete</ins> &nbsp;vs&nbsp; <ins>Hard Delete</ins></h2>
-
 <br>
-
 > <h3>🧹 Hard Delete</h3>
 > 
 > - Definition: Permanently removes the record from the database.
@@ -2557,9 +2555,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > - When regulatory/policy compliance requires removal.
 > 
 > - For performance in high-volume, short-lived data (e.g., session logs, cache).
-
 <br>
-
 > <h3>🧊 Soft Delete</h3>
 > 
 > - Definition: Marks the record as deleted (e.g., with an is_deleted=True flag) but does not physically remove it.
