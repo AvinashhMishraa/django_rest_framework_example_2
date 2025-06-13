@@ -2538,41 +2538,41 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h3>🧹 Hard Delete</h3>
-
-- Definition: Permanently removes the record from the database.
-
-- Effect: Data is gone and cannot be recovered.
-
-- SQL &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
-
-<h4>🔹 When to Use :</h4>
-
-- When data is temporary or non-critical.
-
-- When regulatory/policy compliance requires removal.
-
-- For performance in high-volume, short-lived data (e.g., session logs, cache).
+> <h3>🧹 Hard Delete</h3>
+> 
+> - Definition: Permanently removes the record from the database.
+> 
+> - Effect: Data is gone and cannot be recovered.
+> 
+> - SQL &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
+> 
+> <h4>🔹 When to Use :</h4>
+> 
+> - When data is temporary or non-critical.
+> 
+> - When regulatory/policy compliance requires removal.
+> 
+> - For performance in high-volume, short-lived data (e.g., session logs, cache).
 
 <br>
 
-<h3>🧊 Soft Delete</h3>h3>
-
-- Definition: Marks the record as deleted (e.g., with an is_deleted=True flag) but does not physically remove it.
-
-- Effect: Data stays in DB, but is hidden from normal queries.
-
-- SQL Analogy: <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
-
-<h4>🔹 When to Use :</h4>
-
-- When you want recovery or undo option.
-
-- For audit/history purposes.
-
-- To maintain referential integrity (e.g., foreign key constraints).
-
-- When deletion needs approval or delayed cleanup.
+> <h3>🧊 Soft Delete</h3>
+> 
+> - Definition: Marks the record as deleted (e.g., with an is_deleted=True flag) but does not physically remove it.
+> 
+> - Effect: Data stays in DB, but is hidden from normal queries.
+> 
+> - SQL Analogy: <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
+> 
+> <h4>🔹 When to Use :</h4>
+> 
+> - When you want recovery or undo option.
+> 
+> - For audit/history purposes.
+> 
+> - To maintain referential integrity (e.g., foreign key constraints).
+> 
+> - When deletion needs approval or delayed cleanup.
 
 
 
