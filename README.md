@@ -2169,6 +2169,10 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
+🧠 The bulk operations (create / update / delete) **reduce database hits from N queries → 1 query**.
+
+<br>
+
 > > <code>person_api/home/views.py</code> &nbsp;⭐
 > > ```
 > > from rest_framework.views import APIView
