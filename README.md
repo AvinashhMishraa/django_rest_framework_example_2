@@ -2156,7 +2156,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > <br>
 > 
 > <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/person/    &nbsp;&nbsp;&nbsp;&nbsp; - **option 1** &nbsp;(function based view) <br>
-> <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/persons/   &nbsp;&nbsp;&nbsp; - **option 2** &nbsp;(class based view)    <br>
+> <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/persons/   &nbsp;&nbsp;&nbsp;- **option 2** &nbsp;(class based view)    <br>
 > <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/people/    &nbsp;&nbsp;&nbsp;&nbsp; - **option 3** &nbsp;(ModelViewSet)        <br>
 > ```
 > [
