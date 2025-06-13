@@ -2538,7 +2538,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h1>✅ What is Soft Delete vs Hard Delete in Django (or any system) ?</h1>
+<h2>✅ What is Soft Delete vs Hard Delete in Django (or any system) ?</h2>
 
 > <h3>🧹 Hard Delete</h3>
 > 
