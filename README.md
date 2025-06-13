@@ -2218,6 +2218,39 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >             )
 > > 
 > >         return Response({"message": "All records updated successfully", "data": response_data})
+> > 
+> > 
+> > class BulkPersonDeleteView(APIView):
+> >     def delete(self, request):
+> >         ids = request.data.get("ids", [])
+> > 
+> >         if not isinstance(ids, list) or not all(isinstance(i, int) for i in ids):
+> >             return Response(
+> >                 {"error": "Invalid data. 'ids' must be a list of integers."},
+> >                 status=status.HTTP_400_BAD_REQUEST
+> >             )
+> > 
+> >         persons = Person.objects.filter(id__in=ids)
+> > 
+> >         if not persons.exists():
+> >             return Response(
+> >                 {"error": "No matching persons found for the provided IDs."},
+> >                 status=status.HTTP_404_NOT_FOUND
+> >             )
+> > 
+> >         found_ids = list(persons.values_list('id', flat=True))
+> > 
+> >         deleted_count = persons.count()
+> >         persons.delete()
+> > 
+> >         return Response(
+> >             {
+> >                 "message": f"{deleted_count} persons deleted successfully.",
+> >                 "deleted_ids": found_ids,
+> >                 "missing_ids": list(set(ids) - set(found_ids))
+> >             },
+> >            status=status.HTTP_200_OK
+> >         )
 > > ```
 >
 > <br>
@@ -2225,11 +2258,12 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > <code>person_api/api/urls.py</code>
 > > ```
 > > from django.urls import path
-> > from .views import BulkPersonCreateView, BulkPersonUpdateView
+> > from .views import BulkPersonCreateView, BulkPersonUpdateView, BulkPersonDeleteView
 > > 
 > > urlpatterns = [
-> >     path('person/bulk-create/', BulkPersonCreateView.as_view()),
-> >     path('person/bulk-update/', BulkPersonUpdateView.as_view()),
+> >     path('person/bulk-create/', BulkPersonCreateView.as_view()),            # Class based view
+> >     path('person/bulk-update/', BulkPersonUpdateView.as_view()),            # Class based view
+> >     path('person/bulk-delete/', BulkPersonDeleteView.as_view()),            # Class based view
 > > ]
 > > ```
 
