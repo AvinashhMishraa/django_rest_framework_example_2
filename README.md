@@ -2233,6 +2233,94 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > ]
 > > ```
 
+<br>
+
+> The bulk-create code is implemented in such a way that **either all records are created at once or none**.
+> 
+> <br>
+>
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/bulk-create/
+> > ```
+> > [
+> >  	{"name": "S1", "age": 16, "color": 3},
+> >  	{"name": "S2", "age": 35, "color": 3},
+> >  	{"name": "S3", "age": 27},
+> > 	{"name": "S4", "age":28, "color": null}
+> > ]
+> > ```
+> > <br>
+> >
+> > **Output &nbsp;:**
+> > ```
+> > [
+> >     {"non_field_errors": ["Age should be 18 or older."]},
+> >     {},
+> >     {},
+> >     {}
+> > ]
+> > ```
+> 
+> <br>
+> 
+> It means that the first record here is corrupt because of age validation. <br>
+> Changing it will make the bulk-create successful. <br>
+> Let's verify it.
+> 
+> <br>
+> 
+> > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/bulk-create/
+> > ```
+> >  	{"name": "S1", "age": 26, "color": 3},                   
+> >  	{"name": "S2", "age": 35, "color": 3},
+> >  	{"name": "S3", "age": 27},
+> > 	{"name": "S4", "age":28, "color": null}
+> > ]
+> > ```
+> > <br>
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "message": "Bulk create successful",
+> >     "data": [
+> >         {
+> >             "id": 33,
+> >             "name": "S1",
+> >             "age": 26,
+> >             "color": 3,
+> >             "color_info": {
+> >                 "color_name": "GREEN",
+> >                 "hex_code": "#008000"
+> >             }
+> >         },
+> >         {
+> >             "id": 34,
+> >             "name": "S2",
+> >             "age": 35,
+> >             "color": 3,
+> >             "color_info": {
+> >                 "color_name": "GREEN",
+> >                 "hex_code": "#008000"
+> >             }
+> >         },
+> >         {
+> >             "id": 35,
+> >             "name": "S3",
+> >             "age": 27,
+> >             "color": null,
+> >             "color_info": null
+> >         },
+> >         {
+> >             "id": 36,
+> >             "name": "S4",
+> >             "age": 28,
+> >             "color": null,
+> >             "color_info": null
+> >         }
+> >     ]
+> > }
+> > ```
+
 
 
 
