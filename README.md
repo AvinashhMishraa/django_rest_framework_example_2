@@ -2596,16 +2596,16 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | Admin removing spam comments        | ❌ No or ✅ Yes    | Depends on need for moderation history        |
 > | GDPR "right to be forgotten"        | ❌ Must be hard   | Legal requirement to erase all data           |
 
-> <h3>⭐ &nbsp;👨‍💻 In Django</h3>
+> <h3>👨‍💻 In Django</h3>
 > 
-> Soft delete :
+> **Soft delete** &nbsp;:
 > ```
 > class MyModel(models.Model):
 >     is_deleted = models.BooleanField(default=False)
 > ```
 >
 >
-> Hard delete :
+> **Hard delete** &nbsp; :
 > ```
 > instance.delete()              # Removes the row from database
 > ```
