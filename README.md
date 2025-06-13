@@ -2546,7 +2546,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 - SQL: <code>DELETE FROM table WHERE id = 1;</code>
 
-<h4>🔹 When to Use :</h4>h4>
+<h4>🔹 When to Use :</h4>
 
 - When data is temporary or non-critical.
 
