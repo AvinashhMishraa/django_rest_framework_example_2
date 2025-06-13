@@ -2540,6 +2540,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <h2><ins>Soft Delete</ins> &nbsp;vs&nbsp; <ins>Hard Delete</ins></h2>
 
+<br>
+
 > <h3>⭐ &nbsp;Hard &nbsp;Delete</h3>
 > 
 > - **Definition :**&nbsp; Permanently removes the record from the database.
