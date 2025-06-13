@@ -2270,6 +2270,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > > <code>POST</code> &nbsp;&nbsp;http://localhost:8000/api/person/bulk-create/
 > > ```
+> > [
 > >  	{"name": "S1", "age": 26, "color": 3},                   
 > >  	{"name": "S2", "age": 35, "color": 3},
 > >  	{"name": "S3", "age": 27},
