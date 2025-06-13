@@ -2492,7 +2492,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> The <ins>**bulk-delete**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. <br>
+> The <ins>**bulk-delete**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. &nbsp;⭐ <br>
 > 
 > <br>
 > 
