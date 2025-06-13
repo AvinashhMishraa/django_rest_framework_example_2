@@ -2146,6 +2146,28 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > Similarly the correct way of doing a <code>PUT</code> is by using http://localhost:8000/api/people/24/ and not http://localhost:8000/api/people/
 
+<br>
+
+<h1>Bulk Create &nbsp;/&nbsp; Bulk Update</h1>
+
+<br>
+
+> If you try to hit any of these urls for bulk create, you will get error.
+> <br>
+> 
+> <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/person/    &nbsp;&nbsp;&nbsp;&nbsp; - **option 1** &nbsp;(function based view) <br>
+> <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/persons/   &nbsp;&nbsp;&nbsp;&nbsp; - **option 2** &nbsp;(class based view)    <br>
+> <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/people/    &nbsp;&nbsp;&nbsp;&nbsp; - **option 3** &nbsp;(ModelViewSet)        <br>
+> ```
+> [
+>  	{"name": "S1", "age": 16, "color": 3},
+>  	{"name": "S2", "age": 35, "color": 3},
+>  	{"name": "S3", "age": 27},
+> 	{"name": "S4", "age":28, "color": null}
+> ]
+> ```
+
+
 
 
 
