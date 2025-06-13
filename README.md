@@ -2183,8 +2183,14 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >         serializer = PersonSerializer(data=request.data, many=True)
 > >         if serializer.is_valid():
 > >             serializer.save()
-> >             return Response({"message": "Bulk create successful", "data": serializer.data}, status=status.HTTP_201_CREATED)
-> >         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+> >             return Response(
+> >                 {"message": "Bulk create successful", "data": serializer.data}, 
+> >                 status=status.HTTP_201_CREATED
+> >             )
+> >         return Response(
+> >             serializer.errors, 
+> >             status=status.HTTP_400_BAD_REQUEST
+> >         )
 > > 
 > > 
 > > class BulkPersonUpdateView(APIView):
@@ -2206,7 +2212,10 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >                 errors.append({"id": item.get("id"), "error": "Not Found"})
 > > 
 > >         if errors:
-> >             return Response({"errors": errors, "updated": response_data}, status=status.HTTP_207_MULTI_STATUS)
+> >             return Response(
+> >                 {"errors": errors, "updated": response_data}, 
+> >                 status=status.HTTP_207_MULTI_STATUS
+> >             )
 > > 
 > >         return Response({"message": "All records updated successfully", "data": response_data})
 > > ```
@@ -2223,6 +2232,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >     path('person/bulk-update/', BulkPersonUpdateView.as_view()),
 > > ]
 > > ```
+
+
 
 
 
