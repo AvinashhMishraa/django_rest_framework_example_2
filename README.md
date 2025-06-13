@@ -2542,11 +2542,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 > <h3>⭐ &nbsp;Hard &nbsp;Delete</h3>
 > 
-> - Definition: Permanently removes the record from the database.
+> - **Definition :**&nbsp; Permanently removes the record from the database.
 > 
-> - Effect: Data is gone and cannot be recovered.
+> - **Effect :**&nbsp; Data is gone and cannot be recovered.
 > 
-> - SQL &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
+> - **SQL** &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
 > 
 > ```
 > class MyModel(models.Model):
@@ -2565,11 +2565,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 > <h3>⭐ &nbsp;Soft &nbsp;Delete</h3>
 > 
-> - Definition: Marks the record as deleted (e.g., with an <code>is_deleted=True</code> flag) but does not physically remove it.
+> - **Definition :** &nbsp;Marks the record as deleted (e.g., with an <code>is_deleted=True</code> flag) but does not physically remove it.
 > 
-> - Effect: Data stays in DB, but is hidden from normal queries.
+> - **Effect :** Data stays in DB, but is hidden from normal queries.
 > 
-> - SQL Analogy &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
+> - **SQL Analogy** &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
 > 
 > ```
 > instance.delete()                                                               # Removes the row from database
