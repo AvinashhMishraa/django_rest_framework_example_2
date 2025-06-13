@@ -2607,7 +2607,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 >
 > **Hard delete** &nbsp; :
 > ```
-> instance.delete()              # Removes the row from database
+> instance.delete()                                       # Removes the row from database
 > ```
 
 
