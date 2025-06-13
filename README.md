@@ -2263,7 +2263,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > <br>
 > 
 > It means that the first record here is corrupt because of age validation. <br>
-> Changing it will make the bulk-create successful. <br>
+> Changing it will make the <ins>**bulk-create**</ins> successful. <br>
 > Let's verify it.
 > 
 > <br>
@@ -2323,7 +2323,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> The bulk-update code is implemented in such a way that **it's not EITHER ALL OR NONE**. <br>
+> The <ins>**bulk-update**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. <br>
 > It means only those records will be updated which are not corrupt.
 > 
 > <br>
@@ -2372,7 +2372,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 >
 > <br> 
 > 
-> Let's see another example of bulk update
+> Let's see another example of <ins>**bulk-update**</ins>
 >
 > <br>
 >
