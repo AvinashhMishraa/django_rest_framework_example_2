@@ -2548,7 +2548,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - SQL &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
 > 
-> <h4>🔸 When to Use :</h4>
+> <h4>🔸 &nbsp;When to Use :</h4>
 > 
 > - When data is temporary or non-critical.
 > 
@@ -2565,7 +2565,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - SQL Analogy &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
 >
-> <h4>🔸 When to Use :</h4>
+> <h4>🔸 &nbsp;When to Use :</h4>
 > 
 > - When you want recovery or undo option.
 > 
