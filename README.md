@@ -2609,7 +2609,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | User deleting their profile         | ✅ Yes            | Allow future recovery or account reactivation |
 > | Logs or temporary session data      | ❌ No             | Space/performance more important              |
 > | Products or categories in ecommerce | ✅ Yes            | To avoid breaking orders referencing them     |
-> | Admin removing spam comments        | ❌ No or ✅ Yes    | Depends on need for moderation history        |
+> | Admin removing spam comments        | ❌ No &nbsp;or&nbsp; ✅ Yes    | Depends on need for moderation history        |
 > | GDPR "right to be forgotten"        | ❌ Must be hard   | Legal requirement to erase all data           |
 
 
