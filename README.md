@@ -2544,9 +2544,9 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 > <h3>⭐ &nbsp;Hard &nbsp;Delete</h3>
 > 
-> - **Definition :**&nbsp; Permanently removes the record from the database.
+> - **Definition ** &nbsp;➜&nbsp; Permanently removes the record from the database.
 > 
-> - **Effect :**&nbsp; Data is gone and cannot be recovered.
+> - **Effect ** &nbsp;➜&nbsp; Data is gone and cannot be recovered.
 > 
 > - **SQL** &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
 > 
@@ -2567,9 +2567,9 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 > <h3>⭐ &nbsp;Soft &nbsp;Delete</h3>
 > 
-> - **Definition :** &nbsp;Marks the record as deleted (e.g., with an <code>is_deleted=True</code> flag) but does not physically remove it.
+> - **Definition ** &nbsp;➜&nbsp; Marks the record as deleted (e.g., with an <code>is_deleted=True</code> flag) but does not physically remove it.
 > 
-> - **Effect :** Data stays in DB, but is hidden from normal queries.
+> - **Effect ** &nbsp;➜&nbsp; Data stays in DB, but is hidden from normal queries.
 > 
 > - **SQL Analogy** &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
 > 
