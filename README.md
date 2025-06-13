@@ -2321,6 +2321,141 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > }
 > > ```
 
+<br>
+
+> The bulk-update code is implemented in such a way that **it's not EITHER ALL OR NONE**. <br>
+> It means only those records will be updated which are not corrupt.
+> 
+> <br>
+>
+> > <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/person/bulk-update/
+> > ```
+> > [
+> >   {"id": 33, "name": "Test33", "age": 12},
+> >   {"id": 35, "name": "Test35"},
+> >   {"id": 36, "color": 2}
+> > ]
+> > ```
+> > <br>
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "errors": [
+> >         {
+> >             "non_field_errors": [
+> >                 "Age should be 18 or older."
+> >             ]
+> >         }
+> >     ],
+> >     "updated": [
+> >         {
+> >             "id": 35,
+> >             "name": "Test35",
+> >             "age": 27,
+> >             "color": null,
+> >             "color_info": null
+> >         },
+> >         {
+> >             "id": 36,
+> >             "name": "S4",
+> >             "age": 28,
+> >             "color": 2,
+> >             "color_info": {
+> >                 "color_name": "BLUE",
+> >                 "hex_code": "#0000ff"
+> >             }
+> >         }
+> >     ]
+> > }
+> > ```
+>
+> <br> 
+> 
+> Let's see another example of bulk update
+>
+> <br>
+>
+> > <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/person/bulk-update/
+> > ```
+> > [
+> > 	{"id": 1, "name": "Avinash Mishra", "age": 32, "color": 1},
+> > 	{"id": 2, "name": "Aman Mishra", "age": 27, "color": null},
+> > 	{"id": 3, "name": "Radha Jha", "age": 29, "color": 3},
+> > 	{"id": 21, "name": "Gopal Krisna Jha", "age": 35, "color": 3},
+> > 	{"id": 22, "name": "Bechan Mishra", "age": 54, "color": 1},
+> > 	{"id": 25, "name": "Bina Mishra", "age": 50}
+> > ]
+> > ```
+> > <br>
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "message": "All records updated successfully",
+> >     "data": [
+> >         {
+> >             "id": 1,
+> >             "name": "Avinash Mishra",
+> >             "age": 32,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         },
+> >         {
+> >             "id": 2,
+> >             "name": "Aman Mishra",
+> >             "age": 27,
+> >             "color": null,
+> >             "color_info": null
+> >         },
+> >         {
+> >             "id": 3,
+> >             "name": "Radha Jha",
+> >             "age": 29,
+> >             "color": 3,
+> >             "color_info": {
+> >                 "color_name": "GREEN",
+> >                 "hex_code": "#008000"
+> >             }
+> >         },
+> >         {
+> >             "id": 21,
+> >             "name": "Gopal Krisna Jha",
+> >             "age": 35,
+> >             "color": 3,
+> >             "color_info": {
+> >                 "color_name": "GREEN",
+> >                 "hex_code": "#008000"
+> >             }
+> >         },
+> >         {
+> >             "id": 22,
+> >             "name": "Bechan Mishra",
+> >             "age": 54,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         },
+> >         {
+> >             "id": 25,
+> >             "name": "Bina Mishra",
+> >             "age": 50,
+> >             "color": 2,
+> >             "color_info": {
+> >                 "color_name": "BLUE",
+> >                 "hex_code": "#0000ff"
+> >             }
+> >         }
+> >     ]
+> > }
+> > ```
+
+
 
 
 
