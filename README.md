@@ -2575,18 +2575,26 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - When deletion needs approval or delayed cleanup.
 
-<h3>Comparison</h3>
+> <h3>Comparison</h3>
+> 
+> | Feature               | Hard Delete           | Soft Delete                     |
+> | --------------------- | --------------------- | ------------------------------- |
+> | Record existence      | Removed from DB       | Still in DB                     |
+> | Undo possible?        | ❌ No                  | ✅ Yes                        |
+> | Referential integrity | ❌ Can break FKs       | ✅ Maintained                 |
+> | Performance           | ✅ Fast for small data | ❌ Slight overhead in queries |
+> | Auditing/history      | ❌ Not retained        | ✅ Data is retained           |
+> | DB size impact        | Smaller over time     | Grows unless purged manually    |
 
-| Feature               | Hard Delete           | Soft Delete                     |
-| --------------------- | --------------------- | ------------------------------- |
-| Record existence      | Removed from DB       | Still in DB                     |
-| Undo possible?        | ❌ No                  | ✅ Yes                        |
-| Referential integrity | ❌ Can break FKs       | ✅ Maintained                 |
-| Performance           | ✅ Fast for small data | ❌ Slight overhead in queries |
-| Auditing/history      | ❌ Not retained        | ✅ Data is retained           |
-| DB size impact        | Smaller over time     | Grows unless purged manually    |
-
-
+> <h3>Example Use Cases</h3>
+>
+> | Use Case                            | Use Soft Delete? | Why?                                          |
+> | ----------------------------------- | ---------------- | --------------------------------------------- |
+> | User deleting their profile         | ✅ Yes            | Allow future recovery or account reactivation |
+> | Logs or temporary session data      | ❌ No             | Space/performance more important              |
+> | Products or categories in ecommerce | ✅ Yes            | To avoid breaking orders referencing them     |
+> | Admin removing spam comments        | ❌ No or ✅ Yes    | Depends on need for moderation history        |
+> | GDPR "right to be forgotten"        | ❌ Must be hard   | Legal requirement to erase all data           |
 
 
 
