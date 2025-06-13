@@ -2561,6 +2561,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - For performance in high-volume, short-lived data (e.g., session logs, cache).
 
+<br>
 
 > <h3>⭐ &nbsp;Soft &nbsp;Delete</h3>
 > 
@@ -2584,6 +2585,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - When deletion needs approval or delayed cleanup.
 
+<br>
+
 > <h3>Comparison</h3>
 > 
 > | Feature               | Hard Delete           | Soft Delete                     |
@@ -2594,6 +2597,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | Performance           | ✅ Fast for small data | ❌ Slight overhead in queries |
 > | Auditing/history      | ❌ Not retained        | ✅ Data is retained           |
 > | DB size impact        | Smaller over time     | Grows unless purged manually    |
+
+<br>
 
 > <h3>Example Use Cases</h3>
 >
