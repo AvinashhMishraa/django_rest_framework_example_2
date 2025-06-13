@@ -2540,6 +2540,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <h2>✅ What is Soft Delete vs Hard Delete in Django (or any system) ?</h2>
 
+<br>
+
 > <h3>🧹 Hard Delete</h3>
 > 
 > - Definition: Permanently removes the record from the database.
