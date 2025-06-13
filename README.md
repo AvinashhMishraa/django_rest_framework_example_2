@@ -2536,3 +2536,22 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > }
 > > ```
 
+<br>
+
+<h3>🧹 Hard Delete</h3>
+
+- Definition: Permanently removes the record from the database.
+
+- Effect: Data is gone and cannot be recovered.
+
+- SQL: <code>DELETE FROM table WHERE id = 1;</code>
+
+**🔹 When to Use :**
+
+- When data is temporary or non-critical.
+
+- When regulatory/policy compliance requires removal.
+
+- For performance in high-volume, short-lived data (e.g., session logs, cache).
+
+  
