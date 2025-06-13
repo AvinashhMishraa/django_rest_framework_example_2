@@ -2542,7 +2542,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> <h3>⭐ &nbsp;Hard &nbsp;Delete</h3>
+> <h3>⭐ &nbsp;<ins>Hard &nbsp;Delete</ins></h3>
 > 
 > - **Definition** &nbsp;➜&nbsp; Permanently removes the record from the database.
 > 
@@ -2565,7 +2565,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> <h3>⭐ &nbsp;Soft &nbsp;Delete</h3>
+> <h3>⭐ &nbsp;<ins>Soft &nbsp;Delete</ins></h3>
 > 
 > - **Definition** &nbsp;➜&nbsp; Marks the record as deleted (e.g., with an <code>is_deleted=True</code> flag) but does not physically remove it.
 > 
@@ -2589,7 +2589,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> <h3>Comparison</h3>
+> <h3><ins>Comparison</ins></h3>
 > 
 > | Feature               | Hard Delete           | Soft Delete                     |
 > | --------------------- | --------------------- | ------------------------------- |
@@ -2602,7 +2602,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> <h3>Example Use Cases</h3>
+> <h3><ins>Example Use Cases</ins></h3>
 >
 > | Use Case                            | Use Soft Delete? | Why?                                          |
 > | ----------------------------------- | ---------------- | --------------------------------------------- |
