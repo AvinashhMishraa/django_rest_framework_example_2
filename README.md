@@ -2235,7 +2235,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> The bulk-create code is implemented in such a way that **either all records are created at once or none**.
+> The <ins>**bulk-create**</ins> code is implemented in such a way that **either all records are created at once or none**.
 > 
 > <br>
 >
