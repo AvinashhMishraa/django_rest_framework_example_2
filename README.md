@@ -2544,7 +2544,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 - Effect: Data is gone and cannot be recovered.
 
-- <ins>SQL</ins> &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
+- SQL &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
 
 <h4>🔹 When to Use :</h4>
 
