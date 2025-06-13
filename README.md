@@ -2548,6 +2548,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - SQL &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
 > 
+> ```
+> class MyModel(models.Model):
+>     is_deleted = models.BooleanField(default=False)
+> ```
+> 
 > <h4>🔸 &nbsp;When to Use :</h4>
 > 
 > - When data is temporary or non-critical.
@@ -2564,7 +2569,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > - Effect: Data stays in DB, but is hidden from normal queries.
 > 
 > - SQL Analogy &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
->
+> 
+> ```
+> instance.delete()                                       # Removes the row from database
+> ```
+> 
 > <h4>🔸 &nbsp;When to Use :</h4>
 > 
 > - When you want recovery or undo option.
@@ -2596,19 +2605,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | Admin removing spam comments        | ❌ No or ✅ Yes    | Depends on need for moderation history        |
 > | GDPR "right to be forgotten"        | ❌ Must be hard   | Legal requirement to erase all data           |
 
-> <h3>👨‍💻 In Django</h3>
-> 
-> **Soft delete** &nbsp;:
-> ```
-> class MyModel(models.Model):
->     is_deleted = models.BooleanField(default=False)
-> ```
->
->
-> **Hard delete** &nbsp; :
-> ```
-> instance.delete()                                       # Removes the row from database
-> ```
 
 
 
