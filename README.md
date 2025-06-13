@@ -2359,7 +2359,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 <br>
 
 > 🔸 &nbsp;The <ins>**bulk-update**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. &nbsp;⭐ <br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It means only those records will be updated which are not corrupt.
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It means only those records will be updated which are not corrupt.
 > 
 > <br>
 >
