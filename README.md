@@ -2148,7 +2148,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h1>Bulk Create &nbsp;/&nbsp; Bulk Update</h1>
+<h1>Bulk Create &nbsp;/&nbsp; Bulk Update &nbsp;/&nbsp; Bulk Delete</h1>
 
 <br>
 
@@ -2490,13 +2490,45 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > }
 > > ```
 
+<br>
 
-
-
-
-
-
-
-
-
+> The <ins>**bulk-delete**</ins> code is implemented in such a way that **it's not EITHER ALL OR NONE**. <br>
+> 
+> <br>
+> 
+> > **Single Delete**
+> >
+> > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/person/35/
+> > ```
+> > {
+> >     "message": "Person deleted"
+> > }
+> > ```
+>
+> <br>
+>
+> > **Bulk Delete**
+> > 
+> > <code>DELETE</code> &nbsp;&nbsp;http://localhost:8000/api/person/bulk-delete/
+> > ```
+> > {
+> >     "ids": [33, 34, 35, 36]
+> > }
+> > ```
+> > <br>
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "message": "3 persons deleted successfully.",
+> >     "deleted_ids": [
+> >         33,
+> >         34,
+> >         36
+> >     ],
+> >     "missing_ids": [
+> >         35
+> >     ]
+> > }
+> > ```
 
