@@ -2576,6 +2576,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > - When deletion needs approval or delayed cleanup.
 
 <h3>Comparison</h3>
+
 | Feature               | Hard Delete           | Soft Delete                     |
 | --------------------- | --------------------- | ------------------------------- |
 | Record existence      | Removed from DB       | Still in DB                     |
