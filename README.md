@@ -2559,7 +2559,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 > <h3>⭐ &nbsp;Soft &nbsp;Delete</h3>
 > 
-> - Definition: Marks the record as deleted (e.g., with an is_deleted=True flag) but does not physically remove it.
+> - Definition: Marks the record as deleted (e.g., with an <code>is_deleted=True</code> flag) but does not physically remove it.
 > 
 > - Effect: Data stays in DB, but is hidden from normal queries.
 > 
