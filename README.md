@@ -2562,7 +2562,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - Effect: Data stays in DB, but is hidden from normal queries.
 > 
-> - SQL Analogy: <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
+> - SQL Analogy &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
 > 
 > <h4>🔹 When to Use :</h4>
 > 
