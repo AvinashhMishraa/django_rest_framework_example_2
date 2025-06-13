@@ -2167,6 +2167,63 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > ]
 > ```
 
+<br>
+
+> > <code>person_api/home/views.py</code>
+> > ```
+> > from rest_framework.views import APIView
+> > from rest_framework.response import Response
+> > from rest_framework import status
+> > from .models import Person
+> > from .serializers import PersonSerializer
+> > 
+> > 
+> > class BulkPersonCreateView(APIView):
+> >     def post(self, request):
+> >         serializer = PersonSerializer(data=request.data, many=True)
+> >         if serializer.is_valid():
+> >             serializer.save()
+> >             return Response({"message": "Bulk create successful", "data": serializer.data}, status=status.HTTP_201_CREATED)
+> >         return Response(serializer.errors, status=status.HTTP_400_BAD_REQUEST)
+> > 
+> > 
+> > class BulkPersonUpdateView(APIView):
+> >     def put(self, request):
+> >         data = request.data
+> >         response_data = []
+> >         errors = []
+> > 
+> >         for item in data:
+> >             try:
+> >                 person = Person.objects.get(id=item['id'])
+> >                 serializer = PersonSerializer(person, data=item, partial=True)
+> >                 if serializer.is_valid():
+> >                     serializer.save()
+> >                     response_data.append(serializer.data)
+> >                 else:
+> >                     errors.append(serializer.errors)
+> >             except Person.DoesNotExist:
+> >                 errors.append({"id": item.get("id"), "error": "Not Found"})
+> > 
+> >         if errors:
+> >             return Response({"errors": errors, "updated": response_data}, status=status.HTTP_207_MULTI_STATUS)
+> > 
+> >         return Response({"message": "All records updated successfully", "data": response_data})
+> > ```
+>
+> <br>
+>
+> > <code>person_api/api/urls.py</code>
+> > ```
+> > from django.urls import path
+> > from .views import BulkPersonCreateView, BulkPersonUpdateView
+> > 
+> > urlpatterns = [
+> >     path('person/bulk-create/', BulkPersonCreateView.as_view()),
+> >     path('person/bulk-update/', BulkPersonUpdateView.as_view()),
+> > ]
+> > ```
+
 
 
 
