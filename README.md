@@ -2572,7 +2572,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > - SQL Analogy &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
 > 
 > ```
-> instance.delete()                                       # Removes the row from database
+> instance.delete()                                                               # Removes the row from database
 > ```
 > 
 > <h4>🔸 &nbsp;When to Use :</h4>
@@ -2609,8 +2609,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | Products or categories in ecommerce | ✅ Yes            | To avoid breaking orders referencing them     |
 > | Admin removing spam comments        | ❌ No or ✅ Yes    | Depends on need for moderation history        |
 > | GDPR "right to be forgotten"        | ❌ Must be hard   | Legal requirement to erase all data           |
-
-
 
 
 
