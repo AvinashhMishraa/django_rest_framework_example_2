@@ -2612,6 +2612,9 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | Admin removing spam comments        | ❌ No &nbsp;or&nbsp; ✅ Yes    | Depends on need for moderation history        |
 > | GDPR "right to be forgotten"        | ❌ Must be hard   | Legal requirement to erase all data           |
 
+<br>
+
+<h1>Filters</h1>
 
 
 
