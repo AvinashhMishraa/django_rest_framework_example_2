@@ -2620,6 +2620,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 Let's first build a <code>search</code> api around a **single field** of the <code>Person</code> model in <code>PeopleViewSet</code>.
 
+<br>
+
 > 🔶 &nbsp;**Filter on Name**
 >
 >
@@ -2628,13 +2630,10 @@ Let's first build a <code>search</code> api around a **single field** of the <co
 > class PeopleViewSet(viewsets.ModelViewSet):
 >     serializer_class = PersonSerializer
 >     queryset = Person.objects.all()
->     # queryset = Person.objects.filter(color__isnull = False)
->     # queryset = Person.objects.select_related('color').filter(color__isnull = False)
 > 
 > 
->     # http://localhost:8000/api/people/?search=
 >     def list(self, request):
->         search = request.GET.get('search')
+>         search = request.GET.get('search')                                 # http://localhost:8000/api/people/?search=
 >         queryset = self.queryset
 >         if search:
 >             queryset = queryset.filter(name__startswith=search)
