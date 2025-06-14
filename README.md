@@ -2698,7 +2698,7 @@ Let's first build a <code>search</code> api around a **single field** of the <co
 
 <br>
 
-> 🔶 &nbsp;**Filter on Age** &nbsp;:&nbsp; just modify the <code>list()</code> method of the <code>PeopleViewSet</code> class
+> 🔶 &nbsp;**Filter on Age** &nbsp;➜&nbsp; just modify the <code>list()</code> method of the <code>PeopleViewSet</code> class
 >
 >
 > ```
