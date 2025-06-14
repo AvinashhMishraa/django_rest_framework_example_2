@@ -2700,7 +2700,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > }
 > > ```
 > 
-> <br><br>
+> <br>
 > 
 > > 🔶 &nbsp;**Filter on Age**
 > >
