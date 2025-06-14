@@ -2702,10 +2702,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > <br><br>
 > 
-> > 🔶 &nbsp;**Filter on Age** &nbsp;:&nbsp; just modify the <code>list()</code> method of the <code>PeopleViewSet</code> class
+> > 🔶 &nbsp;**Filter on Age**
 > >
 > > <br>
 > >
+> > Just modify the <code>list()</code> method of the <code>PeopleViewSet</code> class in the <code>person_api/home/views.py</code> file
 > > ```
 > > if search:
 > > 	queryset = queryset.filter(age__gte=search)
