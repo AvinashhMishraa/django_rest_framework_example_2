@@ -2634,7 +2634,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > 
 > > 
 > >     def list(self, request):
-> >         search = request.GET.get('search')                       # http://localhost:8000/api/people/?search=
+> >         search = request.GET.get('search')                          # http://localhost:8000/api/people/?search=
 > >         queryset = self.queryset
 > >         if search:
 > >             queryset = queryset.filter(name__startswith=search)
