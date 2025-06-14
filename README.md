@@ -2620,4 +2620,122 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 Let's first build a <code>search</code> api around a **single field** of the <code>Person</code> model in <code>PeopleViewSet</code>.
 
+> 🔶 &nbsp;**Filter on Name**
+>
+>
+> <code>person_api/home/views.py</code>
+> ```
+> class PeopleViewSet(viewsets.ModelViewSet):
+>     serializer_class = PersonSerializer
+>     queryset = Person.objects.all()
+>     # queryset = Person.objects.filter(color__isnull = False)
+>     # queryset = Person.objects.select_related('color').filter(color__isnull = False)
+> 
+> 
+>     # http://localhost:8000/api/people/?search=
+>     def list(self, request):
+>         search = request.GET.get('search')
+>         queryset = self.queryset
+>         if search:
+>             queryset = queryset.filter(name__startswith=search)
+>         serializer = PersonSerializer(queryset, many=True)
+>         return Response({
+>             'status' : 200,
+>             'data' : serializer.data
+>         })
+> ```
+>
+> <br>
+>
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?search=b
+> > ```
+> > {
+> >     "status": 200,
+> >     "data": [
+> >         {
+> >             "id": 22,
+> >             "name": "Bechan Mishra",
+> >             "age": 54,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         },
+> >         {
+> >             "id": 25,
+> >             "name": "Bina Mishra",
+> >             "age": 50,
+> >             "color": 2,
+> >             "color_info": {
+> >                 "color_name": "BLUE",
+> >                 "hex_code": "#0000ff"
+> >             }
+> >         }
+> >     ]
+> > }
+> > ```
+>
+> <br>
+>
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?search=bi
+> > ```
+> > {
+> >     "status": 200,
+> >     "data": [
+> >         {
+> >             "id": 25,
+> >             "name": "Bina Mishra",
+> >             "age": 50,
+> >             "color": 2,
+> >             "color_info": {
+> >                 "color_name": "BLUE",
+> >                 "hex_code": "#0000ff"
+> >             }
+> >         }
+> >     ]
+> > }
+> > ```
+
+<br>
+
+> 🔶 &nbsp;**Filter on Age** &nbsp;:&nbsp; just modify the <code>list()</code> method of the <code>PeopleViewSet</code> class
+>
+>
+> ```
+> if search:
+> 	queryset = queryset.filter(age__gte=search)
+> ```
+>
+>
+> <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?search=50
+> ```
+> {
+>     "status": 200,
+>     "data": [
+>         {
+>             "id": 22,
+>             "name": "Bechan Mishra",
+>             "age": 54,
+>             "color": 1,
+>             "color_info": {
+>                 "color_name": "RED",
+>                 "hex_code": "#ff0000"
+>             }
+>         },
+>         {
+>             "id": 25,
+>             "name": "Bina Mishra",
+>             "age": 50,
+>             "color": 2,
+>             "color_info": {
+>                 "color_name": "BLUE",
+>                 "hex_code": "#0000ff"
+>             }
+>         }
+>     ]
+> }
+> ```
+
+
 
