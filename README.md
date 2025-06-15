@@ -2742,14 +2742,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-Let's now customize the same api by **combining filters on multiple fields** of the <code>Person</code> model (like <code>name, <code>age</code>) or it's related fields (<code>color__color_name</code>).
-
-
->**Combining Multiple Filters &nbsp;:**
+> Let's now customize the same api by **combining filters on multiple fields** of the <code>Person</code> model (like <code>name, <code>age</code>) or it's related fields (<code>color__color_name</code>).
 >
 > <br>
 >
-> > 🔶 &nbsp;Find all the persons who have the letter "r" in both his <code>name</code> and <code>color</code>.
+> > 🔶 &nbsp;Find all the persons who have the letter **"r"** in both his <code>name</code> and <code>color</code>.
 > > 
 > > <br>
 > > 
@@ -2764,7 +2761,8 @@ Let's now customize the same api by **combining filters on multiple fields** of 
 > >
 > > <br>
 > >
-> > **<ins>Solution</ins> &nbsp;:** <br>
+> > **<ins>Solution</ins> &nbsp;:**
+> >
 > > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?search=r
 > > ```
 > > from django.db.models import Q
@@ -2853,11 +2851,12 @@ Let's now customize the same api by **combining filters on multiple fields** of 
 > >         Q(age__lte=33) &
 > >         Q(color__color_name__icontains=search)
 > >    )
-> > ```
+> > ````
 > >
 > > <br>
 > >
-> > **<ins>Solution</ins> &nbsp;:** <br>
+> > **<ins>Solution</ins> &nbsp;:**
+> >
 > > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?search=r
 > > ```
 > > from django.db.models import Q
