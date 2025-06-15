@@ -2962,12 +2962,12 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > <br>
 > 
 > ```
-> | Lookup           | Description                  |
-> | ---------------- | ---------------------------- |
-> | `date__year`     | Filter by year               |
-> | `date__month`    | Filter by month              |
-> | `date__day`      | Filter by day                |
-> | `date__week_day` | Day of the week (1 = Sunday) |
-> | `date__range`    | Range of dates               |
+| Lookup           | Description                  |
+| ---------------- | ---------------------------- |
+| `date__year`     | Filter by year               |
+| `date__month`    | Filter by month              |
+| `date__day`      | Filter by day                |
+| `date__week_day` | Day of the week (1 = Sunday) |
+| `date__range`    | Range of dates               |
 > ```
 
