@@ -2921,7 +2921,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > <br>
 > 
 > You can use these with <code>name</code> , <code>color__color_name</code> , etc.
-> ```
 > | Lookup        | Description                    | Example                        |
 > | ------------- | ------------------------------ | ------------------------------ |
 > | `exact`       | Exact match (case-sensitive)   | `name__exact='Rohan'`          |
@@ -2935,7 +2934,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | `in`          | Belongs to list                | `name__in=['Rohan', 'Mohan']`  |
 > | `regex`       | Regular expression match       | `name__regex=r'^[A-Z][a-z]+$'` |
 > | `iregex`      | Case-insensitive regex match   | `name__iregex=r'^[a-z]+$'`     |
-> ```
+
 
 <br>
 
@@ -2944,7 +2943,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > <br>
 > 
 > Use these with fields like <code>age</code>.
-> ```
 > | Lookup  | Description           | Example            |
 > | ------- | --------------------- | ------------------ |
 > | `exact` | Exact match           | `age__exact=21`    |
@@ -2953,21 +2951,20 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | `gt`    | Greater than          | `age__gt=30`       |
 > | `gte`   | Greater than or equal | `age__gte=18`      |
 > | `in`    | In a list             | `age__in=[18, 21]` |
-> ```
+
 
 <br>
 
 > 📅 &nbsp;Date/Time Field Filters (<code>DateField</code> , <code>DateTimeField</code>)
-> 
+>
 > <br>
 > 
-> > ```
-> > | Lookup           | Description                  |
-> > | ---------------- | ---------------------------- |
-> > | `date__year`     | Filter by year               |
-> > | `date__month`    | Filter by month              |
-> > | `date__day`      | Filter by day                |
-> > | `date__week_day` | Day of the week (1 = Sunday) |
-> > | `date__range`    | Range of dates               |
-> > ```
+> | Lookup           | Description                  |
+> | ---------------- | ---------------------------- |
+> | `date__year`     | Filter by year               |
+> | `date__month`    | Filter by month              |
+> | `date__day`      | Filter by day                |
+> | `date__week_day` | Day of the week (1 = Sunday) |
+> | `date__range`    | Range of dates               |
+
 
