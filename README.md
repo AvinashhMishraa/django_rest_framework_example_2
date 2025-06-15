@@ -2916,7 +2916,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> 🔤 &nbsp;**String Field Filters** &nbsp;(<code>CharField</code>, <code>TextField</code>)
+> 🔤 &nbsp;**String Field Filters** &nbsp;( <code>CharField</code>, <code>TextField</code> )
 > 
 > 
 > You can use these with <code>name</code> , <code>color__color_name</code> , etc.
@@ -2937,7 +2937,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> 🔢 &nbsp;**Numeric Field Filters** (<code>IntegerField</code> , <code>FloatField</code> , etc.)
+> 🔢 &nbsp;**Numeric Field Filters** ( <code>IntegerField</code> , <code>FloatField</code> , etc. )
 > 
 > 
 > Use these with fields like <code>age</code>.
@@ -2953,7 +2953,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> 📅 &nbsp;Date/Time Field Filters (<code>DateField</code> , <code>DateTimeField</code>)
+> 📅 &nbsp;Date/Time Field Filters ( <code>DateField</code> , <code>DateTimeField</code> )
 >
 > 
 > | Lookup           | Description                  |
