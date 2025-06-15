@@ -2742,7 +2742,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> ⬤ *&nbsp;Let's now customize the same api by <ins>**combining filters on multiple fields**</ins> of the <code>Person</code> model
+> ⬤ &nbsp;Let's now customize the same api by <ins>**combining filters on multiple fields**</ins> of the <code>Person</code> model <br>
 > &nbsp;&nbsp;&nbsp;like <code>name</code> and <code>age</code> or it's related fields like <code>color__color_name</code>.
 >
 > <br>
