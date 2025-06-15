@@ -2913,3 +2913,61 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >     ]
 > > }
 > > ```
+
+<br>
+
+> 🔤 **String Field Filters** &nbsp;(<code>CharField</code>, <code>TextField</code>)
+> 
+> <br>
+> 
+> You can use these with <code>name</code> , <code>color__color_name</code> , etc.
+> ```
+> | Lookup        | Description                    | Example                        |
+> | ------------- | ------------------------------ | ------------------------------ |
+> | `exact`       | Exact match (case-sensitive)   | `name__exact='Rohan'`          |
+> | `iexact`      | Exact match (case-insensitive) | `name__iexact='rohan'`         |
+> | `contains`    | Substring (case-sensitive)     | `name__contains='oh'`          |
+> | `icontains`   | Substring (case-insensitive)   | `name__icontains='oh'`         |
+> | `startswith`  | Starts with (case-sensitive)   | `name__startswith='Ro'`        |
+> | `istartswith` | Starts with (case-insensitive) | `name__istartswith='ro'`       |
+> | `endswith`    | Ends with (case-sensitive)     | `name__endswith='n'`           |
+> | `iendswith`   | Ends with (case-insensitive)   | `name__iendswith='N'`          |
+> | `in`          | Belongs to list                | `name__in=['Rohan', 'Mohan']`  |
+> | `regex`       | Regular expression match       | `name__regex=r'^[A-Z][a-z]+$'` |
+> | `iregex`      | Case-insensitive regex match   | `name__iregex=r'^[a-z]+$'`     |
+> ```
+
+<br>
+
+> 🔢 **Numeric Field Filters** (<code>IntegerField</code> , <code>FloatField</code> , etc.)
+> 
+> <br>
+> 
+> Use these with fields like <code>age</code>.
+> ```
+> | Lookup  | Description           | Example            |
+> | ------- | --------------------- | ------------------ |
+> | `exact` | Exact match           | `age__exact=21`    |
+> | `lt`    | Less than             | `age__lt=18`       |
+> | `lte`   | Less than or equal    | `age__lte=25`      |
+> | `gt`    | Greater than          | `age__gt=30`       |
+> | `gte`   | Greater than or equal | `age__gte=18`      |
+> | `in`    | In a list             | `age__in=[18, 21]` |
+> ```
+
+<br>
+
+> 📅 Date/Time Field Filters (<code>DateField</code> , <code>DateTimeField</code>)
+> 
+> <br>
+> 
+> ```
+> | Lookup           | Description                  |
+> | ---------------- | ---------------------------- |
+> | `date__year`     | Filter by year               |
+> | `date__month`    | Filter by month              |
+> | `date__day`      | Filter by day                |
+> | `date__week_day` | Day of the week (1 = Sunday) |
+> | `date__range`    | Range of dates               |
+> ```
+
