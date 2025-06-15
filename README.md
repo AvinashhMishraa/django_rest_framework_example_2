@@ -2740,6 +2740,181 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > }
 > > ```
 
+<br>
+
+Let's now customize the same api by **combining filters on multiple fields** of the <code>Person</code> model (like <code>name, <code>age</code>) or it's related fields (<code>color__color_name</code>).
+
+
+>**Combining Multiple Filters &nbsp;:**
+>
+> <br>
+>
+> > 🔶 &nbsp;Find all the persons who have the letter "r" in both his <code>name</code> and <code>color</code>.
+> > 
+> > <br>
+> > 
+> > ```
+> > if search:
+> >     queryset = queryset.filter(
+> >         Q(name__icontains=search) &
+> >         Q(color__color_name__icontains=search)
+> >    )
+> > ```
+> > Use <code>from django.db.models import Q</code> for combining filters with <code>|</code> or <code>&</code>.
+> >
+> > <br>
+> >
+> > **<ins>Solution</ins> &nbsp;:** <br>
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?search=r
+> > ```
+> > from django.db.models import Q
+> > 
+> > 
+> > class PeopleViewSet(viewsets.ModelViewSet):
+> >     serializer_class = PersonSerializer
+> >     queryset = Person.objects.all()
+> > 
+> >     def list(self, request):
+> >         search = request.GET.get('search')
+> >         queryset = self.queryset
+> >         if search:
+> >             queryset = queryset.filter(
+> >                 Q(name__icontains=search) &
+> >                 Q(color__color_name__icontains=search)
+> >             )
+> >         serializer = PersonSerializer(queryset, many=True)
+> >         return Response({
+> >             'status' : 200,
+> >             'data' : serializer.data
+> >         })
+> > ```
+> > 
+> > <br>
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "status": 200,
+> >     "data": [
+> >         {
+> >             "id": 1,
+> >             "name": "Avinash Mishra",
+> >             "age": 32,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         },
+> >         {
+> >             "id": 3,
+> >             "name": "Radha Jha",
+> >             "age": 29,
+> >             "color": 3,
+> >             "color_info": {
+> >                 "color_name": "GREEN",
+> >                 "hex_code": "#008000"
+> >             }
+> >         },
+> >         {
+> >             "id": 21,
+> >             "name": "Gopal Krisna Jha",
+> >             "age": 35,
+> >             "color": 3,
+> >             "color_info": {
+> >                 "color_name": "GREEN",
+> >                 "hex_code": "#008000"
+> >             }
+> >         },
+> >         {
+> >             "id": 22,
+> >             "name": "Bechan Mishra",
+> >             "age": 54,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         }
+> >     ]
+> > }
+> > ```
+> 
+> <br>
+>
+> > 🔶 &nbsp;Find all the persons who have the letter "r" in both his <code>name</code> & <code>color</code> and also who have <code>age <= 33</code>
+> > 
+> > <br>
+> > 
+> > ```
+> > if search:
+> >     queryset = queryset.filter(
+> >         Q(name__icontains=search) &
+> >         Q(age__lte=33) &
+> >         Q(color__color_name__icontains=search)
+> >    )
+> > ```
+> >
+> > <br>
+> >
+> > **<ins>Solution</ins> &nbsp;:** <br>
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?search=r
+> > ```
+> > from django.db.models import Q
+> > 
+> > 
+> > class PeopleViewSet(viewsets.ModelViewSet):
+> >     serializer_class = PersonSerializer
+> >     queryset = Person.objects.all()
+> > 
+> >     def list(self, request):
+> >         search = request.GET.get('search')
+> >         queryset = self.queryset
+> >         if search:
+> >             queryset = queryset.filter(
+> >                 Q(name__icontains=search) &
+> >                 Q(age__lte=33) &
+> >                 Q(color__color_name__icontains=search)
+> >             )
+> >         serializer = PersonSerializer(queryset, many=True)
+> >         return Response({
+> >             'status' : 200,
+> >             'data' : serializer.data
+> >         })
+> > ```
+> > 
+> > <br>
+> >
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "status": 200,
+> >     "data": [
+> >         {
+> >             "id": 1,
+> >             "name": "Avinash Mishra",
+> >             "age": 32,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         },
+> >         {
+> >             "id": 3,
+> >             "name": "Radha Jha",
+> >             "age": 29,
+> >             "color": 3,
+> >             "color_info": {
+> >                 "color_name": "GREEN",
+> >                 "hex_code": "#008000"
+> >             }
+> >         }
+> >     ]
+> > }
+> > ```
+
+
 
 
 
