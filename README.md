@@ -2916,7 +2916,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> 🔤 **String Field Filters** &nbsp;(<code>CharField</code>, <code>TextField</code>)
+> 🔤 &nbsp;**String Field Filters** &nbsp;(<code>CharField</code>, <code>TextField</code>)
 > 
 > <br>
 > 
@@ -2939,7 +2939,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> 🔢 **Numeric Field Filters** (<code>IntegerField</code> , <code>FloatField</code> , etc.)
+> 🔢 &nbsp;**Numeric Field Filters** (<code>IntegerField</code> , <code>FloatField</code> , etc.)
 > 
 > <br>
 > 
@@ -2957,7 +2957,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> 📅 Date/Time Field Filters (<code>DateField</code> , <code>DateTimeField</code>)
+> 📅 &nbsp;Date/Time Field Filters (<code>DateField</code> , <code>DateTimeField</code>)
 > 
 > <br>
 > 
