@@ -2758,7 +2758,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >         Q(color__color_name__icontains=search)
 > >    )
 > > ```
-> > Use <code>from django.db.models import Q</code> for combining filters with <code>|</code> or <code>&</code>.
+> > Use <code>from django.db.models import Q</code> for combining filters with <code>|</code> or <code>&</code>. &nbsp;⭐
 > >
 > > <br>
 > >
@@ -2841,7 +2841,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > <br>
 >
-> > 🔶 &nbsp;Find all the persons who have the letter "r" in both his <code>name</code> & <code>color</code> and also who have <code>age <= 33</code>
+> > 🔶 &nbsp;Find all the persons who have the letter **"r"** in both his <code>name</code> & <code>color</code> and also who have <code>age <= 33</code>
 > > 
 > > <br>
 > > 
