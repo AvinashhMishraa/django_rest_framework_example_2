@@ -2642,11 +2642,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >         queryset = self.queryset
 > >         if search:
 > >             queryset = queryset.filter(name__startswith=search)
-> >         serializer = PersonSerializer(queryset, many=True)
-> >         return Response({
-> >             'status' : 200,
-> >             'data' : serializer.data
-> >         })
+> >         serializer = self.serializer_class(queryset, many=True)
+> >         return Response({'status': 200, 'data': serializer.data})
 > > ```
 > >
 > > <br>
@@ -2785,11 +2782,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >                 Q(name__icontains=search) &
 > >                 Q(color__color_name__icontains=search)
 > >             )
-> >         serializer = PersonSerializer(queryset, many=True)
-> >         return Response({
-> >             'status' : 200,
-> >             'data' : serializer.data
-> >         })
+> >         serializer = self.serializer_class(queryset, many=True)
+> >         return Response({'status': 200, 'data': serializer.data})
 > > ```
 > > 
 > > <br>
@@ -2880,11 +2874,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >                 Q(age__lte=33) &
 > >                 Q(color__color_name__icontains=search)
 > >             )
-> >         serializer = PersonSerializer(queryset, many=True)
-> >         return Response({
-> >             'status' : 200,
-> >             'data' : serializer.data
-> >         })
+> >         serializer = self.serializer_class(queryset, many=True)
+> >         return Response({'status': 200, 'data': serializer.data})
 > > ```
 > > 
 > > <br>
@@ -3008,7 +2999,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >             queryset = queryset.filter(color__color_name__iexact=color_name)
 > > 
 > >         serializer = self.serializer_class(queryset, many=True)
-> > 		return Response({'status': 200, 'data': serializer.data})
+> > 	    return Response({'status': 200, 'data': serializer.data})
 > > ```
 > 
 > <br>
