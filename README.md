@@ -3070,7 +3070,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-> 🔸 &nbsp;Install <code>django-filter</code> (if not already installed) :
+> 🔸 &nbsp;Install <code>django-filter</code> &nbsp;(if not already installed) :
 > ```
 > pip install django-filter
 > ```
