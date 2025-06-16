@@ -2618,6 +2618,10 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
+<h2>.filter()</h2>
+
+<br>
+
 > ✅ &nbsp;Let's first build a <code>search</code> api around a **single field** of the <code>Person</code> model in <code>PeopleViewSet</code>.
 > 
 > <br> 
