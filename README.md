@@ -2598,7 +2598,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > ```
 > > queryset = Person.objects.filter(is_deleted=False)
 > > ```
->
 > <br>
 > 
 > <h4>🔸 &nbsp;When to Use :</h4>
