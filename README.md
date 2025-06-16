@@ -2638,11 +2638,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > 
 > > 
 > >     def list(self, request):
-> >         search = request.GET.get('search')                          # http://localhost:8000/api/people/?search=
+> >         search = request.GET.get('search')                            # http://localhost:8000/api/people/?search=
 > >         queryset = self.queryset
 > >         if search:
 > >             queryset = queryset.filter(name__startswith=search)
-> >         serializer = self.serializer_class(queryset, many=True)
+> >         serializer = self.serializer_class(queryset, many=True)           # PersonSerializer(queryset, many=True)
 > >         return Response({'status': 200, 'data': serializer.data})
 > > ```
 > >
@@ -2782,7 +2782,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >                 Q(name__icontains=search) &
 > >                 Q(color__color_name__icontains=search)
 > >             )
-> >         serializer = self.serializer_class(queryset, many=True)
+> >         serializer = self.serializer_class(queryset, many=True)           # PersonSerializer(queryset, many=True)
 > >         return Response({'status': 200, 'data': serializer.data})
 > > ```
 > > 
@@ -2874,7 +2874,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >                 Q(age__lte=33) &
 > >                 Q(color__color_name__icontains=search)
 > >             )
-> >         serializer = self.serializer_class(queryset, many=True)
+> >         serializer = self.serializer_class(queryset, many=True)           # PersonSerializer(queryset, many=True)
 > >         return Response({'status': 200, 'data': serializer.data})
 > > ```
 > > 
