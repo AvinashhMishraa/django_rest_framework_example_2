@@ -2600,7 +2600,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > ```
 > <br>
 >
-> <h4>🔸 &nbsp;When to Use :</h4>
+> **🔸 &nbsp;When to Use &nbsp;:**
 > 
 > - When you want recovery or undo option.
 > 
