@@ -2966,14 +2966,18 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-> > 🔶 &nbsp;Install <code>django-filter</code> (if not already installed) :
+<h3>Filterset class</h2>
+
+In Django REST Framework, <code>filterset_class</code> allows you to **create reusable, customizable filtering logic** using **Django Filter**. This is far cleaner than writing raw <code>.filter()</code> queries in your views.
+
+> > ∎ &nbsp;Install <code>django-filter</code> (if not already installed) :
 > > ```
 > > pip install django-filter
 > > ```
 > 
 > <br>
 > 
-> > 🔶 &nbsp;And in <code>settings.py</code> , add :
+> > ∎ &nbsp;And in <code>settings.py</code> , add :
 > > ```
 > > INSTALLED_APPS = [
 > >     ●●●
@@ -2983,11 +2987,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > <br>
 > 
-> > 🔶 &nbsp;The <code>Person</code> model and the related models like <code>Color</code> are already in place. &nbsp;So nothing to do on that page.
+> > ∎ &nbsp;The <code>Person</code> model and the related models like <code>Color</code> are already in place. &nbsp;So nothing to do on that page.
 > 
 > <br>
 > 
-> > 🔶 &nbsp;Create a new file <code>person_api/home/filters.py</code> 
+> > ∎ &nbsp;Create a new file <code>person_api/home/filters.py</code> 
 > > ```
 > > from django_filters import rest_framework as filters
 > > from .models import Person
@@ -3006,7 +3010,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > <br>
 > 
-> > 🔶 &nbsp;<code>person_api/home/views.py</code> &nbsp;**(ViewSet)**
+> > ∎ &nbsp;<code>person_api/home/views.py</code> &nbsp;**(ViewSet)**
 > > ```
 > > ●●●
 > > from django_filters.rest_framework import DjangoFilterBackend
@@ -3023,7 +3027,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > <br>
 > 
-> > 🔶 &nbsp;The corresponding **router viewset** for <code>PeopleViewSet</code> is already set in <code>person_api/api/urls.py</code> <br>
+> > ∎ &nbsp;The corresponding **router viewset** for <code>PeopleViewSet</code> is already set in <code>person_api/api/urls.py</code> <br>
 > > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
 
 
