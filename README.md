@@ -2707,7 +2707,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > Just modify the <code>list()</code> method of the <code>PeopleViewSet</code> class in the <code>person_api/home/views.py</code> file
 > > ```
 > > if search:
-> > 	queryset = queryset.filter(age__gte=search)
+> >     queryset = queryset.filter(age__gte=search)
 > > ```
 > >
 > > <br>
