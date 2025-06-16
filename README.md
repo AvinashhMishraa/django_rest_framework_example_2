@@ -2550,10 +2550,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - **SQL** &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
 > 
-> ```
-> class MyModel(models.Model):
->     is_deleted = models.BooleanField(default=False)
-> ```
+> <br>
 > 
 > <h4>🔸 &nbsp;When to Use :</h4>
 > 
@@ -2576,7 +2573,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > ```
 > instance.delete()                      # Removes the row from database
 > ```
-> 
+> <br>
 > 
 > > 🔹 &nbsp;**<ins>Example</ins>** &nbsp; ➜ &nbsp;Add **Soft Delete** support for the <code>Person</code> model &nbsp;**:**
 > > 
@@ -2600,7 +2597,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > ```
 > > queryset = Person.objects.filter(is_deleted=False)
 > > ```
-> 
+> <br>
 > 
 > <h4>🔸 &nbsp;When to Use :</h4>
 > 
