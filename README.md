@@ -3100,7 +3100,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > 
 > <br>
 > 
-> 🔸 &nbsp;And in <code>settings.py</code> , add :
+> 🔸 &nbsp;And in <code>person_api/core/settings.py</code> , add :
 > ```
 > INSTALLED_APPS = [
 >     ●●●
