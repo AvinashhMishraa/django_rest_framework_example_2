@@ -2574,8 +2574,32 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > - **SQL Analogy** &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
 > 
 > ```
-> instance.delete()                                                               # Removes the row from database
+> instance.delete()                      # Removes the row from database
 > ```
+>
+> > 🔹 &nbsp;**<ins>Example</ins>** &nbsp; ➜ &nbsp;Add **Soft Delete** support for the <code>Person</code> model &nbsp;**:**
+> > 
+> > <br>
+> > 
+> > Update your <code>Person</code> model :
+> > 
+> > <code>person_api/home/models.py</code>
+> > ```
+> > class Person(models.Model):
+> >     name = models.CharField(max_length=100)
+> >     age = models.IntegerField()
+> >     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="color")
+> >     is_deleted = models.BooleanField(default=False)
+> > 
+> >     def delete(self, using=None, keep_parents=False):
+> >         self.is_deleted = True
+> >         self.save()
+> > ```
+> > 
+> > Update your queryset to exclude soft-deleted records:
+> > ```
+> > queryset = Person.objects.filter(is_deleted=False)
+> > ```
 > 
 > <h4>🔸 &nbsp;When to Use :</h4>
 > 
