@@ -3024,7 +3024,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > <br>
 > 
 > > 🔶 &nbsp;The corresponding **router viewset** for <code>PeopleViewSet</code> is already set in <code>person_api/api/urls.py</code> <br>
-> > &nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
+> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
 
 
 
