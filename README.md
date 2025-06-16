@@ -2568,12 +2568,12 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > - **Effect** &nbsp;➜&nbsp; Data stays in DB, but is hidden from normal queries.
 > 
-> - **SQL Analogy** &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
-> 
-> ```
-> instance.delete()                      # Removes the row from database
-> ```
-> &nbsp; 
+> > - **SQL Analogy** &nbsp;➜&nbsp; <code>UPDATE table SET is_deleted = true WHERE id = 1;</code>
+> > 
+> > ```
+> > instance.delete()                      # Removes the row from database
+> > ```
+> <br> 
 > 
 > > 🔹 &nbsp;**<ins>Example</ins>** &nbsp; ➜ &nbsp;Add **Soft Delete** support for the <code>Person</code> model &nbsp;**:**
 > > 
@@ -2598,7 +2598,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > > ```
 > > queryset = Person.objects.filter(is_deleted=False)
 > > ```
-> 
+> <br>
 >
 > <h4>🔸 &nbsp;When to Use :</h4>
 > 
