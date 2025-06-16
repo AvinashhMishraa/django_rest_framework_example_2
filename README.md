@@ -3062,20 +3062,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h3>Filterset &nbsp;class</h2>
+<h3>Filterset &nbsp;class</h3>
 
 <br>
 
-In Django REST Framework, <code>filterset_class</code> allows you to **create reusable, customizable filtering logic** using **Django Filter**. This is far cleaner than writing raw <code>.filter()</code> queries in your views.
-
-<br>
-
-
-<h3>Filterset &nbsp;class</h2>
-
-<br>
-
-In Django REST Framework, <code>filterset_class</code> allows you to **create reusable, customizable filtering logic** using **Django Filter**. This is far cleaner than writing raw <code>.filter()</code> queries in your views.
+In Django REST Framework, <code>filterset_class</code> allows you to **create reusable, customizable filtering logic** using **Django Filter**. <br>This is far cleaner than writing raw <code>.filter()</code> queries in your views.
 
 <br>
 
