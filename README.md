@@ -3031,16 +3031,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >                 "color_name": "RED",
 > >                 "hex_code": "#ff0000"
 > >             }
-> >         },
-> >         {
-> >             "id": 28,
-> >             "name": "ABC",
-> >             "age": 33,
-> >             "color": 1,
-> >             "color_info": {
-> >                 "color_name": "RED",
-> >                 "hex_code": "#ff0000"
-> >             }
 > >         }
 > >     ]
 > > }
