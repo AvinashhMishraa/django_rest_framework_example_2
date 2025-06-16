@@ -2974,7 +2974,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > <br>
 > 
-> Update the <code>list()</code> method in the <code>PeopleViewSet</code> to handle related fields properly using <code>__</code> lookup &nbsp;:
+> Update the <code>list()</code> method in the <code>PeopleViewSet</code> to handle related fields properly using <code>__</code> lookup &nbsp;**:**
 > 
 > 
 > > <code>person_api/home/views.py</code>
