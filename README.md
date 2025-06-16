@@ -2549,7 +2549,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > - **Effect** &nbsp;➜&nbsp; Data is gone and cannot be recovered.
 > 
 > - **SQL** &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
-> <br>
+> 
+> 
 > 
 > <h4>🔸 &nbsp;When to Use :</h4>
 > 
