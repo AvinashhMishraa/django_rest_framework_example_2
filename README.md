@@ -2618,7 +2618,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h2>.filter()</h2>
+<h3>.filter(&nbsp;)</h3>
 
 <br>
 
