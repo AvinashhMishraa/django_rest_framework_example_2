@@ -2999,7 +2999,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >             queryset = queryset.filter(color__color_name__iexact=color_name)
 > > 
 > >         serializer = self.serializer_class(queryset, many=True)
-> > 	    return Response({'status': 200, 'data': serializer.data})
+> >         return Response({'status': 200, 'data': serializer.data})
 > > ```
 > 
 > <br>
