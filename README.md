@@ -3087,7 +3087,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > 
 > <br>
 > 
-> 🔹 &nbsp;The <code>Person</code> model and the related models like <code>Color</code> are already in place. &nbsp;So nothing to do on that page.
+> 🔹 &nbsp;The <code>Person</code> model and the related models like <code>Color</code> are already in place. &nbsp;So nothing to do on that file.
 > 
 > <br>
 > 
@@ -3128,7 +3128,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > <br>
 > 
 > 🔹 &nbsp;The corresponding **router viewset** for <code>PeopleViewSet</code> is already set in <code>person_api/api/urls.py</code> <br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
 
 
 
