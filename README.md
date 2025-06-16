@@ -2579,9 +2579,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 >
 > > 🔹 &nbsp;**<ins>Example</ins>** &nbsp; ➜ &nbsp;Add **Soft Delete** support for the <code>Person</code> model &nbsp;**:**
 > > 
-> > <br>
 > > 
-> > Update your <code>Person</code> model :
+> > Update your <code>Person</code> model &nbsp;**:**
 > > 
 > > <code>person_api/home/models.py</code>
 > > ```
@@ -2596,7 +2595,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >         self.save()
 > > ```
 > > 
-> > Update your queryset to exclude soft-deleted records:
+> > Update your queryset to exclude soft-deleted records &nbsp;**:**
 > > ```
 > > queryset = Person.objects.filter(is_deleted=False)
 > > ```
