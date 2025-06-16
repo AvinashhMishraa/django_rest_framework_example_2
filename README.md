@@ -3070,65 +3070,77 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-> > 🔹 &nbsp;Install <code>django-filter</code> (if not already installed) :
-> > ```
-> > pip install django-filter
-> > ```
+
+<h3>Filterset &nbsp;class</h2>
+
+<br>
+
+In Django REST Framework, <code>filterset_class</code> allows you to **create reusable, customizable filtering logic** using **Django Filter**. This is far cleaner than writing raw <code>.filter()</code> queries in your views.
+
+<br>
+
+> 🔹 &nbsp;Install <code>django-filter</code> (if not already installed) :
+> ```
+> pip install django-filter
+> ```
 > 
 > <br>
 > 
-> > 🔹 &nbsp;And in <code>settings.py</code> , add :
-> > ```
-> > INSTALLED_APPS = [
-> >     ●●●
-> >     'django_filters',
-> > ]
-> > ```
+> 🔹 &nbsp;And in <code>settings.py</code> , add :
+> ```
+> INSTALLED_APPS = [
+>     ●●●
+>     'django_filters',
+> ]
+> ```
 > 
 > <br>
 > 
-> > 🔹 &nbsp;The <code>Person</code> model and the related models like <code>Color</code> are already in place. &nbsp;So nothing to do on that page.
+> 🔹 &nbsp;The <code>Person</code> model and the related models like <code>Color</code> are already in place. &nbsp;So nothing to do on that page.
 > 
 > <br>
 > 
-> > 🔹 &nbsp;Create a new file <code>person_api/home/filters.py</code> 
-> > ```
-> > from django_filters import rest_framework as filters
-> > from .models import Person
-> > 
-> > 
-> > class PersonFilter(filters.FilterSet):
-> >     name = filters.CharFilter(lookup_expr='icontains')
-> >     min_age = filters.NumberFilter(field_name='age', lookup_expr='gte')
-> >     max_age = filters.NumberFilter(field_name='age', lookup_expr='lte')
-> >     color_name = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
-> > 
-> >     class Meta:
-> >         model = Person
-> >         fields = ['name', 'min_age', 'max_age', 'color_name']
-> > ```
+> 🔹 &nbsp;Create a new file <code>person_api/home/filters.py</code> 
+> ```
+> from django_filters import rest_framework as filters
+> from .models import Person
+> 
+> 
+> class PersonFilter(filters.FilterSet):
+>     name = filters.CharFilter(lookup_expr='icontains')
+>     min_age = filters.NumberFilter(field_name='age', lookup_expr='gte')
+>     max_age = filters.NumberFilter(field_name='age', lookup_expr='lte')
+>     color_name = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
+> 
+>     class Meta:
+>         model = Person
+>         fields = ['name', 'min_age', 'max_age', 'color_name']
+> ```
 > 
 > <br>
 > 
-> > 🔹 &nbsp;<code>person_api/home/views.py</code> &nbsp;**(ViewSet)**
-> > ```
-> > ●●●
-> > from django_filters.rest_framework import DjangoFilterBackend
-> > from .filters import PersonFilter
-> > 
-> > 
-> > class PeopleViewSet(viewsets.ModelViewSet):
-> >     queryset = Person.objects.select_related('color').all()
-> >     serializer_class = PersonSerializer
-> > 
-> >     filter_backends = [DjangoFilterBackend]
-> >     filterset_class = PersonFilter
-> > ```
+> 🔹 &nbsp;<code>person_api/home/views.py</code> &nbsp;**(ViewSet)**
+> ```
+> ●●●
+> from django_filters.rest_framework import DjangoFilterBackend
+> from .filters import PersonFilter
+> 
+> 
+> class PeopleViewSet(viewsets.ModelViewSet):
+>     queryset = Person.objects.select_related('color').all()
+>     serializer_class = PersonSerializer
+> 
+>     filter_backends = [DjangoFilterBackend]
+>     filterset_class = PersonFilter
+> ```
 > 
 > <br>
 > 
-> > 🔹 &nbsp;The corresponding **router viewset** for <code>PeopleViewSet</code> is already set in <code>person_api/api/urls.py</code> <br>
-> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
+> 🔹 &nbsp;The corresponding **router viewset** for <code>PeopleViewSet</code> is already set in <code>person_api/api/urls.py</code> <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
+
+
+
 
 
 
