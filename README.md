@@ -2970,69 +2970,122 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h3>Filterset class</h2>
-
-In Django REST Framework, <code>filterset_class</code> allows you to **create reusable, customizable filtering logic** using **Django Filter**. This is far cleaner than writing raw <code>.filter()</code> queries in your views.
-
-> > ∎ &nbsp;Install <code>django-filter</code> (if not already installed) :
-> > ```
-> > pip install django-filter
-> > ```
+> <h4>✅ &nbsp;Add Custom Filtering Operators &nbsp;(including related fields)</h4>
 > 
 > <br>
 > 
-> > ∎ &nbsp;And in <code>settings.py</code> , add :
+> Update your <code>list()</code> method in the <code>PeopleViewSet</code> to handle related fields properly using <code>__</code> lookup :
+> 
+> 
+> > <code>person_api/home/views.py</code>
 > > ```
-> > INSTALLED_APPS = [
-> >     ●●●
-> >     'django_filters',
-> > ]
-> > ```
-> 
-> <br>
-> 
-> > ∎ &nbsp;The <code>Person</code> model and the related models like <code>Color</code> are already in place. &nbsp;So nothing to do on that page.
-> 
-> <br>
-> 
-> > ∎ &nbsp;Create a new file <code>person_api/home/filters.py</code> 
-> > ```
-> > from django_filters import rest_framework as filters
-> > from .models import Person
-> > 
-> > 
-> > class PersonFilter(filters.FilterSet):
-> >     name = filters.CharFilter(lookup_expr='icontains')
-> >     min_age = filters.NumberFilter(field_name='age', lookup_expr='gte')
-> >     max_age = filters.NumberFilter(field_name='age', lookup_expr='lte')
-> >     color_name = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
-> > 
-> >     class Meta:
-> >         model = Person
-> >         fields = ['name', 'min_age', 'max_age', 'color_name']
-> > ```
-> 
-> <br>
-> 
-> > ∎ &nbsp;<code>person_api/home/views.py</code> &nbsp;**(ViewSet)**
-> > ```
-> > ●●●
-> > from django_filters.rest_framework import DjangoFilterBackend
-> > from .filters import PersonFilter
+> > from django.db.models import Q
 > > 
 > > 
 > > class PeopleViewSet(viewsets.ModelViewSet):
-> >     queryset = Person.objects.select_related('color').all()
 > >     serializer_class = PersonSerializer
+> >     queryset = Person.objects.all()
 > > 
-> >     filter_backends = [DjangoFilterBackend]
-> >     filterset_class = PersonFilter
+> >     def list(self, request):
+> > 	
+> >         name = request.GET.get('name')
+> >         age_min = request.GET.get('age_min')
+> >         age_max = request.GET.get('age_max')
+> >         color_name = request.GET.get('color')
+> > 
+> >         queryset = self.queryset
+> > 
+> >         if name:
+> >             queryset = queryset.filter(Q(name__icontains=name))
+> > 
+> >         if age_min:
+> >             queryset = queryset.filter(age__gte=age_min)
+> > 
+> >         if age_max:
+> >             queryset = queryset.filter(age__lte=age_max)
+> > 
+> >         if color_name:
+> >             queryset = queryset.filter(color__color_name__iexact=color_name)
+> > 
+> >         serializer = self.serializer_class(queryset, many=True)                     # serializer = PersonSerializer(queryset, many=True)
+> > 		return Response({'status': 200, 'data': serializer.data})
+> > ```
+> 
+> <br>
+>
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?color=red
+> > 
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "status": 200,
+> >     "data": [
+> >         {
+> >             "id": 1,
+> >             "name": "Avinash Mishra",
+> >             "age": 32,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         },
+> >         {
+> >             "id": 22,
+> >             "name": "Bechan Mishra",
+> >             "age": 54,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         },
+> >         {
+> >             "id": 28,
+> >             "name": "ABC",
+> >             "age": 33,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         }
+> >     ]
+> > }
 > > ```
 > 
 > <br>
 > 
-> > ∎ &nbsp;The corresponding **router viewset** for <code>PeopleViewSet</code> is already set in <code>person_api/api/urls.py</code> <br>
-> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?color=red&name=avi
+> > 
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "status": 200,
+> >     "data": [
+> >         {
+> >             "id": 1,
+> >             "name": "Avinash Mishra",
+> >             "age": 32,
+> >             "color": 1,
+> >             "color_info": {
+> >                 "color_name": "RED",
+> >                 "hex_code": "#ff0000"
+> >             }
+> >         }
+> >     ]
+> > }
+> > ```
+
+
+
+
+
+
+
+
 
 
 
