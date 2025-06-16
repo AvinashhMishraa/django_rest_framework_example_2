@@ -2575,6 +2575,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > ```
 > 
 > 
+> 
 > > 🔹 &nbsp;**<ins>Example</ins>** &nbsp; ➜ &nbsp;Add **Soft Delete** support for the <code>Person</code> model &nbsp;**:**
 > > 
 > > 
