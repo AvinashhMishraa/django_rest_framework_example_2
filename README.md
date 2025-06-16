@@ -2974,7 +2974,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > 
 > <br>
 > 
-> Update the <code>list()</code> method in the <code>PeopleViewSet</code> to handle related fields properly using <code>__</code> lookup :
+> Update the <code>list()</code> method in the <code>PeopleViewSet</code> to handle related fields properly using <code>__</code> lookup &nbsp;:
 > 
 > 
 > > <code>person_api/home/views.py</code>
@@ -3007,7 +3007,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > >         if color_name:
 > >             queryset = queryset.filter(color__color_name__iexact=color_name)
 > > 
-> >         serializer = self.serializer_class(queryset, many=True)                     # serializer = PersonSerializer(queryset, many=True)
+> >         serializer = self.serializer_class(queryset, many=True)             # serializer = PersonSerializer(queryset, many=True)
 > > 		return Response({'status': 200, 'data': serializer.data})
 > > ```
 > 
