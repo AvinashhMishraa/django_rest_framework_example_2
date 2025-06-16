@@ -2573,8 +2573,8 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > ```
 > instance.delete()                      # Removes the row from database
 > ```
+> <br>
 > 
-> <br><br>
 > 
 > > 🔹 &nbsp;**<ins>Example</ins>** &nbsp; ➜ &nbsp;Add **Soft Delete** support for the <code>Person</code> model &nbsp;**:**
 > > 
