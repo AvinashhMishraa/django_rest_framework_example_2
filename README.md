@@ -3083,7 +3083,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 
 
-<h3>First implement the soft delete and also clean the portion related to it above</h3>
+
 
 
 
