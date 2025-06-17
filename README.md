@@ -3073,6 +3073,135 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mishra
+> > ```
+> > [
+> >     {
+> >         "id": 1,
+> >         "name": "Avinash Mishra",
+> >         "age": 32,
+> >         "color": 1,
+> >         "color_info": {
+> >             "color_name": "RED",
+> >             "hex_code": "#ff0000"
+> >         }
+> >     },
+> >     {
+> >         "id": 2,
+> >         "name": "Aman Mishra",
+> >         "age": 27,
+> >         "color": null,
+> >         "color_info": null
+> >     },
+> >     {
+> >         "id": 22,
+> >         "name": "Bechan Mishra",
+> >         "age": 54,
+> >         "color": 1,
+> >         "color_info": {
+> >             "color_name": "RED",
+> >             "hex_code": "#ff0000"
+> >         }
+> >     },
+> >     {
+> >         "id": 25,
+> >         "name": "Bina Mishra",
+> >         "age": 50,
+> >         "color": 2,
+> >         "color_info": {
+> >             "color_name": "BLUE",
+> >             "hex_code": "#0000ff"
+> >         }
+> >     }
+> > ]
+> > ```
+> 
+> <br>
+>
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mis&min_age=30
+> > ```
+> > [
+> >     {
+> >         "id": 1,
+> >         "name": "Avinash Mishra",
+> >         "age": 32,
+> >         "color": 1,
+> >         "color_info": {
+> >             "color_name": "RED",
+> >             "hex_code": "#ff0000"
+> >         }
+> >     },
+> >     {
+> >         "id": 22,
+> >         "name": "Bechan Mishra",
+> >         "age": 54,
+> >         "color": 1,
+> >         "color_info": {
+> >             "color_name": "RED",
+> >             "hex_code": "#ff0000"
+> >         }
+> >     },
+> >     {
+> >         "id": 25,
+> >         "name": "Bina Mishra",
+> >         "age": 50,
+> >         "color": 2,
+> >         "color_info": {
+> >             "color_name": "BLUE",
+> >             "hex_code": "#0000ff"
+> >         }
+> >     }
+> > ]
+> > ```
+> 
+> <br>
+> 
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mis&min_age=30&max_age=52
+> > ```
+> > [
+> >     {
+> >         "id": 1,
+> >         "name": "Avinash Mishra",
+> >         "age": 32,
+> >         "color": 1,
+> >         "color_info": {
+> >             "color_name": "RED",
+> >             "hex_code": "#ff0000"
+> >         }
+> >     },
+> >     {
+> >         "id": 25,
+> >         "name": "Bina Mishra",
+> >         "age": 50,
+> >         "color": 2,
+> >         "color_info": {
+> >             "color_name": "BLUE",
+> >             "hex_code": "#0000ff"
+> >         }
+> >     }
+> > ]
+> > ```
+> 
+> <br>
+> 
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mis&min_age=30&max_age=52&color=blu
+> > ```
+> > [
+> >     {
+> >         "id": 25,
+> >         "name": "Bina Mishra",
+> >         "age": 50,
+> >         "color": 2,
+> >         "color_info": {
+> >             "color_name": "BLUE",
+> >             "hex_code": "#0000ff"
+> >         }
+> >     }
+> > ]
+> > ```
+
+<br>
+
 <h3>⬛ &nbsp;Summary of Different Kinds of Filters</h3>
 
 <br>
