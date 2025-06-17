@@ -2559,7 +2559,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h3>.filter(&nbsp;)</h3>
+<h3>⦿ &nbsp;.filter(&nbsp;)</h3>
 
 <br>
 
@@ -3003,7 +3003,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h3>Filterset &nbsp;class</h3>
+<h3>⦿ &nbsp;Filterset &nbsp;class</h3>
 
 <br>
 
