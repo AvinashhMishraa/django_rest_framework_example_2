@@ -2148,6 +2148,23 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
+> Now that you have seen all kinds of ways to create an API, let's compare them. 
+> 
+> 
+> | Feature/Aspect  | Function-Based API          | Class-Based API (`APIView`)  | ModelViewSet                          |
+> | --------------- | --------------------------- | ---------------------------- | ------------------------------------- |
+> | Style           | Procedural                  | OOP                          | OOP + Auto-routing                    |
+> | Code Structure  | Simple                      | Clean, method-separated      | Highly abstracted                     |
+> | Suitable for    | Small/simple APIs           | Medium complexity            | Full-featured RESTful APIs            |
+> | URL Handling    | Manual                      | Manual                       | Auto via Routers                      |
+> | CRUD Support    | Custom                      | Custom                       | Full (Create, Retrieve, etc.)         |
+> | Extensibility   | Low                         | Medium                       | High (Mixins, Permissions, Filters)   |
+> | Performance     | Excellent                   | Excellent                    | Slightly more abstracted              |
+> | Testability     | Good                        | Very good                    | Excellent                             |
+> | Common Use Case | Prototypes, quick endpoints | Reusable views, custom logic | Full REST APIs with standard patterns |
+
+<br>
+
 <h1>Bulk Create &nbsp;/&nbsp; Bulk Update &nbsp;/&nbsp; Bulk Delete</h1>
 
 <br>
