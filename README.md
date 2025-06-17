@@ -3122,7 +3122,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > 
 > <br>
 >
-> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mis&min_age=30
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mishra&min_age=30
 > > ```
 > > [
 > >     {
@@ -3160,7 +3160,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > 
 > <br>
 > 
-> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mis&min_age=30&max_age=52
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mishra&min_age=30&max_age=52
 > > ```
 > > [
 > >     {
@@ -3188,7 +3188,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > 
 > <br>
 > 
-> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mis&min_age=30&max_age=52&color=blu
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mishra&min_age=30&max_age=52&color=blu
 > > ```
 > > [
 > >     {
