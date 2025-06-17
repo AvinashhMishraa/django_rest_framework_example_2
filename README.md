@@ -2538,30 +2538,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h2><ins>Soft Delete</ins> &nbsp;vs&nbsp; <ins>Hard Delete</ins></h2>
-
-<br>
-
-> <h3>⭐ &nbsp;<ins>Hard &nbsp;Delete</ins></h3>
-> 
-> - **Definition** &nbsp;➜&nbsp; Permanently removes the record from the database.
-> 
-> - **Effect** &nbsp;➜&nbsp; Data is gone and cannot be recovered.
-> 
-> - **SQL** &nbsp;➜&nbsp; <code>DELETE FROM table WHERE id = 1;</code>
-> 
-> 
-> 
-> <h4>🔸 &nbsp;When to Use :</h4>
-> 
-> - When data is temporary or non-critical.
-> 
-> - When regulatory/policy compliance requires removal.
-> 
-> - For performance in high-volume, short-lived data (e.g., session logs, cache).
-
-<br>
-
 <h1>Filters</h1>
 
 <br>
