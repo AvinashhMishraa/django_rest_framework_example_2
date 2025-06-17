@@ -2559,7 +2559,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h3>⦿ &nbsp;.filter(&nbsp;)</h3>
+<h3>⬛ &nbsp;.filter(&nbsp;)</h3>
 
 <br>
 
@@ -3003,7 +3003,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-<h3>⦿ &nbsp;Filterset &nbsp;class</h3>
+<h3>⬛ &nbsp;Filterset &nbsp;class</h3>
 
 <br>
 
@@ -3073,7 +3073,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-<h3>⦿ ⬛ &nbsp;Summary &nbsp;of &nbsp;different &nbsp;kinds &nbsp;of &nbsp;Filters &nbsp;:</h3>
+<h3>⬛ &nbsp;Summary &nbsp;of &nbsp;different &nbsp;kinds &nbsp;of &nbsp;Filters &nbsp;:</h3>
 
 | Method             | Type           | Power    | When to Use                            |
 | ------------------ | -------------- | -------- | -------------------------------------- |
