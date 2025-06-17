@@ -3073,7 +3073,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-<h3>⬛ &nbsp;Summary of different kinds of Filters &nbsp;:</h3>
+<h3>⬛ &nbsp;summary of different kinds of filters &nbsp;:</h3>
 
 <br>
 
