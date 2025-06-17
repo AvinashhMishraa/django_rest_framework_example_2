@@ -3073,6 +3073,10 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
+> Now you can veirfy your filters.
+>
+> <br>
+>
 > > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=mishra
 > > ```
 > > [
