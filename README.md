@@ -3078,6 +3078,14 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > 🔸 &nbsp;The corresponding **router viewset** for <code>PeopleViewSet</code> is already set in <code>person_api/api/urls.py</code> <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; So nothing to do on that side.
 
+<br>
+
+| Method             | Type           | Power    | When to Use                            |
+| ------------------ | -------------- | -------- | -------------------------------------- |
+| Manual `.get()`    | Function/class | Basic    | Quick filters in small APIs            |
+| `filterset_fields` | ViewSet / CBV  | Moderate | For simple exact filters               |
+| `filterset_class`  | ViewSet / CBV  | Advanced | For range, icontains, date filters etc |
+
 
 
 
