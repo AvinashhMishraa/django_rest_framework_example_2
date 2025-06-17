@@ -3080,7 +3080,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-🔴 &nbsp;<h3>Summary &nbsp;of &nbsp;different &nbsp;kinds &nbsp;of &nbsp;Filters &nbsp;:</h3>
+<h3>🔴 &nbsp;Summary &nbsp;of &nbsp;different &nbsp;kinds &nbsp;of &nbsp;Filters &nbsp;:</h3>
 
 | Method             | Type           | Power    | When to Use                            |
 | ------------------ | -------------- | -------- | -------------------------------------- |
