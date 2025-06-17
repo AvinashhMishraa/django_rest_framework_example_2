@@ -3042,11 +3042,11 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 >     name = filters.CharFilter(lookup_expr='icontains')
 >     min_age = filters.NumberFilter(field_name='age', lookup_expr='gte')
 >     max_age = filters.NumberFilter(field_name='age', lookup_expr='lte')
->     color_name = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
+>     color = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
 > 
 >     class Meta:
 >         model = Person
->         fields = ['name', 'min_age', 'max_age', 'color_name']
+>         fields = ['name', 'min_age', 'max_age', 'color']
 > ```
 > 
 > <br>
