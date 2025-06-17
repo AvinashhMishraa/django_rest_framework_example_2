@@ -3086,7 +3086,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 | ------------------ | -------------- | -------- | -------------------------------------- |
 | Manual `.get()`    | Function/class | Basic    | Quick filters in small APIs            |
 | `filterset_fields` | ViewSet &nbsp;/&nbsp; Class Based View  | Moderate | For simple exact filters               |
-| `filterset_class`  | ViewSet &nbsp;/&nbsp; Class Based View  | Advanced | For range, icontains, date filters etc |
+| `filterset_class`  | ViewSet &nbsp;/&nbsp; Class Based View  | Advanced | For range, icontains, date filters, etc. |
 
 
 
