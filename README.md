@@ -3203,7 +3203,9 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 | `filterset_fields` | ViewSet &nbsp;/&nbsp; Class Based View  | Moderate | For simple exact filters               |
 | `filterset_class`  | ViewSet &nbsp;/&nbsp; Class Based View  | Advanced | For range, icontains, date filters, etc. |
 
+<br>
 
+<h1><ins>Hard Delete</ins> &nbsp;vs&nbsp; <ins>Soft Delete</ins></h1>
 
 
 
