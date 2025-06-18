@@ -2179,7 +2179,7 @@ A mixin : <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Avoid repetition (DRY principle) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Easier testing & maintenance 
 
-<br>
+<br><br>
 
 <h3>✅ &nbsp;Simple Example in Pure Python</h3>
 
