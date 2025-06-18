@@ -2267,6 +2267,17 @@ Here is how you can build your DRF view using Mixins :
 > ]
 > ```
 
+<br>
+
+| HTTP      | URL          | Action   |
+| --------- | ------------ | -------- |
+| GET       | `/person/`   | list     |
+| POST      | `/person/`   | create   |
+| GET       | `/person/1/` | retrieve |
+| PUT/PATCH | `/person/1/` | update   |
+| DELETE    | `/person/1/` | delete   |
+
+
 
 
 
