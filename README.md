@@ -2216,8 +2216,8 @@ A mixin : <br>
 
 Django uses **mixins** heavily for views. It can combine behaviors by mixing them together.
 
-Here is how you can build your DRF view using Mixins <br>
-> 👉 <code>views.py</code>
+> Here is how you can build your DRF view using Mixins <br>
+> 👉 &nbsp;<code>views.py</code>
 > ```
 > from rest_framework import generics, mixins
 > from .models import Person
@@ -2251,10 +2251,10 @@ Here is how you can build your DRF view using Mixins <br>
 >     def delete(self, request, *args, **kwargs):
 >         return self.destroy(request, *args, **kwargs)
 > ```
-> 
-> <br>
-> 
-> <code>urls.py</code>
+
+<br>
+
+> <👉 &nbsp;code>urls.py</code>
 > ```
 > from django.urls import path
 > from .views import PersonView
