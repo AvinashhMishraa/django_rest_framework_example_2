@@ -2150,6 +2150,28 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | Testability     | Good                        | Very good                    | Excellent                             |
 > | Common Use Case | Prototypes, quick endpoints | Reusable views, custom logic | Full REST APIs with standard patterns |
 
+<br><br><br>
+
+<h1>Mixins</h1>
+
+✅ &nbsp;What is a Mixin ?
+
+A **mixin** is a type of **multiple inheritance** pattern where a class is used to add **extra functionality** to other classes, without being a full standalone class on its own.
+
+> In simple words:
+> 
+> 👉 &nbsp;Mixin &nbsp;=&nbsp; reusable feature class
+
+You use <code>mixins</code> to **"mix in"** behavior into other classes.
+
+
+
+
+
+
+
+<br>
+<br>
 <br>
 
 <h1>Bulk Create &nbsp;/&nbsp; Bulk Update &nbsp;/&nbsp; Bulk Delete</h1>
