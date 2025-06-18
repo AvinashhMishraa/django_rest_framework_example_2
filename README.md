@@ -2254,7 +2254,7 @@ Django uses **mixins** heavily for views. It can combine behaviors by mixing the
 
 <br>
 
-> <👉 &nbsp;code>urls.py</code>
+> 👉 &nbsp;<code>urls.py</code>
 > ```
 > from django.urls import path
 > from .views import PersonView
