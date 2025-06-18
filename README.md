@@ -2179,6 +2179,42 @@ A mixin : <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Avoid repetition (DRY principle) <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Easier testing & maintenance 
 
+<br>
+
+<br>
+
+<h3>✅ &nbsp;Simple Example in Pure Python</h3>
+
+Suppose we want some logging feature for many classes :
+```
+class LoggerMixin:
+    def log(self, message):
+        print(f"[LOG]: {message}")
+
+class Animal:
+    def speak(self):
+        print("Animal speaks")
+
+class Dog(Animal, LoggerMixin):
+    def speak(self):
+        self.log("Dog is barking")
+        print("Bark!")
+
+dog = Dog()
+dog.speak()
+```
+
+<br>
+
+**Output &nbsp;:**
+``
+[LOG]: Dog is barking
+Bark!
+```
+
+
+
+
 
 
 
