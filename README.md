@@ -2277,7 +2277,47 @@ Here is how you can build your DRF view using Mixins :
 | PUT/PATCH | `/person/1/` | update   |
 | DELETE    | `/person/1/` | delete   |
 
+<br>
 
+<h3>✅ &nbsp;✅ Quick Summary Table :</h3>
+
+| **Concept** | **Explanation**                            |
+| ----------- | ------------------------------------------ |
+| Class       | Full standalone blueprint                  |
+| Mixin       | Partial behavior to add                    |
+| Use case    | Add reusable small features                |
+| Django use  | Views, permissions, serializers, querysets |
+
+<br>
+
+<h3>✅ &nbsp;✅ FULL STACK :</h3>
+```
+APIView (base)
+|
+|--- GenericAPIView (adds serializer, queryset)
+     |
+     |--- mixins.CreateModelMixin (adds create())
+     |--- mixins.ListModelMixin (adds list())
+     |--- mixins.UpdateModelMixin (adds update())
+     |--- mixins.DestroyModelMixin (adds destroy())
+     |--- mixins.RetrieveModelMixin (adds retrieve())
+```
+
+<br>
+
+<h3>✅ &nbsp;✅ Summary Diagram :</h3>
+```
+┌────────────────────────────────────────────────────────┐
+│                        APIView                         │    ← (very basic: just HTTP methods)
+└───────────────────────────┬────────────────────────────┘
+                            │
+┌───────────────────────────┴────────────────────────────┐
+│                    GenericAPIView                      │    ← (provides queryset, serializer handling)
+└────┬──────────────┬─────────────┬─────────────────┬────┘
+     │              │             │                 │
+┌────┴─────┐    ┌───┴────┐    ┌───┴──────┐    ┌─────┴────┐
+│  Create  │    │  List  │    │  Update  │    │  Delete  │    ← (behavior mixins)
+└──────────┘    └────────┘    └──────────┘    └──────────┘
 
 
 
