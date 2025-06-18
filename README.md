@@ -2217,9 +2217,8 @@ A mixin : <br>
 
 Django uses **mixins** heavily for views. It can combine behaviors by mixing them together.
 
-<br>
+Here is how you can build your DRF view using Mixins :
 
-> Here is how you can build your DRF view using Mixins <br>
 > 👉 &nbsp;<code>views.py</code>
 > ```
 > from rest_framework import generics, mixins
