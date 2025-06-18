@@ -2181,7 +2181,7 @@ A mixin : <br>
 
 <br>
 
-
+<h3>✅ &nbsp;Simple Example in Pure Python</h3>
 
 
 
