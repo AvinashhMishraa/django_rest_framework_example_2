@@ -405,7 +405,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-🔸 &nbsp;<ins>**Solution - 1**</ins> &nbsp;:
+✅ &nbsp;<ins>**Solution - 1**</ins> &nbsp;:
 > To handle <code>/api/person/{id}/</code> , you need a **separate view** for person detail operations (**GET** / **PUT** / **PATCH** / **DELETE** &nbsp;for a single object)
 > <br><br>
 >
@@ -456,7 +456,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-🔸 &nbsp;<ins>**Solution - 2**</ins> &nbsp;: 
+✅ &nbsp;<ins>**Solution - 2**</ins> &nbsp;: 
 > using <code>ModelViewSet</code> to simplify code and avoid manually writing separate views for detail and list endpoints
 > <br><br>
 >
