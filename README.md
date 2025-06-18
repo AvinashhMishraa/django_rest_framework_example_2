@@ -2209,7 +2209,7 @@ A mixin : <br>
 Django uses **mixins** heavily for views. It can combine behaviors by mixing them together.
 
 👉 &nbsp;Here is how you can build your DRF view using Mixins <br>
-views.py
+<code>views.py</code>
 ```
 from rest_framework import generics, mixins
 from .models import Person
@@ -2248,9 +2248,7 @@ class PersonView(
         return self.destroy(request, *args, **kwargs)
 ```
 
-
-
-urls.py
+<code>urls.py</code>
 ```
 from django.urls import path
 from .views import PersonView
