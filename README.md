@@ -23,9 +23,7 @@
 
 <br>
 
-<div>
-    <h1>@api_view( )</h1>
-</div>
+<h1>@api_view( )</h1>
 
 <br>
 
@@ -58,9 +56,7 @@
 
 <br>
 
-<div>
-    <h1>Routers</h1>
-</div>
+<h1>Routers</h1>
 
 <br>
 
@@ -222,9 +218,7 @@
 
 <br>
 
-<div>
-    <h1>Why Serializer ?</h1>
-</div>
+<h1>Why Serializer ?</h1>
 
 <br>
 
@@ -732,9 +726,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-<div>
-    <h1>Serializing Foreign Key</h1>
-</div>
+<h1>Serializing Foreign Key</h1>
 
 <br>
 
@@ -1384,9 +1376,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-<div>
-    <h1>SerializerMethodField( )</h1>
-</div>
+<h1>SerializerMethodField( )</h1>
 
 <br>
 
@@ -1967,7 +1957,7 @@ Use it for **ForeignKey** and **OneToOne** relationships where you know you'll n
 
 <br>
 
-<h2>ModelViewSet</h2>
+<h1>ModelViewSet</h1>
 
 Now that you have seen both function based view <code>@api_view()</code> and class based view <code>ApiView()</code> which are custom CRUD suuport, let's now see <ins>ModelViewSet</ins> which gives you **full-featured RESTful APIs** + **auto-routing**, **filters**, **auth**, etc.
 
