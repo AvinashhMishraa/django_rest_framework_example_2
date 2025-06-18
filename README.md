@@ -3205,7 +3205,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-<h1><ins>Hard Delete</ins> &nbsp;vs&nbsp; <ins>Soft Delete</ins></h1>
+<h1>Hard Delete &nbsp;&nbsp;vs&nbsp;&nbsp; Soft Delete</h1>
 
 
 
