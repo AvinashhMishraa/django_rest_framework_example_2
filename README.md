@@ -2216,6 +2216,7 @@ A mixin : <br>
 <h3>✅ &nbsp;Mixin Example in Django</h3>
 
 Django uses **mixins** heavily for views. It can combine behaviors by mixing them together.
+
 <br>
 
 > Here is how you can build your DRF view using Mixins <br>
