@@ -2169,10 +2169,22 @@ A mixin : <br>
 &nbsp;&nbsp;●&nbsp;&nbsp; Doesn't define the complete object. <br>
 &nbsp;&nbsp;●&nbsp;&nbsp; Only provides additional methods or behavior. <br>
 
+<br>
+
+✅ &nbsp;Why do we need Mixins ?
+- Code reuse
+- Separation of concerns
+- Avoid repetition (DRY principle)
+- Easier testing & maintenance
 
 
 
 
+
+
+
+
+<br><br><br>
 <br>
 <br>
 <br>
