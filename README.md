@@ -2174,6 +2174,7 @@ A mixin : <br>
 <br>
 
 <h3>✅ &nbsp;Why do we need Mixins ?</h3>
+
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Code reuse <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Separation of concerns <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Avoid repetition (DRY principle) <br>
@@ -2215,6 +2216,7 @@ A mixin : <br>
 <h3>✅ &nbsp;Mixin Example in Django</h3>
 
 Django uses **mixins** heavily for views. It can combine behaviors by mixing them together.
+<br>
 
 > Here is how you can build your DRF view using Mixins <br>
 > 👉 &nbsp;<code>views.py</code>
