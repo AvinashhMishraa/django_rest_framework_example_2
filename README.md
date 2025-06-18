@@ -2154,8 +2154,6 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <h1>Mixins</h1>
 
-<br>
-
 <h3>✅ &nbsp;What is a Mixin ?</h3>
 
 A **mixin** is a type of **multiple inheritance** pattern where a class is used to add **extra functionality** to other classes, without being a full standalone class on its own.
@@ -2171,15 +2169,11 @@ A mixin : <br>
 &nbsp;&nbsp;●&nbsp;&nbsp; Doesn't define the complete object. <br>
 &nbsp;&nbsp;●&nbsp;&nbsp; Only provides additional methods or behavior.
 
-<br>
-
 <h3>✅ &nbsp;Why do we need Mixins ?</h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Code reuse <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Separation of concerns <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Avoid repetition (DRY principle) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Easier testing & maintenance 
-
-<br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Easier testing & maintenance.
 
 <h3>✅ &nbsp;Simple Example in Pure Python</h3>
 
@@ -2201,8 +2195,6 @@ A mixin : <br>
 > dog = Dog()
 > dog.speak()
 > ```
->
-> <br>
 >
 > Output :
 > ```
