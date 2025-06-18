@@ -2201,6 +2201,8 @@ A mixin : <br>
 > [LOG]: Dog is barking
 > Bark!
 > ```
+>
+> ✔ <code>LoggerMixin</code> gives logging capability to <code>Dog</code> without forcing <code>Animal</code> or <code>Dog</code> to have that logic directly.
 
 
 
