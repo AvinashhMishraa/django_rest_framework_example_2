@@ -2164,8 +2164,6 @@ A **mixin** is a type of **multiple inheritance** pattern where a class is used 
 
 You use <code>mixins</code> to **"mix in"** behavior into other classes.
 
-<br>
-
 A mixin :
 
 - Usually doesn’t stand alone.
@@ -2178,7 +2176,8 @@ A mixin :
 
 
 
-
+<br>
+<br>
 <br>
 <br>
 <br>
