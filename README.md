@@ -2313,7 +2313,7 @@ Here is how you can build your DRF view using Mixins :
 
 <br>
 
-🧠 The bulk operations (create / update / delete) **reduce database hits from N queries → 1 query**.
+🧠 The bulk operations (create / update / delete) **reduce database hits from N queries ➜ 1 query**.
 
 <br>
 
