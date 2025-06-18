@@ -2279,7 +2279,7 @@ Here is how you can build your DRF view using Mixins :
 
 <br>
 
-<h3>✅ &nbsp;✅ Quick Summary Table :</h3>
+<h3>✅ &nbsp;Quick Summary Table :</h3>
 
 | **Concept** | **Explanation**                            |
 | ----------- | ------------------------------------------ |
@@ -2290,58 +2290,20 @@ Here is how you can build your DRF view using Mixins :
 
 <br>
 
-<h3>✅ &nbsp;✅ FULL STACK :</h3>
+<h3>✅ &nbsp;FULL STACK :</h3>
 
 <pre>
-APIView (base)
+APIView (base - just HTTP methods)
 |
 |--- GenericAPIView (adds serializer, queryset)
      |
-     |--- mixins.CreateModelMixin (adds create())
-     |--- mixins.ListModelMixin (adds list())
-     |--- mixins.UpdateModelMixin (adds update())
-     |--- mixins.DestroyModelMixin (adds destroy())
-     |--- mixins.RetrieveModelMixin (adds retrieve())
+     |--- mixins.CreateModelMixin     ➜   adds create()
+     |--- mixins.ListModelMixin       ➜   adds list()
+     |--- mixins.UpdateModelMixin     ➜   adds update()
+     |--- mixins.DestroyModelMixin    ➜   adds destroy()
+     |--- mixins.RetrieveModelMixin   ➜   adds retrieve()
 </pre>
 
-<br>
-
-<h3>✅ &nbsp;✅ Summary Diagram :</h3>
-<pre>
-┌────────────────────────────────────────────────────────┐
-│                        APIView                         │    ← (very basic: just HTTP methods)
-└───────────────────────────┬────────────────────────────┘
-                            │
-┌───────────────────────────┴────────────────────────────┐
-│                    GenericAPIView                      │    ← (provides queryset, serializer handling)
-└────┬──────────────┬─────────────┬─────────────────┬────┘
-     │              │             │                 │
-┌────┴─────┐    ┌───┴────┐    ┌───┴──────┐    ┌─────┴────┐
-│  Create  │    │  List  │    │  Update  │    │  Delete  │    ← (behavior mixins)
-└──────────┘    └────────┘    └──────────┘    └──────────┘
-</pre>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<br><br><br>
-<br>
-<br>
-<br>
-<br>
 <br>
 
 <h1>Bulk Create &nbsp;/&nbsp; Bulk Update &nbsp;/&nbsp; Bulk Delete</h1>
