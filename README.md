@@ -2172,10 +2172,10 @@ A mixin : <br>
 <br>
 
 ✅ &nbsp;Why do we need Mixins ?
-- Code reuse
-- Separation of concerns
-- Avoid repetition (DRY principle)
-- Easier testing & maintenance
+&nbsp;&nbsp;●&nbsp;&nbsp; Usually doesn’t stand alone. <br>Code reuse
+&nbsp;&nbsp;●&nbsp;&nbsp; Usually doesn’t stand alone. <br>Separation of concerns
+&nbsp;&nbsp;●&nbsp;&nbsp; Usually doesn’t stand alone. <br>Avoid repetition (DRY principle)
+&nbsp;&nbsp;●&nbsp;&nbsp; Usually doesn’t stand alone. <br>Easier testing & maintenance
 
 
 
