@@ -2171,6 +2171,8 @@ A mixin : <br>
 &nbsp;&nbsp;●&nbsp;&nbsp; Doesn't define the complete object. <br>
 &nbsp;&nbsp;●&nbsp;&nbsp; Only provides additional methods or behavior.
 
+<br>
+
 <h3>✅ &nbsp;Why do we need Mixins ?</h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Code reuse <br> 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Separation of concerns <br> 
