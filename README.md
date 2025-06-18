@@ -2160,10 +2160,19 @@ A **mixin** is a type of **multiple inheritance** pattern where a class is used 
 
 > In simple words:
 > 
-> 👉 &nbsp;Mixin &nbsp;=&nbsp; reusable feature class
+> 👉 &nbsp;**Mixin &nbsp;=&nbsp; reusable feature class**
 
 You use <code>mixins</code> to **"mix in"** behavior into other classes.
 
+<br>
+
+A mixin :
+
+- Usually doesn’t stand alone.
+
+- Doesn't define the complete object.
+
+- Only provides additional methods or behavior.
 
 
 
