@@ -2318,10 +2318,10 @@ APIView (base - just HTTP methods)
 > <code>PUT</code> &nbsp;&nbsp;http://localhost:8000/api/people/    &nbsp;&nbsp;&nbsp;&nbsp; - **option 3** &nbsp;(ModelViewSet)        <br>
 > ```
 > [
->  	{"name": "S1", "age": 16, "color": 3},
->  	{"name": "S2", "age": 35, "color": 3},
->  	{"name": "S3", "age": 27},
-> 	{"name": "S4", "age":28, "color": null}
+>     {"name": "S1", "age": 16, "color": 3},
+>     {"name": "S2", "age": 35, "color": 3},
+>     {"name": "S3", "age": 27},
+>     {"name": "S4", "age":28, "color": null}
 > ]
 > ```
 
