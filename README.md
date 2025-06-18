@@ -2150,9 +2150,11 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | Testability     | Good                        | Very good                    | Excellent                             |
 > | Common Use Case | Prototypes, quick endpoints | Reusable views, custom logic | Full REST APIs with standard patterns |
 
-<br><br><br>
+<br>
 
 <h1>Mixins</h1>
+
+<br>
 
 <h3>✅ &nbsp;What is a Mixin ?</h3>
 
@@ -2167,9 +2169,7 @@ You use <code>mixins</code> to **"mix in"** behavior into other classes.
 A mixin : <br>
 &nbsp;&nbsp;●&nbsp;&nbsp; Usually doesn’t stand alone. <br>
 &nbsp;&nbsp;●&nbsp;&nbsp; Doesn't define the complete object. <br>
-&nbsp;&nbsp;●&nbsp;&nbsp; Only provides additional methods or behavior. <br>
-
-<br>
+&nbsp;&nbsp;●&nbsp;&nbsp; Only provides additional methods or behavior.
 
 <h3>✅ &nbsp;Why do we need Mixins ?</h3>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; Code reuse <br> 
