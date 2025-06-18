@@ -2181,8 +2181,6 @@ A mixin : <br>
 
 <br>
 
-<br>
-
 <h3>✅ &nbsp;Simple Example in Pure Python</h3>
 
 Suppose we want some logging feature for many classes :
