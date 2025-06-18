@@ -2291,7 +2291,8 @@ Here is how you can build your DRF view using Mixins :
 <br>
 
 <h3>✅ &nbsp;✅ FULL STACK :</h3>
-```
+
+<pre>
 APIView (base)
 |
 |--- GenericAPIView (adds serializer, queryset)
@@ -2301,12 +2302,12 @@ APIView (base)
      |--- mixins.UpdateModelMixin (adds update())
      |--- mixins.DestroyModelMixin (adds destroy())
      |--- mixins.RetrieveModelMixin (adds retrieve())
-```
+</pre>
 
 <br>
 
 <h3>✅ &nbsp;✅ Summary Diagram :</h3>
-```
+<pre>
 ┌────────────────────────────────────────────────────────┐
 │                        APIView                         │    ← (very basic: just HTTP methods)
 └───────────────────────────┬────────────────────────────┘
@@ -2318,7 +2319,7 @@ APIView (base)
 ┌────┴─────┐    ┌───┴────┐    ┌───┴──────┐    ┌─────┴────┐
 │  Create  │    │  List  │    │  Update  │    │  Delete  │    ← (behavior mixins)
 └──────────┘    └────────┘    └──────────┘    └──────────┘
-
+</pre>
 
 
 
