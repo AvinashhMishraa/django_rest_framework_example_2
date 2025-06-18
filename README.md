@@ -2224,38 +2224,34 @@ Here is how you can build your DRF view using Mixins <br>
 > from .serializers import PersonSerializer
 > 
 > class PersonView(
->     mixins.ListModelMixin,              # for GET list
->     mixins.CreateModelMixin,            # for POST create
->     mixins.RetrieveModelMixin,          # for GET detail
->     mixins.UpdateModelMixin,            # for PUT/PATCH update
->     mixins.DestroyModelMixin,           # for DELETE
->     generics.GenericAPIView             # gives base functionality / base APIView structure
+>     mixins.ListModelMixin,                      # for GET list
+>     mixins.CreateModelMixin,                    # for POST create
+>     mixins.RetrieveModelMixin,                  # for GET detail
+>     mixins.UpdateModelMixin,                    # for PUT/PATCH update
+>     mixins.DestroyModelMixin,                   # for DELETE
+>     generics.GenericAPIView                     # gives base functionality / base APIView structure
 > ):
 >     queryset = Person.objects.all()
 >     serializer_class = PersonSerializer
 > 
->     # GET list
 >     def get(self, request, *args, **kwargs):
 >         if 'pk' in kwargs:
 >             return self.retrieve(request, *args, **kwargs)
 >         return self.list(request, *args, **kwargs)
 > 
->     # POST create
 >     def post(self, request, *args, **kwargs):
 >         return self.create(request, *args, **kwargs)
 > 
->     # PUT/PATCH update
 >     def put(self, request, *args, **kwargs):
 >         return self.update(request, *args, **kwargs)
 > 
 >     def patch(self, request, *args, **kwargs):
 >         return self.partial_update(request, *args, **kwargs)
 > 
->     # DELETE
 >     def delete(self, request, *args, **kwargs):
 >         return self.destroy(request, *args, **kwargs)
 > ```
->
+> 
 > <br>
 > 
 > <code>urls.py</code>
@@ -2264,8 +2260,8 @@ Here is how you can build your DRF view using Mixins <br>
 > from .views import PersonView
 > 
 > urlpatterns = [
->     path('person/', PersonView.as_view()),           # for list & create
->     path('person/<int:pk>/', PersonView.as_view()),  # for retrieve, update, delete
+>     path('person/', PersonView.as_view()),                    # for list & create
+>     path('person/<int:pk>/', PersonView.as_view()),           # for retrieve, update, delete
 > ]
 > ```
 
