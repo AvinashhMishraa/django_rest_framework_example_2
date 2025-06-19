@@ -3485,7 +3485,7 @@ Now :
 
 <br>
 
-**🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Add field to model**
+**🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Add <code>is_deleted</code> field to model**
 
 ```
 class Person(models.Model):
