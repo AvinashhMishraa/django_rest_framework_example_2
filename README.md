@@ -3483,7 +3483,7 @@ Now :
 
 <h3>4️⃣ How to Implement Soft Delete in Django ?</h3>
 
-**➔ Step 1: Add field to model**
+**🔸 &nbsp;Step 1 &nbsp;➔&nbsp; Add field to model**
 
 ```
 class Person(models.Model):
