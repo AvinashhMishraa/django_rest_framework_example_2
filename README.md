@@ -3481,7 +3481,7 @@ Now :
 
 <br>
 
-<h3>4️⃣ How to Implement Soft Delete in Django ?</h3>
+<h3>4️⃣ &nbsp;How to Implement Soft Delete in Django ?</h3>
 
 <br>
 
