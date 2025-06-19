@@ -3412,5 +3412,16 @@ Once hard deleted :
 
 <h3>2️⃣ &nbsp;What is Soft Delete ?</h3>
 
+**🔸 &nbsp;<ins>Definition</ins> :**
+
+Soft delete means marking the record as deleted but keeping it in the database.
+
+Instead of deleting physically :
+
+- You add a **"deletion marker field"** (e.g., <code>is_deleted=True</code>).
+
+- Data remains in the database, but system treats it as deleted.
+
+
 
 
