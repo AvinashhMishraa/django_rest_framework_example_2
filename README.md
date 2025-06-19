@@ -3363,7 +3363,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-<h3>1️⃣ &nbsp;What is __Hard Delete__ ?</h3>
+<h3>1️⃣ &nbsp;What is Hard Delete ?</h3>
 
 <br>
 
