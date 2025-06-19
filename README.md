@@ -3450,9 +3450,9 @@ Now :
 
 **🔸 &nbsp;<ins>Benefits</ins> :**
 
-- ✅ Recovery is possible ( simply set <code>is_deleted=False</code> )
-- ✅ Great for auditing, compliance, legal, safety-critical data.
-- ✅ Useful for user-facing apps where "trash bin" or "undo delete" is needed.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Recovery is possible ( simply set <code>is_deleted=False</code> )
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Great for auditing, compliance, legal, safety-critical data.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;✅ Useful for user-facing apps where "trash bin" or "undo delete" is needed.
 
 <br>
 
