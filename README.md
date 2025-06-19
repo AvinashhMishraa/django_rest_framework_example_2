@@ -3458,9 +3458,9 @@ Now :
 
 **🔸 &nbsp;<ins>Drawbacks</ins> :**
 
-&nbsp;&Nbsp;&nbsp;● Requires additional logic in : <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◾️ Queries (must always filter is_deleted=False) <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◾️ ORM manager overrides <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◾️ Business logic <br>
+&nbsp;&nbsp;&nbsp;&nbsp;● Requires additional logic in : <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◾️ Queries (must always filter is_deleted=False) <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◾️ ORM manager overrides <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◾️ Business logic <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;● Data volume keeps growing
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● Data volume keeps growing
