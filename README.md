@@ -3433,9 +3433,7 @@ Instead of deleting physically :
 | 1  | John | 25  | Red   | False       |
 | 2  | Mike | 30  | Blue  | False       |
 
-<br>
-
-After soft delete:
+After soft delete :
 ```
 person = Person.objects.get(id=1)
 person.is_deleted = True
