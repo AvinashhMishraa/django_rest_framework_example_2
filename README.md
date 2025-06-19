@@ -3361,6 +3361,8 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <h1>Hard Delete &nbsp;&nbsp;&nbsp;vs&nbsp;&nbsp;&nbsp; Soft Delete</h1>
 
+<br>
+
 <h3>1️⃣ &nbsp;What is Hard Delete ?</h3>
 
 🔸 &nbsp;**<ins>Definition</ins> :**
@@ -3370,6 +3372,8 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 Once hard deleted :
 - The data is **physically gone** from the database.
 - Cannot be recovered unless you have backups.
+
+<br>
 
 🔸 &nbsp;**<ins>Example</ins> :**
 
