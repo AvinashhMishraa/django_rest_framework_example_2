@@ -3464,3 +3464,18 @@ Now :
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◾️&nbsp; Business logic <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp; Data volume keeps growing
+
+<br>
+
+<h3>3️⃣ &nbsp;When to Use Hard vs Soft Delete ?</h3>
+
+| Scenario                                                   | Recommendation  |
+| ---------------------------------------------------------- | --------------- |
+| Legal compliance required (GDPR, audits, medical data)     | **Soft Delete** |
+| Application offers “Recycle Bin” / restore feature         | **Soft Delete** |
+| Sensitive data where accidental delete must be recoverable | **Soft Delete** |
+| Temporary inactive users                                   | **Soft Delete** |
+| Logs, temporary cache, expired tokens                      | **Hard Delete** |
+| Low-value, high-volume data (click logs, telemetry)        | **Hard Delete** |
+| Simple admin tools without restore needs                   | **Hard Delete** |
+
