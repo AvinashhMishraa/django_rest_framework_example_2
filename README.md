@@ -3497,7 +3497,7 @@ class Person(models.Model):
 
 <br>
 
-**🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Override model's <code>delete()</code> method**
+**🔸 &nbsp;<ins>Step 2</ins> &nbsp;➔&nbsp; Override model's <code>delete()</code> method**
 
 ```
 def delete(self, using=None, keep_parents=False):
