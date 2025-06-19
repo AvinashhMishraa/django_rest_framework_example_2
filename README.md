@@ -3363,7 +3363,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <h3>1️⃣ &nbsp;What is Hard Delete ?</h3>
 
-◼ &nbsp;**<ins>Definition</ins> :**
+🔸 &nbsp;**<ins>Definition</ins> :**
 
 > **Hard delete** means **permanent removal** of the record from the database table.
 
@@ -3371,7 +3371,7 @@ Once hard deleted :
 - The data is **physically gone** from the database.
 - Cannot be recovered unless you have backups.
 
-◼ &nbsp;**Example :**
+🔸 &nbsp;**Example :**
 
 Imagine you have a Person table :
 
