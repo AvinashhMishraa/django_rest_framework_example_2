@@ -3440,3 +3440,18 @@ person.is_deleted = True
 person.save()
 ```
 
+Now :
+| id | name | age | color | is\_deleted |
+| -- | ---- | --- | ----- | ----------- |
+| 1  | John | 25  | Red   | True        |
+| 2  | Mike | 30  | Blue  | False       |
+
+<br>
+
+**🔸 &nbsp;<ins>Benefits</ins> :**
+
+- ✅ Recovery is possible (simply set is_deleted=False)
+- ✅ Great for auditing, compliance, legal, safety-critical data.
+- ✅ Useful for user-facing apps where "trash bin" or "undo delete" is needed.
+
+
