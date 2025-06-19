@@ -3379,14 +3379,16 @@ Once hard deleted :
 > > | -- | ---- | --- | ----- |
 > > | 1  | John | 25  | Red   |
 > > | 2  | Mike | 30  | Blue  |
+> <br>
 > 
 > > If you run :
 > > ```
 > > Person.objects.get(id=1).delete()
 > > ```
+> <br>
 > 
 > > Now, the row with <code>id=1</code> is permanently deleted.
-> > 
+> >
 > > New table content :
 > > | id | name | age | color |
 > > | -- | ---- | --- | ----- |
