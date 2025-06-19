@@ -3435,5 +3435,10 @@ Instead of deleting physically :
 
 <br>
 
-
+After soft delete:
+```
+person = Person.objects.get(id=1)
+person.is_deleted = True
+person.save()
+```
 
