@@ -3408,7 +3408,9 @@ Once hard deleted :
 - Good for data that will never be needed again.
 - Not suitable for audit/compliance/legal data where recovery may be required.
 
+<br>
 
+<h3>2️⃣ &nbsp;What is Soft Delete ?</h3>
 
 
 
