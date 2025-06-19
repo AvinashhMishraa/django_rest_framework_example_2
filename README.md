@@ -3454,4 +3454,13 @@ Now :
 - ✅ Great for auditing, compliance, legal, safety-critical data.
 - ✅ Useful for user-facing apps where "trash bin" or "undo delete" is needed.
 
+<br>
 
+**🔸 &nbsp;<ins>Drawbacks</ins> :**
+
+> ■ Requires additional logic in:
+> &nbsp;&nbsp;&nbsp;&nbsp;● Queries (must always filter is_deleted=False)
+> &nbsp;&nbsp;&nbsp;● ORM manager overrides
+> &nbsp;&nbsp;&nbsp;● Business logic
+> 
+> ■ Data volume keeps growing
