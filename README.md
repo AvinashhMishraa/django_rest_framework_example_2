@@ -3416,7 +3416,7 @@ Once hard deleted :
 
 **🔸 &nbsp;<ins>Definition</ins> :**
 
-Soft delete means marking the record as deleted but keeping it in the database.
+**Soft delete** means marking the record as deleted but keeping it in the database.
 
 Instead of deleting physically :
 
