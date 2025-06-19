@@ -2279,7 +2279,7 @@ Here is how you can build your DRF view using Mixins :
 
 <br>
 
-<h3>✅ &nbsp;Quick Summary Table :</h3>
+<h3>✅ &nbsp;Quick Summary Table</h3>
 
 | **Concept** | **Explanation**                            |
 | ----------- | ------------------------------------------ |
@@ -2290,7 +2290,7 @@ Here is how you can build your DRF view using Mixins :
 
 <br>
 
-<h3>✅ &nbsp;FULL STACK :</h3>
+<h3>✅ &nbsp;FULL STACK</h3>
 
 <pre>
 APIView (base - just HTTP methods)
