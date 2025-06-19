@@ -3371,9 +3371,9 @@ Once hard deleted :
 - The data is **physically gone** from the database.
 - Cannot be recovered unless you have backups.
 
-🔸 &nbsp;**Example :**
+🔸 &nbsp;**<ins>Example</ins> :**
 
-Imagine you have a Person table :
+Imagine you have a <code>Person</code> table :
 
 | id | name | age | color |
 | -- | ---- | --- | ----- |
