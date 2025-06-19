@@ -3400,6 +3400,12 @@ Once hard deleted :
 > > | -- | ---- | --- | ----- |
 > > | 2  | Mike | 30  | Blue  |
 
+🔸 &nbsp;**<ins>Key Points</ins> :**
+- Simple to implement.
+- No special logic required.
+- Good for data that will never be needed again.
+- Not suitable for audit/compliance/legal data where recovery may be required.
+
 
 
 
