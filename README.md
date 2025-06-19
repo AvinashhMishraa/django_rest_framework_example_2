@@ -3479,3 +3479,9 @@ Now :
 | Low-value, high-volume data (click logs, telemetry)        | **Hard Delete** |
 | Simple admin tools without restore needs                   | **Hard Delete** |
 
+<br>
+
+<h3>4️⃣ How to Implement Soft Delete in Django ?</h3>
+
+
+
