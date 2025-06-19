@@ -3400,6 +3400,8 @@ Once hard deleted :
 > > | -- | ---- | --- | ----- |
 > > | 2  | Mike | 30  | Blue  |
 
+<br>
+
 🔸 &nbsp;**<ins>Key Points</ins> :**
 - Simple to implement.
 - No special logic required.
