@@ -3422,6 +3422,16 @@ Instead of deleting physically :
 
 - Data remains in the database, but system treats it as deleted.
 
+<br>
+
+**🔸 &nbsp;<ins>Example Schema</ins> :**
+
+| id | name | age | color | is\_deleted |
+| -- | ---- | --- | ----- | ----------- |
+| 1  | John | 25  | Red   | False       |
+| 2  | Mike | 30  | Blue  | False       |
+
+<br>
 
 
 
