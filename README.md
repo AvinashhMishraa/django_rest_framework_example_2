@@ -3373,24 +3373,24 @@ Once hard deleted :
 
 🔸 &nbsp;**<ins>Example</ins> :**
 
-Imagine you have a <code>Person</code> table :
-
-| id | name | age | color |
-| -- | ---- | --- | ----- |
-| 1  | John | 25  | Red   |
-| 2  | Mike | 30  | Blue  |
-
-If you run :
-```
-Person.objects.get(id=1).delete()
-```
-
-Now, the row with <code>id=1</code> is permanently deleted.
-
-New table content :
-| id | name | age | color |
-| -- | ---- | --- | ----- |
-| 2  | Mike | 30  | Blue  |
+> Imagine you have a <code>Person</code> table :
+> 
+> | id | name | age | color |
+> | -- | ---- | --- | ----- |
+> | 1  | John | 25  | Red   |
+> | 2  | Mike | 30  | Blue  |
+> 
+> If you run :
+> ```
+> Person.objects.get(id=1).delete()
+> ```
+> 
+> Now, the row with <code>id=1</code> is permanently deleted.
+> 
+> New table content :
+> | id | name | age | color |
+> | -- | ---- | --- | ----- |
+> | 2  | Mike | 30  | Blue  |
 
 
 
