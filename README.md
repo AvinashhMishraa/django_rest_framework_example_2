@@ -3630,11 +3630,11 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-| Operation         | Code                                         |
-| ----------------- | -------------------------------------------- |
-| Normal list       | &nbsp;&nbsp;`Person.objects.all()`                       |
-| Including deleted&nbsp;&nbsp; | `Person.all_objects.all()`                   |
-| Only deleted      | `Person.all_objects.filter(is_deleted=True)` |
+| Operation                                 | Code                                                                 |
+| ----------------------------------------- | -------------------------------------------------------------------- |
+| &nbsp;&nbsp;Normal list&nbsp;&nbsp;       | &nbsp;&nbsp;`Person.objects.all()`&nbsp;&nbsp;                       |
+| &nbsp;&nbsp;Including deleted&nbsp;&nbsp; | &nbsp;&nbsp;`Person.all_objects.all()`&nbsp;&nbsp;                   |
+| &nbsp;&nbsp;Only deleted&nbsp;&nbsp;      | &nbsp;&nbsp;`Person.all_objects.filter(is_deleted=True)`&nbsp;&nbsp; |
 
 <br>
 
