@@ -3563,7 +3563,7 @@ class Person(models.Model):
 
 <br>
 
-**🔸 &nbsp;<ins>Step 3</ins> &nbsp;➔&nbsp; Use your manager carefully**
+**🔸 &nbsp;<ins>Step 4</ins> &nbsp;➔&nbsp; Use your manager carefully**
 
 Default &nbsp;&nbsp;:&nbsp;&nbsp; <code>Person.objects.all()</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; returns only non-deleted records <br>
 Use &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <code>Person.all_objects.all()</code> &nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; returns everything
