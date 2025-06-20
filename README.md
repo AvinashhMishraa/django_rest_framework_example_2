@@ -3561,7 +3561,13 @@ class Person(models.Model):
         super().delete()
 ```
 
+<br>
 
+**🔸 &nbsp;<ins>Step 3</ins> &nbsp;➔&nbsp; Use your manager carefully**
+
+Default: <code>Person.objects.all()</code> ➔ returns only non-deleted records.
+
+Use: <code>Person.all_objects.all()</code> ➔ returns everything.
 
 
 
