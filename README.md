@@ -3495,6 +3495,11 @@ class Person(models.Model):
     is_deleted = models.BooleanField(default=False)
 ```
 
+```
+py manage.py makemigrations
+py manage.py migrate
+```
+
 <br>
 
 **🔸 &nbsp;<ins>Step 2</ins> &nbsp;➔&nbsp; Override model's <code>delete()</code> method**
