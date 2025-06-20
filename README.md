@@ -3603,5 +3603,29 @@ class Person(models.Model):
 &nbsp;&nbsp;Default &nbsp;&nbsp;:&nbsp;&nbsp; <code>Person.objects.all()</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; returns only non-deleted records <br>
 &nbsp;&nbsp;Use &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <code>Person.all_objects.all()</code> &nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; returns everything
 
+<br>
 
+<h3>4️⃣ &nbsp;Queries in Soft Delete</h3>
+
+| Operation         | Code                                         |
+| ----------------- | -------------------------------------------- |
+| Normal list       | `Person.objects.all()`                       |
+| Including deleted | `Person.all_objects.all()`                   |
+| Only deleted      | `Person.all_objects.filter(is_deleted=True)` |
+
+<br>
+
+> <code>Python manage.py shell</code>
+> 
+> 
+> | Code                                            | Output                                                                                           |
+> |-------------------------------------------------|--------------------------------------------------------------------------------------------------|
+> | <code>p1 = Person.all_objects.get(id=XX)</code>&nbsp;&nbsp;&nbsp; | returns the person with the <code>id = XX</code>                                                 |
+> | <code>p1.is_deleted</code>                      | returns <code>False</code>                                                                       |
+> | <code>p1.delete()</code>                        | soft deletes the person i.e, <code>person.is_deleted = True</code>                               |
+> | <code>p1.is_deleted</code>                      | returns <code>True</code>                                                                        |
+> | <code>p1.restore()</code>                       | restores the person i.e, <code>person.is_deleted = False</code>                                  |
+> | <code>p1.is_deleted</code>                      | returns <code>False</code>                                                                       |
+> | <code>p1.hard_delete()</code>                   | removes the person physically                                                                    |
+> | <code>Person.all_objects.get(id=XX)</code>      | **ERROR** => <code>home.models.Person.DoesNotExist: Person matching query does not exist.</code>&nbsp; |
 
