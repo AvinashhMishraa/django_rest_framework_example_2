@@ -3489,6 +3489,8 @@ Now :
 
 **🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Add** <code>is_deleted</code> **field to model**
 
+<br>
+
 <code>person_api/home/models.py</code>
 ```
 class Person(models.Model):
@@ -3507,6 +3509,8 @@ py manage.py migrate
 <br>
 
 **🔸 &nbsp;<ins>Step 2</ins> &nbsp;➔&nbsp; Override model's** <code>delete()</code> **method**
+
+<br>
 
 > <code>person_api/home/models.py</code>
 > ```
@@ -3560,6 +3564,8 @@ py manage.py migrate
 
 **🔸 &nbsp;<ins>Step 3</ins> &nbsp;➔&nbsp; (optional but recommended) &nbsp;: &nbsp;Create a custom model manager**
 
+<br>
+
 <code>person_api/home/models.py</code>
 ```
 class SoftDeleteManager(models.Manager):
@@ -3585,6 +3591,8 @@ class Person(models.Model):
 <br>
 
 **🔸 &nbsp;<ins>Step 4</ins> &nbsp;➔&nbsp; Use your manager carefully**
+
+<br>
 
 Default &nbsp;&nbsp;:&nbsp;&nbsp; <code>Person.objects.all()</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; returns only non-deleted records <br>
 Use &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;:&nbsp;&nbsp; <code>Person.all_objects.all()</code> &nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; returns everything
