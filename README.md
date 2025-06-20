@@ -3506,6 +3506,7 @@ py manage.py migrate
 
 **🔸 &nbsp;<ins>Step 2</ins> &nbsp;➔&nbsp; Override model's <code>delete()</code> method**
 
+<code>person_api/home/models.py</code>
 ```
 def delete(self, using=None, keep_parents=False):
     self.is_deleted = True
