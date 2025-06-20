@@ -3487,6 +3487,7 @@ Now :
 
 **🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Add <code>is_deleted</code> field to model**
 
+<code>person_api/home/models.py</code>
 ```
 class Person(models.Model):
     name = models.CharField(max_length=100)
