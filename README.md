@@ -3581,8 +3581,8 @@ class Person(models.Model):
     ●●●
     is_deleted = models.BooleanField(default=False)
 
-    objects = SoftDeleteManager()                                # default manager (hides soft deleted)
-    all_objects = models.Manager()                               # includes deleted when needed
+    objects = SoftDeleteManager()                                # Default manager: returns only active 
+    all_objects = models.Manager()                               # Full manager: returns all (including deleted)
 
     def delete(self, using=None, keep_parents=False):            # soft delete
         self.is_deleted = True
