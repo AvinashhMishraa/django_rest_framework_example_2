@@ -3607,7 +3607,9 @@ class Person(models.Model):
 
 <br>
 
-**🔸 &nbsp;<ins>Step 4</ins> &nbsp;➔&nbsp; Optional &nbsp;(if you want to show the** <code>is_deleted</code> **field)**
+**🔸 &nbsp;<ins>Step 5</ins> &nbsp;➔&nbsp; Optional &nbsp;(if you want to show the** <code>is_deleted</code> **field)**
+
+<br>
 
 ```
 class PersonSerializer(serializers.ModelSerializer):
