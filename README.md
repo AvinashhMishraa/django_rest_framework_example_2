@@ -3535,6 +3535,8 @@ py manage.py migrate
 >         self.save()
 > ```
 
+<br>
+
 > Now that you have over-ridden the <code>delete()</code> method for **soft delete**, you'll have to write a method for **hard delete** also : <br>
 > 
 > <code>person_api/home/models.py</code>
