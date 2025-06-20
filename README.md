@@ -3592,7 +3592,7 @@ class Person(models.Model):
         self.is_deleted = False
         self.save()
 
-    def hard_delete(self):                                       # restores the soft-deleted person
+    def hard_delete(self):                                       # removes the person physically from the Person table
         super().delete()
 ```
 
