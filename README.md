@@ -3615,7 +3615,7 @@ class Person(models.Model):
 
 <br>
 
-> <code>Python manage.py shell</code>
+> Run <code>Python manage.py shell</code> in the terminal &nbsp;:
 > 
 > 
 > | Code                                            | Output                                                                                    |
