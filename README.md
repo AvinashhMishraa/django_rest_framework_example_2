@@ -3535,5 +3535,13 @@ class Person(models.Model):
         super().delete()
 ```
 
+<br>
+
+**🔸 &nbsp;<ins>Step 3</ins> &nbsp;➔&nbsp; (optional but recommended): &nbsp;Create a custom model manager**
+
+
+
+
+
 
 
