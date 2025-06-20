@@ -2304,9 +2304,7 @@ APIView (base - just HTTP methods from basic low-level view)
      |--- mixins.RetrieveModelMixin   ➜   adds retrieve()
 </pre>
 
-Instead of forcing you to rewrite similar code in every view, DRF gives you **Mixins** (reusable building blocks) to add specific behavior : <ins>list</ins>, <ins>create</ins>, <ins>update</ins>, <ins>delete</ins>, <ins>retrieve</ins>.
-
-Then you compose them together as per your need.
+Instead of forcing you to rewrite similar code in every view, DRF gives you **Mixins** (reusable building blocks) to add specific behavior : <ins>list</ins> , <ins>create</ins> , <ins>update</ins> , <ins>delete</ins> , <ins>retrieve</ins>. Then you compose them together as per your need.
 
 <br>
 
