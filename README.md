@@ -3539,7 +3539,27 @@ class Person(models.Model):
 
 **🔸 &nbsp;<ins>Step 3</ins> &nbsp;➔&nbsp; (optional but recommended) &nbsp;: &nbsp;Create a custom model manager**
 
+<code>person_api/home/models.py</code>
+```
+class SoftDeleteManager(models.Manager):
+    def get_queryset(self):
+        return super().get_queryset().filter(is_deleted=False)
 
+
+class Person(models.Model):
+    ●●●
+    is_deleted = models.BooleanField(default=False)
+
+    objects = SoftDeleteManager()                               # Default manager (hides soft deleted)
+    all_objects = models.Manager()                              # Include deleted when needed
+
+    def delete(self, using=None, keep_parents=False):
+        self.is_deleted = True
+        self.save()
+
+    def hard_delete(self):
+        super().delete()
+```
 
 
 
