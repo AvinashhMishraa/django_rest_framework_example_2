@@ -2290,12 +2290,12 @@ Here is how you can build your DRF view using Mixins :
 
 <br>
 
-<h3>✅ &nbsp;Full Stack</h3>
+<h3>✅ &nbsp;DRF Generic Flow Structure</h3>
 
 <pre>
-APIView (base - just HTTP methods)
+APIView (base - just HTTP methods from basic low-level view)
 |
-|--- GenericAPIView (adds serializer, queryset)
+|--- GenericAPIView (adds queryset, serializer, filtering, pagination etc.)
      |
      |--- mixins.CreateModelMixin     ➜   adds create()
      |--- mixins.ListModelMixin       ➜   adds list()
@@ -2303,6 +2303,10 @@ APIView (base - just HTTP methods)
      |--- mixins.DestroyModelMixin    ➜   adds destroy()
      |--- mixins.RetrieveModelMixin   ➜   adds retrieve()
 </pre>
+
+Instead of forcing you to rewrite similar code in every view, DRF gives you **Mixins** (reusable building blocks) to add specific behavior : <ins>list</ins>, <ins>create</ins>, <ins>update</ins>, <ins>delete</ins>, <ins>retrieve</ins>.
+
+Then you compose them together as per your need.
 
 <br>
 
