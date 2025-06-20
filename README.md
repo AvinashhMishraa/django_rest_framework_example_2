@@ -3652,3 +3652,15 @@ class PersonSerializer(serializers.ModelSerializer):
 > | <code>p1.hard_delete()</code>                   | **removes** the person physically                                                         |
 > | <code>Person.all_objects.get(id=XX)</code>      | **ERROR** &nbsp;➜&nbsp; <code>home.models.Person.DoesNotExist: Person matching query does not exist.</code>&nbsp; |
 
+<br>
+
+<h3> &nbsp;6️⃣ How to Implement Bulk Soft Delete ?</h3>
+
+Let’s say you want to delete multiple persons at once.
+
+```
+ids_to_delete = [34, 37, 38]
+Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)
+```
+
+
