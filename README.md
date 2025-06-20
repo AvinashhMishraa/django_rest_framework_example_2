@@ -3485,7 +3485,7 @@ Now :
 
 <br>
 
-**🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Add <code>is_deleted</code> field to model**
+**🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Add** <code>is_deleted</code> **field to model**
 
 <code>person_api/home/models.py</code>
 ```
@@ -3504,7 +3504,7 @@ py manage.py migrate
 
 <br>
 
-**🔸 &nbsp;<ins>Step 2</ins> &nbsp;➔&nbsp; Override model's <code>delete()</code> method**
+**🔸 &nbsp;<ins>Step 2</ins> &nbsp;➔&nbsp; Override model's** <code>delete()</code> **method**
 
 <code>person_api/home/models.py</code>
 ```
