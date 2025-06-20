@@ -3508,53 +3508,53 @@ py manage.py migrate
 
 **🔸 &nbsp;<ins>Step 2</ins> &nbsp;➔&nbsp; Override model's** <code>delete()</code> **method**
 
-<code>person_api/home/models.py</code>
-```
-class Person(models.Model):
-    ●●●
-    is_deleted = models.BooleanField(default=False)
-
-    def delete(self, using=None, keep_parents=False):
-        self.is_deleted = True
-        self.save()
-```
-<code>python manage.py makemigrations</code> <br>
-<code>py manage.py migrate</code>
-
-<br>
-
-You'll also have to restore a soft-deleted person. To do it : <br>
-<code>person_api/home/models.py</code>
-```
-class Person(models.Model):
-    ●●●
-    is_deleted = models.BooleanField(default=False)
-
-    def delete(self, using=None, keep_parents=False):
-        self.is_deleted = True
-        self.save()
-
-    def restore(self):
-        self.is_deleted = False
-        self.save()
-```
+> <code>person_api/home/models.py</code>
+> ```
+> class Person(models.Model):
+>     ●●●
+>     is_deleted = models.BooleanField(default=False)
+> 
+>     def delete(self, using=None, keep_parents=False):
+>         self.is_deleted = True
+>         self.save()
+> ```
+> <code>python manage.py makemigrations</code> <br>
+> <code>py manage.py migrate</code>
 
 <br>
 
-Now that you have over-ridden the <code>delete()</code> method for **soft delete**, you'll have to write a method for **hard delete** also : <br>
-<code>person_api/home/models.py</code>
-```
-class Person(models.Model):
-    ●●●
-    is_deleted = models.BooleanField(default=False)
+> You'll also have to restore a soft-deleted person. To do it : <br>
+> <code>person_api/home/models.py</code>
+> ```
+> class Person(models.Model):
+>     ●●●
+>     is_deleted = models.BooleanField(default=False)
+> 
+>     def delete(self, using=None, keep_parents=False):
+>         self.is_deleted = True
+>         self.save()
+> 
+>     def restore(self):
+>         self.is_deleted = False
+>         self.save()
+> ```
 
-    def delete(self, using=None, keep_parents=False):
-        self.is_deleted = True
-        self.save()
+<br>
 
-    def hard_delete(self):
-        super().delete()
-```
+> Now that you have over-ridden the <code>delete()</code> method for **soft delete**, you'll have to write a method for **hard delete** also : <br>
+> <code>person_api/home/models.py</code>
+> ```
+> class Person(models.Model):
+>     ●●●
+>     is_deleted = models.BooleanField(default=False)
+> 
+>     def delete(self, using=None, keep_parents=False):
+>         self.is_deleted = True
+>         self.save()
+> 
+>     def hard_delete(self):
+>         super().delete()
+> ```
 
 <br>
 
