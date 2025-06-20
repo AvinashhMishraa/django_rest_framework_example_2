@@ -3537,7 +3537,7 @@ class Person(models.Model):
 
 <br>
 
-**🔸 &nbsp;<ins>Step 3</ins> &nbsp;➔&nbsp; (optional but recommended): &nbsp;Create a custom model manager**
+**🔸 &nbsp;<ins>Step 3</ins> &nbsp;➔&nbsp; (optional but recommended) &nbsp;: &nbsp;Create a custom model manager**
 
 
 
