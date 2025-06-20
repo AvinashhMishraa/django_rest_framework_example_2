@@ -3519,6 +3519,8 @@ class Person(models.Model):
         self.save()
 ```
 
+<br>
+
 You'll also have to restore a soft-deleted person. To do it : <br>
 <code>person_api/home/models.py</code>
 ```
