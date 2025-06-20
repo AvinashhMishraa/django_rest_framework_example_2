@@ -3510,17 +3510,29 @@ py manage.py migrate
 
 <code>person_api/home/models.py</code>
 ```
-def delete(self, using=None, keep_parents=False):
-    self.is_deleted = True
-    self.save()
+class Person(models.Model):
+    ●●●
+    is_deleted = models.BooleanField(default=False)
+
+    def delete(self, using=None, keep_parents=False):
+        self.is_deleted = True
+        self.save()
 ```
 
 Now that you have over-ridden the <code>delete()</code> method for **soft delete**, you'll have to write a method for **hard delete** also :
 
 <code>person_api/home/models.py</code>
 ```
-def hard_delete(self):
-    super().delete()
+class Person(models.Model):
+    ●●●
+    is_deleted = models.BooleanField(default=False)
+
+    def delete(self, using=None, keep_parents=False):
+        self.is_deleted = True
+        self.save()
+
+    def hard_delete(self):
+        super().delete()
 ```
 
 
