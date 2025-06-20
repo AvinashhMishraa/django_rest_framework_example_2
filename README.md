@@ -3626,14 +3626,14 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-<h3>4️⃣ &nbsp;Queries in Soft Delete</h3>
+<h3>5️⃣ &nbsp;Queries in Soft Delete</h3>
 
 <br>
 
 | Operation         | Code                                         |
 | ----------------- | -------------------------------------------- |
-| Normal list       | `Person.objects.all()`                       |
-| Including deleted | `Person.all_objects.all()`                   |
+| Normal list       | &nbsp;&nbsp;`Person.objects.all()`                       |
+| Including deleted&nbsp;&nbsp; | `Person.all_objects.all()`                   |
 | Only deleted      | `Person.all_objects.filter(is_deleted=True)` |
 
 <br>
