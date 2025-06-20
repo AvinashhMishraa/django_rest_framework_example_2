@@ -3638,7 +3638,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-> Run <code>Python manage.py shell</code> in the terminal &nbsp;:
+> Run <code>Python manage.py shell</code> in the terminal to checkout these following lines&nbsp;:
 > 
 > 
 > | Code                                            | Output                                                                                    |
@@ -3658,9 +3658,10 @@ class PersonSerializer(serializers.ModelSerializer):
 
 Let’s say you want to delete multiple persons at once.
 
-```
-ids_to_delete = [34, 37, 38]
-Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)
-```
+> Run the following code in the shell - <code>Python manage.py shell</code> :
+> ```
+> ids_to_delete = [34, 37, 38]
+> Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)
+> ```
 
 
