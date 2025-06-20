@@ -3534,11 +3534,11 @@ py manage.py migrate
 >     ●●●
 >     is_deleted = models.BooleanField(default=False)
 > 
->     def delete(self, using=None, keep_parents=False):
+>     def delete(self, using=None, keep_parents=False):            # soft delete
 >         self.is_deleted = True
 >         self.save()
-> 
->     def restore(self):
+>
+>     def restore(self):                                           # restores the soft-deleted person
 >         self.is_deleted = False
 >         self.save()
 > ```
@@ -3552,11 +3552,15 @@ py manage.py migrate
 >     ●●●
 >     is_deleted = models.BooleanField(default=False)
 > 
->     def delete(self, using=None, keep_parents=False):
+>     def delete(self, using=None, keep_parents=False):            # soft delete
 >         self.is_deleted = True
 >         self.save()
+>
+>     def restore(self):                                           # restores the soft-deleted person
+>         self.is_deleted = False
+>         self.save()
 > 
->     def hard_delete(self):
+>     def hard_delete(self):                                       # removes the person physically from the Person table
 >         super().delete()
 > ```
 
@@ -3577,14 +3581,18 @@ class Person(models.Model):
     ●●●
     is_deleted = models.BooleanField(default=False)
 
-    objects = SoftDeleteManager()                               # Default manager (hides soft deleted)
-    all_objects = models.Manager()                              # Include deleted when needed
+    objects = SoftDeleteManager()                                # default manager (hides soft deleted)
+    all_objects = models.Manager()                               # includes deleted when needed
 
-    def delete(self, using=None, keep_parents=False):
+    def delete(self, using=None, keep_parents=False):            # soft delete
         self.is_deleted = True
         self.save()
 
-    def hard_delete(self):
+    def restore(self):                                           # restores the soft-deleted person
+        self.is_deleted = False
+        self.save()
+
+    def hard_delete(self):                                       # restores the soft-deleted person
         super().delete()
 ```
 
