@@ -3496,6 +3496,7 @@ class Person(models.Model):
     is_deleted = models.BooleanField(default=False)
 ```
 
+Now run this on the terminal :
 ```
 py manage.py makemigrations
 py manage.py migrate
