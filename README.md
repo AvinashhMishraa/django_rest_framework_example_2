@@ -3656,9 +3656,11 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <h3> &nbsp;6️⃣ How to Implement Bulk Soft Delete ?</h3>
 
-Let’s say you want to delete multiple persons at once.
+<br>
 
-> Run the following code in the shell - <code>Python manage.py shell</code> :
+Let’s say you want to **delete multiple persons at once**.
+
+> Run the following code in the shell - <code>Python manage.py shell</code> &nbsp;:
 > ```
 > ids_to_delete = [34, 37, 38]
 > Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)
