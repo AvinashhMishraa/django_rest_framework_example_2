@@ -3522,8 +3522,6 @@ py manage.py migrate
 >         self.is_deleted = True
 >         self.save()
 > ```
-> <code>python manage.py makemigrations</code> <br>
-> <code>py manage.py migrate</code>
 
 <br>
 
