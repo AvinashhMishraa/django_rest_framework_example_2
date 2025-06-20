@@ -3665,5 +3665,6 @@ Let’s say you want to **delete multiple persons at once**.
 > ids_to_delete = [34, 37, 38]
 > Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)
 > ```
-
+>
+> Note that it works even if some of these ids are not present
 
