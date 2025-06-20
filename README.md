@@ -3471,6 +3471,8 @@ Now :
 
 <h3>3️⃣ &nbsp;When to Use Hard vs Soft Delete ?</h3>
 
+<br>
+
 | Scenario                                                   | Recommendation  |
 | ---------------------------------------------------------- | --------------- |
 | Legal compliance required (GDPR, audits, medical data)     | **Soft Delete** |
@@ -3606,6 +3608,8 @@ class Person(models.Model):
 <br>
 
 <h3>4️⃣ &nbsp;Queries in Soft Delete</h3>
+
+<br>
 
 | Operation         | Code                                         |
 | ----------------- | -------------------------------------------- |
