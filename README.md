@@ -3622,9 +3622,9 @@ class Person(models.Model):
 > |-------------------------------------------------|-------------------------------------------------------------------------------------------|
 > | <code>p1 = Person.all_objects.get(id=XX)</code>&nbsp;&nbsp; | returns the person with the <code>id = XX</code>                              |
 > | <code>p1.is_deleted</code>                      | returns <code>False</code>                                                                |
-> | <code>p1.delete()</code>                        | soft deletes the person i.e, <code>person.is_deleted = True</code>                        |
+> | <code>p1.delete()</code>                        | **soft deletes** the person i.e, <code>person.is_deleted = True</code>                        |
 > | <code>p1.is_deleted</code>                      | returns <code>True</code>                                                                 |
-> | <code>p1.restore()</code>                       | restores the person i.e, <code>person.is_deleted = False</code>                           |
+> | <code>p1.restore()</code>                       | **restores** the person i.e, <code>person.is_deleted = False</code>                           |
 > | <code>p1.is_deleted</code>                      | returns <code>False</code>                                                                |
 > | <code>p1.hard_delete()</code>                   | removes the person physically                                                             |
 > | <code>Person.all_objects.get(id=XX)</code>      | **ERROR** &nbsp;➜&nbsp; <code>home.models.Person.DoesNotExist: Person matching query does not exist.</code>&nbsp; |
