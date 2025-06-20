@@ -3566,8 +3566,7 @@ class Person(models.Model):
 **🔸 &nbsp;<ins>Step 3</ins> &nbsp;➔&nbsp; Use your manager carefully**
 
 Default &nbsp;: <code>Person.objects.all()</code> &nbsp;&nbsp;⟶&nbsp;&nbsp; returns only non-deleted records.
-
-Use &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <code>Person.all_objects.all()</code> &nbsp;&nbsp;⟶&nbsp;&nbsp; returns everything.
+Use &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;: <code>Person.all_objects.all()</code> &nbsp;&nbsp;⟶&nbsp;&nbsp; returns everything.
 
 
 
