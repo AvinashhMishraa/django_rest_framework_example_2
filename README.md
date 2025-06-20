@@ -3607,6 +3607,23 @@ class Person(models.Model):
 
 <br>
 
+**🔸 &nbsp;<ins>Step 4</ins> &nbsp;➔&nbsp; Optional (if you want to show the** <code>is_deleted</code> **field)**
+
+```
+class PersonSerializer(serializers.ModelSerializer):
+
+    ...
+
+    class Meta:
+        model = Person
+        # fields = '__all__'
+        fields = ['id', 'name', 'age', 'color', 'color_info', 'is_deleted']           # custom order
+    
+    ...
+```
+
+<br>
+
 <h3>4️⃣ &nbsp;Queries in Soft Delete</h3>
 
 <br>
