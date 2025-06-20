@@ -3654,7 +3654,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-<h3> &nbsp;6️⃣ How to Implement Bulk Soft Delete ?</h3>
+<h3>6️⃣ &nbsp;How to Implement Bulk Soft Delete ?</h3>
 
 <br>
 
