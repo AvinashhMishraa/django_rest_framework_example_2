@@ -3572,9 +3572,6 @@ py manage.py migrate
 
 <code>person_api/home/models.py</code>
 ```
-●●●
-
-
 class SoftDeleteManager(models.Manager):
     def get_queryset(self):
         return super().get_queryset().filter(is_deleted=False)
