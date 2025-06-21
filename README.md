@@ -3707,16 +3707,17 @@ When you call <code>.delete()</code> on a **queryset**, Django does **bulk hard 
 It does **NOT** call the instance method <code>delete()</code> on each object.
 This is how <ins>Django ORM delete</ins> works.
 
-- If you call <code>instance.delete()</code> , Django calls :
-```
-def delete(self, using=None, keep_parents=False):
-    # model level delete
-```
-
-- But if you call <code>queryset.delete()</code> , Django directly executes SQL like :
-```
-DELETE FROM person WHERE id IN (1, 2, 3);
-```
+> > If you call <code>instance.delete()</code> , Django calls :
+> > ```
+> > def delete(self, using=None, keep_parents=False):
+> >     # model level delete
+> > ```
+> <br>
+> 
+> > But if you call <code>queryset.delete()</code> , Django directly executes SQL like :
+> > ```
+> > DELETE FROM person WHERE id IN (1, 2, 3);
+> > ```
 
 
 
