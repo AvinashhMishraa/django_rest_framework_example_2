@@ -3688,8 +3688,8 @@ Let’s say you want to **delete multiple persons at once**.
 > > &nbsp;&nbsp;&nbsp;<code>python manage.py shell</code>
 > > ```
 > > ids_to_delete = [41, 42, 43, 44]
-> > Person.objects.filter(id__in=ids_to_delete).delete()     # deletes all ids & returns the number of persons deleted
-> > p = Person.all_objects.get(id=41)                        # ERROR : person does not exist ➜ it was hard deleted
+> > Person.objects.filter(id__in=ids_to_delete).delete()         # returns the number of persons deleted
+> > p = Person.all_objects.get(id=41)                            # ERROR : person does not exist ➜ hard deleted
 > > ```
 
 <br>
