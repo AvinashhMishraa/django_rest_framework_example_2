@@ -3697,3 +3697,12 @@ Let’s say you want to **delete multiple persons at once**.
 
 🔸 &nbsp;Now the question is why <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> is **not a Bulk Soft Delete** ?
 
+```
+persons = Person.objects.filter(id__in=ids)
+persons.delete()
+```
+
+When you call <code>.delete()</code> on a **queryset**, Django does **bulk hard delete**. <br>
+It does **NOT** call the instance method <code>delete()</code> on each object.
+
+
