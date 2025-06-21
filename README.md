@@ -3552,15 +3552,15 @@ py manage.py migrate
 >     ●●●
 >     is_deleted = models.BooleanField(default=False)
 > 
->     def delete(self, using=None, keep_parents=False):            # soft delete
+>     def delete(self, using=None, keep_parents=False):        # soft delete
 >         self.is_deleted = True
 >         self.save()
 >
->     def restore(self):                                           # restores the soft-deleted person
+>     def restore(self):                                       # restores the soft-deleted person
 >         self.is_deleted = False
 >         self.save()
 > 
->     def hard_delete(self):                                       # removes the person physically from the Person table
+>     def hard_delete(self):                                   # removes the person physically from the Person table
 >         super().delete()
 > ```
 
