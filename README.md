@@ -3672,6 +3672,8 @@ Let’s say you want to **delete multiple persons at once**.
 
 **✅ &nbsp;Will** <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> **also work ?**
 
+<br>
+
 > Since you have already overridden the <code>delete()</code> method of the <code>Person</code> model, you may be thinking &nbsp;➜
 > 
 > - If &nbsp;<code>Person.objects.filter(id__in=ids_to_delete).delete()</code> &nbsp;does &nbsp;a <ins>**bulk soft delete**</ins> &nbsp;or &nbsp;<ins>**bulk hard delete**</ins> ?
@@ -3680,12 +3682,12 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-You can check it through the bulk delete api http://localhost:8000/api/person/bulk-delete/ which uses <code>persons.delete()</code>
-
-However, you may quickly verify it through the <code>Django shell</code> also.
-```
-ids_to_delete = [41, 42, 43, 44]
-Person.objects.filter(id__in=ids_to_delete).delete()
-p = Person.all_objects.get(id=41)                     # ERROR -> person does not exist    =====>    So it was a bulk hard delete not bulk soft delete
-```
+> You can check it through the bulk delete api http://localhost:8000/api/person/bulk-delete/ which uses <code>persons.delete()</code>
+> 
+> However, you may quickly verify it through the <code>Django shell</code> also.
+> ```
+> ids_to_delete = [41, 42, 43, 44]
+> Person.objects.filter(id__in=ids_to_delete).delete()
+> p = Person.all_objects.get(id=41)                     # ERROR -> person does not exist which implies it was hard deleted
+> ```
 
