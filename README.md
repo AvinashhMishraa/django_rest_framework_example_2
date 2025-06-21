@@ -3719,7 +3719,9 @@ Let’s say you want to **delete multiple persons at once**.
 > >
 > > 👉 &nbsp; **It bypasses your model’s** <code>delete()</code> **method.**
 
+<br>
 
+<h4>✅ &nbsp;Create an API for the <ins>Soft Bulk Delete</ins> and also for <ins>Restoring</ins> it</h4>
 
 
 
