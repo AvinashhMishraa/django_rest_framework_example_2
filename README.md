@@ -3725,6 +3725,9 @@ This is how <ins>Django ORM delete</ins> works.
 > > DELETE FROM person WHERE id IN (1, 2, 3);
 > > ```
 
+<br>
+
+👉 &nbsp; **It bypasses your model’s** <code>delete()</code> **method.**
 
 
 
