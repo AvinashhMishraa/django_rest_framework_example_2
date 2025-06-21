@@ -3704,17 +3704,17 @@ Let’s say you want to **delete multiple persons at once**.
 >
 > <br>
 >
-> > > If you call <code>instance.delete()</code> , Django calls :
-> > > ```
-> > > def delete(self, using=None, keep_parents=False):
-> > >     # model level delete
-> > > ```
-> > <br>
-> > 
-> > > But if you call <code>queryset.delete()</code> , Django directly executes SQL like :
-> > > ```
-> > > DELETE FROM person WHERE id IN (1, 2, 3);
-> > > ```
+> > If you call <code>instance.delete()</code> , Django calls :
+> > ```
+> > def delete(self, using=None, keep_parents=False):
+> >     # model level delete
+> > ```
+> <br>
+> 
+> > But if you call <code>queryset.delete()</code> , Django directly executes SQL like :
+> > ```
+> > DELETE FROM person WHERE id IN (1, 2, 3);
+> > ```
 > 
 > <br>
 > 
