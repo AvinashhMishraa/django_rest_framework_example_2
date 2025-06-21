@@ -3685,7 +3685,7 @@ Let’s say you want to **delete multiple persons at once**.
 > ∎ &nbsp;You can check it through the bulk delete api ( http://localhost:8000/api/person/bulk-delete/ ) which uses <code>persons.delete()</code>
 > 
 > ∎ &nbsp;However, you may quickly verify it through the <code>Django shell</code> also. <br>
-> > &nbsp;&nbsp;&nbsp;<code>python manage.py shell</code>
+> > <code>python manage.py shell</code>
 > > ```
 > > ids_to_delete = [41, 42, 43, 44]
 > > Person.objects.filter(id__in=ids_to_delete).delete()         # returns the number of persons deleted
