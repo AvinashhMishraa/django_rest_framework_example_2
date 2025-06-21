@@ -3670,7 +3670,7 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-<h4>✅ &nbsp;Will &nbsp;<code>persons.delete()</code>&nbsp; in the <code>bulk-delelete</code> api also work for <ins>bulk soft delete</ins> ? &nbsp; If not, why ?</h4>
+<h4>✅ &nbsp;Will &nbsp;<code>persons.delete()</code>&nbsp; in the &nbsp;<code>bulk-delelete</code>&nbsp; api also work for <ins>bulk soft delete</ins> ? &nbsp; If not, why ?</h4>
 
 <br>
 
