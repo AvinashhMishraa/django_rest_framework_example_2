@@ -3687,7 +3687,8 @@ Let’s say you want to **delete multiple persons at once**.
 > However, you may quickly verify it through the <code>Django shell</code> also.
 > ```
 > ids_to_delete = [41, 42, 43, 44]
-> Person.objects.filter(id__in=ids_to_delete).delete()
+> Person.objects.filter(id__in=ids_to_delete).delete()      # deletes all ids and returns the number of persons deleted
 > p = Person.all_objects.get(id=41)                         # ERROR : person does not exist   ➜   it was hard deleted
 > ```
+
 
