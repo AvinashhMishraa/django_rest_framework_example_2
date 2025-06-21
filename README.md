@@ -3707,7 +3707,7 @@ persons.delete()
 
 <br>
 
-When you call <code>.delete()</code> on a **queryset**, Django does **bulk hard delete**. <br>
+So when you call <code>.delete()</code> on a **queryset**, Django does **bulk hard delete**. <br>
 It does **NOT** call the instance method <code>delete()</code> on each object.
 This is how <ins>Django ORM delete</ins> works.
 
