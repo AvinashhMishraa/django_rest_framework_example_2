@@ -3693,4 +3693,7 @@ Let’s say you want to **delete multiple persons at once**.
 > p = Person.all_objects.get(id=41)                         # ERROR : person does not exist   ➜   it was hard deleted
 > ```
 
+<br>
+
+Now the question is why <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> is not a Bulk Soft Delete ?
 
