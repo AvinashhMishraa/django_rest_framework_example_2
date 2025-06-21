@@ -3674,7 +3674,11 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-Since you have already overridden the <code>delete()</code> method of the <code>Person</code> model, you may want to verify if <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> also does the **bulk soft delete** like <code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code> ?
+> ```
+> persons = Person.objects.filter(id__in=ids_to_delete)
+> ```
+> 
+> Since you have already overridden the <code>delete()</code> method of the <code>Person</code> model, you may want to verify if <code>persons.delete()</code> also does the **bulk soft delete** like <code>persons.update(is_deleted=True)</code> ?
 
 <br>
 
