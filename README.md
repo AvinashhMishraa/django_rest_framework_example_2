@@ -3694,7 +3694,7 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-> 🔶 &nbsp;Now the question is &nbsp;-&nbsp; why does <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> **not do the Bulk Soft Delete** ?
+> 🔶 &nbsp;Now the question is &nbsp;-&nbsp; why does <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> <ins>not do the Bulk Soft Delete</ins> ?
 > 
 > <br>
 > 
