@@ -3682,7 +3682,7 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-> You can check it through the bulk delete api http://localhost:8000/api/person/bulk-delete/ which uses <code>persons.delete()</code>
+> You can check it through the api http://localhost:8000/api/person/bulk-delete/ which uses <code>persons.delete()</code> for bulk delete.
 > 
 > However, you may quickly verify it through the <code>Django shell</code> also.
 > ```
