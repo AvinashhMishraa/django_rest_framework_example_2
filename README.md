@@ -3670,19 +3670,18 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-<h4>✅ &nbsp;Will &nbsp;<code>persons.delete()</code>&nbsp; in the &nbsp;<code>bulk-delelete</code>&nbsp; api also work for <ins>bulk soft delete</ins> ? &nbsp; If not, why ?</h4>
+<h4>✅ &nbsp;Will &nbsp;<code>persons.delete()</code>&nbsp; in the &nbsp;<code>bulk-delete</code>&nbsp; api also work for <ins>bulk soft delete</ins> ? &nbsp; If not, why ?</h4>
 
 <br>
 
-> Since you have already overridden the <code>delete()</code> method of the <code>Person</code> model, you may be thinking &nbsp;**:**
+> Since you have already overridden the <code>delete()</code> method of the <code>Person</code> model, you may want to verify &nbsp;**:**
 > 
-> - In other words, if <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> will also do the <ins>**bulk soft delete**</ins> like <code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code> ?
-
-<br>
-
+> If <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> also does the <ins>**bulk soft delete**</ins> like <code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code> ?
+>
+> <br>
+> 
 > You can check it through the api ( http://localhost:8000/api/person/bulk-delete/ ) which uses <code>persons.delete()</code> for bulk delete.
 > 
->
 > However, you may quickly verify it through the <code>Django shell</code> also. <br>
 > <code>python manage.py shell</code>
 > ```
