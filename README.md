@@ -3694,31 +3694,31 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-🔶 &nbsp;Now the question is why <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> is **not a Bulk Soft Delete** ?
-
-<br>
-
-So when you call <code>.delete()</code> on a **queryset**, Django does **bulk hard delete**. <br>
-It does **NOT** call the instance method <code>delete()</code> on each object.
-This is how <ins>Django ORM delete</ins> works.
-
-<br>
-
-> > If you call <code>instance.delete()</code> , Django calls :
-> > ```
-> > def delete(self, using=None, keep_parents=False):
-> >     # model level delete
-> > ```
+> 🔶 &nbsp;Now the question is why <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> is **not a Bulk Soft Delete** ?
+> 
 > <br>
 > 
-> > But if you call <code>queryset.delete()</code> , Django directly executes SQL like :
-> > ```
-> > DELETE FROM person WHERE id IN (1, 2, 3);
-> > ```
-
-<br>
-
-👉 &nbsp; **It bypasses your model’s** <code>delete()</code> **method.**
+> So when you call <code>.delete()</code> on a **queryset**, Django does **bulk hard delete**. <br>
+> It does **NOT** call the instance method <code>delete()</code> on each object. <br>
+> This is how <ins>Django ORM delete</ins> works.
+>
+> <br>
+>
+> > > If you call <code>instance.delete()</code> , Django calls :
+> > > ```
+> > > def delete(self, using=None, keep_parents=False):
+> > >     # model level delete
+> > > ```
+> > <br>
+> > 
+> > > But if you call <code>queryset.delete()</code> , Django directly executes SQL like :
+> > > ```
+> > > DELETE FROM person WHERE id IN (1, 2, 3);
+> > > ```
+> 
+> <br>
+> 
+> 👉 &nbsp; **It bypasses your model’s** <code>delete()</code> **method.**
 
 
 
