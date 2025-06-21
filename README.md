@@ -3670,7 +3670,7 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-<h4>✅ &nbsp;Will <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> also work ?</h4>
+**✅ &nbsp;Will** <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> **also work ?**
 
 
 
