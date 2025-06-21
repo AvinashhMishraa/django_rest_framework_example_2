@@ -3697,6 +3697,7 @@ Let’s say you want to **delete multiple persons at once**.
 
 🔸 &nbsp;Now the question is why <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> is **not a Bulk Soft Delete** ?
 
+The equivalent code is :
 ```
 persons = Person.objects.filter(id__in=ids)
 persons.delete()
@@ -3704,5 +3705,20 @@ persons.delete()
 
 When you call <code>.delete()</code> on a **queryset**, Django does **bulk hard delete**. <br>
 It does **NOT** call the instance method <code>delete()</code> on each object.
+This is how <ins>Django ORM delete</ins> works.
+
+- If you call <code>instance.delete()</code> , Django calls :
+```
+def delete(self, using=None, keep_parents=False):
+    # model level delete
+```
+
+- But if you call <code>queryset.delete()</code> , Django directly executes SQL like :
+```
+DELETE FROM person WHERE id IN (1, 2, 3);
+```
+
+
+
 
 
