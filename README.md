@@ -3678,7 +3678,7 @@ Let’s say you want to **delete multiple persons at once**.
 > 
 > - If &nbsp;<code>Person.objects.filter(id__in=ids_to_delete).delete()</code> &nbsp;does &nbsp;a <ins>**bulk soft delete**</ins> &nbsp;or &nbsp;<ins>**bulk hard delete**</ins> ?
 > 
-> - In other words, if <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> will also do the **bulk soft delete** like <code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code> ?
+> - In other words, if <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> will also do the <ins>**bulk soft delete**</ins> like <code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code> ?
 
 <br>
 
