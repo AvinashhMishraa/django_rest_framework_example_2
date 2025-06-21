@@ -3716,10 +3716,10 @@ Let’s say you want to **delete multiple persons at once**.
 > > ```
 > > DELETE FROM person WHERE id IN (1, 2, 3);
 > > ```
->
-> <br>
-> 
-> 👉 &nbsp; **It bypasses your model’s** <code>delete()</code> **method.**
+> >
+> > 👉 &nbsp; **It bypasses your model’s** <code>delete()</code> **method.**
+
+
 
 
 
