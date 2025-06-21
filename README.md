@@ -3698,7 +3698,7 @@ Let’s say you want to **delete multiple persons at once**.
 > 
 > <br>
 > 
-> So when you call <code>.delete()</code> on a **queryset**, Django does **bulk hard delete**. <br>
+> When you call <code>.delete()</code> on a **queryset**, Django does **bulk hard delete**. <br>
 > It does **NOT** call the instance method <code>delete()</code> on each object. <br>
 > This is how <ins>Django ORM delete</ins> works.
 >
@@ -3709,7 +3709,7 @@ Let’s say you want to **delete multiple persons at once**.
 > > def delete(self, using=None, keep_parents=False):
 > >     # model level delete
 > > ```
->
+> 
 > <br>
 > 
 > > But if you call <code>queryset.delete()</code> , Django directly executes SQL like :
