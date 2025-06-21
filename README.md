@@ -3672,11 +3672,10 @@ Let’s say you want to **delete multiple persons at once**.
 
 **✅ &nbsp;Will** <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> **also work ?**
 
-<br>
-
 Since you have already overridden the <code>delete()</code> method of the <code>Person</code> model, you may be thinking &nbsp;➜ <br><br>
 - If &nbsp;<code>Person.objects.filter(id__in=ids_to_delete).delete()</code> &nbsp;does &nbsp;a <ins>**bulk soft delete**</ins> &nbsp;or &nbsp;<ins>**bulk hard delete**</ins> ?
-- If <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> will do the same work as <code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code>
+  
+- In other words, if <code>Person.objects.filter(id__in=ids_to_delete).delete()</code> will do the same work as <code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code>
 
 <br>
 
