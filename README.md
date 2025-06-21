@@ -3670,4 +3670,4 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-<h3>✅ &nbsp;<code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code> is not same as <code>Person.objects.filter(id__in=ids_to_delete).delete()</code></h3>
+<h4>✅ &nbsp;Why</h4> <code>Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)</code> <h4>is not same as</h4> <code>Person.objects.filter(id__in=ids_to_delete).delete()</code>
