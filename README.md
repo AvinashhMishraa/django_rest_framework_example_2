@@ -3680,5 +3680,12 @@ Since you have already overridden the <code>delete()</code> method of the <code>
 
 <br>
 
+You can check it through the bulk delete api http://localhost:8000/api/person/bulk-delete/ which uses <code>persons.delete()</code>
 
+However, you may quickly verify it through the <code>Django shell</code> also.
+```
+ids_to_delete = [41, 42, 43, 44]
+Person.objects.filter(id__in=ids_to_delete).delete()
+p = Person.all_objects.get(id=41)                     # ERROR -> person does not exist    =====>    So it was a bulk hard delete not bulk soft delete
+```
 
