@@ -3663,8 +3663,10 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-Let’s say you want to **delete multiple persons at once**.
-
+> Let’s say you want to **delete multiple persons at once**.
+>
+> <br>
+> 
 > Run the following code in the shell &nbsp;➜&nbsp; <code>Python manage.py shell</code> &nbsp;**:**
 > ```
 > ids_to_delete = [34, 37, 38]
