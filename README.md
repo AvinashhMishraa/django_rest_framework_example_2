@@ -3677,8 +3677,7 @@ Let’s say you want to **delete multiple persons at once**.
 >
 > <br>
 > 
-> But this solution is perfect for internal code (service layer, management commands, admin panels, batch jobs). <br>
-> It's actually a **ORM-based method chaining** and does not involve creating separate APIs for <ins>bulk hard delte</ins> , <ins>bulk soft delete</ins> and <ins>bulk restore</ins>. &nbsp;⭐
+> But this solution is perfect for internal code (service layer, management commands, admin panels, batch jobs). It's actually a **ORM-based method chaining** and does not involve creating separate APIs for <ins>bulk hard delte</ins> , <ins>bulk soft delete</ins> and <ins>bulk restore</ins>. &nbsp;⭐
 
 
 <br>
