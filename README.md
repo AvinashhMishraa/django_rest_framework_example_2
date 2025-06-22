@@ -3725,7 +3725,7 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-There are 2 solutions :
+There are 2 solutions &nbsp;:
 
 - Either you can create a <ins>separate API</ins> for Soft Bulk Delete.
 
