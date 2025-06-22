@@ -3723,6 +3723,8 @@ Let’s say you want to **delete multiple persons at once**.
 
 <h4>✅ &nbsp;Solution for Soft Bulk Delete</h4>
 
+<br>
+
 There are 2 solutions :
 - Either you can create a separate API for <ins>Soft Bulk Delete</ins>
 
