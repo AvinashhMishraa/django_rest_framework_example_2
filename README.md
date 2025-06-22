@@ -3489,6 +3489,9 @@ Now :
 
 <br>
 
+This solution does not involve creating separate APIs for <ins>bulk hard delte</ins> , <ins>bulk soft delete</ins> and <ins>bulk restore</ins>. <br>
+It's just a <ins>**ORM-based method chaining**</ins> &nbsp;⭐
+
 **🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Add** <code>is_deleted</code> **field to model**
 
 <br>
@@ -3667,6 +3670,8 @@ Let’s say you want to **delete multiple persons at once**.
 > ```
 >
 > Note that it works even if some of these **ids** are not present.
+>
+> But this solution is perfect for internal code (service layer, management commands, admin panels, batch jobs).
 
 <br>
 
