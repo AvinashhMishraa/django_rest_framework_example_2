@@ -3721,10 +3721,11 @@ Let’s say you want to **delete multiple persons at once**.
 
 <br>
 
-<h4>✅ &nbsp;The Solution for Soft Bulk Delete</h4>
+<h4>✅ &nbsp;Solution for Soft Bulk Delete</h4>
 
 There are 2 solutions :
 - Either you can create a separate API for <ins>Soft Bulk Delete</ins>
+
 - Or make <code>Person.objects.filter(id__in=[41, 42, 43]).delete()</code> somehow work so that you can use the already created bulk-delete api.
 
 
