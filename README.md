@@ -3671,9 +3671,15 @@ Let’s say you want to **delete multiple persons at once**.
 > Person.objects.filter(id__in=ids_to_delete).update(is_deleted=True)
 > ```
 >
+> <br>
+> 
 > Note that it works even if some of these **ids** are not present.
 >
-> But this solution is perfect for internal code (service layer, management commands, admin panels, batch jobs).
+> <br>
+> 
+> But this solution is perfect for internal code (service layer, management commands, admin panels, batch jobs). <br>
+> It's actually a **ORM-based method chaining** and does not involve creating separate APIs for <ins>bulk hard delte</ins> , <ins>bulk soft delete</ins> and <ins>bulk restore</ins>. &nbsp;⭐
+
 
 <br>
 
