@@ -3490,7 +3490,9 @@ Now :
 <br>
 
 This solution does not involve creating separate APIs for <ins>bulk hard delte</ins> , <ins>bulk soft delete</ins> and <ins>bulk restore</ins>. <br>
-It's just a <ins>**ORM-based method chaining**</ins> which is perfect for internal code (service layer, management commands, admin panels, batch jobs). &nbsp;⭐ <br>
+It's just a <ins>**ORM-based method chaining**</ins> which is perfect for internal code (service layer, management commands, admin panels, batch jobs). 
+
+<br>
 
 **🔸 &nbsp;<ins>Step 1</ins> &nbsp;➔&nbsp; Add** <code>is_deleted</code> **field to model**
 
