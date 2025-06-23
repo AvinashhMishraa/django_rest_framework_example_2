@@ -3741,7 +3741,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 There are 2 solutions &nbsp;:
 
-> - Either you use **ORM-based method chaining** <br>to make <code>Person.objects.filter(id__in=[41, 42, 43]).delete()</code> work as a **bulk soft delete** (which is cuurently for **bulk hard delete**) <br>so that you can _use the already created bulk-delete api **http://localhost:8000/api/person/bulk-delete/** for **bulk soft delete**_.
+> - Either you use **ORM-based method chaining** to make <code>Person.objects.filter(id__in=[41, 42, 43]).delete()</code> work for **bulk soft delete** (which is cuurently a **bulk hard delete** api) so that you can _use the already created this bulk-delete api **http://localhost:8000/api/person/bulk-delete/** for **bulk soft delete**_.
 >
 > <br>
 > 
