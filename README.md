@@ -3739,7 +3739,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-There are 2 solutions &nbsp;**:**
+There are 3 solutions &nbsp;**:**
 
 <br>
 
