@@ -3747,7 +3747,7 @@ There are 3 solutions &nbsp;**:**
 >
 > <br>
 > 
-> - Or &nbsp;create &nbsp;<ins>_separate APIs_</ins> &nbsp;for &nbsp;**Bulk Soft Delete** , &nbsp;**Bulk Hard Delete** &nbsp;&&nbsp; **Bulk Restore**. 
+> - Or create <ins>_separate APIs_</ins> for &nbsp; - &nbsp;**Bulk Soft Delete** , &nbsp;**Bulk Hard Delete** &nbsp;&&nbsp; **Bulk Restore**. 
 >
 > <br>
 >
