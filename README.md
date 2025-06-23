@@ -3751,7 +3751,7 @@ class PersonSerializer(serializers.ModelSerializer):
 > 
 > <br>
 > 
-> - Or you can use a <ins>**hybrid** of the above 2 solutions<ins> taking best from each of them. &nbsp;⭐
+> - Or you can use a <ins>**hybrid** of the above 2 solutions</ins> taking best from each of them. &nbsp;⭐
 
 
 
