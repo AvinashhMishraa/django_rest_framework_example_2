@@ -3759,7 +3759,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 | API                             | Behavior                                 |
 | ------------------------------- | ---------------------------------------- |
-| <br>`/api/person/`<br>                  | Standard CRUD for active persons         |
+| `/api/person/`                  | Standard CRUD for active persons         |
 | <br>`/api/person/all/` <br><br> `/api/person/?show_deleted=true` <br> `/api/person/?show_deleted=false` | Separate endpoint for Admin only : returns alive + soft-deleted <br><br> Toggle via query param instead of separate endpoint  |
 | <br>`/api/person/bulk-soft-delete/` | Soft delete bulk                         |
 | <br>`/api/person/bulk-hard-delete/` | Hard delete bulk                         |
