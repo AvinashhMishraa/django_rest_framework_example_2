@@ -3781,8 +3781,7 @@ The Hybrid Solution combines :
 
 ✅ ORM flexibility for internal operations
 
-✅ Full control for :
-
+✅ Full control for : <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▪️ &nbsp;soft delete      <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▪️ &nbsp;hard delete      <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ▪️ &nbsp;restore          <br>
