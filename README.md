@@ -3757,7 +3757,13 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <h1>Bulk Soft Delete</h1>
 
-
+| API                             | Behavior                                 |
+| ------------------------------- | ---------------------------------------- |
+| `/api/person/`                  | Standard CRUD for active persons         |
+| `/api/person/all/`              | Admin only: returns alive + soft-deleted |
+| `/api/person/bulk-soft-delete/` | Soft delete bulk                         |
+| `/api/person/bulk-hard-delete/` | Hard delete bulk                         |
+| `/api/person/bulk-restore/`     | Restore bulk                             |
 
 
 
