@@ -3773,6 +3773,19 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <h3>⬛ &nbsp;Hybrid Solution &nbsp;:</h3>
 
+The Hybrid Solution combines :
 
+✅ Model level reusable soft delete logic (with ORM chaining)
+
+✅ API endpoints for controlled public-facing operations
+
+✅ ORM flexibility for internal operations
+
+✅ Full control for :
+
+- soft delete
+- hard delete
+- restore
+- bulk operations
 
 
