@@ -3759,7 +3759,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-<h3>⚫ &nbsp;Objective &nbsp;:</h3>
+<h3>⬛ &nbsp;Objective &nbsp;:</h3>
 
 | API                             | Behavior                                 |
 | ------------------------------- | ---------------------------------------- |
