@@ -3753,5 +3753,17 @@ class PersonSerializer(serializers.ModelSerializer):
 > 
 > - Or you can use a <ins>**hybrid** of the above 2 solutions</ins> taking best from each of them. &nbsp;⭐
 
+<br>
+
+<h1>Bulk Soft Delete</h1>
+
+
+
+
+
+
+
+
+
 
 
