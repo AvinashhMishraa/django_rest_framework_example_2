@@ -3759,6 +3759,8 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
+<h3>⭐ &nbsp;Objective &nbsp;:</h3>
+
 | API                             | Behavior                                 |
 | ------------------------------- | ---------------------------------------- |
 | `http://localhost:8000/api/person/`                  | Standard CRUD for active persons         |
