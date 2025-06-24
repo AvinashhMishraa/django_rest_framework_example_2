@@ -3761,6 +3761,8 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <h3>⬛ &nbsp;Objectives &nbsp;:</h3>
 
+<br>
+
 | API                             | Behavior                                 |
 | ------------------------------- | ---------------------------------------- |
 | `http://localhost:8000/api/person/`                  | Standard CRUD for active persons         |
@@ -3772,6 +3774,8 @@ class PersonSerializer(serializers.ModelSerializer):
 <br>
 
 <h3>⬛ &nbsp;Hybrid Solution &nbsp;:</h3>
+
+<br>
 
 The Hybrid Solution combines :
 
