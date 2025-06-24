@@ -3771,11 +3771,11 @@ class PersonSerializer(serializers.ModelSerializer):
 
 | API                             | Behavior                                 |
 | ------------------------------- | ---------------------------------------- |
-| &nbsp;`/api/person/`&nbsp;                  | &nbsp;Standard CRUD for active persons&nbsp;         |
-| &nbsp;`/api/person/all/` <br><br> &nbsp;`/api/person/?show_deleted=true` <br> &nbsp;`/api/person/?show_deleted=false`&nbsp; | &nbsp;Separate endpoint for Admin only &nbsp;:&nbsp; returns <ins>alive</ins> + <ins>soft-deleted</ins> <br><br> Toggle via query param to make it even more flexible <br>instead of creating a separate endpoint&nbsp; |
-| &nbsp;`/api/person/bulk-soft-delete/`&nbsp; | &nbsp;Soft delete bulk&nbsp;                         |
-| &nbsp;`/api/person/bulk-hard-delete/`&nbsp; | &nbsp;Hard delete bulk&nbsp;                         |
-| &nbsp;`/api/person/bulk-restore/`&nbsp;     | &nbsp;Restore bulk&nbsp;                             |
+| &nbsp;`/api/person/`&nbsp;                  | Standard CRUD for active persons&nbsp;         |
+| &nbsp;`/api/person/all/` <br><br> &nbsp;`/api/person/?show_deleted=true` <br> &nbsp;`/api/person/?show_deleted=false`&nbsp; | Separate endpoint for Admin only &nbsp;:&nbsp; returns <ins>alive</ins> + <ins>soft-deleted</ins> <br><br> Toggle via query param to make it even more flexible <br>instead of creating a separate endpoint |
+| &nbsp;`/api/person/bulk-soft-delete/`&nbsp; | Soft delete bulk                         |
+| &nbsp;`/api/person/bulk-hard-delete/`&nbsp; | Hard delete bulk                         |
+| &nbsp;`/api/person/bulk-restore/`&nbsp;     | Restore bulk                             |
 
 
 
