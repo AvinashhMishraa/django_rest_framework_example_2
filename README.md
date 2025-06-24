@@ -3769,7 +3769,9 @@ class PersonSerializer(serializers.ModelSerializer):
 | `http://localhost:8000/api/person/bulk-hard-delete/` | Hard delete bulk                         |
 | `http://localhost:8000/api/person/bulk-restore/`     | Restore bulk                             |
 
+<br>
 
+<h3>⬛ &nbsp;Hybrid Solution &nbsp;:</h3>
 
 
 
