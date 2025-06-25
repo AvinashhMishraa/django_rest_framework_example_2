@@ -3855,6 +3855,9 @@ class Person(models.Model):
 <br>
 
 <h4>2️⃣ &nbsp;&nbsp;<code>person_api/home/serializers.py</code></h4>
+
+<br>
+
 ```
 from rest_framework import serializers
 from .models import Person
