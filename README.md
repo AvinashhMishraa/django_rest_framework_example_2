@@ -3976,5 +3976,24 @@ class BulkHardDeleteAPIView(APIView):
 > - If your URL represents a resource, use **RESTful** verbs ( `GET`, `POST`, `PUT`, `PATCH`, `DELETE` )
 > - If your URL represents an action or operation, then `POST` is safest
 
+<br>
 
+**🔸 Regular DRF ViewSet for normal CRUD operations &nbsp;:**
+```
+from rest_framework import viewsets
+from .models import Person
+from .serializers import PersonSerializer
+
+
+class PersonViewSet(viewsets.ModelViewSet):
+    queryset = Person.objects.all()                # Only non-deleted
+    serializer_class = PersonSerializer
+```
+
+> But let's not use it in this case since you already implemented explicit function-based views :
+> - person(request)      ===>   `/api/person/`        →  list, create, update, patch, delete (single object)
+> - person_detail(id)    ===>   `/api/person/<id>/`   →  retrieve, update, patch, delete (by ID)
+
+So, you don’t need the <code>PersonViewSet</code> ❌ <br>
+However, if you want to benefit from filtering, pagination, and permissions with minimal code, you may use the <code>PersonViewSet</code>.
 
