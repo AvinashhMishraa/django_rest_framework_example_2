@@ -3963,6 +3963,12 @@ class BulkHardDeleteAPIView(APIView):
 > 
 > DRF community (and many big APIs like Stripe, Shopify, etc.) recommend `POST` for bulk operations. ⭐
 
+<br>
+
+| Scenario                         | Recommended                                         |
+| -------------------------------- | --------------------------------------------------- |
+| Soft Delete of **single person** | `PATCH /api/person/{id}/ { is_deleted: true }`      |
+| Soft Delete of **bulk persons**  | `POST /api/person/bulk-soft-delete/ { ids: [...] }` |
 
 
 
