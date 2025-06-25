@@ -3941,13 +3941,13 @@ class BulkHardDeleteAPIView(APIView):
 
 <br>
 
-You are using `POST` here for bulk soft delete , bulk restore and bulk hard delete because :
-
-- PATCH request generally assumes partial update on existing resource.
-
-- Here /api/person/bulk-soft-delete/ is actually not a resource URL — it’s a bulk action endpoint.
-
-- There is no resource called bulk-soft-delete, it's actually an action/operation, so it's common to model such operation-specific endpoints as POST.
+> Because :
+> 
+> - PATCH request generally assumes partial update on existing resource.
+> 
+> - Here /api/person/bulk-soft-delete/ is actually not a resource URL — it’s a bulk action endpoint.
+> 
+> - There is no resource called bulk-soft-delete, it's actually an action/operation, so it's common to model such operation-specific endpoints as POST.
 
 
 
