@@ -3881,6 +3881,8 @@ class PersonSerializer(serializers.ModelSerializer):
 
 ✅ These APIs give you public control while still allowing you to use ORM directly wherever needed.
 
+<br>
+
 <h4>🔸 &nbsp;Bulk Soft Delete API</h4>
 
 ```
@@ -3898,3 +3900,14 @@ class BulkSoftDeleteAPIView(APIView):
         return Response({"message": "Soft deleted successfully."}, status=status.HTTP_200_OK)
 ```
 
+<br>
+
+<h4>🔸 Bulk Restore API</h4>
+
+```
+class BulkRestoreAPIView(APIView):
+    def post(self, request):
+        ids = request.data.get('ids', [])
+        Person.all_objects.filter(id__in=ids).restore()
+        return Response({"message": "Restored successfully."}, status=status.HTTP_200_OK)
+```
