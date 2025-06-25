@@ -3911,3 +3911,14 @@ class BulkRestoreAPIView(APIView):
         Person.all_objects.filter(id__in=ids).restore()
         return Response({"message": "Restored successfully."}, status=status.HTTP_200_OK)
 ```
+
+<br>
+
+**🔸 Bulk Hard Delete API**
+```
+class BulkHardDeleteAPIView(APIView):
+    def post(self, request):
+        ids = request.data.get('ids', [])
+        Person.all_objects.filter(id__in=ids).hard_delete()
+        return Response({"message": "Hard deleted successfully."}, status=status.HTTP_200_OK)
+```
