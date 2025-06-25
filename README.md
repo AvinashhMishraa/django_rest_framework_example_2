@@ -3762,7 +3762,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-<h3>⬛ &nbsp;Objectives &nbsp;:</h3>
+<h2>⬛ &nbsp;Objectives &nbsp;:</h2>
 
 <br>
 
