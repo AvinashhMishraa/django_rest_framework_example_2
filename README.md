@@ -3939,15 +3939,15 @@ class BulkHardDeleteAPIView(APIView):
 >
 > and it worked fine, so why do people often use <code>POST</code> request for these kind of bulk operations in enterprise or production grade APIs ?
 
-<br>
-
 > Because :
 > 
-> - PATCH request generally assumes partial update on existing resource.
+> - `PATCH` request generally assumes partial update on existing resource.
 > 
-> - Here /api/person/bulk-soft-delete/ is actually not a resource URL — it’s a bulk action endpoint.
+> - Here `/api/person/bulk-soft-delete/` is actually <ins>not a resource URL</ins> — it’s a **bulk action endpoint**.
 > 
-> - There is no resource called bulk-soft-delete, it's actually an action/operation, so it's common to model such operation-specific endpoints as POST.
+> - There is no resource called `bulk-soft-delete``, it's actually an **action/operation**, so it's common to model such operation-specific endpoints as `POST`.
+
+
 
 
 
