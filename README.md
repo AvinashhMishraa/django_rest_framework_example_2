@@ -3865,15 +3865,12 @@ from .models import Person
 
 
 class PersonSerializer(serializers.ModelSerializer):
-
-	●●●
-
     class Meta:
         model = Person
         # fields = '__all__'
         fields = ['id', 'name', 'age', 'color', 'color_info', 'is_deleted']
     
-	●●●
+    ●●●
 ```
 
 
