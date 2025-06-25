@@ -3930,7 +3930,7 @@ class BulkHardDeleteAPIView(APIView):
 Although we have used :
 
 - <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;request in <code>BulkPersonCreateView</code> for <code>/api/person/bulk-create/</code>
-- <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;request in <code>BulkPersonUpdateView</code> for <code>/api/person/bulk-update/</code>
+- <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request in <code>BulkPersonUpdateView</code> for <code>/api/person/bulk-update/</code>
 - <code>DELETE</code> request in <code>BulkPersonDeleteView</code> for <code>/api/person/bulk-delete/</code>
 
 and it worked fine as expected.
