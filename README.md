@@ -3929,9 +3929,9 @@ class BulkHardDeleteAPIView(APIView):
 
 Although we have used :
 
-- <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in <code>BulkPersonCreateView</code> for <code>/api/person/bulk-create/</code>
-- <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in <code>BulkPersonUpdateView</code> for <code>/api/person/bulk-update/</code>
-- <code>DELETE</code> &nbsp;request &nbsp;in <code>BulkPersonDeleteView</code> for <code>/api/person/bulk-delete/</code>
+- <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonCreateView</code> for <code>/api/person/bulk-create/</code>
+- <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonUpdateView</code> for <code>/api/person/bulk-update/</code>
+- <code>DELETE</code> &nbsp;request &nbsp;in &nbsp;<code>BulkPersonDeleteView</code> for <code>/api/person/bulk-delete/</code>
 
 and it worked fine as expected.
 
