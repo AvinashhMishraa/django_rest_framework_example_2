@@ -3927,12 +3927,17 @@ class BulkHardDeleteAPIView(APIView):
 
 **🔸 Why using <code>post()</code> for all these bulk operations ?**
 
-Although we have used &nbsp;**:**
+Although you have used &nbsp;**:**
 
 - <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonCreateView</code> &nbsp;for&nbsp; <code>/api/person/bulk-create/</code>
 - <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonUpdateView</code> &nbsp;for&nbsp; <code>/api/person/bulk-update/</code>
 - <code>DELETE</code> &nbsp;request &nbsp;in &nbsp;<code>BulkPersonDeleteView</code> &nbsp;for&nbsp; <code>/api/person/bulk-delete/</code>
 
-and it worked fine as expected.
+and it worked fine, so why do people often use <code>POST</code> request for these kind of bulk operations in enterprise or production grade APIs ? <br>
+Instead they could have used :
+- <code>PATCH</code> for **Bulk Soft Delete** or **Bulk Restore** and 
+- <code>DELETE</code> for **Bulk Hard Delete**
+
+
 
 
