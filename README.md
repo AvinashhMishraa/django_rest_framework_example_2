@@ -3991,7 +3991,9 @@ class PersonViewSet(viewsets.ModelViewSet):
 ```
 
 > But let's not use it in this case since you already implemented explicit function-based views : <br>
+> 
 > &nbsp;&nbsp;&nbsp;&nbsp;✔️ `person(request)`    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;   `/api/person/` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;  `list` , `create` , `update` , `patch` , `delete` &nbsp;(single object) <br>
+> 
 > &nbsp;&nbsp;&nbsp;&nbsp;✔️ `person_detail(id)`   &nbsp;&nbsp;➜&nbsp;&nbsp;   `/api/person/<id>/`  &nbsp;&nbsp;➜&nbsp;&nbsp;  `retrieve` , `update` , `patch` , `delete` &nbsp;(by ID)
 
 So, you don’t need the <code>PersonViewSet</code> ❌ <br>
