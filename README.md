@@ -2342,6 +2342,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > > from .serializers import PersonSerializer
 > > 
 > > 
+> > # /api/person/bulk-create/
 > > class BulkPersonCreateView(APIView):
 > >     def post(self, request):
 > >         serializer = PersonSerializer(data=request.data, many=True)
@@ -2357,6 +2358,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > >         )
 > > 
 > > 
+> > # /api/person/bulk-update/
 > > class BulkPersonUpdateView(APIView):
 > >     def put(self, request):
 > >         data = request.data
@@ -2383,7 +2385,8 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > > 
 > >         return Response({"message": "All records updated successfully", "data": response_data})
 > > 
-> > 
+> >
+> > # /api/person/bulk-delete/
 > > class BulkPersonDeleteView(APIView):
 > >     def delete(self, request):
 > >         ids = request.data.get("ids", [])
