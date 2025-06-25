@@ -3882,6 +3882,7 @@ class PersonSerializer(serializers.ModelSerializer):
 ✅ These APIs give you public control while still allowing you to use ORM directly wherever needed.
 
 <h4>🔸 &nbsp;Bulk Soft Delete API</h4>
+
 ```
 from rest_framework.views import APIView
 from rest_framework.response import Response
