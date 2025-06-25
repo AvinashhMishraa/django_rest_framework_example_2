@@ -3949,7 +3949,7 @@ class BulkHardDeleteAPIView(APIView):
 > > 
 > > - Here `/api/person/bulk-soft-delete/` is actually <ins>not a resource URL</ins> &nbsp;—&nbsp; it’s a **bulk action endpoint**
 > > 
-> > - There is no resource called `bulk-soft-delete` , it's actually an **action/operation**, so it's common to model such operation-specific endpoints as `POST`
+> > - There is no resource called `bulk-soft-delete` , it's actually an **action/operation** , so it's common to model such operation-specific endpoints as `POST`
 
 
 
