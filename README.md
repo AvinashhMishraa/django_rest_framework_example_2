@@ -3885,6 +3885,8 @@ class PersonSerializer(serializers.ModelSerializer):
 
 **🔸 &nbsp;Bulk Soft Delete API**
 
+<br>
+
 ```
 from rest_framework.views import APIView
 from rest_framework.response import Response
@@ -3904,6 +3906,8 @@ class BulkSoftDeleteAPIView(APIView):
 
 **🔸 &nbsp;Bulk Restore API**
 
+<br>
+
 ```
 class BulkRestoreAPIView(APIView):
     def post(self, request):
@@ -3915,6 +3919,9 @@ class BulkRestoreAPIView(APIView):
 <br>
 
 **🔸 &nbsp;Bulk Hard Delete API**
+
+<br>
+
 ```
 class BulkHardDeleteAPIView(APIView):
     def post(self, request):
@@ -3979,6 +3986,9 @@ class BulkHardDeleteAPIView(APIView):
 <br>
 
 **🔸 &nbsp;Regular DRF ViewSet for normal CRUD operations &nbsp;:**
+
+<br>
+
 ```
 from rest_framework import viewsets
 from .models import Person
