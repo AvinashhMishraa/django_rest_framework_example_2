@@ -3927,7 +3927,7 @@ class BulkHardDeleteAPIView(APIView):
 
 **🔸 Why using <code>post()</code> for all these bulk operations ?**
 
-Although you have used &nbsp;**:**
+Although you have used earlier &nbsp;**:**
 
 - <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonCreateView</code> &nbsp;for&nbsp; <code>/api/person/bulk-create/</code>
 - <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonUpdateView</code> &nbsp;for&nbsp; <code>/api/person/bulk-update/</code>
