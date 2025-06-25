@@ -3902,7 +3902,7 @@ class BulkSoftDeleteAPIView(APIView):
 
 <br>
 
-<h4>🔸 Bulk Restore API</h4>
+**🔸 Bulk Restore API**
 
 ```
 class BulkRestoreAPIView(APIView):
