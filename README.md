@@ -3776,7 +3776,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-<h3>⬛ &nbsp;Hybrid Solution &nbsp;:</h3>
+<h2>⬛ &nbsp;Hybrid Solution &nbsp;:</h2>
 
 <br>
 
