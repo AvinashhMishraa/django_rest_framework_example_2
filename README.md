@@ -3927,18 +3927,17 @@ class BulkHardDeleteAPIView(APIView):
 
 **🔸 Why using <code>post()</code> for all these bulk operations ?**
 
-
-You could have used &nbsp;**:**
-- <code>PATCH</code> &nbsp;for <ins>**Bulk Soft Delete**</ins> or <ins>**Bulk Restore**</ins> and 
-- <code>DELETE</code> &nbsp;for <ins>**Bulk Hard Delete**</ins>
-
-like you have used earlier &nbsp;**:**
-
-- <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonCreateView</code> &nbsp;for&nbsp; <code>/api/person/bulk-create/</code>
-- <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonUpdateView</code> &nbsp;for&nbsp; <code>/api/person/bulk-update/</code>
-- <code>DELETE</code> &nbsp;request &nbsp;in &nbsp;<code>BulkPersonDeleteView</code> &nbsp;for&nbsp; <code>/api/person/bulk-delete/</code>
-
-and it worked fine, so why do people often use <code>POST</code> request for these kind of bulk operations in enterprise or production grade APIs ?
+> You could have used &nbsp;**:**
+> - <code>PATCH</code> &nbsp;for <ins>**Bulk Soft Delete**</ins> or <ins>**Bulk Restore**</ins> and 
+> - <code>DELETE</code> &nbsp;for <ins>**Bulk Hard Delete**</ins>
+>
+> like you have used earlier &nbsp;**:**
+>
+> - <code>POST</code> &nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonCreateView</code> &nbsp;for&nbsp; <code>/api/person/bulk-create/</code>
+> - <code>PUT</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;request &nbsp;in &nbsp;<code>BulkPersonUpdateView</code> &nbsp;for&nbsp; <code>/api/person/bulk-update/</code>
+> - <code>DELETE</code> &nbsp;request &nbsp;in &nbsp;<code>BulkPersonDeleteView</code> &nbsp;for&nbsp; <code>/api/person/bulk-delete/</code>
+>
+> and it worked fine, so why do people often use <code>POST</code> request for these kind of bulk operations in enterprise or production grade APIs ?
 
 <br>
 
