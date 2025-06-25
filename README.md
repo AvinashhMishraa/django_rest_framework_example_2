@@ -3795,4 +3795,67 @@ The Hybrid Solution combines &nbsp;**:**
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● &nbsp;bulk operations  <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ● &nbsp;toggle filter for retrieving persons who were soft-deleted (and hard deleted both)  <br>
 
+<br>
 
+<h4>1️⃣  &nbsp;&nbsp;<code>person_api/home/models.py</code></h4>
+
+
+```
+from django.db import models
+
+
+
+class SoftDeleteQuerySet(models.QuerySet):
+
+    def delete(self):
+        return super().update(is_deleted=True)
+
+    def restore(self):
+        return super().update(is_deleted=False)
+		
+	def hard_delete(self):
+        return super().delete()
+
+
+
+class SoftDeleteManager(models.Manager):
+
+    def get_queryset(self):
+        return SoftDeleteQuerySet(self.model, using=self._db).filter(is_deleted=False)
+
+
+
+class Color(models.Model):
+
+    color_name = models.CharField(max_length=100)
+
+    def __str__(self) -> str:
+        return self.color_name
+
+
+
+class Person(models.Model):
+
+    name = models.CharField(max_length=100)
+    age = models.IntegerField()
+    color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="color")
+    is_deleted = models.BooleanField(default=False)
+
+    objects = SoftDeleteManager()                             # Default manager : returns only active
+    all_objects = SoftDeleteQuerySet.as_manager()             # All objects (active + deleted)
+
+    def delete(self, using=None, keep_parents=False):         # instance delete for single soft delete
+        self.is_deleted = True
+        self.save()
+
+    def restore(self):                                        # restores the soft-deleted person
+        self.is_deleted = False
+        self.save()
+
+    def hard_delete(self):                                    # removes the person physically from the Person table
+        super().delete()
+```
+
+✅ Now soft-delete behavior is fully encapsulated at model/queryset level.
+
+<br>
