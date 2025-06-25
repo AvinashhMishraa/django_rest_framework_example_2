@@ -3873,5 +3873,27 @@ class PersonSerializer(serializers.ModelSerializer):
     ●●●
 ```
 
+<br>
 
+<h3>3️⃣  &nbsp;&nbsp;<code>person_api/home/views.py</code>  —  Hybrid API views</h3>
+
+<br>
+
+✅ These APIs give you public control while still allowing you to use ORM directly wherever needed.
+
+<h4>🔸 &nbsp;Bulk Soft Delete API</h4>
+```
+from rest_framework.views import APIView
+from rest_framework.response import Response
+from rest_framework import status
+from .models import Person
+
+
+
+class BulkSoftDeleteAPIView(APIView):
+    def post(self, request):
+        ids = request.data.get('ids', [])
+        Person.objects.filter(id__in=ids).delete()
+        return Response({"message": "Soft deleted successfully."}, status=status.HTTP_200_OK)
+```
 
