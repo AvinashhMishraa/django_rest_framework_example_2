@@ -3806,7 +3806,6 @@ from django.db import models
 
 
 class SoftDeleteQuerySet(models.QuerySet):
-
     def delete(self):
         return super().update(is_deleted=True)
 
@@ -3819,14 +3818,12 @@ class SoftDeleteQuerySet(models.QuerySet):
 
 
 class SoftDeleteManager(models.Manager):
-
     def get_queryset(self):
         return SoftDeleteQuerySet(self.model, using=self._db).filter(is_deleted=False)
 
 
 
 class Color(models.Model):
-
     color_name = models.CharField(max_length=100)
 
     def __str__(self) -> str:
@@ -3835,7 +3832,6 @@ class Color(models.Model):
 
 
 class Person(models.Model):
-
     name = models.CharField(max_length=100)
     age = models.IntegerField()
     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="color")
