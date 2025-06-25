@@ -3973,7 +3973,7 @@ class BulkHardDeleteAPIView(APIView):
 <br>
 
 🧠 Rule of Thumb :
-- If your URL represents a resource, use **RESTful** verbs (`GET`, `POST`, `PUT`, `PATCH`, `DELETE`).
+- If your URL represents a resource, use **RESTful** verbs ( `GET`, `POST`, `PUT`, `PATCH`, `DELETE` ).
 - If your URL represents an action or operation, then `POST` is safest.
 
 
