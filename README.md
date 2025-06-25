@@ -3955,7 +3955,7 @@ class BulkHardDeleteAPIView(APIView):
 
 <br>
 
-> Industry common practice (for bulk actions) &nbsp;**:*
+> Industry common practice (for bulk actions) &nbsp;**:**
 > 
 > > ✅ POST — for action endpoints (e.g., bulk-soft-delete, bulk-restore, send-email, sync-data, export-csv etc.)
 > > 
