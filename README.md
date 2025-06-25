@@ -3965,16 +3965,16 @@ class BulkHardDeleteAPIView(APIView):
 
 <br>
 
-| Scenario                         | Recommended                                         |
-| -------------------------------- | --------------------------------------------------- |
-| Soft Delete of **single person** | `PATCH /api/person/{id}/ { is_deleted: true }`      |
-| Soft Delete of **bulk persons**  | `POST /api/person/bulk-soft-delete/ { ids: [...] }` |
+> | Scenario                         | Recommended                                         |
+> | -------------------------------- | --------------------------------------------------- |
+> | Soft Delete of **single person** | `PATCH /api/person/{id}/ { is_deleted: true }`      |
+> | Soft Delete of **bulk persons**  | `POST /api/person/bulk-soft-delete/ { ids: [...] }` |
 
 <br>
 
-🧠 Rule of Thumb :
-- If your URL represents a resource, use **RESTful** verbs ( `GET`, `POST`, `PUT`, `PATCH`, `DELETE` ).
-- If your URL represents an action or operation, then `POST` is safest.
+> Rule of Thumb :
+> - If your URL represents a resource, use **RESTful** verbs ( `GET`, `POST`, `PUT`, `PATCH`, `DELETE` ).
+> - If your URL represents an action or operation, then `POST` is safest.
 
 
 
