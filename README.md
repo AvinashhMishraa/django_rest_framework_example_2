@@ -3956,9 +3956,11 @@ class BulkHardDeleteAPIView(APIView):
 <br>
 
 > Industry common practice (for bulk actions):
-> - ✅ POST — for action endpoints (e.g., bulk-soft-delete, bulk-restore, send-email, sync-data, export-csv etc.)
 > 
-> - ✅ PATCH — for partial updates of resource (per-record)
+> ✅ POST — for action endpoints (e.g., bulk-soft-delete, bulk-restore, send-email, sync-data, export-csv etc.)
+> 
+> ✅ PATCH — for partial updates of resource (per-record)
+> 
 > DRF community (and many big APIs like Stripe, Shopify, etc.) recommend POST for bulk operations.
 
 
