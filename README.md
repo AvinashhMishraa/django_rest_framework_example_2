@@ -3797,7 +3797,7 @@ The Hybrid Solution combines &nbsp;**:**
 
 <br>
 
-<h3>1️⃣  &nbsp;&nbsp;<code>person_api/home/models.py</code></h3>
+<h3>1️⃣ &nbsp;&nbsp;<code>person_api/home/models.py</code></h3>
 
 <br>
 
@@ -3853,3 +3853,25 @@ class Person(models.Model):
 ◼️ &nbsp;Now soft-delete behavior is fully encapsulated at model/queryset level.
 
 <br>
+
+<h4>2️⃣ &nbsp;&nbsp;<code>person_api/home/serializers.py</code></h4>
+```
+from rest_framework import serializers
+from .models import Person
+
+
+
+class PersonSerializer(serializers.ModelSerializer):
+
+	●●●
+
+    class Meta:
+        model = Person
+        # fields = '__all__'
+        fields = ['id', 'name', 'age', 'color', 'color_info', 'is_deleted']
+    
+	●●●
+```
+
+
+
