@@ -3902,7 +3902,7 @@ class BulkSoftDeleteAPIView(APIView):
 
 <br>
 
-**🔸 Bulk Restore API**
+**🔸 &nbsp;Bulk Restore API**
 
 ```
 class BulkRestoreAPIView(APIView):
@@ -3914,7 +3914,7 @@ class BulkRestoreAPIView(APIView):
 
 <br>
 
-**🔸 Bulk Hard Delete API**
+**🔸 &nbsp;Bulk Hard Delete API**
 ```
 class BulkHardDeleteAPIView(APIView):
     def post(self, request):
@@ -3925,7 +3925,7 @@ class BulkHardDeleteAPIView(APIView):
 
 <br>
 
-**🔸 Why using <code>post()</code> for all these bulk operations - <code>bulk-soft-delete</code> or <code>bulk-restore</code> or <code>bulk-hard-delete</code> &nbsp;?**
+**🔸 &nbsp;Why using <code>post()</code> for all these bulk operations - <code>bulk-soft-delete</code> or <code>bulk-restore</code> or <code>bulk-hard-delete</code> &nbsp;?**
 
 <br>
 
@@ -3978,7 +3978,7 @@ class BulkHardDeleteAPIView(APIView):
 
 <br>
 
-**🔸 Regular DRF ViewSet for normal CRUD operations &nbsp;:**
+**🔸 &nbsp;Regular DRF ViewSet for normal CRUD operations &nbsp;:**
 ```
 from rest_framework import viewsets
 from .models import Person
