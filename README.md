@@ -3996,6 +3996,6 @@ class PersonViewSet(viewsets.ModelViewSet):
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;✔️ `person_detail(id)`   &nbsp;&nbsp;➜&nbsp;&nbsp;   `/api/person/<id>/`  &nbsp;&nbsp;➜&nbsp;&nbsp;  `retrieve` , `update` , `patch` , `delete` &nbsp;(by ID)
 
-So, you don’t need the <code>PersonViewSet</code> ❌ <br>
+So, you don’t need the <code>PersonViewSet</code> &nbsp;❌ <br>
 However, if you want to benefit from <ins>filtering</ins >, <ins>pagination</ins> and <ins>permissions</ins> with minimal code, you may use the <code>PersonViewSet</code>
 
