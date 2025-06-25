@@ -3951,7 +3951,7 @@ class BulkHardDeleteAPIView(APIView):
 > > 
 > > - There is no resource called `bulk-soft-delete` , it's actually an **action/operation** , so it's common to model such operation-specific endpoints as `POST`
 > > 
-> > The same is true for `/api/person/bulk-soft-delete/`
+> > - The same is true for `/api/person/bulk-soft-delete/`
 
 
 
