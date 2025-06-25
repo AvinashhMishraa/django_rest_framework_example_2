@@ -3799,6 +3799,7 @@ The Hybrid Solution combines &nbsp;**:**
 
 <h4>1️⃣  &nbsp;&nbsp;<code>person_api/home/models.py</code></h4>
 
+<br>
 
 ```
 from django.db import models
@@ -3849,6 +3850,6 @@ class Person(models.Model):
         super().delete()
 ```
 
-✅ Now soft-delete behavior is fully encapsulated at model/queryset level.
+◼️ Now soft-delete behavior is fully encapsulated at model/queryset level.
 
 <br>
