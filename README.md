@@ -3883,7 +3883,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-<h4>🔸 &nbsp;Bulk Soft Delete API</h4>
+**🔸 &nbsp;Bulk Soft Delete API**
 
 ```
 from rest_framework.views import APIView
