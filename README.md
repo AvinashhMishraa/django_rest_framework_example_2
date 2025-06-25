@@ -3936,8 +3936,8 @@ Although you have used earlier &nbsp;**:**
 and it worked fine, so why do people often use <code>POST</code> request for these kind of bulk operations in enterprise or production grade APIs ?
 
 Instead they could have used :
-- <code>PATCH</code> for **Bulk Soft Delete** or **Bulk Restore** and 
-- <code>DELETE</code> for **Bulk Hard Delete**
+- <code>PATCH</code> for <ins>**Bulk Soft Delete**</ins> or <ins>**Bulk Restore**</ins> and 
+- <code>DELETE</code> for <ins>**Bulk Hard Delete**</ins>
 
 
 
