@@ -3941,7 +3941,7 @@ Instead they could have used &nbsp;**:**
 
 <br>
 
-Then why `POST` ? 
+Then why uising `POST` here for bulk soft delete , bulk restoreand bulk hard delete ? 
 
 Because :
 
