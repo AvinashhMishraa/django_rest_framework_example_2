@@ -3943,7 +3943,7 @@ class BulkHardDeleteAPIView(APIView):
 >
 > <br>
 > 
-> > Because :
+> > Because &nbsp;**:**
 > > 
 > > - `PATCH` request generally assumes partial update on existing resource
 > > 
