@@ -4013,4 +4013,42 @@ class PersonViewSet(viewsets.ModelViewSet):
 So, you don’t need the <code>PersonViewSet</code> &nbsp;❌ <br>
 However, if you want to benefit from <ins>filtering</ins >, <ins>pagination</ins> and <ins>permissions</ins> with minimal code, you may use the <code>PersonViewSet</code>
 
+<br>
+
+<h3>3️⃣  &nbsp;&nbsp;<code>person_api/api/urls.py</code></h3>
+
+<br>
+
+```
+from django.urls import path, include
+from rest_framework.routers import DefaultRouter
+from home.views import (
+    index, person, person_detail, login, Persons, PeopleViewSet,
+    BulkPersonCreateView, BulkPersonUpdateView, BulkPersonDeleteView,
+    BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView
+)
+
+
+router = DefaultRouter()
+router.register(r'people', PeopleViewSet, basename='people')
+urlpatterns = router.urls
+
+
+urlpatterns = [
+    path('index/', index),                                                  # Function based view
+    path('person/', person),                                                # Function based view
+    path('person/<int:id>/', person_detail),                                # Function based view
+    path('login/', login),                                                  # Function based view
+    path('persons/', Persons.as_view()),                                    # Class based view
+    path('', include(router.urls)),                                         # ModelViewSet
+    path('person/bulk-create/', BulkPersonCreateView.as_view()),            # Class based view
+    path('person/bulk-update/', BulkPersonUpdateView.as_view()),            # Class based view
+    path('person/bulk-delete/', BulkPersonDeleteView.as_view()),            # Class based view         # Hard Delete
+    path('person/bulk-soft-delete/', BulkSoftDeleteAPIView.as_view()),      # Class based view         # Soft Delete
+    path('person/bulk-hard-delete/', BulkHardDeleteAPIView.as_view()),      # Class based view         # Hard Delete
+    path('person/bulk-restore/', BulkRestoreAPIView.as_view()),             # Class based view
+]
+```
+
+
 
