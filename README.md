@@ -3925,7 +3925,7 @@ class BulkHardDeleteAPIView(APIView):
 
 <br>
 
-🔸 Why using <code>POST</code> for all these bulk operations ?
+**🔸 Why using <code>post()</code> for all these bulk operations ?**
 
 Although we have used &nbsp;**:**
 
