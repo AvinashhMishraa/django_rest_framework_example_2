@@ -3875,7 +3875,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-<h3>3️⃣  &nbsp;&nbsp;<code>person_api/home/views.py</code>  —  Hybrid API views</h3>
+<h3>3️⃣  &nbsp;&nbsp;<code>person_api/home/views.py</code>  &nbsp;—&nbsp;  Hybrid API views</h3>
 
 <br>
 
