@@ -3850,6 +3850,6 @@ class Person(models.Model):
         super().delete()
 ```
 
-◼️ Now soft-delete behavior is fully encapsulated at model/queryset level.
+◼️ &nbsp;Now soft-delete behavior is fully encapsulated at model/queryset level.
 
 <br>
