@@ -3925,7 +3925,7 @@ class BulkHardDeleteAPIView(APIView):
 
 <br>
 
-**🔸 Why using <code>post()</code> for all these bulk operations ?**
+**🔸 Why using <code>post()</code> for all these bulk operations - <code>bulk-soft-delete</code> or <code>bulk-restore</code> or <code>bulk-hard-delete</code> &nbsp;?**
 
 > You could have used &nbsp;**:**
 > - <code>PATCH</code> &nbsp;for <ins>**Bulk Soft Delete**</ins> or <ins>**Bulk Restore**</ins> and 
