@@ -3922,3 +3922,15 @@ class BulkHardDeleteAPIView(APIView):
         Person.all_objects.filter(id__in=ids).hard_delete()
         return Response({"message": "Hard deleted successfully."}, status=status.HTTP_200_OK)
 ```
+
+<br>
+
+🔸 Why using <code>POST</code> for all these bulk operations ?
+
+Although we have used :
+- <code>POST</code> request in <code>BulkPersonCreateView</code> for <code>/api/person/bulk-create/</code>
+- <code>PUT</code> request in <code>BulkPersonUpdateView</code> for <code>/api/person/bulk-update/</code>
+- <code>DELETE</code> request in <code>BulkPersonDeleteView</code> for <code>/api/person/bulk-delete/</code>
+and it worked fine as expected.
+
+
