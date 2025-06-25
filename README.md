@@ -3941,7 +3941,10 @@ Instead they could have used &nbsp;**:**
 
 <br>
 
-Because 
+Then why `POST` ? 
+
+Because :
+
 - PATCH request generally assumes partial update on existing resource.
 
 - Here /api/person/bulk-soft-delete/ is actually not a resource URL — it’s a bulk action endpoint.
