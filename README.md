@@ -4199,7 +4199,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > **➀** &nbsp;Define instance-level `hard_delete()` on model (as you already have).
 >
-> **➁** &nbsp;Define queryset-level `hard_delete()` like this : 
+> **➁** &nbsp;Define queryset-level `hard_delete()` like this &nbsp;**:** 
 > 
 > > ```
 > > class SoftDeleteQuerySet(models.QuerySet):
