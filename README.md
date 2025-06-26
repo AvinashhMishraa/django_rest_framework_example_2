@@ -4183,7 +4183,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > **🔶 &nbsp;Solution 2 &nbsp;&nbsp;—&nbsp;&nbsp; If you want bulk hard delete behavior directly on QuerySet :** &nbsp;⭐
 > 
 > ➊ &nbsp;Don't use `super().delete()` for hard delete. <br>
-> ➊ &nbsp;Instead, call the base QuerySet’s `.delete()` method using the unbound base class. 
+> ➋ &nbsp;Instead, call the base QuerySet’s `.delete()` method using the unbound base class. 
 > 
 > ```
 > class SoftDeleteQuerySet(models.QuerySet):
