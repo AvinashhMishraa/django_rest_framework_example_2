@@ -4112,7 +4112,7 @@ urlpatterns = [
 
 <br>
 
-For any service layer, scheduled tasks, admin panels :
+For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 > ✅ &nbsp;**Soft delete internally &nbsp;:**
 > 
