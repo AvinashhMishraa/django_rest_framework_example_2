@@ -4217,7 +4217,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 &nbsp;&nbsp;∎&nbsp; `super().delete()` on queryset might internally use `.get()` or not bypass your model’s `delete()` override.
 
-&nbsp;&nbsp;∎&nbsp; To do actual hard delete, call the original base class’s `delete()` like &nbsp;➜ <code>models.QuerySet.delete(self)</code>
+&nbsp;&nbsp;∎&nbsp; To do actual hard delete, call the original base class’s `delete()` like &nbsp;&nbsp;➜&nbsp;&nbsp; <code>models.QuerySet.delete(self)</code>
 
 
 
