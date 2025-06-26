@@ -4151,7 +4151,6 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > - `.update()` executes a **single raw SQL query**.
 > > - works perfectly on bulk data because Django just <ins>builds a SQL statement on the whole queryset</ins>.
 > > - No `.get()` or model-level logic is involved
->
 > <br>
 >
 > Whereas hard_delete() is an instance method. <br>
