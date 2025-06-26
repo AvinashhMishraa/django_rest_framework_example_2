@@ -4149,7 +4149,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > That's because the `delete()` and `restore()` methods in the `SoftDeleteQueryText` are actually calling `.update()` method in the background.
 > > - `.update()` executes a **single raw SQL query**.
-> > - works perfectly on bulk data because Django just builds a SQL statement on the whole queryset.
+> > - works perfectly on bulk data because Django just <ins>builds a SQL statement on the whole queryset</ins>.
 > > - No `.get()` or model-level logic is involved
 
 
