@@ -4234,6 +4234,6 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 `Person.all_objects.filter(id__in=[57, 59, 60]).hard_delete()` &nbsp;&nbsp;-&nbsp;&nbsp; deletes all these 3 persons from the database and returns <code>(3, {'home.Person': 3})</code>
 
-`Person.all_objects.filter(id__in=[57, 59, 61]).hard_delete()` &nbsp;&nbsp;-&nbsp;&nbsp; deletes all these 3 persons from the database and returns (1, {'home.Person': 1})
+`Person.all_objects.filter(id__in=[57, 59, 61]).hard_delete()` &nbsp;&nbsp;-&nbsp;&nbsp; deletes all these 3 persons from the database and returns `(1, {'home.Person': 1})`
 
 
