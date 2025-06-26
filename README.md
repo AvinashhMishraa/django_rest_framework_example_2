@@ -4209,7 +4209,18 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > ```
 > > This way, both single-object and bulk queryset call the <ins>same logic</ins> . And it applies instance-level hard_delete to each one. &nbsp;👈
 
+<br>
 
+✅ Summary
+
+- `.update()` is safe and fast for bulk ops — perfect for soft delete and restore.
+
+- `super().delete()` on queryset might internally use .get() or not bypass your model’s `delete()` override.
+
+- To do actual hard delete, call the original base class’s `delete()` like:
+``
+models.QuerySet.delete(self)
+```
 
 
 
