@@ -4058,20 +4058,11 @@ urlpatterns = [
 
 <br>
 
-> `POST`  http://localhost:8000/api/person/bulk-soft-delete/
-> ```
-> {
->     "ids": [71, 72, 73]
-> }
-> ```
+> `POST` &nbsp;&nbsp; http://localhost:8000/api/person/bulk-soft-delete/ &nbsp;&nbsp;➜&nbsp;&nbsp; `{ "ids": [71, 72, 73] }`
+> 
 > <br>
 > 
-> **Output &nbsp;:**
-> ```
-> {
->     "message": "Soft deleted successfully."
-> }
-> ```
+> **Output &nbsp;:**  &nbsp;&nbsp;➜&nbsp;&nbsp; `{ "message": "Soft deleted successfully." }`
 
 
 
