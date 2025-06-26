@@ -4250,7 +4250,7 @@ In production systems we often want :
 
 ✅ **`person_api/home/models.py` (&nbsp;already done, unchanged)**
 
-We already have :
+We already have &nbsp;:
 ```
 class Person(models.Model):
     ...
