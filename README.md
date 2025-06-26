@@ -4056,8 +4056,6 @@ urlpatterns = [
 
 <br>
 
-<br>
-
 > `POST` &nbsp;&nbsp; http://localhost:8000/api/person/bulk-soft-delete/ &nbsp;&nbsp;➜&nbsp;&nbsp; `{ "ids": [71, 72, 73] }`
 > <br>
 > 
