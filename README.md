@@ -4234,12 +4234,12 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-`Person.all_objects.filter(id__in=[57, 59, 60]).hard_delete()` 
+> `Person.all_objects.filter(id__in=[57, 59, 60]).hard_delete()` 
 > deletes all these 3 persons from the database and returns <code>(3, {'home.Person': 3})</code>
 
 <br>
 
-`Person.all_objects.filter(id__in=[57, 59, 61]).hard_delete()` 
+> `Person.all_objects.filter(id__in=[57, 59, 61]).hard_delete()` 
 > deletes all these 3 persons from the database and returns `(1, {'home.Person': 1})`
 
 
