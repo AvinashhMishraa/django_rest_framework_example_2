@@ -4050,5 +4050,26 @@ urlpatterns = [
 ]
 ```
 
+<br>
+
+<h3>5️⃣  &nbsp;&nbsp;Let's now verify these APIs</h3>
+
+<br>
+
+<br>
+
+> `POST`  http://localhost:8000/api/person/bulk-soft-delete/
+> {
+>     "ids": [71, 72, 73]
+> }
+> <br>
+> 
+> **Output &nbsp;:**
+> {
+>     "message": "Soft deleted successfully."
+> }
+
+
+
 
 
