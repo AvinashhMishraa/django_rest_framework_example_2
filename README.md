@@ -4185,12 +4185,12 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > **➀** &nbsp;Don't use `super().delete()` for hard delete. <br>
 > **➁** &nbsp;Instead, call the base QuerySet’s `.delete()` method using the unbound base class. 
 > 
-> ```
-> class SoftDeleteQuerySet(models.QuerySet):
->     def hard_delete(self):
->         return models.QuerySet.delete(self)
-> ```
-> This bypasses any custom model-level `.delete()` logic (like your soft-delete override), and just performs raw SQL deletion for all records in queryset.
+> > ```
+> > class SoftDeleteQuerySet(models.QuerySet):
+> >     def hard_delete(self):
+> >         return models.QuerySet.delete(self)
+> > ```
+> > This bypasses any custom model-level `.delete()` logic (like your soft-delete override), and just performs raw SQL deletion for all records in queryset.
 
 
 
