@@ -4128,7 +4128,12 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > `Person.all_objects.filter(id=74).restore()` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; single soft delete  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; works fine  <br>
 > `Person.objects.filter(id__in=[75,76,77]).restore()` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; bulk soft delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; works fine
 
+<br>
 
+> ✅ &nbsp;**Hard delete internally &nbsp;:**
+> >
+> Person.all_objects.filter(id=74).hard_delete()           ---   single hard delete  -- works fine - returns 1 <br>
+> Person.objects.filter(id__in=[75,76,77]).hard_delete()   ---   bulk hard delete -- ERROR  ---  <code>models.Person.MultipleObjectsReturned: get() returned more than one Person -- it returned 3!</code>
 
 
 
