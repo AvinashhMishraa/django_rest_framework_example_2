@@ -4106,6 +4106,13 @@ urlpatterns = [
 > > <code>Person.all_objects.get(id=72).is_deleted</code>  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; Person matching query <ins>does not exist</ins>  &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; **hard deleted**   <br>
 > > <code>Person.all_objects.get(id=73).is_deleted</code>  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; Person matching query <ins>does not exist</ins>  &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; **hard deleted**   <br>
 
+<br>
 
-6️⃣  &nbsp;&nbsp;ORM usage for internal code
+<h3>6️⃣  &nbsp;&nbsp;ORM usage for internal code</h3>
+
+
+
+
+
+
 
