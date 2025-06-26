@@ -4136,10 +4136,12 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > <br>
 > 
-> <code>Person.objects.filter(id__in=[75,76,77]).hard_delete()</code>   ---   bulk hard delete -- ERROR 
+> <code>Person.objects.filter(id__in=[75,76,77]).hard_delete()</code>  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; bulk hard delete  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; ERROR 
 > > ```
 > > models.Person.MultipleObjectsReturned: get() returned more than one Person -- it returned 3!
 > > ```
+
+
 
 
 
