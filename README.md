@@ -4118,25 +4118,25 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 > ✅ &nbsp;**Soft delete internally &nbsp;:**
 > 
-> `Person.all_objects.filter(id=74).delete()` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; single soft delete  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️   <br>
-> `Person.objects.filter(id__in=[75,76,77]).delete()` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; bulk soft delete  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️    <br>
+> `Person.all_objects.filter(id=74).delete()` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp; single soft delete  &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️   <br>
+> `Person.objects.filter(id__in=[75,76,77]).delete()` &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp; bulk soft delete  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️    <br>
 
 <br>
 
 > ✅ &nbsp;**Restore internally &nbsp;:**
 > 
-> `Person.all_objects.filter(id=74).restore()` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; single soft delete  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️  <br>
-> `Person.objects.filter(id__in=[75,76,77]).restore()` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; bulk soft delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️
+> `Person.all_objects.filter(id=74).restore()` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp; single soft delete  &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️  <br>
+> `Person.objects.filter(id__in=[75,76,77]).restore()` &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp; bulk soft delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️
 
 <br>
 
 > ✅ &nbsp;**Hard delete internally &nbsp;:**
 > >
-> <code>Person.all_objects.filter(id=74).hard_delete()</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; single hard delete  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; returns &nbsp;`1` <br>
+> <code>Person.all_objects.filter(id=74).hard_delete()</code> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp; single hard delete  &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp;&nbsp; works fine &nbsp;✔️  &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp;&nbsp; returns &nbsp;`1` <br>
 > 
 > <br>
 > 
-> <code>Person.objects.filter(id__in=[75,76,77]).hard_delete()</code>  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; bulk hard delete  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; ERROR &nbsp;❌
+> <code>Person.objects.filter(id__in=[75,76,77]).hard_delete()</code>  &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp;&nbsp; bulk hard delete  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp;&nbsp; ERROR &nbsp;❌
 > > ```
 > > models.Person.MultipleObjectsReturned: get() returned more than one Person -- it returned 3!
 > > ```
