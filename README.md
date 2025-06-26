@@ -4153,11 +4153,11 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > - No `.get()` or model-level logic is involved
 > 
 > 
-> Whereas hard_delete() is an instance method. 
+> Whereas `hard_delete()` is an instance method. 
 > 
-> You’re trying to call it on a queryset (QuerySet object), but queryset doesn’t know about your custom hard_delete() method. 
+> You’re trying to call it on a queryset (QuerySet object), but queryset doesn’t know about your custom `hard_delete()` method. 
 > 
-> Because the statement `super().delete()` in the `hard_delete()` method of the `SoftDeleteQueryText` does not call the default queryset’s delete() method. 
+> Because the statement `super().delete()` in the `hard_delete()` method of the `SoftDeleteQueryText` does not call the default queryset’s `delete()` method. 
 > 
 > Instead, this internally calls the model’s `delete()` method for each object — BUT — it uses `.get()` to fetch them one-by-one.
 > 
