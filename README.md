@@ -4195,7 +4195,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > <br>
 > 
-> **🔶 &nbsp;Solution 3 &nbsp;—&nbsp; If you want both <ins>instance-level</ins> and <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` mnethod &nbsp;:**
+> **🔶 &nbsp;Solution 3 &nbsp;—&nbsp; If you want both <ins>instance-level</ins> & <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` mnethod &nbsp;:**
 > 
 >  Don't use `super().delete()` for hard delete. <br>
 >
