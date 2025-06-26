@@ -4073,6 +4073,7 @@ urlpatterns = [
 > > <code>Person.all_objects.get(id=73).is_deleted</code>  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; True  &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; soft deleted   <br>
 
 <br>
+&nbsp;
 
 > `POST` &nbsp;&nbsp; http://localhost:8000/api/person/bulk-restore/ &nbsp;&nbsp;➜&nbsp;&nbsp; `{ "ids": [71, 72, 73] }`
 > <br>
