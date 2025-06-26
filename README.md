@@ -4224,7 +4224,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 | Soft delete (bulk)    | `.update()`                        | ✅ Fast   | ✅ Yes         | ❌ No              |
 | Restore (bulk)        | `.update()`                        | ✅ Fast   | ✅ Yes         | ❌ No              |
 | Hard delete (bulk)    | `QuerySet.delete()`                | ✅ Fast   | ✅ Yes         | ❌ No              |
-| Hard delete (per obj) | `for obj in qs: obj.hard_delete()` | ❌ Slower | ✅ Yes (safe)  | ✅ Yes             |
+| Hard delete (per obj) | `for obj in qs:`<br> &nbsp;&nbsp;&nbsp;`obj.hard_delete()` | ❌ Slower | ✅ Yes (safe)  | ✅ Yes             |
 
 <br>
 
