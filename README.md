@@ -4232,7 +4232,8 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 ✅ &nbsp;**Now your usage will work exactly as you expect in ORM :**
 
-<code>Person.objects.filter(id__in=[75, 76, 77]).hard_delete()</code>       # deletes the persons 75, 76 & 77 from the database and returns <code>(2, {'home.Person': 2})</code>
+`Person.all_objects.filter(id__in=[57, 59, 60]).hard_delete()` &nbsp;&nbsp;-&nbsp;&nbsp; deletes all these 3 persons from the database and returns <code>(3, {'home.Person': 3})</code>
 
+`Person.all_objects.filter(id__in=[57, 59, 61]).hard_delete()` &nbsp;&nbsp;-&nbsp;&nbsp; deletes all these 3 persons from the database and returns (1, {'home.Person': 1})
 
 
