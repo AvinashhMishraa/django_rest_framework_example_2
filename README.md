@@ -4236,6 +4236,6 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > deletes all these 3 persons from the database and returns <code>(3, {'home.Person': 3})</code>
 
 > `Person.all_objects.filter(id__in=[57, 59, 61]).hard_delete()` <br>
-> deletes all these 3 persons from the database and returns `(1, {'home.Person': 1})`
+> deletes only 1 person from the database and returns `(1, {'home.Person': 1})` since `57` & `59` already hard deleted.
 
 
