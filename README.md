@@ -4236,4 +4236,15 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > `Person.all_objects.filter(id__in=[57, 59, 61]).hard_delete()` <br>
 > deletes only 1 person from the database and returns `(1, {'home.Person': 1})` since `57` & `59` already hard deleted.
 
+<br>
+
+<h3>7️⃣  &nbsp;&nbsp;Add a feature to `GET` all persons (including hard deleted)</h3>
+
+
+
+
+
+
+
+
 
