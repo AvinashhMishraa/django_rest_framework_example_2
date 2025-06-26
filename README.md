@@ -4191,7 +4191,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >     def hard_delete(self):
 > >         return models.QuerySet.delete(self)
 > > ```
-> > This way, both single-object and bulk queryset call the same logic. And it applies instance-level hard_delete to each one. &nbsp;👈
+> > This way, both single-object and bulk queryset call the **same logic**. And it applies instance-level hard-delete to each one. &nbsp;👈
 
 
 
