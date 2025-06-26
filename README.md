@@ -4075,7 +4075,7 @@ urlpatterns = [
 <br>
 &nbsp;
 
-> `POST` &nbsp;&nbsp; http://localhost:8000/api/person/bulk-restore/ &nbsp;&nbsp;➜&nbsp;&nbsp; `{ "ids": [71, 72, 73] }`
+> `POST` &nbsp;&nbsp; http://localhost:8000/api/person/bulk-restore/ &nbsp;&nbsp;➜&nbsp;&nbsp; `{ "ids": [71, 73] }`
 > <br>
 > 
 > **Output &nbsp;:**  &nbsp;&nbsp;➜&nbsp;&nbsp; `{ "message": "Restored successfully." }`
