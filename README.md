@@ -4159,10 +4159,10 @@ You’re trying to call it on a queryset (QuerySet object), but queryset doesn�
 Because the statement `super().delete()` in the `hard_delete()` method of the `SoftDeleteQueryText` does not call the default queryset’s delete() method. <br>
 Instead, this internally calls the model’s `delete()` method for each object — BUT — it uses `.get()` to fetch them one-by-one. <br>
 And `.get()` fails when it finds multiple objects. <br>
-> ⚠️ That’s why you're seeing:
-> ```
-> MultipleObjectsReturned: get() returned more than one Person -- it returned 3!
-> ```
+> > ⚠️ That’s why you're seeing:
+> > ```
+> > MultipleObjectsReturned: get() returned more than one Person -- it returned 3!
+> > ```
 
 
 
