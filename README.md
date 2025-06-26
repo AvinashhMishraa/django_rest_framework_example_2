@@ -3879,7 +3879,7 @@ class PersonSerializer(serializers.ModelSerializer):
 
 <br>
 
-✅ These APIs give you public control while still allowing you to use ORM directly wherever needed.
+These APIs give you public control while still allowing you to use ORM directly wherever needed.
 
 <br>
 
