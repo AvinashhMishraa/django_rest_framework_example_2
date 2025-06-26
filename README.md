@@ -4151,7 +4151,18 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > - `.update()` executes a **single raw SQL query**.
 > > - works perfectly on bulk data because Django just <ins>builds a SQL statement on the whole queryset</ins>.
 > > - No `.get()` or model-level logic is involved
-
+>
+> <br>
+>
+> Whereas hard_delete() is an instance method. <br>
+You’re trying to call it on a queryset (QuerySet object), but queryset doesn’t know about your custom hard_delete() method. <br>
+Because the statement `super().delete()` in the `hard_delete()` method of the `SoftDeleteQueryText` does not call the default queryset’s delete() method. <br>
+Instead, this internally calls the model’s `delete()` method for each object — BUT — it uses `.get()` to fetch them one-by-one. <br>
+And `.get()` fails when it finds multiple objects. <br>
+> ⚠️ That’s why you're seeing:
+> ```
+> MultipleObjectsReturned: get() returned more than one Person -- it returned 3!
+> ```
 
 
 
