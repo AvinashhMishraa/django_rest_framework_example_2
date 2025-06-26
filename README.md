@@ -4068,9 +4068,9 @@ urlpatterns = [
 > Let's now verify it through `shell` : 
 >
 > <code>py manage.py shell</code>                                                                <br>
-> > <code>Person.all_objects.get(id=71).is_deleted</code>    ===> True   ====> soft deleted     <br>
-> > <code>Person.all_objects.get(id=72).is_deleted</code>    ===> True   ====> soft deleted     <br>
-> > <code>Person.all_objects.get(id=73).is_deleted</code>    ===> True   ====> soft deleted     <br>
+> > <code>Person.all_objects.get(id=71).is_deleted</code>  &nbsp;&nbsp;===>&nbsp;&nbsp; True  &nbsp;&nbsp;===>&nbsp;&nbsp; soft deleted   <br>
+> > <code>Person.all_objects.get(id=72).is_deleted</code>  &nbsp;&nbsp;===>&nbsp;&nbsp; True  &nbsp;&nbsp;===>&nbsp;&nbsp; soft deleted   <br>
+> > <code>Person.all_objects.get(id=73).is_deleted</code>  &nbsp;&nbsp;===>&nbsp;&nbsp; True  &nbsp;&nbsp;===>&nbsp;&nbsp; soft deleted   <br>
 
 
 
