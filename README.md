@@ -4211,7 +4211,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-✅ &nbsp;Summary
+✅ &nbsp;**Summary**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;∎&nbsp; `.update()` is safe and fast for bulk ops — perfect for soft delete and restore.
 
@@ -4228,7 +4228,11 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 | Hard delete (bulk)    | `QuerySet.delete()`                | ✅ Fast   | ✅ Yes         | ❌ No              |
 | Hard delete (per obj) | `for obj in qs: obj.hard_delete()` | ❌ Slower | ✅ Yes (safe)  | ✅ Yes             |
 
+<br>
 
+✅ &nbsp;**Now your usage will work exactly as you expect in ORM :**
+
+<code>Person.objects.filter(id__in=[75, 76, 77]).hard_delete()</code>       # deletes the persons 75, 76 & 77 from the database and returns <code>(2, {'home.Person': 2})</code>
 
 
 
