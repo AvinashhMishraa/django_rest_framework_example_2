@@ -4207,7 +4207,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >         for obj in self:
 > >             obj.hard_delete()
 > > ```
-> > This way, both single-object and bulk queryset call the <ins>same logic</ins>. And it applies instance-level hard_delete to each one. &nbsp;👈
+> > This way, both single-object and bulk queryset call the <ins>same logic</ins> . And it applies instance-level hard_delete to each one. &nbsp;👈
 
 
 
