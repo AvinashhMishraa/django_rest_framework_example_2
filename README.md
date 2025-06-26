@@ -4213,12 +4213,11 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 ✅ Summary
 
-&nbsp;&nbsp;∎&nbsp;&nbsp; `.update()` is safe and fast for bulk ops — perfect for soft delete and restore.
+&nbsp;&nbsp;∎&nbsp; `.update()` is safe and fast for bulk ops — perfect for soft delete and restore.
 
-&nbsp;&nbsp;∎&nbsp;&nbsp; `super().delete()` on queryset might internally use `.get()` or not bypass your model’s `delete()` override.
+&nbsp;&nbsp;∎&nbsp; `super().delete()` on queryset might internally use `.get()` or not bypass your model’s `delete()` override.
 
-&nbsp;&nbsp;∎&nbsp;&nbsp; To do actual hard delete, call the original base class’s `delete()` like &nbsp;**:** <br>
-<code>&nbsp;&nbsp; models.QuerySet.delete(self) &nbsp;&nbsp;</code>
+&nbsp;&nbsp;∎&nbsp; To do actual hard delete, call the original base class’s `delete()` like &nbsp;**➜** <code>&nbsp;&nbsp; models.QuerySet.delete(self) &nbsp;&nbsp;</code>
 
 
 
