@@ -4167,7 +4167,16 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > ```
 > > MultipleObjectsReturned: get() returned more than one Person -- it returned 3!
 > > ```
-
+>
+> <br>
+>
+> ✅ Solution 1 — Iterate on queryset (most common way)
+> ```
+> qs = Person.all_objects.filter(id__in=[75, 76, 77])
+> for person in qs:
+>     person.hard_delete()
+> ```
+> 👉 This is very safe and fully respects your custom `hard_delete()` logic.
 
 
 
