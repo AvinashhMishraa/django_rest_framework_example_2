@@ -4191,7 +4191,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >     def hard_delete(self):
 > >         return models.QuerySet.delete(self)
 > > ```
-> > This bypasses any custom model-level `.delete()` logic (like your soft-delete override), and just performs raw SQL deletion for all records in queryset.
+> > This way, both single-object and bulk queryset call the same logic. And it applies instance-level hard_delete to each one. &nbsp;👈
 
 
 
