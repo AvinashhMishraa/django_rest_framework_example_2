@@ -4197,9 +4197,9 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > **🔶 &nbsp;Solution 3 &nbsp;—&nbsp; If you want both <ins>instance-level</ins> & <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` method &nbsp;:**
 > 
->  Don't use `super().delete()` for hard delete. <br>
+> **➀** &nbsp;Define instance-level `hard_delete()` on model (as you already have).
 >
-> Instead, call the base QuerySet’s `.delete()` method using the unbound base class. 
+> **➁** &nbsp;Define queryset-level `hard_delete()` like this : 
 > 
 > > ```
 > > class SoftDeleteQuerySet(models.QuerySet):
