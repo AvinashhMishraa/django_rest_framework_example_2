@@ -4143,7 +4143,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 >
 > <br>
 > 
-> **🔸 &nbsp;Why this problem ?**
+> **🔸 &nbsp;Why this error ?**
 > 
 > You may now think why `bulk soft delete` and `bulk restore` work, but `bulk hard delete` does not (**in ORM**), even though they all seem similar on surface.
 > 
