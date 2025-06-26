@@ -4177,10 +4177,10 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 >     person.hard_delete()
 > ```
 > This is very safe and fully respects your custom `hard_delete()` logic. &nbsp;👈
->
+> 
 > <br>
->
-> **🔶 &nbsp;Solution 2 &nbsp;&nbsp;—&nbsp;&nbsp; If you want bulk hard delete behavior directly on QuerySet :** &nbsp;⭐
+> 
+> **🔶 &nbsp;Solution 3 — If you want both <ins>instance-level</ins> and <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` method &nbsp;:** &nbsp;⭐
 > 
 > **➀** &nbsp;Don't use `super().delete()` for hard delete. <br>
 >
