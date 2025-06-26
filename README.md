@@ -4176,7 +4176,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > for person in qs:
 >     person.hard_delete()
 > ```
-> 👉 This is very safe and fully respects your custom `hard_delete()` logic.
+> This is very safe and fully respects your custom `hard_delete()` logic. &nbsp;👈
 >
 > <br>
 >
