@@ -4067,9 +4067,11 @@ urlpatterns = [
 > <br>
 > 
 > **Output &nbsp;:**
+> ```
 > {
 >     "message": "Soft deleted successfully."
 > }
+> ```
 
 
 
