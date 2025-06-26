@@ -4115,8 +4115,8 @@ urlpatterns = [
 For any service layer, scheduled tasks, admin panels :
 
 > ✅ Soft delete internally :                                                                           <br>
-> &nbsp;&nbsp;&nbsp;`Person.all_objects.filter(id=74).delete()`          &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; single soft delete  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; works fine    <br>
-> &nbsp;&nbsp;&nbsp;`Person.objects.filter(id__in=[75,76,77]).delete()`  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; bulk soft delete  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; works fine    <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Person.all_objects.filter(id=74).delete()`          &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; single soft delete  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; works fine    <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`Person.objects.filter(id__in=[75,76,77]).delete()`  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; bulk soft delete  &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; works fine    <br>
 
 
 
