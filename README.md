@@ -4145,7 +4145,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > **🔸 &nbsp;Why this error ?**
 > 
-> You may now think why `bulk soft delete` and `bulk restore` work, but `bulk hard delete` does not (**in ORM**), even though they all seem similar on surface.
+> You may now think why `bulk-soft-delete` and `bulk-restore` work, but `bulk-hard-delete` does not (**in ORM**), even though they all seem similar on surface.
 > 
 > That's because the `delete()` and `restore()` methods in the `SoftDeleteQueryText` are actually calling `.update()` method in the background.
 > > - `.update()` executes a **single raw SQL query**.
