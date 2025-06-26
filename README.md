@@ -4170,7 +4170,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > <br>
 > 
-> **🔶 &nbsp;Solution 1 &nbsp;—&nbsp; Iterate on queryset (most common way)** 
+> **🔶 &nbsp;<ins>Solution 1</ins> &nbsp;—&nbsp; Iterate on queryset (most common way)** 
 > ```
 > qs = Person.all_objects.filter(id__in=[75, 76, 77])
 > for person in qs:
@@ -4180,7 +4180,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > <br>
 > 
-> **🔶 &nbsp;Solution 2 &nbsp;—&nbsp; If you want bulk hard delete behavior directly on QuerySet &nbsp;:**
+> **🔶 &nbsp;<ins>Solution 2</ins> &nbsp;—&nbsp; If you want bulk hard delete behavior directly on QuerySet &nbsp;:**
 > 
 >  Don't use `super().delete()` for hard delete. <br>
 >
@@ -4195,7 +4195,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > <br>
 > 
-> **🔶 &nbsp;Solution 3 &nbsp;—&nbsp; If you want both <ins>instance-level</ins> & <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` method &nbsp;:**
+> **🔶 &nbsp;<ins>Solution 3</ins> &nbsp;—&nbsp; If you want both <ins>instance-level</ins> & <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` method &nbsp;:**
 > 
 > **➀** &nbsp;Define instance-level `hard_delete()` on model (as you already have).
 >
