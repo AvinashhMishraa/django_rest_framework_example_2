@@ -4246,7 +4246,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 In production systems we often want :
 > ∎&nbsp; Normal &nbsp;`GET` &nbsp;➜&nbsp; only alive (non-deleted) records <br>
-> ∎&nbsp; Admin &nbsp;&nbsp;`GET` &nbsp;&nbsp;➜&nbsp; return both deleted and non-deleted records
+> ∎&nbsp; Admin &nbsp;&nbsp;`GET` &nbsp;➜&nbsp; return both deleted and non-deleted records
 
 
 
