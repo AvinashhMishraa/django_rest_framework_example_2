@@ -4180,7 +4180,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 >
 > <br>
 >
-> **🔶 &nbsp;Solution 2 — If you want bulk hard delete behavior directly on QuerySet :** &nbsp;⭐
+> **🔶 &nbsp;Solution 2 &nbsp;—&nbsp; If you want bulk hard delete behavior directly on QuerySet :** &nbsp;⭐
 > 
 > Don't use `super().delete()` for hard delete. <br>
 > Instead, call the base QuerySet’s `.delete()` method using the unbound base class. 
