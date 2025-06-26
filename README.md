@@ -4180,7 +4180,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > <br>
 > 
-> **🔶 &nbsp;Solution 3 &nbsp;—&nbsp; If you want both <ins>instance-level</ins> & <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` method &nbsp;:**
+> **🔶 &nbsp;Solution 2 &nbsp;—&nbsp; If you want bulk hard delete behavior directly on QuerySet &nbsp;:**
 > 
 > **➀** &nbsp;Don't use `super().delete()` for hard delete. <br>
 >
@@ -4191,7 +4191,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >     def hard_delete(self):
 > >         return models.QuerySet.delete(self)
 > > ```
-> > This way, both single-object and bulk queryset call the <ins>same logic</ins>. &nbsp;And it applies instance-level hard-delete to each one. &nbsp;👈
+> > This <ins>bypasses</ins> any custom model-level `.delete()` logic (like your soft-delete override), and just performs raw SQL deletion for all records in queryset. &nbsp;👈
 
 
 
