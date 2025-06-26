@@ -4126,7 +4126,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > ✅ &nbsp;**Restore internally &nbsp;:**
 > 
 > `Person.all_objects.filter(id=74).restore()` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; single soft delete  &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; works fine  <br>
-> `Person.objects.filter(id__in=[75,76,77]).restore()` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; bulk soft delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; works fine
+> `Person.objects.filter(id__in=[75,76,77]).restore()` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; bulk soft delete&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; works fine
 
 
 
