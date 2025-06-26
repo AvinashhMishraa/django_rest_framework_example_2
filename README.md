@@ -4143,14 +4143,14 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 >
 > <br>
 > 
-> Why this problem ?
+> **🔸 &nbsp;Why this problem ?**
 > 
 > You may now think why `bulk soft delete` and `bulk restore` work, but `bulk hard delete` does not (**in ORM**), even though they all seem similar on surface.
 > 
-> That's because the `delete()` and `restore()` methods in the `SoftDeleteQueryText` are actually calling `.update()` method in the background. <br>
-> - `.update()` executes a **single raw SQL query**.
-> - works perfectly on bulk data because Django just builds a SQL statement on the whole queryset.
-> - No `.get()` or model-level logic is involved
+> That's because the `delete()` and `restore()` methods in the `SoftDeleteQueryText` are actually calling `.update()` method in the background.
+> > - `.update()` executes a **single raw SQL query**.
+> > - works perfectly on bulk data because Django just builds a SQL statement on the whole queryset.
+> > - No `.get()` or model-level logic is involved
 
 
 
