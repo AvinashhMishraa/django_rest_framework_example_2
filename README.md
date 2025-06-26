@@ -4114,19 +4114,10 @@ urlpatterns = [
 
 For any service layer, scheduled tasks, admin panels :
 
-**✅ Soft delete internally :**
-Person.all_objects.filter(id=74).delete()                ---   single soft delete  -- works fine
-Person.objects.filter(id__in=[75,76,77]).delete()        ---   bulk soft delete    -- works fine
+✅ Soft delete internally :                                                                           <br>
+&nbsp;&nbsp;&nbsp;`Person.all_objects.filter(id=74).delete()`                ---   single soft delete  -- works fine    <br>
+&nbsp;&nbsp;&nbsp;`Person.objects.filter(id__in=[75,76,77]).delete()`        ---   bulk soft delete    -- works fine    <br>
 
-**✅ Restore internally :**
-Person.all_objects.filter(id=74).restore()               ---   single soft delete  -- works fine
-Person.objects.filter(id__in=[75,76,77]).restore()       ---   bulk soft delete    -- works fine
-
-**✅ Hard delete internally :**
-Person.all_objects.filter(id=74).hard_delete()           ---   single hard delete  -- works fine - returns 1
-Person.objects.filter(id__in=[75,76,77]).hard_delete()   ---   ERROR  ---  <code>models.Person.MultipleObjectsReturned: get() returned more than one Person -- it returned 3!</code>
-
-Why this problem ?
 
 
 
