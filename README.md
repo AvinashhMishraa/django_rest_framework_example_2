@@ -4246,6 +4246,17 @@ In production systems we often want :
 > ∎&nbsp; Normal &nbsp;`GET` &nbsp;➜&nbsp; only alive (non-deleted) records <br>
 > ∎&nbsp; Admin &nbsp;&nbsp;`GET` &nbsp;➜&nbsp; return both deleted and non-deleted records
 
+<br>
+
+✅ **`person_api/home/models.py` (&nbsp;already done, unchanged)**
+
+We already have :
+```
+class Person(models.Model):
+    ...
+    objects = SoftDeleteManager()                          # Default manager (alive only)
+    all_objects = SoftDeleteQuerySet.as_manager()          # Full queryset (alive + deleted)
+```
 
 
 
