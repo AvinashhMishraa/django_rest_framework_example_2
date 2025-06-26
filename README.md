@@ -4221,12 +4221,12 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-| Use Case              | Method                             | Fast?    | Safe for bulk? | Calls model logic? |
-| --------------------- | ---------------------------------- | -------- | -------------- | ------------------ |
-| Soft delete (bulk)    | `.update()`                        | ✅ Fast   | ✅ Yes          | ❌ No             |
-| Restore (bulk)        | `.update()`                        | ✅ Fast   | ✅ Yes          | ❌ No             |
-| Hard delete (bulk)    | `QuerySet.delete()`                | ✅ Fast   | ✅ Yes          | ❌ No             |
-| Hard delete (per obj) | `for obj in qs: obj.hard_delete()` | ❌ Slower | ✅ Yes (safe)   | ✅ Yes            |
+| Use Case              | Method                             | Fast ?    | Safe for bulk ? | Calls model logic? |
+| --------------------- | ---------------------------------- | --------- | --------------- | ------------------ |
+| Soft delete (bulk)    | `.update()`                        | ✅ Fast   | ✅ Yes         | ❌ No             |
+| Restore (bulk)        | `.update()`                        | ✅ Fast   | ✅ Yes         | ❌ No             |
+| Hard delete (bulk)    | `QuerySet.delete()`                | ✅ Fast   | ✅ Yes         | ❌ No             |
+| Hard delete (per obj) | `for obj in qs: obj.hard_delete()` | ❌ Slower | ✅ Yes (safe)  | ✅ Yes            |
 
 
 
