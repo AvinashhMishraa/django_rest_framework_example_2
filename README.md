@@ -4238,7 +4238,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-<h3>7️⃣  &nbsp;&nbsp;Add a feature to `GET` all persons (including hard deleted)</h3>
+<h3>7️⃣  &nbsp;&nbsp;Add a feature to <code>GET</code> all persons (<ins>including</ins> hard deleted)</h3>
 
 
 
