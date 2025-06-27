@@ -4341,7 +4341,18 @@ In production systems we often want :
 
 If you want even more flexibility, you can make the **"include deleted" toggle** available via query param instead of separate endpoint.
 
+Had you the `PersonViewSet` class, you could have easily handled this toggle visibility by adding a full filtering support using <code>get_queryset()</code>
+```
+class PersonViewSet(viewsets.ModelViewSet):
+    serializer_class = PersonSerializer
 
+    def get_queryset(self):
+        include_deleted = self.request.query_params.get('include_deleted', 'false').lower() == 'true'
+        if include_deleted:
+            return Person.all_objects.all()
+        return Person.objects.all()
+```
+This would have been much more elegant, fully reusable, no separate admin API needed.
 
 
 
