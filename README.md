@@ -4341,7 +4341,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 >
 > If you want even more flexibility, you can make the **"include deleted" toggle** available via query param instead of separate endpoint.
 > 
-> Had you the `PersonViewSet` class, you could have easily handled this toggle visibility by adding a full filtering support using <code>get_queryset()</code>
+> Had you the `PersonViewSet` class, you could have easily handled this toggle visibility by using <code>get_queryset()</code>
 > ```
 > class PersonViewSet(viewsets.ModelViewSet):
 >     serializer_class = PersonSerializer
