@@ -4250,26 +4250,26 @@ In production systems we often want :
 
 ✅ &nbsp;**`person_api/home/models.py` &nbsp;(already done, unchanged)**
 
-We already have &nbsp;:
-```
-class Person(models.Model):
-    ●●●
-    objects = SoftDeleteManager()                          # Default manager (alive only)
-    all_objects = SoftDeleteQuerySet.as_manager()          # Full queryset (alive + deleted)
-```
+> We already have &nbsp;:
+> ```
+> class Person(models.Model):
+>     ●●●
+>     objects = SoftDeleteManager()                          # Default manager (alive only)
+>     all_objects = SoftDeleteQuerySet.as_manager()          # Full queryset (alive + deleted)
+> ```
 
 <br>
 
 ✅ &nbsp;**`person_api/home/serializers.py` &nbsp;(no change needed)**
 
-We can reuse the same serializer since the `is_deleted` field are already in model.
-```
-class PersonSerializer(serializers.ModelSerializer):
-    class Meta:
-        model = Person
-        fields = '__all__'
-```
-■ &nbsp;If you want you can also make `is_deleted` `read_only_fields` in serializer for safety.
+> We can reuse the same serializer since the `is_deleted` field are already in model.
+> ```
+> class PersonSerializer(serializers.ModelSerializer):
+>     class Meta:
+>         model = Person
+>         fields = '__all__'
+> ```
+> ■ &nbsp;If you want you can also make `is_deleted` `read_only_fields` in serializer for safety.
 
 
 
