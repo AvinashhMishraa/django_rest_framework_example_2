@@ -4337,7 +4337,7 @@ In production systems we often want :
 
 <br>
 
-🏆 &nbsp;**Bonus Improvement &nbsp;&nbsp;➜&nbsp;&nbsp; The best Practice is to have a <ins>optional query param for admins to have full control to toggle visibility</ins>**
+🏆 &nbsp;**Bonus Improvement &nbsp;&nbsp;➜&nbsp;&nbsp; The best practice is to have a <ins>optional query param for admins to have full control to toggle visibility</ins>**
 
 
 
