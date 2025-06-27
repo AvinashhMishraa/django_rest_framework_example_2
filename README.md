@@ -4352,7 +4352,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >             return Person.all_objects.all()
 > >         return Person.objects.all()
 > > ```
-> > This would have been much more elegant, fully reusable, no separate admin API needed.
+> > This is much more elegant, fully reusable, no separate admin API needed.
 
 
 
