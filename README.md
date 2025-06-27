@@ -4386,7 +4386,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > >
 > > > <br>
 > > >
-> > > GET &nbsp; `/api/person/?show_deleted=true`    &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;  All (including soft-deleted)
+> > > GET &nbsp; `/api/person/?show_deleted=true`    &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;  All (including soft-deleted)
 > > > 
 > > > GET &nbsp; `/api/person/?show_deleted=false`   &nbsp;&nbsp;➜&nbsp;&nbsp;  Only active
 > > > 
