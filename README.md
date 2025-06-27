@@ -4342,8 +4342,8 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > <br>
 > 
 > If you want even more flexibility, you can make the **"include deleted" toggle** available via <ins>query param</ins> instead of separate endpoint. <br>
-> - `/api/person/?show_deleted=true`
-> - `/api/person/?show_deleted=false`
+> 🔸 `/api/person/?show_deleted=true`
+> 🔸 `/api/person/?show_deleted=false`
 >
 > <br>
 > 
