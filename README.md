@@ -4357,8 +4357,33 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >         return Person.objects.all()
 > > ```
 > > This is much more elegant, fully reusable, no separate admin API needed.
-
-
+> 
+> <br>
+>
+> > But since you're using **function-based views (FBVs)** like :
+> ```
+> @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+> def person(request):
+> ```
+> 
+> <br>
+> 
+> > You can just handle the query parameter `include_deleted` directly inside the `GET` block of your `person()` view.
+> > 
+> > `person_api/api/views.py`
+> > ```
+> > # /api/person/
+> > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+> > def person(request):
+> >     if request.method == 'GET':
+> >         include_deleted = request.query_params.get('include_deleted', 'false').lower() == 'true'
+> >         if include_deleted:
+> >             objs = Person.all_objects.select_related('color').filter(color__isnull = False)        # objs = Person.all_objects.all()
+> >         else:       
+> >             objs = Person.objects.select_related('color').filter(color__isnull = False)            # objs = Person.objects.all()
+> >         serializer = PersonSerializer(objs, many = True)
+> >         return Response(serializer.data)
+> > ```
 
 
 
