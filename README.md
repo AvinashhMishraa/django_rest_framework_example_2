@@ -4386,11 +4386,11 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > >
 > > > <br>
 > > >
-> > > GET &nbsp; `/api/person/?show_deleted=true`    &nbsp;&nbsp;➜&nbsp;&nbsp;  All (including soft-deleted)
+> > > GET &nbsp; `/api/person/?show_deleted=true`    &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;  All (including soft-deleted)
 > > > 
 > > > GET &nbsp; `/api/person/?show_deleted=false`   &nbsp;&nbsp;➜&nbsp;&nbsp;  Only active
 > > > 
-> > > GET &nbsp; `/api/person/`                      &nbsp;&nbsp;➜&nbsp;  Defaults to active
+> > > GET &nbsp; `/api/person/`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;  Defaults to active
 
 <br>
 
