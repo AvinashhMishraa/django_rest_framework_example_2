@@ -4281,7 +4281,7 @@ In production systems we often want :
 
 <br>
 
-> Create <ins>new API endpoint</ins> for **Admin** (Get all persons including deleted)
+> Create <ins>new API endpoint</ins> for **Admin** &nbsp;(Get all persons including deleted)
 > ```
 > # /api/person/all/
 > class AdminPersonListAPIView(APIView):
