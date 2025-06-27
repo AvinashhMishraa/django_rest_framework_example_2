@@ -4242,98 +4242,98 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-✅ &nbsp;In production systems we often want :
-> &nbsp;&nbsp;∎&nbsp; Normal &nbsp;`GET` &nbsp;➜&nbsp; only alive (non-deleted) records <br>
-> &nbsp;&nbsp;∎&nbsp; Admin &nbsp;&nbsp;`GET` &nbsp;➜&nbsp; return both deleted and non-deleted records
-
-<br>
-
-🔶 &nbsp;**`person_api/home/models.py` &nbsp;(already done, unchanged)**
-
-<br>
-
-> We already have &nbsp;:
-> ```
-> class Person(models.Model):
->     ●●●
->     objects = SoftDeleteManager()                          # Default manager (alive only)
->     all_objects = SoftDeleteQuerySet.as_manager()          # Full queryset (alive + deleted)
-> ```
-
-<br>
-
-🔶 &nbsp;**`person_api/home/serializers.py` &nbsp;(no change needed)**
-
-<br>
-
-> We can reuse the same serializer since the `is_deleted` field are already in model.
-> ```
-> class PersonSerializer(serializers.ModelSerializer):
->     class Meta:
->         model = Person
->         fields = '__all__'
-> ```
-> ■ &nbsp;If you want you can also make `is_deleted` `read_only_fields` in serializer for safety.
-
-<br>
-
-🔶 &nbsp;**`person_api/home/view.py`**
-
-<br>
-
-> Create <ins>new API endpoint</ins> for **Admin** &nbsp;(Get all persons including deleted)
-> ```
-> # /api/person/all/
-> class AdminPersonListAPIView(APIView):
->     def get(self, request):
->         persons = Person.all_objects.all()
->         serializer = PersonSerializer(persons, many=True)
->         return Response(serializer.data, status=status.HTTP_200_OK)
-> ```
-
-<br>
-
-🔶 &nbsp;**Update &nbsp;`person_api/api/urls.py`**
-
-<br>
-
-> ```
-> from django.urls import path, include
-> from rest_framework.routers import DefaultRouter
-> from home.views import (
->     index, person, person_detail, login, Persons, PeopleViewSet,
->     BulkPersonCreateView, BulkPersonUpdateView, BulkPersonDeleteView,
->     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView            # 👈
-> )
+> In production systems we often want :
+> > &nbsp;&nbsp;∎&nbsp; Normal &nbsp;`GET` &nbsp;➜&nbsp; only alive (non-deleted) records <br>
+> > &nbsp;&nbsp;∎&nbsp; Admin &nbsp;&nbsp;`GET` &nbsp;➜&nbsp; return both deleted and non-deleted records
 > 
+> <br>
 > 
-> router = DefaultRouter()
-> router.register(r'people', PeopleViewSet, basename='people')
-> urlpatterns = router.urls
+> ✅ &nbsp; &nbsp;**`person_api/home/models.py` &nbsp;(already done, unchanged)**
 > 
+> <br>
 > 
-> urlpatterns = [
->     path('index/', index),                                                  # Function based view
->     path('person/', person),                                                # Function based view
->     path('person/<int:id>/', person_detail),                                # Function based view
->     path('login/', login),                                                  # Function based view
->     path('persons/', Persons.as_view()),                                    # Class based view
->     path('', include(router.urls)),                                         # ModelViewSet
->     path('person/bulk-create/', BulkPersonCreateView.as_view()),            # Class based view
->     path('person/bulk-update/', BulkPersonUpdateView.as_view()),            # Class based view
->     path('person/bulk-delete/', BulkPersonDeleteView.as_view()),            # Class based view         # Hard Delete
->     path('person/bulk-soft-delete/', BulkSoftDeleteAPIView.as_view()),      # Class based view         # Soft Delete
->     path('person/bulk-hard-delete/', BulkHardDeleteAPIView.as_view()),      # Class based view         # Hard Delete
->     path('person/bulk-restore/', BulkRestoreAPIView.as_view()),             # Class based view
->     path('person/all/', AdminPersonListAPIView.as_view()),                  # Class based view         # 👈
-> ]
-> ```
-
-<br>
-
-> With this &nbsp;**:** <br>
-> > **Public** &nbsp;&nbsp;GET&nbsp; `/api/person/` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; returns only active persons <br>
-> > **Admin** &nbsp;GET&nbsp; `/api/person/all/` &nbsp;&nbsp;➜&nbsp;&nbsp; returns both deleted and non-deleted persons
+> > We already have &nbsp;:
+> > ```
+> > class Person(models.Model):
+> >     ●●●
+> >     objects = SoftDeleteManager()                          # Default manager (alive only)
+> >     all_objects = SoftDeleteQuerySet.as_manager()          # Full queryset (alive + deleted)
+> > ```
+> 
+> <br>
+> 
+> ✅ &nbsp; &nbsp;**`person_api/home/serializers.py` &nbsp;(no change needed)**
+> 
+> <br>
+> 
+> > We can reuse the same serializer since the `is_deleted` field are already in model.
+> > ```
+> > class PersonSerializer(serializers.ModelSerializer):
+> >     class Meta:
+> >         model = Person
+> >         fields = '__all__'
+> > ```
+> > ■ &nbsp;If you want you can also make `is_deleted` `read_only_fields` in serializer for safety.
+> 
+> <br>
+> 
+> ✅ &nbsp; &nbsp;**`person_api/home/view.py`**
+> 
+> <br>
+> 
+> > Create <ins>new API endpoint</ins> for **Admin** &nbsp;(Get all persons including deleted)
+> > ```
+> > # /api/person/all/
+> > class AdminPersonListAPIView(APIView):
+> >     def get(self, request):
+> >         persons = Person.all_objects.all()
+> >         serializer = PersonSerializer(persons, many=True)
+> >         return Response(serializer.data, status=status.HTTP_200_OK)
+> > ```
+> 
+> <br>
+> 
+> ✅ &nbsp; &nbsp;**Update &nbsp;`person_api/api/urls.py`**
+> 
+> <br>
+> 
+> > ```
+> > from django.urls import path, include
+> > from rest_framework.routers import DefaultRouter
+> > from home.views import (
+> >     index, person, person_detail, login, Persons, PeopleViewSet,
+> >     BulkPersonCreateView, BulkPersonUpdateView, BulkPersonDeleteView,
+> >     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView            # 👈
+> > )
+> > 
+> > 
+> > router = DefaultRouter()
+> > router.register(r'people', PeopleViewSet, basename='people')
+> > urlpatterns = router.urls
+> > 
+> > 
+> > urlpatterns = [
+> >     path('index/', index),                                                  # Function based view
+> >     path('person/', person),                                                # Function based view
+> >     path('person/<int:id>/', person_detail),                                # Function based view
+> >     path('login/', login),                                                  # Function based view
+> >     path('persons/', Persons.as_view()),                                    # Class based view
+> >     path('', include(router.urls)),                                         # ModelViewSet
+> >     path('person/bulk-create/', BulkPersonCreateView.as_view()),            # Class based view
+> >     path('person/bulk-update/', BulkPersonUpdateView.as_view()),            # Class based view
+> >     path('person/bulk-delete/', BulkPersonDeleteView.as_view()),            # Class based view         # Hard Delete
+> >     path('person/bulk-soft-delete/', BulkSoftDeleteAPIView.as_view()),      # Class based view         # Soft Delete
+> >     path('person/bulk-hard-delete/', BulkHardDeleteAPIView.as_view()),      # Class based view         # Hard Delete
+> >     path('person/bulk-restore/', BulkRestoreAPIView.as_view()),             # Class based view
+> >     path('person/all/', AdminPersonListAPIView.as_view()),                  # Class based view         # 👈
+> > ]
+> > ```
+> 
+> <br>
+> 
+> > With this &nbsp;**:** <br>
+> > > **Public** &nbsp;&nbsp;GET&nbsp; `/api/person/` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; returns only active persons <br>
+> > > **Admin** &nbsp;GET&nbsp; `/api/person/all/` &nbsp;&nbsp;➜&nbsp;&nbsp; returns both deleted and non-deleted persons
 
 <br>
 
