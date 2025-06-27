@@ -4337,7 +4337,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-> 🏆 &nbsp;**Bonus Improvement** - <ins>optional query param for admins to have full control to toggle visibility</ins>
+> 🏆 &nbsp;**Bonus Improvement** &nbsp;&nbsp;-&nbsp;&nbsp; <ins>optional query param for admins to have full control to toggle visibility</ins>
 >
 > If you want even more flexibility, you can make the **"include deleted" toggle** available via query param instead of separate endpoint.
 > 
