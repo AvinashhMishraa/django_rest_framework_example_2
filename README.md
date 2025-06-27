@@ -4332,8 +4332,8 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > <br>
 > 
 > > With this &nbsp;**:** <br>
-> > &nbsp;&nbsp;&nbsp;&nbsp;◼️&nbsp; **Public** &nbsp;&nbsp;GET&nbsp; `/api/person/` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; returns only active persons <br>
-> > &nbsp;&nbsp;&nbsp;&nbsp;◼️&nbsp; **Admin** &nbsp;GET&nbsp; `/api/person/all/` &nbsp;&nbsp;➜&nbsp;&nbsp; returns both deleted and non-deleted persons
+> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◼️&nbsp; **Public** &nbsp;&nbsp;GET&nbsp; `/api/person/` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; returns only active persons <br>
+> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◼️&nbsp; **Admin** &nbsp;GET&nbsp; `/api/person/all/` &nbsp;&nbsp;➜&nbsp;&nbsp; returns both deleted and non-deleted persons
 
 <br>
 
