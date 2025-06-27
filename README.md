@@ -4330,7 +4330,7 @@ In production systems we often want :
 >     path('person/bulk-soft-delete/', BulkSoftDeleteAPIView.as_view()),      # Class based view         # Soft Delete
 >     path('person/bulk-hard-delete/', BulkHardDeleteAPIView.as_view()),      # Class based view         # Hard Delete
 >     path('person/bulk-restore/', BulkRestoreAPIView.as_view()),             # Class based view
->     path('person/all/', AdminPersonListAPIView.as_view()),
+>     path('person/all/', AdminPersonListAPIView.as_view()),                  # Class based view
 > ]
 > ```
 
