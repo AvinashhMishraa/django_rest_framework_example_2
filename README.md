@@ -4383,26 +4383,22 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > >         serializer = PersonSerializer(objs, many = True)
 > > >         return Response(serializer.data)
 > > > ```
-> >
+> > >
 > > <br>
-> >
-> > > GET &nbsp;`/api/person/?show_deleted=true`    &nbsp;&nbsp;-->&nbsp;&nbsp;  All (including soft-deleted)
+> > >
+> > > GET &nbsp;`/api/person/?show_deleted=true`    &nbsp;&nbsp;➜&nbsp;&nbsp;  All (including soft-deleted)
 > > > 
-> > > GET &nbsp;`/api/person/?show_deleted=false`   &nbsp;&nbsp;-->&nbsp;&nbsp;  Only active
+> > > GET &nbsp;`/api/person/?show_deleted=false`   &nbsp;&nbsp;➜&nbsp;&nbsp;  Only active
 > > > 
-> > > GET &nbsp;`/api/person/`                      &nbsp;&nbsp;-->&nbsp;  Defaults to active
-> >
-> > <br>
-> >
-> > > If you want to **debug** &nbsp;**:**
-> > > ```
-> > > print("Show deleted:", show_deleted)
-> > > print("Returned records:", objs.count())
-> > > ```
+> > > GET &nbsp;`/api/person/`                      &nbsp;&nbsp;➜&nbsp;  Defaults to active
 
+<br>
 
-
-
+> If you want to **debug** &nbsp;**:**
+> ```
+> print("Show deleted:", show_deleted)
+> print("Returned records:", objs.count())
+> ```
 
 
 
