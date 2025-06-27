@@ -4242,9 +4242,9 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-In production systems we often want :
-> ∎&nbsp; Normal &nbsp;`GET` &nbsp;➜&nbsp; only alive (non-deleted) records <br>
-> ∎&nbsp; Admin &nbsp;&nbsp;`GET` &nbsp;➜&nbsp; return both deleted and non-deleted records
+🔶 &nbsp;In production systems we often want :
+> &nbsp;&nbsp;∎&nbsp; Normal &nbsp;`GET` &nbsp;➜&nbsp; only alive (non-deleted) records <br>
+> &nbsp;&nbsp;∎&nbsp; Admin &nbsp;&nbsp;`GET` &nbsp;➜&nbsp; return both deleted and non-deleted records
 
 <br>
 
@@ -4337,7 +4337,7 @@ In production systems we often want :
 
 <br>
 
-🏆 &nbsp;**Bonus Improvement** 
+🔶 &nbsp;**Bonus Improvement** 
 
 The best practice is to have a <ins>optional query param for admins to have full control to toggle visibility</ins>
 
