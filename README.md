@@ -4296,6 +4296,55 @@ In production systems we often want :
 > > **Public** &nbsp;&nbsp;GET&nbsp; `/api/person/` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; returns only active persons <br>
 > > **Admin** &nbsp;GET&nbsp; `/api/person/all/` &nbsp;&nbsp;➜&nbsp;&nbsp; returns both deleted and non-deleted persons
 
+<br>
+
+✅ &nbsp;**Update `person_api/api/urls.py`**
+
+<br>
+
+> ```
+> from django.urls import path, include
+> from rest_framework.routers import DefaultRouter
+> from home.views import (
+>     index, person, person_detail, login, Persons, PeopleViewSet,
+>     BulkPersonCreateView, BulkPersonUpdateView, BulkPersonDeleteView,
+>     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView        # AdminPersonListAPIView imported
+> )
+> 
+> 
+> 
+> router = DefaultRouter()
+> router.register(r'people', PeopleViewSet, basename='people')
+> urlpatterns = router.urls
+> 
+> 
+> 
+> urlpatterns = [
+>     path('index/', index),                                                  # Function based view
+>     path('person/', person),                                                # Function based view
+>     path('person/<int:id>/', person_detail),                                # Function based view
+>     path('login/', login),                                                  # Function based view
+>     path('persons/', Persons.as_view()),                                    # Class based view
+>     path('', include(router.urls)),                                         # ModelViewSet
+>     path('person/bulk-create/', BulkPersonCreateView.as_view()),            # Class based view
+>     path('person/bulk-update/', BulkPersonUpdateView.as_view()),            # Class based view
+>     path('person/bulk-delete/', BulkPersonDeleteView.as_view()),            # Class based view         # Hard Delete
+>     path('person/bulk-soft-delete/', BulkSoftDeleteAPIView.as_view()),      # Class based view         # Soft Delete
+>     path('person/bulk-hard-delete/', BulkHardDeleteAPIView.as_view()),      # Class based view         # Hard Delete
+>     path('person/bulk-restore/', BulkRestoreAPIView.as_view()),             # Class based view
+>     path('person/all/', AdminPersonListAPIView.as_view()),
+> ]
+> ```
+
+
+
+
+
+
+
+
+
+
 
 
 
