@@ -4366,7 +4366,6 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
 > > def person(request):
 > > ```
-> > <br>
 > > 
 > > You can just handle the query parameter `include_deleted` directly inside the `GET` block of your `person()` view.
 > > > `person_api/api/views.py`
