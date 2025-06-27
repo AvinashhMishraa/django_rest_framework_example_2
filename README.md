@@ -4344,7 +4344,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > If you want even more flexibility, you can make the **"include deleted" toggle** available via <ins>query param</ins> instead of separate endpoint. <br>
 > 🔸 `/api/person/?show_deleted=true` <br>
 > 🔸 `/api/person/?show_deleted=false`
->
+> 
 > <br>
 > 
 > > Had you the `PersonViewSet` class, you could have easily handled this toggle visibility by using <code>get_queryset()</code>
@@ -4363,7 +4363,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > <br>
 >
-> > But since you're using **function-based views (FBVs)** for the base API `/api/person/`
+> > But since you're using **function-based views (FBVs)** for the base API &nbsp;`/api/person/`
 > > 
 > > You can just handle the query parameter `include_deleted` directly inside the `GET` block of your `person()` view.
 > >
