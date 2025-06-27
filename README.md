@@ -4308,15 +4308,13 @@ In production systems we often want :
 > from home.views import (
 >     index, person, person_detail, login, Persons, PeopleViewSet,
 >     BulkPersonCreateView, BulkPersonUpdateView, BulkPersonDeleteView,
->     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView        # AdminPersonListAPIView imported
+>     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView
 > )
-> 
 > 
 > 
 > router = DefaultRouter()
 > router.register(r'people', PeopleViewSet, basename='people')
 > urlpatterns = router.urls
-> 
 > 
 > 
 > urlpatterns = [
