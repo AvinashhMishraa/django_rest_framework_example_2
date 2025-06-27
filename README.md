@@ -4271,6 +4271,19 @@ In production systems we often want :
 > ```
 > ■ &nbsp;If you want you can also make `is_deleted` `read_only_fields` in serializer for safety.
 
+<br>
+
+✅ &nbsp;**`person_api/home/view.py`**
+
+> Create new API endpoint for Admin (Get all persons including deleted)
+> ```
+> # /api/person/all/
+> class AdminPersonListAPIView(APIView):
+>     def get(self, request):
+>         persons = Person.all_objects.all()
+>         serializer = PersonSerializer(persons, many=True)
+>         return Response(serializer.data, status=status.HTTP_200_OK)
+> ```
 
 
 
