@@ -4303,7 +4303,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > from home.views import (
 > >     index, person, person_detail, login, Persons, PeopleViewSet,
 > >     BulkPersonCreateView, BulkPersonUpdateView, BulkPersonDeleteView,
-> >     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView            # 👈
+> >     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView       # 👈
 > > )
 > > 
 > > 
@@ -4313,19 +4313,19 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > 
 > > 
 > > urlpatterns = [
-> >     path('index/', index),                                                  # Function based view
-> >     path('person/', person),                                                # Function based view
-> >     path('person/<int:id>/', person_detail),                                # Function based view
-> >     path('login/', login),                                                  # Function based view
-> >     path('persons/', Persons.as_view()),                                    # Class based view
-> >     path('', include(router.urls)),                                         # ModelViewSet
-> >     path('person/bulk-create/', BulkPersonCreateView.as_view()),            # Class based view
-> >     path('person/bulk-update/', BulkPersonUpdateView.as_view()),            # Class based view
-> >     path('person/bulk-delete/', BulkPersonDeleteView.as_view()),            # Class based view         # Hard Delete
-> >     path('person/bulk-soft-delete/', BulkSoftDeleteAPIView.as_view()),      # Class based view         # Soft Delete
-> >     path('person/bulk-hard-delete/', BulkHardDeleteAPIView.as_view()),      # Class based view         # Hard Delete
-> >     path('person/bulk-restore/', BulkRestoreAPIView.as_view()),             # Class based view
-> >     path('person/all/', AdminPersonListAPIView.as_view()),                  # Class based view         # 👈
+> >     path('index/', index),                                                  
+> >     path('person/', person),                                                
+> >     path('person/<int:id>/', person_detail),                                
+> >     path('login/', login),                                                  
+> >     path('persons/', Persons.as_view()),                                    
+> >     path('', include(router.urls)),                                         
+> >     path('person/bulk-create/', BulkPersonCreateView.as_view()),            
+> >     path('person/bulk-update/', BulkPersonUpdateView.as_view()),            
+> >     path('person/bulk-delete/', BulkPersonDeleteView.as_view()),            # Hard Delete
+> >     path('person/bulk-soft-delete/', BulkSoftDeleteAPIView.as_view()),      # Soft Delete
+> >     path('person/bulk-hard-delete/', BulkHardDeleteAPIView.as_view()),      # Hard Delete
+> >     path('person/bulk-restore/', BulkRestoreAPIView.as_view()),             
+> >     path('person/all/', AdminPersonListAPIView.as_view()),                  # 👈
 > > ]
 > > ```
 > 
