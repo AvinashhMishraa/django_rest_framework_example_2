@@ -4260,7 +4260,7 @@ class Person(models.Model):
 
 <br>
 
-✅ &nbsp;**`serializers.py` &nbsp;(no change needed)**
+✅ &nbsp;**`person_api/home/serializers.py` &nbsp;(no change needed)**
 
 We can reuse the same serializer since the `is_deleted` field are already in model.
 ```
