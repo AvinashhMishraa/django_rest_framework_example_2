@@ -4250,6 +4250,8 @@ In production systems we often want :
 
 ✅ &nbsp;**`person_api/home/models.py` &nbsp;(already done, unchanged)**
 
+<br>
+
 > We already have &nbsp;:
 > ```
 > class Person(models.Model):
@@ -4261,6 +4263,8 @@ In production systems we often want :
 <br>
 
 ✅ &nbsp;**`person_api/home/serializers.py` &nbsp;(no change needed)**
+
+<br>
 
 > We can reuse the same serializer since the `is_deleted` field are already in model.
 > ```
@@ -4274,6 +4278,8 @@ In production systems we often want :
 <br>
 
 ✅ &nbsp;**`person_api/home/view.py`**
+
+<br>
 
 > Create new API endpoint for Admin (Get all persons including deleted)
 > ```
