@@ -4298,7 +4298,7 @@ In production systems we often want :
 
 <br>
 
-✅ &nbsp;**Update `person_api/api/urls.py`**
+✅ &nbsp;**Update &nbsp;`person_api/api/urls.py`**
 
 <br>
 
