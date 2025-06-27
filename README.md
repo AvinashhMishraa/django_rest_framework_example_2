@@ -4346,16 +4346,17 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > <br>
 > 
 > > Had you the `PersonViewSet` class, you could have easily handled this toggle visibility by using <code>get_queryset()</code>
-> > ```
-> > class PersonViewSet(viewsets.ModelViewSet):
-> >     serializer_class = PersonSerializer
-> > 
-> >     def get_queryset(self):
-> >         include_deleted = self.request.query_params.get('include_deleted', 'false').lower() == 'true'
-> >         if include_deleted:
-> >             return Person.all_objects.all()
-> >         return Person.objects.all()
-> > ```
+> > > `person_api/api/views.py`
+> > > ```
+> > > class PersonViewSet(viewsets.ModelViewSet):
+> > >     serializer_class = PersonSerializer
+> > > 
+> > >     def get_queryset(self):
+> > >         include_deleted = self.request.query_params.get('include_deleted', 'false').lower() == 'true'
+> > >         if include_deleted:
+> > >             return Person.all_objects.all()
+> > >         return Person.objects.all()
+> > > ```
 > > This is much more elegant, fully reusable, no separate admin API needed.
 > 
 > <br>
@@ -4368,22 +4369,22 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > <br>
 > > 
 > > You can just handle the query parameter `include_deleted` directly inside the `GET` block of your `person()` view.
-> > `person_api/api/views.py`
-> > ```
-> > # /api/person/
-> > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
-> > def person(request):
-> >     if request.method == 'GET':
-> >         include_deleted = request.query_params.get('include_deleted', 'false').lower() == 'true'
-> >         if include_deleted:
-> >             # objs = Person.all_objects.all()
-> >             objs = Person.all_objects.select_related('color').filter(color__isnull = False)
-> >         else:
-> >             # objs = Person.objects.all()
-> >             objs = Person.objects.select_related('color').filter(color__isnull = False)
-> >         serializer = PersonSerializer(objs, many = True)
-> >         return Response(serializer.data)
-> > ```
+> > > `person_api/api/views.py`
+> > > ```
+> > > # /api/person/
+> > > @api_view(['GET', 'POST', 'PUT', 'PATCH', 'DELETE'])
+> > > def person(request):
+> > >     if request.method == 'GET':
+> > >         include_deleted = request.query_params.get('include_deleted', 'false').lower() == 'true'
+> > >         if include_deleted:
+> > >             # objs = Person.all_objects.all()
+> > >             objs = Person.all_objects.select_related('color').filter(color__isnull = False)
+> > >         else:
+> > >             # objs = Person.objects.all()
+> > >             objs = Person.objects.select_related('color').filter(color__isnull = False)
+> > >         serializer = PersonSerializer(objs, many = True)
+> > >         return Response(serializer.data)
+> > > ```
 
 
 
