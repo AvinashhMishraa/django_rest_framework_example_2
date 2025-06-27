@@ -4339,6 +4339,9 @@ In production systems we often want :
 
 🏆 &nbsp;**Bonus Improvement &nbsp;&nbsp;➜&nbsp;&nbsp; The best practice is to have a <ins>optional query param for admins to have full control to toggle visibility</ins>**
 
+If you want even more flexibility, you can make the **"include deleted" toggle** available via query param instead of separate endpoint.
+
+
 
 
 
