@@ -4391,14 +4391,14 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > > GET &nbsp; `/api/person/?show_deleted=false`   &nbsp;&nbsp;➜&nbsp;&nbsp;  Only active
 > > > 
 > > > GET &nbsp; `/api/person/`  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;  Defaults to active
-
-<br>
-
-> If you want to **debug** &nbsp;**:**
-> ```
-> print("Show deleted:", show_deleted)
-> print("Returned records:", objs.count())
-> ```
+> > >
+> > > <br>
+> > >
+> > > If you want to **debug** &nbsp;**:**
+> > > ```
+> > > print("Include deleted:", include_deleted)
+> > > print("Returned records:", objs.count())
+> > > ```
 
 
 
