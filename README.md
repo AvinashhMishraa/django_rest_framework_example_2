@@ -4290,6 +4290,8 @@ In production systems we often want :
 >         serializer = PersonSerializer(persons, many=True)
 >         return Response(serializer.data, status=status.HTTP_200_OK)
 > ```
+> <br>
+> 
 > With this : <br>
 > **Public** GET `/api/person/` ➜ returns only active persons <br>
 > **Admin** GET `/api/person/all/` ➜ returns both deleted and non-deleted persons
