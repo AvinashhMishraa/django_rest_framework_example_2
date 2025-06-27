@@ -4308,7 +4308,7 @@ In production systems we often want :
 > from home.views import (
 >     index, person, person_detail, login, Persons, PeopleViewSet,
 >     BulkPersonCreateView, BulkPersonUpdateView, BulkPersonDeleteView,
->     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView
+>     BulkSoftDeleteAPIView, BulkHardDeleteAPIView, BulkRestoreAPIView, AdminPersonListAPIView            # 👈
 > )
 > 
 > 
@@ -4330,7 +4330,7 @@ In production systems we often want :
 >     path('person/bulk-soft-delete/', BulkSoftDeleteAPIView.as_view()),      # Class based view         # Soft Delete
 >     path('person/bulk-hard-delete/', BulkHardDeleteAPIView.as_view()),      # Class based view         # Hard Delete
 >     path('person/bulk-restore/', BulkRestoreAPIView.as_view()),             # Class based view
->     path('person/all/', AdminPersonListAPIView.as_view()),                  # Class based view
+>     path('person/all/', AdminPersonListAPIView.as_view()),                  # Class based view         # 👈
 > ]
 > ```
 
