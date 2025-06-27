@@ -4242,13 +4242,13 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-🔶 &nbsp;In production systems we often want :
+✅ &nbsp;In production systems we often want :
 > &nbsp;&nbsp;∎&nbsp; Normal &nbsp;`GET` &nbsp;➜&nbsp; only alive (non-deleted) records <br>
 > &nbsp;&nbsp;∎&nbsp; Admin &nbsp;&nbsp;`GET` &nbsp;➜&nbsp; return both deleted and non-deleted records
 
 <br>
 
-✅ &nbsp;**`person_api/home/models.py` &nbsp;(already done, unchanged)**
+🔶 &nbsp;**`person_api/home/models.py` &nbsp;(already done, unchanged)**
 
 <br>
 
@@ -4262,7 +4262,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-✅ &nbsp;**`person_api/home/serializers.py` &nbsp;(no change needed)**
+🔶 &nbsp;**`person_api/home/serializers.py` &nbsp;(no change needed)**
 
 <br>
 
@@ -4277,7 +4277,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-✅ &nbsp;**`person_api/home/view.py`**
+🔶 &nbsp;**`person_api/home/view.py`**
 
 <br>
 
@@ -4293,7 +4293,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-✅ &nbsp;**Update &nbsp;`person_api/api/urls.py`**
+🔶 &nbsp;**Update &nbsp;`person_api/api/urls.py`**
 
 <br>
 
@@ -4337,7 +4337,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-🔶 &nbsp;**Bonus Improvement** 
+✅ &nbsp;**Bonus Improvement** 
 
 The best practice is to have a <ins>optional query param for admins to have full control to toggle visibility</ins>
 
