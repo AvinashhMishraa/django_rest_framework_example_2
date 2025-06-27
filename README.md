@@ -4378,9 +4378,11 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >     if request.method == 'GET':
 > >         include_deleted = request.query_params.get('include_deleted', 'false').lower() == 'true'
 > >         if include_deleted:
-> >             objs = Person.all_objects.select_related('color').filter(color__isnull = False)        # objs = Person.all_objects.all()
-> >         else:       
-> >             objs = Person.objects.select_related('color').filter(color__isnull = False)            # objs = Person.objects.all()
+> >             # objs = Person.all_objects.all()
+> >             objs = Person.all_objects.select_related('color').filter(color__isnull = False)
+> >         else:
+> >             # objs = Person.objects.all()
+> >             objs = Person.objects.select_related('color').filter(color__isnull = False)
 > >         serializer = PersonSerializer(objs, many = True)
 > >         return Response(serializer.data)
 > > ```
