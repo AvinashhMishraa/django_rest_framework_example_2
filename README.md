@@ -4339,7 +4339,11 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 > ⭐ &nbsp;**Bonus Improvement** &nbsp;&nbsp;-&nbsp;&nbsp; <ins>optional query param for admins to have full control to toggle visibility</ins>
 >
+> <br>
+> 
 > If you want even more flexibility, you can make the **"include deleted" toggle** available via query param instead of separate endpoint.
+>
+> <br>
 > 
 > > Had you the `PersonViewSet` class, you could have easily handled this toggle visibility by using <code>get_queryset()</code>
 > > ```
