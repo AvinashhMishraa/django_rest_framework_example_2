@@ -4293,7 +4293,7 @@ In production systems we often want :
 > <br>
 > 
 > With this &nbsp;**:** <br>
-> > **Public** &nbsp;&nbsp;GET&nbsp; `/api/person/` ➜ returns only active persons <br>
+> > **Public** &nbsp;&nbsp;GET&nbsp; `/api/person/` &nbsp;&nbsp;➜ returns only active persons <br>
 > > **Admin** &nbsp;GET&nbsp; `/api/person/all/` ➜ returns both deleted and non-deleted persons
 
 
