@@ -4253,7 +4253,7 @@ In production systems we often want :
 We already have &nbsp;:
 ```
 class Person(models.Model):
-    ...
+    ●●●
     objects = SoftDeleteManager()                          # Default manager (alive only)
     all_objects = SoftDeleteQuerySet.as_manager()          # Full queryset (alive + deleted)
 ```
