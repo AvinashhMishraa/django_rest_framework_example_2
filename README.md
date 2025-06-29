@@ -1373,25 +1373,58 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
+<h1><code>related_name</code> while defining a foreign key</h1>
+
+<br>
+
+We have not yet learnt &nbsp;⟶&nbsp; why are we passing `related_name="people"` parameter while defing a **foreign key** in a model ?
+> ```
+> color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, <code>related_name="people"</code>)
+> ```
+
+<br>
+
 ```
-Person.all_objects.filter(id__in=[1,3])           ➜ QuerySet [<Person: Person object (1)>, <Person: Person object (3)>]>
+Person.all_objects.filter(id__in=[1,3])           ➜  QuerySet [<Person: Person object (1)>, <Person: Person object (3)>]>
 
-Person.all_objects.get(id=1)                      ➜ <Person: Person object (1)>
-Person.all_objects.get(id=1).name                 ➜ 'Avinash Mishra'
-Person.all_objects.get(id=1).color                ➜ <Color: RED>
-Person.all_objects.get(id=1).color.color_name     ➜ 'RED'
+Person.all_objects.get(id=1)                      ➜  <Person: Person object (1)>
+Person.all_objects.get(id=1).name                 ➜  'Avinash Mishra'
+Person.all_objects.get(id=1).color                ➜  <Color: RED>
+Person.all_objects.get(id=1).color.color_name     ➜  'RED'
 ```
 
+<br>
 
-<h4>color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, <code>related_name="people"</code>)</h4>
+Now the question is can we do the reverse ? <br>
+> How to get all persons related to a specific color ?
 
+<br>
 
-
-
-
-
-
-
+> ⭐ &nbsp;Note that the `related_name='people'` in your **ForeignKey** definition is used to define the reverse relation name from the `Color` model back to the `Person` model.
+>
+> <br>
+>
+> > `color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE)`
+> > ```
+> > red = Color.objects.get(color_name="RED")
+> > red.person_set.all()
+> > ```
+>
+> <br>
+>
+> > `color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")`
+> > ```
+> > red = Color.objects.get(color_name="RED")
+> > red_people = red.people.all()                        # better than red.person_set.all()
+> > ``` 
+> > 
+> > <br>
+> > 
+> > **Verification &nbsp;:**
+> > `red.people`
+> > ```
+> > <django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x0000020B6AE63F50>
+> > ```
 
 <br>
 
