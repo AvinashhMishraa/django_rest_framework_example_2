@@ -1379,7 +1379,7 @@ you will find <code>"Page Not Found"</code> error.
 
 > We have not yet learnt &nbsp;⟶&nbsp; why are we passing `related_name="people"` parameter while defing a **foreign key** in a model ?
 > ```
-> color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, <code>related_name="people"</code>)
+> color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")
 > ```
 
 <br>
@@ -1395,11 +1395,11 @@ Person.all_objects.get(id=1).color.color_name     ➜  'RED'
 
 <br>
 
-Now the question is can we do the reverse ? <br>
+> Now the question is can we do the reverse ? <br>
 > How to get all persons related to a specific color ?
-
-<br>
-
+> 
+> <br>
+>
 > ⭐ &nbsp;Note that the `related_name='people'` in your **ForeignKey** definition is used to define the reverse relation name from the `Color` model back to the `Person` model.
 >
 > <br>
