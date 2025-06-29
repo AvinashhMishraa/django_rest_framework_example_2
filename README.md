@@ -1373,7 +1373,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-<h3>color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, `related_name="people"`)</h3>
+<h4>color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, `related_name="people"`)</h4>
 
 
 
