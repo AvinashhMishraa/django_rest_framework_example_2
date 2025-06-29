@@ -1424,7 +1424,7 @@ Person.all_objects.get(id=1).color.color_name     ➜  'RED'
 > > 
 > > <br>
 > > 
-> > **Verification &nbsp;:**
+> > **Verification &nbsp;:** you can verify it though <code>shell</code>
 > >
 > > `red.people`
 > > ```
