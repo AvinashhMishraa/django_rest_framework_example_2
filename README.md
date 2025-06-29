@@ -1424,8 +1424,8 @@ Person.all_objects.get(id=1).color.color_name     ➜  'RED'
 > > 
 > > <br>
 > > 
-> > **Verification &nbsp;:** you can verify it though <code>shell</code>
-> >
+> > **Verification &nbsp;:** &nbsp;you can verify it though <code>py manage.py shell</code>
+> > 
 > > `red.people`
 > > ```
 > > <django.db.models.fields.related_descriptors.create_reverse_many_to_one_manager.<locals>.RelatedManager object at 0x0000020B6AE63F50>
