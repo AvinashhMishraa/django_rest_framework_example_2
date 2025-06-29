@@ -1399,9 +1399,9 @@ Person.all_objects.get(id=1).color.color_name     ➜  'RED'
 > How to get all persons related to a specific color ?
 > 
 > <br>
->
-> ⭐ &nbsp;Note that the `related_name='people'` in your **ForeignKey** definition is used to define the reverse relation name from the `Color` model back to the `Person` model.
->
+> 
+> **Note** that the `related_name='people'` in your **ForeignKey** definition is used to define the reverse relation name from the `Color` model back to the `Person` model. ⭐
+> 
 > <br>
 >
 > > `color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE)`
