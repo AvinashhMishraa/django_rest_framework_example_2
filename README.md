@@ -1403,6 +1403,8 @@ Person.all_objects.get(id=1).color.color_name     ➜  'RED'
 > **Note** that the `related_name='people'` in your **ForeignKey** definition is used to define the reverse relation name from the `Color` model back to the `Person` model. ⭐
 > 
 > <br>
+> 
+> 🔸 &nbsp;<ins>**Case - 1**</ins>
 >
 > > `color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE)`
 > > ```
@@ -1412,6 +1414,8 @@ Person.all_objects.get(id=1).color.color_name     ➜  'RED'
 >
 > <br>
 >
+> 🔸 &nbsp;<ins>**Case - 2**</ins>
+> 
 > > `color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")`
 > > ```
 > > red = Color.objects.get(color_name="RED")
