@@ -779,7 +779,7 @@ you will find <code>"Page Not Found"</code> error.
 > > 
 > > 
 > > class Person(models.Model):
-> >     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="color")
+> >     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")
 > >     name = models.CharField(max_length=100)
 > >     age = models.IntegerField()
 > > ```
@@ -3832,7 +3832,7 @@ class Color(models.Model):
 class Person(models.Model):
     name = models.CharField(max_length=100)
     age = models.IntegerField()
-    color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="color")
+    color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")
     is_deleted = models.BooleanField(default=False)
 
     objects = SoftDeleteManager()                             # Default manager : returns only active
