@@ -1374,12 +1374,12 @@ you will find <code>"Page Not Found"</code> error.
 <br>
 
 ```
-Person.all_objects.filter(id__in=[1,3])        ➜  OUTPUT : QuerySet [<Person: Person object (1)>, <Person: Person object (3)>]>
+Person.all_objects.filter(id__in=[1,3])        ➜  O/P : QuerySet [<Person: Person object (1)>, <Person: Person object (3)>]>
 
-Person.all_objects.get(id=1)                   ➜  OUTPUT : <Person: Person object (1)>
-Person.all_objects.get(id=1).name              ➜  OUTPUT : 'Avinash Mishra'
-Person.all_objects.get(id=1).color             ➜  OUTPUT : <Color: RED>
-Person.all_objects.get(id=1).color.color_name  ➜  OUTPUT : 'RED'
+Person.all_objects.get(id=1)                   ➜  O/P : <Person: Person object (1)>
+Person.all_objects.get(id=1).name              ➜  O/P : 'Avinash Mishra'
+Person.all_objects.get(id=1).color             ➜  O/P : <Color: RED>
+Person.all_objects.get(id=1).color.color_name  ➜  O/P : 'RED'
 ```
 
 
