@@ -1377,7 +1377,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-We have not yet learnt &nbsp;⟶&nbsp; why are we passing `related_name="people"` parameter while defing a **foreign key** in a model ?
+> We have not yet learnt &nbsp;⟶&nbsp; why are we passing `related_name="people"` parameter while defing a **foreign key** in a model ?
 > ```
 > color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, <code>related_name="people"</code>)
 > ```
