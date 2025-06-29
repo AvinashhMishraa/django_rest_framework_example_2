@@ -1373,6 +1373,18 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
+<h3>color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, `related_name="people"`)</h3>
+
+
+
+
+
+
+
+
+
+<br>
+
 <h1>SerializerMethodField( )</h1>
 
 <br>
