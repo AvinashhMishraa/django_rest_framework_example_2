@@ -1363,7 +1363,7 @@ you will find <code>"Page Not Found"</code> error.
 > <br>
 >
 > <h4>🔸 &nbsp;When to use what ?</h4>
->
+> 
 > | Use Case                                                      | Use                                         |
 > | ------------------------------------------------------------- | ------------------------------------------- |
 > | Quick read-only API of related fields                         | `depth=1`                                   |
@@ -1373,7 +1373,7 @@ you will find <code>"Page Not Found"</code> error.
 
 <br>
 
-<h4>color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, `related_name="people"`)</h4>
+<h4>color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, <code>related_name="people"</code>)</h4>
 
 
 
