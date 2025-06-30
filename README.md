@@ -4507,8 +4507,8 @@ Consider the following two models &nbsp;**:**
 <br>
 
 And you want &nbsp;**:**
-> A **reusable base** class (`SoftDeleteModel`) for all models.  <br>
-> 👉 If a `Person` is <ins>**soft-deleted**</ins>, automatically <ins>**hard-delete**</ins> all related Address records.
+> 👉 &nbsp;A **reusable base** class (`SoftDeleteModel`) for all models.  <br>
+> 👉 &nbsp;If a `Person` is <ins>**soft-deleted**</ins>, automatically <ins>**hard-delete**</ins> all related Address records.
 
 
 
