@@ -4512,86 +4512,86 @@ And you want &nbsp;**:**
 
 <br>
 
-`person_api/home/**models.py**`
-```
-from django.db import models
-
-
-
-class SoftDeleteQuerySet(models.QuerySet):
-	●●●
-
-
-
-class SoftDeleteManager(models.Manager):
-    def get_queryset(self):
-        # return super().get_queryset().filter(is_deleted=False)
-        return SoftDeleteQuerySet(self.model, using=self._db).filter(is_deleted=False)
-
-
-
-class SoftDeleteModel(models.Model):
-    is_deleted = models.BooleanField(default=False)
-
-    objects = SoftDeleteManager()                             # Only active
-    all_objects = SoftDeleteQuerySet.as_manager()             # All (active + deleted)
-
-    class Meta:
-        abstract = True
-
-    def delete(self, using=None, keep_parents=False, user=None):
-        if not self.is_deleted:
-            self.is_deleted = True
-            self.save()
-
-    def restore(self):
-        if self.is_deleted:
-            self.is_deleted = False
-            self.save()
-
-    def hard_delete(self):
-        super().delete()
-
-
-
-class Color(models.Model):
-	●●●
-
-
-
-class Person(SoftDeleteModel):                                 # inherits from <SoftDeleteModel> instead of <models.Model>
-    name = models.CharField(max_length=100)
-    age = models.IntegerField()
-    color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")
-    is_deleted = models.BooleanField(default=False)
-
-    objects = SoftDeleteManager()                              # only active
-    all_objects = SoftDeleteQuerySet.as_manager()              # all (including soft-deleted)
-
-    def delete(self, using=None, keep_parents=False):          # instance delete for single soft delete
-
-        # First soft-delete child objects
-        for address in self.addresses.all():
-            address.delete()
-
-        # Now soft-delete self
-        self.is_deleted = True
-        self.save()
-
-    def restore(self):                                         # restores the soft-deleted person
-        self.is_deleted = False
-        self.save()
-
-    def hard_delete(self):                                     # removes the person physically from the Person table
-        super().delete()
-
-
-
-class Address(SoftDeleteModel):
-    person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name='addresses')
-    city = models.CharField(max_length=100)
-    street = models.CharField(max_length=200)
-```
+Now let's update the model file
+> `person_api/home/**models.py**`
+> ```
+> from django.db import models
+> 
+> 
+> 
+> class SoftDeleteQuerySet(models.QuerySet):
+> 	●●●
+> 
+> 
+> 
+> class SoftDeleteManager(models.Manager):
+>     def get_queryset(self):
+>         # return super().get_queryset().filter(is_deleted=False)
+>         return SoftDeleteQuerySet(self.model, using=self._db).filter(is_deleted=False)
+> 
+> 
+> 
+> class SoftDeleteModel(models.Model):
+>     is_deleted = models.BooleanField(default=False)
+> 
+>     objects = SoftDeleteManager()                             # Only active
+>     all_objects = SoftDeleteQuerySet.as_manager()             # All (active + deleted)
+> 
+>     class Meta:
+>         abstract = True
+> 
+>     def delete(self, using=None, keep_parents=False, user=None):
+>         if not self.is_deleted:
+>             self.is_deleted = True
+>             self.save()
+> 
+>     def restore(self):
+>         if self.is_deleted:
+>             self.is_deleted = False
+>             self.save()
+> 
+>     def hard_delete(self):
+>         super().delete()
+> 
+> 
+> 
+> class Color(models.Model):
+> 	●●●
+> 
+> 
+> 
+> class Person(SoftDeleteModel):                                 # inherits from <SoftDeleteModel> instead of <models.Model>
+>     name = models.CharField(max_length=100)
+>     age = models.IntegerField()
+>     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")
+>     is_deleted = models.BooleanField(default=False)
+> 
+>     objects = SoftDeleteManager()                              # only active
+>     all_objects = SoftDeleteQuerySet.as_manager()              # all (including soft-deleted)
+> 
+>     def delete(self, using=None, keep_parents=False):          # instance delete for single soft delete
+>         # First soft-delete child objects
+>         for address in self.addresses.all():
+>             address.delete()
+> 
+>         # Now soft-delete self
+>         self.is_deleted = True
+>         self.save()
+> 
+>     def restore(self):                                         # restores the soft-deleted person
+>         self.is_deleted = False
+>         self.save()
+> 
+>     def hard_delete(self):                                     # removes the person physically from the Person table
+>         super().delete()
+> 
+> 
+> 
+> class Address(SoftDeleteModel):
+>     person = models.ForeignKey(Person, on_delete=models.CASCADE, related_name='addresses')
+>     city = models.CharField(max_length=100)
+>     street = models.CharField(max_length=200)
+> ```
 
 
 
