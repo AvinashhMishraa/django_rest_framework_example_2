@@ -4500,15 +4500,16 @@ But before cascading soft-delete on child objects, let's first implement cascadi
 
 <br>
 
-Consider the following two models &nbsp;:
+Consider the following two models &nbsp;**:**
 > `Person` &nbsp;(**Parent**)                                <br>
 > `Address` (**Child** &nbsp;—&nbsp; ForeignKey to Person)
 
 <br>
 
-And you want :
-> 👉 If a `Person` is <ins>**soft-deleted**</ins>, automatically <ins>**hard-delete**</ins> all related Address records.  <br>
-> A **reusable base** class (`SoftDeleteModel`) for all models.
+And you want &nbsp;**:**
+> A **reusable base** class (`SoftDeleteModel`) for all models.  <br>
+> 👉 If a `Person` is <ins>**soft-deleted**</ins>, automatically <ins>**hard-delete**</ins> all related Address records.
+
 
 
 
