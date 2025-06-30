@@ -4496,7 +4496,7 @@ But before cascading soft-delete on child objects, let's first implement cascadi
 
 <br>
 
-1️⃣ &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**hard-delete**</ins> its _child objects_.
+**1️⃣** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**hard-delete**</ins> its _child objects_.
 
 <br>
 
@@ -4595,7 +4595,7 @@ Now let's update the model file
 
 <br>
 
-2️⃣ &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
+**2️⃣** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you <ins>**restore**</ins> a _parent object_, automatically <ins>**restore**</ins> its _child objects_.
 
