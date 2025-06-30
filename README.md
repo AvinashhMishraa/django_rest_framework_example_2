@@ -4599,7 +4599,7 @@ Now let's update the model file
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you <ins>**restore**</ins> a _parent object_, automatically <ins>**restore**</ins> its _child objects_.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you <ins>**hard-delete**</ins> a _parent object_, automatically <ins>**hard-delete**</ins> its _child objects_.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you <ins>**hard-delete**</ins> a _parent object_, automatically <ins>**hard-delete**</ins> its _child objects_.
 
 
 
