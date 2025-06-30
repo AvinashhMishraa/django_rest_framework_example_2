@@ -4513,7 +4513,7 @@ And you want &nbsp;**:**
 <br>
 
 Now let's update the model file
-> `person_api/home/**models.py**`
+> `person_api/home/models.py`
 > ```
 > from django.db import models
 > 
