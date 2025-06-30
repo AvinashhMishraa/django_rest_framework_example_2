@@ -4486,6 +4486,21 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > > > print("Returned records:", objs.count())
 > > > ```
 
+<br>
+
+<h1>Automatic Soft-Delete on <ins>Related Models</ins> (Cascade Soft Delete) 🔥</h1>
+
+<br>
+
+But before cascading soft-delete on child objects, let's first implement cascading hard-delete on child objects.
+
+<br>
+
+✅ &nbsp;**Problem &nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**hard-delete**</ins> its _child objects_.
+
+
+
+
 
 
 
