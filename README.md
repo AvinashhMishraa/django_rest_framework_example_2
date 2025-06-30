@@ -4264,7 +4264,36 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >         for obj in self:
 > >             obj.hard_delete()
 > > ```
-> > This way, both single-object and bulk queryset call the <ins>same logic</ins> . And it applies instance-level hard_delete to each one. &nbsp;👈
+> > This way, both single-object and bulk queryset call the <ins>same logic</ins> . &nbsp;And it applies instance-level hard_delete to each one. &nbsp;👈
+> 
+> <br>
+> 
+> In fact this **solution-3** can be used for all types of bulk operations &nbsp;&nbsp;➜&nbsp;&nbsp; `soft_delete()` , &nbsp;`restore()` , &nbsp;`hard_delete()`
+> ```
+> class SoftDeleteQuerySet(models.QuerySet):
+> 
+>     def delete(self):
+>         # for obj in self:                                    # Method - 1
+>         #     obj.delete()
+> 
+>         return super().update(is_deleted=True)                # Method - 2
+> 
+>     def restore(self):
+> 
+>         # for obj in self:                                    # Method - 1
+>         #     obj.restore()
+> 
+>         return super().update(is_deleted=False)               # Method - 2
+>     
+>     def hard_delete(self):
+> 
+>         # for obj in self:                                    # Method - 1
+>         #     obj.hard_delete()
+> 
+>         # return super().delete()                             # Method - 2
+> 
+>         return models.QuerySet.delete(self)                   # Method - 3
+> ```
 
 <br>
 
