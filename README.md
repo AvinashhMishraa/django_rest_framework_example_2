@@ -4488,7 +4488,7 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 
 <br>
 
-<h1>Automatic Soft-Delete on <ins>Related Models</ins> (Cascade Soft Delete) 🔥</h1>
+<h1>Automatic Soft-Delete on <ins>Related Models</ins> &nbsp;(Cascade Soft Delete) 🔥</h1>
 
 <br>
 
