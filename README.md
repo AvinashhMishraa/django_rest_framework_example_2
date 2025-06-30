@@ -4518,12 +4518,8 @@ from django.db import models
 
 
 
-
-
 class SoftDeleteQuerySet(models.QuerySet):
 	●●●
-
-
 
 
 
@@ -4531,8 +4527,6 @@ class SoftDeleteManager(models.Manager):
     def get_queryset(self):
         # return super().get_queryset().filter(is_deleted=False)
         return SoftDeleteQuerySet(self.model, using=self._db).filter(is_deleted=False)
-
-
 
 
 
@@ -4560,12 +4554,8 @@ class SoftDeleteModel(models.Model):
 
 
 
-
-
 class Color(models.Model):
 	●●●
-
-
 
 
 
@@ -4594,8 +4584,6 @@ class Person(SoftDeleteModel):                                 # inherits from <
 
     def hard_delete(self):                                     # removes the person physically from the Person table
         super().delete()
-
-
 
 
 
