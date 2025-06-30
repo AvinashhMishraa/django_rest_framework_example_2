@@ -4279,14 +4279,12 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 >         return super().update(is_deleted=True)                # Method - 2
 > 
 >     def restore(self):
-> 
 >         # for obj in self:                                    # Method - 1
 >         #     obj.restore()
 > 
 >         return super().update(is_deleted=False)               # Method - 2
 >     
 >     def hard_delete(self):
-> 
 >         # for obj in self:                                    # Method - 1
 >         #     obj.hard_delete()
 > 
