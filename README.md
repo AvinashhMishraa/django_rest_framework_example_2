@@ -4560,16 +4560,16 @@ Now let's update the model file
 > 
 > 
 > 
-> class Person(SoftDeleteModel):                                 # inherits from <SoftDeleteModel> instead of <models.Model>
+> class Person(SoftDeleteModel):                               # inherits from <SoftDeleteModel> instead of <models.Model>
 >     name = models.CharField(max_length=100)
 >     age = models.IntegerField()
 >     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")
 >     is_deleted = models.BooleanField(default=False)
 > 
->     objects = SoftDeleteManager()                              # only active
->     all_objects = SoftDeleteQuerySet.as_manager()              # all (including soft-deleted)
+>     objects = SoftDeleteManager()                            # only active
+>     all_objects = SoftDeleteQuerySet.as_manager()            # all (including soft-deleted)
 > 
->     def delete(self, using=None, keep_parents=False):          # instance delete for single soft delete
+>     def delete(self, using=None, keep_parents=False):        # instance delete for single soft delete
 >         # First soft-delete child objects
 >         for address in self.addresses.all():
 >             address.delete()
@@ -4578,11 +4578,11 @@ Now let's update the model file
 >         self.is_deleted = True
 >         self.save()
 > 
->     def restore(self):                                         # restores the soft-deleted person
+>     def restore(self):                                       # restores the soft-deleted person
 >         self.is_deleted = False
 >         self.save()
 > 
->     def hard_delete(self):                                     # removes the person physically from the Person table
+>     def hard_delete(self):                                   # removes the person physically from the Person table
 >         super().delete()
 > 
 > 
