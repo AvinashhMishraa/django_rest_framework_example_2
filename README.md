@@ -3873,7 +3873,7 @@ class SoftDeleteQuerySet(models.QuerySet):
     def restore(self):
         return super().update(is_deleted=False)
 		
-	def hard_delete(self):
+    def hard_delete(self):
         return super().delete()
 
 
