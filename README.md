@@ -4273,24 +4273,24 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > class SoftDeleteQuerySet(models.QuerySet):
 > 
 >     def delete(self):
->         # for obj in self:                                    # Method - 1
+>         # for obj in self:                                  # Method - 1
 >         #     obj.delete()
 > 
->         return super().update(is_deleted=True)                # Method - 2
+>         return super().update(is_deleted=True)              # Method - 2
 > 
 >     def restore(self):
->         # for obj in self:                                    # Method - 1
+>         # for obj in self:                                  # Method - 1
 >         #     obj.restore()
 > 
->         return super().update(is_deleted=False)               # Method - 2
+>         return super().update(is_deleted=False)             # Method - 2
 > 
 >     def hard_delete(self):
->         # for obj in self:                                    # Method - 1
+>         # for obj in self:                                  # Method - 1
 >         #     obj.hard_delete()
 > 
->         # return super().delete()                             # works in API but not in ORM
+>         # return super().delete()                           # works in API but not in ORM
 > 
->         return models.QuerySet.delete(self)                   # Method - 3
+>         return models.QuerySet.delete(self)                 # Method - 2
 > ```
 
 <br>
