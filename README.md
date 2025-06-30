@@ -4265,10 +4265,10 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > >             obj.hard_delete()
 > > ```
 > > This way, both single-object and bulk queryset call the <ins>same logic</ins> . &nbsp;And it applies instance-level hard_delete to each one. &nbsp;👈
-> 
-> <br>
-> 
-> In fact this **solution-3** can be used for all types of bulk operations &nbsp;&nbsp;➜&nbsp;&nbsp; `soft_delete()` , &nbsp;`restore()` , &nbsp;`hard_delete()`
+
+<br>
+
+> In fact this <ins>**solution-3**</ins> can be used for all types of bulk operations &nbsp;&nbsp;➜&nbsp;&nbsp; `soft_delete()` , &nbsp;`restore()` , &nbsp;`hard_delete()`
 > ```
 > class SoftDeleteQuerySet(models.QuerySet):
 > 
