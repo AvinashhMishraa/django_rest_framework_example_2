@@ -4597,6 +4597,10 @@ Now let's update the model file
 
 2️⃣ &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
 
+If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
+
+If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
+
 
 
 
