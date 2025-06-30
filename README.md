@@ -4283,12 +4283,12 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 >         #     obj.restore()
 > 
 >         return super().update(is_deleted=False)               # Method - 2
->     
+> 
 >     def hard_delete(self):
 >         # for obj in self:                                    # Method - 1
 >         #     obj.hard_delete()
 > 
->         # return super().delete()                             # Method - 2
+>         # return super().delete()                             # works in API but not in ORM
 > 
 >         return models.QuerySet.delete(self)                   # Method - 3
 > ```
