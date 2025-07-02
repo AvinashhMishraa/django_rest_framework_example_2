@@ -4602,6 +4602,46 @@ Make the migration file and run it :
 
 <br>
 
+Let's now first create some addresses and link them with some persons &nbsp;:
+> ```
+> p1 = Person.objects.get(id=32)
+> addr1 = Address(person=p1, city='city1', street='street1')
+> addr2 = Address(person=p1, city='city2', street='street2')
+> 
+> addr1.save()
+> addr2.save()
+> 
+> addr1.person
+> addr1.person.name
+> addr1.person.is_deleted
+> 
+> addr2.person
+> addr2.person.name
+> addr2.person.is_deleted
+> 
+> p1.addresses
+> ```
+> 
+> <br>
+> 
+> ```
+> p2 = Person.objects.get(id=35)
+> addr3 = Address(person=p2, city='city3', street='street3')
+> 
+> addr3.save()
+> 
+> addr3.person
+> addr3.person.name
+> addr3.person.is_deleted
+> 
+> p2.addresess
+> ```
+
+
+
+
+
+
 
 
 
