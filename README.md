@@ -4614,15 +4614,15 @@ Let's now first create some addresses and link them with some persons (which are
 > addr1.save()
 > addr2.save()
 > 
-> addr1                            #  <Address: Address object (1)>
-> addr1.person                     #  <Person: Person object (32)>
-> addr1.person.name                #  'PQR'
+> addr1                           #  <Address: Address object (1)>
+> addr1.person                    #  <Person: Person object (32)>
+> addr1.person.name               #  'PQR'
 >
-> addr2                            #  <Address: Address object (2)>
-> addr2.person                     #  <Person: Person object (32)>
-> addr2.person.name                #  'Test Name 32'
+> addr2                           #  <Address: Address object (2)>
+> addr2.person                    #  <Person: Person object (32)>
+> addr2.person.name               #  'Test Name 32'
 > 
-> p1.addresses.all()               #  <SoftDeleteQuerySet [<Address: Address object (1)>, <Address: Address object (2)>]>
+> p1.addresses.all()              #  <SoftDeleteQuerySet [<Address: Address object (1)>, <Address: Address object (2)>]>
 > ```
 
 <br>
