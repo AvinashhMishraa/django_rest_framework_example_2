@@ -4496,7 +4496,7 @@ But before cascading soft-delete on child objects, let's first implement cascadi
 
 <br>
 
-**1️⃣** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**hard-delete**</ins> its _child objects_.
+**1️⃣** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you **soft-delete** a <ins>parent object</ins>, automatically **hard-delete** its <ins>child objects<ins>.
 
 <br>
 
