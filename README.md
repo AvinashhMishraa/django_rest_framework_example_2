@@ -4595,6 +4595,12 @@ Now let's update the model file
 
 <br>
 
+Make the migration file and run it :
+> `py manage.py makemigrations`
+> `py manage.py migrate`
+
+<br>
+
 **2️⃣** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you <ins>**restore**</ins> a _parent object_, automatically <ins>**restore**</ins> its _child objects_.
