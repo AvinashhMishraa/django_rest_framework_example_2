@@ -4602,9 +4602,11 @@ Make the migration file and run it &nbsp;:
 
 <br>
 
-Let's now first create some addresses and link them with some persons using `shell` &nbsp;:
+Let's now first create some addresses and link them with some persons (which are not soft-deleted) using `shell` &nbsp;:
 > ```
-> p1 = Person.objects.get(id=32)
+> p1 = Person.objects.get(id=1)
+> p1.is_deleted = False
+> p1.save()
 > 
 > addr1 = Address(person=p1, city='city1', street='street1')
 > addr2 = Address(person=p1, city='city2', street='street2')
@@ -4626,7 +4628,7 @@ Let's now first create some addresses and link them with some persons using `she
 > <br>
 > 
 > ```
-> p2 = Person.objects.get(id=35)
+> p2 = Person.objects.get(id=2)
 > 
 > addr3 = Address(person=p2, city='city3', street='street3')
 > addr3.save()
