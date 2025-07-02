@@ -4617,7 +4617,6 @@ Let's now first create some addresses and link them with some persons using `she
 > 
 > addr2.person
 > addr2.person.name
-> addr2.person.is_deleted
 > 
 > p1.addresses.all()
 > ```
@@ -4632,7 +4631,6 @@ Let's now first create some addresses and link them with some persons using `she
 > 
 > addr3.person
 > addr3.person.name
-> addr3.person.is_deleted
 > 
 > p2.addresses.all()
 > ```
