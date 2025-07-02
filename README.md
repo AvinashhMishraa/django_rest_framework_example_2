@@ -4602,7 +4602,7 @@ Make the migration file and run it :
 
 <br>
 
-Let's now first create some addresses and link them with some persons &nbsp;:
+Let's now first create some addresses and link them with some persons using `shell`&nbsp;:
 > ```
 > p1 = Person.objects.get(id=32)
 > addr1 = Address(person=p1, city='city1', street='street1')
