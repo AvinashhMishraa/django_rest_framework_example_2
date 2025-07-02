@@ -4620,7 +4620,7 @@ Let's now first create some addresses and link them with some persons (which are
 >
 > addr2                            # <Address: Address object (2)>
 > addr2.person                     # <Person: Person object (32)>
-> addr2.person.name                # 'PQR'
+> addr2.person.name                # 'Test Name 32'
 > 
 > p1.addresses.all()               # <SoftDeleteQuerySet [<Address: Address object (1)>, <Address: Address object (2)>]>
 > ```
@@ -4635,11 +4635,11 @@ Let's now first create some addresses and link them with some persons (which are
 > addr3 = Address(person=p2, city='city3', street='street3')
 > addr3.save()
 > 
-> addr3
-> addr3.person
-> addr3.person.name
+> addr3                             # <Address: Address object (3)>   
+> addr3.person                      # <Person: Person object (35)>
+> addr3.person.name                 # 'Test Name 35'
 > 
-> p2.addresses.all()
+> p2.addresses.all()                # <SoftDeleteQuerySet [<Address: Address object (3)>]>
 > ```
 
 
