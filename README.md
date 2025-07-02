@@ -4613,7 +4613,6 @@ Let's now first create some addresses and link them with some persons using `she
 > 
 > addr1.person
 > addr1.person.name
-> addr1.person.is_deleted
 > 
 > addr2.person
 > addr2.person.name
