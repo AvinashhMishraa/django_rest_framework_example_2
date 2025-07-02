@@ -4651,6 +4651,7 @@ p1                                   #  <Person: Person object (32)>
 p1.is_deleted                        #  True
 Address.objects.get(id=1)            #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
 Address.objects.get(id=2)            #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
+p1.addresses.all()                   #  <SoftDeleteQuerySet []>
 ```
 
 
