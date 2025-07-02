@@ -4645,14 +4645,14 @@ Let's now first create some addresses and link them with some persons (which are
 <br>
 
 Now let's **soft-delete** the person `p1` and see whether the related addresses `addr1` and `addr2` are <ins>**hard deleted**</ins> or not &nbsp;:
-```
-p1.delete()                          #  soft deletes the person   👉   DELETE http://localhost:8000/api/person/32/
-p1                                   #  <Person: Person object (32)>
-p1.is_deleted                        #  True
-Address.objects.get(id=1)            #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
-Address.objects.get(id=2)            #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
-p1.addresses.all()                   #  <SoftDeleteQuerySet []>
-```
+> ```
+> p1.delete()                          #  soft deletes the person   👉   DELETE http://localhost:8000/api/person/32/
+> p1                                   #  <Person: Person object (32)>
+> p1.is_deleted                        #  True
+> Address.objects.get(id=1)            #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
+> Address.objects.get(id=2)            #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
+> p1.addresses.all()                   #  <SoftDeleteQuerySet []>
+> ```
 
 
 
