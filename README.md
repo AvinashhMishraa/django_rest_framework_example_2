@@ -4616,7 +4616,7 @@ Let's now first create some addresses and link them with some persons (which are
 > 
 > addr1                           #  <Address: Address object (1)>
 > addr1.person                    #  <Person: Person object (32)>
-> addr1.person.name               #  'PQR'
+> addr1.person.name               #  'Test Name 32'
 >
 > addr2                           #  <Address: Address object (2)>
 > addr2.person                    #  <Person: Person object (32)>
