@@ -4605,15 +4605,18 @@ Make the migration file and run it &nbsp;:
 Let's now first create some addresses and link them with some persons using `shell` &nbsp;:
 > ```
 > p1 = Person.objects.get(id=32)
+> 
 > addr1 = Address(person=p1, city='city1', street='street1')
 > addr2 = Address(person=p1, city='city2', street='street2')
 > 
 > addr1.save()
 > addr2.save()
-> 
+>
+> addr1
 > addr1.person
 > addr1.person.name
-> 
+>
+> addr2
 > addr2.person
 > addr2.person.name
 > 
@@ -4624,10 +4627,11 @@ Let's now first create some addresses and link them with some persons using `she
 > 
 > ```
 > p2 = Person.objects.get(id=35)
-> addr3 = Address(person=p2, city='city3', street='street3')
 > 
+> addr3 = Address(person=p2, city='city3', street='street3')
 > addr3.save()
 > 
+> addr3
 > addr3.person
 > addr3.person.name
 > 
