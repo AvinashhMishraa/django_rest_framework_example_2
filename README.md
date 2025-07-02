@@ -4613,7 +4613,7 @@ Let's now first create some addresses and link them with some persons (which are
 > 
 > addr1.save()
 > addr2.save()
->
+> 
 > addr1
 > addr1.person
 > addr1.person.name
@@ -4629,6 +4629,8 @@ Let's now first create some addresses and link them with some persons (which are
 > 
 > ```
 > p2 = Person.objects.get(id=2)
+> p2.is_deleted = False
+> p2.save()
 > 
 > addr3 = Address(person=p2, city='city3', street='street3')
 > addr3.save()
