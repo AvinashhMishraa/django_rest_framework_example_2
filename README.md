@@ -4636,6 +4636,7 @@ Now let's **soft-delete** the person `p1` and see whether the related addresses 
 > Address.objects.get(id=2)            #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
 > p1.addresses.all()                   #  <SoftDeleteQuerySet []>
 > ```
+> 🔸 &nbsp;Yes the related addresses are hard deleted.
 
 
 
