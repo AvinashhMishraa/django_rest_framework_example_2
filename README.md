@@ -4512,7 +4512,7 @@ And you want &nbsp;**:**
 
 <br>
 
-Now let's update the model file
+Now let's update the model file &nbsp;:
 > `person_api/home/models.py`
 > ```
 > from django.db import models
@@ -4595,14 +4595,14 @@ Now let's update the model file
 
 <br>
 
-Make the migration file and run it :
+Make the migration file and run it &nbsp;:
 > `py manage.py makemigrations`
 > 
 > `py manage.py migrate`
 
 <br>
 
-Let's now first create some addresses and link them with some persons using `shell`&nbsp;:
+Let's now first create some addresses and link them with some persons using `shell` &nbsp;:
 > ```
 > p1 = Person.objects.get(id=32)
 > addr1 = Address(person=p1, city='city1', street='street1')
