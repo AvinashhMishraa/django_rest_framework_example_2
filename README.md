@@ -4620,6 +4620,7 @@ Let's now first create some addresses and link them with some persons using `she
 > addr2.person.is_deleted
 > 
 > p1.addresses
+> p1.addresses.all()
 > ```
 > 
 > <br>
@@ -4635,6 +4636,7 @@ Let's now first create some addresses and link them with some persons using `she
 > addr3.person.is_deleted
 > 
 > p2.addresess
+> p2.addresses.all()
 > ```
 
 
@@ -4645,7 +4647,7 @@ Let's now first create some addresses and link them with some persons using `she
 
 
 
-<br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br>
 
 **2️⃣** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
 
