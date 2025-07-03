@@ -4722,17 +4722,17 @@ Few more examples on **ORM** &nbsp;**:**
 <br>
 
 <h3>🧠 &nbsp;Notes</h3>
-- The related_name='addresses' on Address.person is **required** for auto-cascade.
+∎ &nbsp;The related_name='addresses' on Address.person is **required** for auto-cascade.
 
-- This version is **production-ready** — DRY, scalable, and highly reusable.
+∎ &nbsp;This version is **production-ready** — DRY, scalable, and highly reusable.
 
-- With this refactored architecture, you get:
+∎ &nbsp;With this refactored architecture, you get:
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Global cascade soft delete        <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Clean abstraction                 <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Scalable to N models              <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;No repetitive model overrides     <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;REST API-ready for production use <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Global cascade soft delete        <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Clean abstraction                 <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Scalable to N models              <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;No repetitive model overrides     <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;REST API-ready for production use <br>
 
 
 
