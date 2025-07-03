@@ -4608,6 +4608,8 @@ Let's now first create some addresses and link them with a random person (which 
 > p1.is_deleted = False
 > p1.save()
 > 
+> p1.addresses.all()              # <SoftDeleteQuerySet []>
+> 
 > addr1 = Address(person=p1, city='city1', street='street1')
 > addr1.save()
 > 
