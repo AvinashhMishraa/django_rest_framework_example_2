@@ -4679,9 +4679,9 @@ Now let's see what happens to the related addresses of a person when he is **sof
 > > ```
 > > 
 > > ```
-> > Person.all_objects.get(id=45).is_deleted                      # True                          -     soft deleted
-> > Address.all_objects.get(id=26).is_deleted                     # True                          -     soft deleted
-> > Address.all_objects.get(id=27).is_deleted                     # True                          -     soft deleted
+> > Person.all_objects.get(id=45).is_deleted                      # True                              # soft deleted
+> > Address.all_objects.get(id=26).is_deleted                     # True                              # soft deleted
+> > Address.all_objects.get(id=27).is_deleted                     # True                              # soft deleted
 > > ```
 > 
 > <br>
@@ -4691,9 +4691,9 @@ Now let's see what happens to the related addresses of a person when he is **sof
 > > ```
 > >
 > > ```
-> > Person.all_objects.get(id=45).is_deleted                      # False                         -     restored 
-> > Address.all_objects.get(id=26).is_deleted                     # False                         -     restored
-> > Address.all_objects.get(id=27).is_deleted                     # False                         -     restored
+> > Person.all_objects.get(id=45).is_deleted                      # False                             # restored 
+> > Address.all_objects.get(id=26).is_deleted                     # False                             # restored
+> > Address.all_objects.get(id=27).is_deleted                     # False                             # restored
 > > ```
 > 
 > <br>
@@ -4703,9 +4703,9 @@ Now let's see what happens to the related addresses of a person when he is **sof
 > > ```
 > > 
 > > ```
-> > Person.all_objects.get(id=45).is_deleted                      # Person.DoesNotExit error      -     hard deleted
-> > Address.all_objects.get(id=26).is_deleted                     # Address.DoesNotExit error     -     hard deleted
-> > Address.all_objects.get(id=27).is_deleted                     # Address.DoesNotExit error     -     hard deleted
+> > Person.all_objects.get(id=45).is_deleted                      # Person.DoesNotExit error          # hard deleted
+> > Address.all_objects.get(id=26).is_deleted                     # Address.DoesNotExit error         # hard deleted
+> > Address.all_objects.get(id=27).is_deleted                     # Address.DoesNotExit error         # hard deleted
 > > ```
 
 
