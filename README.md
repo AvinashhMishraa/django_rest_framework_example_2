@@ -4708,18 +4708,13 @@ Few more examples on **ORM**
 > ```
 > Person.objects.get(id=1).delete()                               # Soft delete person (and their addresses)
 > 
-> 
 > Person.all_objects.get(id=1).restore()                          # Restore person (and their addresses)
-> 
 > 
 > Person.all_objects.get(id=1).hard_delete()                      # Hard delete person (and their addresses)
 > 
-> 
 > Person.objects.filter(age__gte=60).delete()                     # Bulk soft delete persons (and their addresses)
 > 
-> 
 > Person.all_objects.filter(id__in=[2, 3]).restore()              # Restore multiple persons (and their addresses)
-> 
 > 
 > Person.all_objects.filter(age__lt=20).hard_delete()             # Hard delete multiple persons (and their addresses)
 > ```
