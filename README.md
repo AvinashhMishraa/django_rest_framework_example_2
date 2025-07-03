@@ -4521,8 +4521,8 @@ And you want &nbsp;**:**
 > ∎ &nbsp;A **reusable base** class (`SoftDeleteModel`) for all models.  <br>
 >
 > ∎ &nbsp;<ins>**soft deleting**</ins> a `Person` automatically <ins>**soft deletes**</ins> all it's related `Address` records. &nbsp;👈 <br>
-> &nbsp;&nbsp;&nbsp;<ins>**restoring**</ins> a `Person` automatically <ins>**restores**</ins> all it's related `Address` records. &nbsp;👈 <br>
-> &nbsp;&nbsp;&nbsp;<ins>**hard deleting**</ins> a `Person` automatically <ins>**hard deletes**</ins> all it's related `Address` records. &nbsp;👈
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>**restoring**</ins> a `Person` automatically <ins>**restores**</ins> all it's related `Address` records. &nbsp;👈 <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<ins>**hard deleting**</ins> a `Person` automatically <ins>**hard deletes**</ins> all it's related `Address` records. &nbsp;👈
 
 <br>
 
