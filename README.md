@@ -4673,7 +4673,7 @@ Now let's see what happens to the related addresses of a person when he is **sof
 > > ```
 > > 
 > > ```
-> > Person.all_objects.get(id=45).is_deleted                      # True                             # soft deleted
+> > Person.all_objects.get(id=45).is_deleted                     # True                              # soft deleted
 > > Address.all_objects.get(id=1).is_deleted                     # True                              # soft deleted
 > > Address.all_objects.get(id=2).is_deleted                     # True                              # soft deleted
 > > ```
