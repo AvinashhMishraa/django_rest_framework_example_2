@@ -4609,9 +4609,9 @@ Let's now first create some addresses and link them with some persons (which are
 > p1.save()
 > 
 > addr1 = Address(person=p1, city='city1', street='street1')
-> addr2 = Address(person=p1, city='city2', street='street2')
+> > addr1.save()
 > 
-> addr1.save()
+> addr2 = Address(person=p1, city='city2', street='street2')
 > addr2.save()
 > 
 > addr1                           #  <Address: Address object (1)>
