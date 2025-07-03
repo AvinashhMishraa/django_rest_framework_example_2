@@ -4672,7 +4672,28 @@ Let's now first create some addresses and link them with a random person (which 
 > Address.all_objects.get(id=2).is_deleted                        # False 
 > ```
 
+<br>
 
+Let's now first create some addresses and link them with a random person (which is not soft-deleted) using `shell`  &nbsp;**:**
+> ```
+> p1 = Person.all_objects.get(id=45)
+> p1.is_deleted = False
+> p1.save()
+> 
+> 
+> addr1 = Address(person=p1, city='city1', street='street1')
+> addr1.save()
+> addr1.id                                                        # 1
+> 
+> 
+> addr2 = Address(person=p1, city='city2', street='street2') 
+> addr2.save()
+> addr2.id                                                        # 2
+> 
+> 
+> Person.all_objects.get(id=45).is_deleted                        # False 
+> Address.all_objects.get(id=1).is_deleted                        # False 
+> Address.all_objects.get(id=2).is_deleted                        # False 
 
 
 
