@@ -4609,7 +4609,7 @@ Let's now first create some addresses and link them with a random person (which 
 > p1.save()
 > 
 > addr1 = Address(person=p1, city='city1', street='street1')
-> > addr1.save()
+> addr1.save()
 > 
 > addr2 = Address(person=p1, city='city2', street='street2')
 > addr2.save()
