@@ -4703,7 +4703,6 @@ Now let's see what happens to the related addresses of a person when he is **sof
 > > ```
 > > <br>
 > > 
-> > verification :
 > > ```
 > > Person.all_objects.get(id=45).is_deleted                      # True                          -     soft deleted
 > > Address.all_objects.get(id=26).is_deleted                     # True                          -     soft deleted
@@ -4717,7 +4716,6 @@ Now let's see what happens to the related addresses of a person when he is **sof
 > > ```
 > > <br>
 > >
-> > verification :
 > > ```
 > > Person.all_objects.get(id=45).is_deleted                      # False                         -     restored 
 > > Address.all_objects.get(id=26).is_deleted                     # False                         -     restored
