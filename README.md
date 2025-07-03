@@ -4723,11 +4723,11 @@ Few more examples on **ORM** &nbsp;**:**
 
 <h3>🧠 &nbsp;Notes</h3>
 
-✅ &nbsp;The related_name='addresses' on Address.person is **required** for auto-cascade.
+🔹 &nbsp;The related_name='addresses' on Address.person is **required** for auto-cascade.
 
-✅ &nbsp;This version is **production-ready** — DRY, scalable, and highly reusable.
+🔹 &nbsp;This version is **production-ready** — DRY, scalable, and highly reusable.
 
-✅ &nbsp;With this refactored architecture, you get:
+🔹 &nbsp;With this refactored architecture, you get:
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ∎ &nbsp;Global cascade soft delete        <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ∎ &nbsp;Clean abstraction                 <br>
