@@ -4704,7 +4704,7 @@ Now let's see what happens to the related addresses of a person when he is **sof
 
 <br>
 
-Few more examples on **ORM**
+Few more examples on **ORM** &nbsp;**:**
 > ```
 > Person.objects.get(id=1).delete()                               # Soft delete person (and their addresses)
 > 
@@ -4719,8 +4719,20 @@ Few more examples on **ORM**
 > Person.all_objects.filter(age__lt=20).hard_delete()             # Hard delete multiple persons (and their addresses)
 > ```
 
+<br>
 
+<h3>🧠 &nbsp;Notes</h3>
+- The related_name='addresses' on Address.person is **required** for auto-cascade.
 
+- This version is **production-ready** — DRY, scalable, and highly reusable.
+
+- With this refactored architecture, you get:
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Global cascade soft delete
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Clean abstraction
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;Scalable to N models
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;No repetitive model overrides
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ✅ &nbsp;REST API-ready for production use
 
 
 
