@@ -4503,7 +4503,11 @@ But before cascading soft-delete on child objects, let's first implement cascadi
 
 <br>
 
-**1️⃣** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you **soft-delete** a <ins>parent object</ins>, automatically **hard-delete** its <ins>child objects<ins>.
+**🔶** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you **restore** a <ins>parent object</ins>, automatically **restore** its <ins>child objects</ins>.
+
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you **hard-delete** a <ins>parent object</ins>, automatically **hard-delete** its <ins>child objects</ins>.
 
 <br>
 
@@ -4515,7 +4519,10 @@ Consider the following two models &nbsp;**:**
 
 And you want &nbsp;**:**
 > ∎ &nbsp;A **reusable base** class (`SoftDeleteModel`) for all models.  <br>
-> ∎ &nbsp;If a `Person` is <ins>**soft-deleted**</ins> , automatically <ins>**hard-delete**</ins> all related `Address` records. &nbsp;👈
+>
+> ∎ &nbsp;<ins>**soft deleting**</ins> a `Person` automatically <ins>**soft deletes**</ins> all it's related `Address` records. &nbsp;👈 <br>
+> &nbsp;&nbsp;&nbsp;<ins>**restoring**</ins> a `Person` automatically <ins>**restores**</ins> all it's related `Address` records. &nbsp;👈 <br>
+> &nbsp;&nbsp;&nbsp;<ins>**hard deleting**</ins> a `Person` automatically <ins>**hard deletes**</ins> all it's related `Address` records. &nbsp;👈
 
 <br>
 
@@ -4638,16 +4645,7 @@ Let's now first create some addresses and link them with a random person (which 
 
 <br>
 
-Now let's **soft-delete** the person `p1` and see whether the related addresses `addr1` and `addr2` are <ins>**hard deleted**</ins> or not &nbsp;:
-> ```
-> p1.delete()                          #  soft deletes the person   👉   DELETE http://localhost:8000/api/person/32/
-> p1                                   #  <Person: Person object (32)>
-> p1.is_deleted                        #  True  ➜  soft deleted
-> Address.all_objects.get(id=1)        #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
-> Address.all_objects.get(id=2)        #  ❌ home.models.Address.DoesNotExist: Address matching query does not exist.
-> p1.addresses.all()                   #  <SoftDeleteQuerySet []>
-> ```
-> 🔸 &nbsp;**Yes the related addresses are hard deleted.**
+
 
 
 
@@ -4659,11 +4657,7 @@ Now let's **soft-delete** the person `p1` and see whether the related addresses 
 
 <br><br><br><br><br><br><br><br>
 
-**2️⃣** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you **restore** a <ins>parent object</ins>, automatically **restore** its <ins>child objects</ins>.
-
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you **hard-delete** a <ins>parent object</ins>, automatically **hard-delete** its <ins>child objects</ins>.
 
 
 
