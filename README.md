@@ -4695,7 +4695,47 @@ Let's now first create some addresses and link them with a random person (which 
 > Address.all_objects.get(id=1).is_deleted                        # False 
 > Address.all_objects.get(id=2).is_deleted                        # False 
 
+<br>
 
+Now let's see what happens to the related addresses of a person when he is **soft-deleted**, then **restored** and then **hard-deleted** &nbsp;**:**
+> > ```
+> > p1.delete()
+> > ```
+> > <br>
+> > 
+> > verification :
+> > ```
+> > Person.all_objects.get(id=45).is_deleted                      # True                          -     soft deleted
+> > Address.all_objects.get(id=26).is_deleted                     # True                          -     soft deleted
+> > Address.all_objects.get(id=27).is_deleted                     # True                          -     soft deleted
+> > ```
+> 
+> <br>
+> 
+> > ```
+> > p1.restore()
+> > ```
+> > <br>
+> >
+> > verification :
+> > ```
+> > Person.all_objects.get(id=45).is_deleted                      # False                         -     restored 
+> > Address.all_objects.get(id=26).is_deleted                     # False                         -     restored
+> > Address.all_objects.get(id=27).is_deleted                     # False                         -     restored
+> > ```
+> 
+> <br>
+> 
+> > ```
+> > p1.hard_delete()
+> > ```
+> > <br>
+> > 
+> > ```
+> > Person.all_objects.get(id=45).is_deleted                      # Person.DoesNotExit error      -     hard deleted
+> > Address.all_objects.get(id=26).is_deleted                     # Address.DoesNotExit error     -     hard deleted
+> > Address.all_objects.get(id=27).is_deleted                     # Address.DoesNotExit error     -     hard deleted
+> > ```
 
 
 
