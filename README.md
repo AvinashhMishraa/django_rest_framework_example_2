@@ -4617,10 +4617,12 @@ Let's now first create some addresses and link them with a random person (which 
 > addr1                           #  <Address: Address object (1)>
 > addr1.person                    #  <Person: Person object (32)>
 > addr1.person.name               #  'Test Name 32'
+> addr1.person.is_deleted         #  False
 >
 > addr2                           #  <Address: Address object (2)>
 > addr2.person                    #  <Person: Person object (32)>
 > addr2.person.name               #  'Test Name 32'
+> addr2.person.is_deleted         #  False
 > 
 > p1.addresses.all()              #  <SoftDeleteQuerySet [<Address: Address object (1)>, <Address: Address object (2)>]>
 > ```
