@@ -4534,7 +4534,6 @@ Now let's update the model file &nbsp;:
 > 
 > 
 > 
-> 
 > class SoftDeleteQuerySet(models.QuerySet):
 >     def delete(self):
 >         for obj in self:
@@ -4550,14 +4549,12 @@ Now let's update the model file &nbsp;:
 > 
 > 
 > 
-> 
 > class SoftDeleteManager(models.Manager):
 >     def get_queryset(self):
 >         return SoftDeleteQuerySet(self.model, using=self._db).filter(is_deleted=False)
 > 
 >     def all_with_deleted(self):
 >         return SoftDeleteQuerySet(self.model, using=self._db)
-> 
 > 
 > 
 > 
@@ -4606,14 +4603,12 @@ Now let's update the model file &nbsp;:
 > 
 > 
 > 
-> 
 > class Color(models.Model):
 > 
 >     color_name = models.CharField(max_length=100)
 > 
 >     def __str__(self) -> str:
 >         return self.color_name
-> 
 > 
 > 
 > 
@@ -4624,7 +4619,6 @@ Now let's update the model file &nbsp;:
 > 
 >     objects = SoftDeleteManager()                           # only active
 >     all_objects = SoftDeleteQuerySet.as_manager()           # all (including soft-deleted)
-> 
 > 
 > 
 > 
