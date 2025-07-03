@@ -4667,7 +4667,7 @@ Let's now first create some addresses and link them with a random person (which 
 
 <br>
 
-Now let's see what happens to the related addresses of a person when he is **soft-deleted**, then **restored** and then **hard-deleted** &nbsp;**:**
+Now let's see what happens to the related addresses of a person when he is <ins>**soft-deleted**</ins>, then <ins>**restored**</ins> and then <ins>**hard-deleted**</ins> &nbsp;**:**
 > > ```
 > > p1.delete()
 > > ```
