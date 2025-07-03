@@ -3503,6 +3503,13 @@ After soft delete :
 person = Person.objects.get(id=1)
 person.is_deleted = True
 person.save()
+
+
+p1, p2 = Person.all_objects.filter(id__in=[1, 2])
+p1.is_deleted = True
+p2.is_deleted = True
+p1.save()
+p2.save()
 ```
 
 Now :
