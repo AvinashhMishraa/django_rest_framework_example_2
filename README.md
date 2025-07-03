@@ -4604,7 +4604,7 @@ Make the migration file and run it &nbsp;:
 
 Let's now first create some addresses and link them with some persons (which are not soft-deleted) using `shell` &nbsp;:
 > ```
-> p1 = Person.objects.get(id=32)
+> p1 = Person.all_objects.get(id=32)
 > p1.is_deleted = False
 > p1.save()
 > 
