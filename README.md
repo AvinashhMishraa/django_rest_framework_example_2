@@ -2789,7 +2789,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > >         queryset = self.queryset
 > >         if search:
 > >             queryset = queryset.filter(name__startswith=search)
-> >         serializer = self.serializer_class(queryset, many=True)           # PersonSerializer(queryset, many=True)
+> >         serializer = self.serializer_class(queryset, many=True)       # PersonSerializer(queryset, many=True)
 > >         return Response({'status': 200, 'data': serializer.data})
 > > ```
 > >
