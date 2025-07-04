@@ -4311,8 +4311,8 @@ For any service layer, scheduled tasks, admin panels &nbsp;**:**
 > 
 > <br>
 > 
-> **🔶 &nbsp;<ins>Solution 3</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; If you want both <ins>instance-level</ins> & <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` method &nbsp;:**
-> 
+> **🔶 &nbsp;<ins>Solution 3</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; If you want both <ins>instance-level</ins> & <ins>queryset-level</ins> deletion routes through your model’s `hard_delete()` method**
+>
 > **➀** &nbsp;Define instance-level `hard_delete()` on model (as you already have).
 >
 > **➁** &nbsp;Define queryset-level `hard_delete()` like this &nbsp;**:** 
