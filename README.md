@@ -3228,7 +3228,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > <br>
 > 
 > > ```
-> > qs = Person.all_objects.filter(id__in=[62, 63, 66]).values('id', 'name')
+> > qs = Person.all_objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
 > > list(qs)
 > > ```
 > >
