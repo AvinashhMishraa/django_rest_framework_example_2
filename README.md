@@ -4772,7 +4772,7 @@ Few more examples on **ORM** &nbsp;**:**
 
 <br>
 
-✅ &nbsp;<ins>Verification &nbsp;through &nbsp;**API**</ins>
+<h4>✅ &nbsp;<ins>Verification &nbsp;through &nbsp;API</ins></h4>
 
 <br>
 
