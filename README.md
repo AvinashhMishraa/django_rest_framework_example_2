@@ -4714,6 +4714,10 @@ Let's now first create some addresses and link them with a random person (which 
 
 <br>
 
+✅ &nbsp;**ORM**
+
+<br>
+
 Now let's see what happens to the related addresses of a person when he is <ins>**soft-deleted**</ins>, then <ins>**restored**</ins> and then <ins>**hard-deleted**</ins> &nbsp;**:**
 > > ```
 > > p1.delete()
@@ -4767,6 +4771,16 @@ Few more examples on **ORM** &nbsp;**:**
 > ```
 
 <br>
+
+✅ &nbsp;**ORM**
+
+Now that you have verified this cascading effect of **soft delete**, **restore** and **hard delete** on related models at both instance and bulk level on Django Shell (ORM), let's try the same through <ins>**API**</ins> call also. 
+
+
+But instead of verifying it on an instance, let's verify cascading effect of 
+- **bulk soft delete** &nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-soft-delete/`
+- **bulk restore**     &nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-restore/`
+- **bulk hard delete** &nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-hard-delete/`
 
 
 
