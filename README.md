@@ -4550,6 +4550,10 @@ But before cascading soft-delete on child objects, let's first implement cascadi
 
 <br>
 
+<h3>✅ &nbsp;Problem &nbsp;Statement</h3>
+
+<br>
+
 **🔶** &nbsp;**Problem &nbsp;&nbsp;➜** &nbsp; If you <ins>**soft-delete**</ins> a _parent object_, automatically <ins>**soft-delete**</ins> its _child objects_.
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**➜**&nbsp;&nbsp; If you **restore** a <ins>parent object</ins>, automatically **restore** its <ins>child objects</ins>.
