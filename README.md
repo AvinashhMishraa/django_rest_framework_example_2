@@ -4789,7 +4789,56 @@ But instead of verifying it on an instance, let's verify cascading effect of
 - **bulk restore**     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through &nbsp;&nbsp;**API** &nbsp;&nbsp;`/api/person/bulk-restore/`
 - **bulk hard delete** &nbsp;&nbsp;through &nbsp;&nbsp;**API** &nbsp;&nbsp;`/api/person/bulk-hard-delete/`
 
+<br>
 
+Let's now first create some addresses and link them with some random persons (which are not soft-deleted) using `shell` &nbsp;**:**
+
+> ```
+> p1, p2 = Person.all_objects.filter(id__in = [43, 48])
+> 
+> 
+> p1           ➜          <Person: Person object (43)>
+> p2           ➜          <Person: Person object (48)>
+> ```
+> 
+> <br>
+> 
+> > ```
+> > list(Person.all_objects.filter(id__in = [43, 48]).values("id", "is_deleted"))
+> > ```
+> > **OUTPUT** &nbsp;➜&nbsp; `[{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]`
+> 
+> <br>
+> 
+> ```
+> p2.is_deleted = False
+> p2.save()
+> ```
+> 
+> <br>
+> 
+> ```
+> addr = Address(person=p1, city='test city 3', street='test street 3')
+> addr.save()
+> addr.id                                                                     # 3
+> 
+> 
+> addr = Address(person=p1, city='test city 4', street='test street 4')
+> addr.save()
+> addr.id                                                                     # 4
+> 
+> 
+> addr = Address(person=p2, city='test city 5', street='test street 5')
+> addr.save()
+> addr.id                                                                     # 5
+> ```
+> 
+> <br>
+> 
+> ```
+> list(p1.addresses.all())               # [<Address: street3, city3>, <Address: street4, city4>]
+> 
+> list(p2.addresses.all())               # [<Address: street5, city5>]
 
 
 
