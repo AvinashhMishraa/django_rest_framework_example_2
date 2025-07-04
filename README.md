@@ -4778,11 +4778,12 @@ Few more examples on **ORM** &nbsp;**:**
 
 Now that you have verified this cascading effect of **soft delete**, **restore** and **hard delete** on related models at both instance and bulk level on Django Shell (ORM), let's try the same through <ins>**API**</ins> call also. 
 
+<br>
 
 But instead of verifying it on an instance, let's verify cascading effect of 
-- **bulk soft delete** &nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-soft-delete/`
-- **bulk restore**     &nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-restore/`
-- **bulk hard delete** &nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-hard-delete/`
+- **bulk soft delete** &nbsp;&nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-soft-delete/`
+- **bulk restore**     &nbsp;&nbsp;&nbsp;&nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-restore/`
+- **bulk hard delete** &nbsp;&nbsp;through &nbsp;**API** &nbsp;`/api/person/bulk-hard-delete/`
 
 
 
