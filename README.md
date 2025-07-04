@@ -4714,7 +4714,7 @@ Let's now first create some addresses and link them with a random person (which 
 
 <br>
 
-✅ &nbsp;verification through **ORM**
+✅ &nbsp;<ins>Verification through **ORM**</ins>
 
 <br>
 
@@ -4772,7 +4772,7 @@ Few more examples on **ORM** &nbsp;**:**
 
 <br>
 
-✅ &nbsp;verification through **API**
+✅ &nbsp;<ins>Verification through **API**</ins>
 
 Now that you have verified this cascading effect of **soft delete**, **restore** and **hard delete** on related models at both instance and bulk level on Django Shell (ORM), let's try the same through <ins>**API**</ins> call also. 
 
