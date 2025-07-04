@@ -3220,7 +3220,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 🔸 &nbsp;<ins>**Option 1**</ins> &nbsp;➜ &nbsp;Using Django's `.values()`
 > 
 > > ```
-> > Person.all_objects.filter(id__in=[62, 63, 66]).values('id', 'name')
+> > Person.all_objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
 > > ```
 > > 
 > > `<SoftDeleteQuerySet [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]>`
@@ -3239,7 +3239,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 🔸 &nbsp;<ins>**Option 2**</ins> &nbsp;➜ &nbsp;List of Tuples (id, name) using `list()` function and `.values_list()` method
 > 
 > > ```
-> > list(Person.all_objects.filter(id__in=[62, 63, 66]).values_list('id', 'name'))
+> > list(Person.all_objects.filter(id__in=[62, 63, 66, 70]).values_list('id', 'name'))
 > > ```
 > > 
 > > `[(62, 'K2'), (63, 'K3'), (66, 'K6')]`
@@ -3249,7 +3249,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 🔸 &nbsp;<ins>**Option 3**</ins> &nbsp;➜ &nbsp;List of Strings (formatted) using list comprehenssion
 > 
 > > ```
-> > [f"{p.id}: {p.name}" for p in Person.all_objects.filter(id__in=[62, 63, 66])]
+> > [f"{p.id}: {p.name}" for p in Person.all_objects.filter(id__in=[62, 63, 66, 70])]
 > > ```
 > > 
 > > `['62: K2', '63: K3', '66: K6']`
