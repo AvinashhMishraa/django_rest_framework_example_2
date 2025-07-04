@@ -3217,7 +3217,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 
 > <br>
 > 
-> 🔹 &nbsp;**Option 1: &nbsp;Using** <ins>Django's</ins> `.values()`
+> ➊ &nbsp;**Option 1: &nbsp;Using** <ins>Django's</ins> `.values()`
 > 
 > > ```
 > > Person.all_objects.filter(id__in=[62, 63, 66]).values('id', 'name')
@@ -3236,7 +3236,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 
 > <br>
 > 
-> 🔹 &nbsp;**Option 2: &nbsp;<ins>List of Tuples (id, name)</ins> using `list()` function and `.values_list()` method**
+> ➋ &nbsp;**Option 2: &nbsp;<ins>List of Tuples (id, name)</ins> using `list()` function and `.values_list()` method**
 > 
 > > ```
 > > list(Person.all_objects.filter(id__in=[62, 63, 66]).values_list('id', 'name'))
@@ -3246,7 +3246,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 
 > <br>
 > 
-> 🔹 &nbsp;**Option 3: <ins>List of Strings (formatted)</ins> using <ins>list comprehenssion</ins>**
+> ➌ &nbsp;**Option 3: <ins>List of Strings (formatted)</ins> using <ins>list comprehenssion</ins>**
 > 
 > > ```
 > > [f"{p.id}: {p.name}" for p in Person.all_objects.filter(id__in=[62, 63, 66])]
