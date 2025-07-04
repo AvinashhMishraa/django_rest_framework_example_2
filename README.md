@@ -4695,7 +4695,7 @@ Make the migration file and run it &nbsp;:
 
 <br>
 
-Let's now first create some addresses and link them with a random person (which is not soft-deleted) using `shell`  &nbsp;**:**
+Let's now first create some <ins>addresses</ins> and link them with some random <ins>persons</ins> (which are not soft-deleted) using `shell` &nbsp;**:**
 > ```
 > p1 = Person.all_objects.get(id=45)
 > p1.is_deleted = False
@@ -4791,8 +4791,7 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 <br>
 
-Let's now first create some addresses and link them with some random persons (which are not soft-deleted) using `shell` &nbsp;**:**
-
+Let's now first create some <ins>addresses</ins> and link them with some random <ins>persons</ins> (which are not soft-deleted) using `shell` &nbsp;**:**
 > ```
 > p1, p2 = Person.all_objects.filter(id__in = [43, 48])
 > 
