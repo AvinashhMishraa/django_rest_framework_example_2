@@ -4839,6 +4839,10 @@ Let's now first create some <ins>addresses</ins> and link them with some random 
 > 
 > list(p2.addresses.all())               # [<Address: street5, city5>]
 
+<br>
+
+
+`POST` &nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;`{"ids": [43, 48]}`
 
 
 
