@@ -4714,7 +4714,7 @@ Let's now first create some addresses and link them with a random person (which 
 
 <br>
 
-✅ &nbsp;<ins>Verification &nbsp;through &nbsp;**ORM**</ins>
+<h3>✅ &nbsp;Verification &nbsp;through &nbsp;<ins>ORM</ins></h3>
 
 <br>
 
@@ -4772,7 +4772,7 @@ Few more examples on **ORM** &nbsp;**:**
 
 <br>
 
-<h3>✅ &nbsp;<ins>Verification &nbsp;through &nbsp;API</ins></h3>
+<h3>✅ &nbsp;Verification &nbsp;through &nbsp;<ins>API</ins></h3>
 
 <br>
 
