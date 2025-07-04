@@ -3209,6 +3209,58 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
+> <h4>✅ &nbsp;Practice Example</h4>
+> 
+> <br>
+> 
+> 🔶 &nbsp;Collect **names** of **persons** with a list of specific `ids`
+> 
+> <br>
+>
+> 🔸 &nbsp;**Option 1: &nbsp;Using** <ins>Django's</ins> `.values()`
+> 
+> > > ```
+> > > Person.all_objects.filter(id__in=[62, 63, 66]).values('id', 'name')
+> > > ```
+> > > 
+> > > `<SoftDeleteQuerySet [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]>`
+> > 
+> > <br>
+> > 
+> > > ```
+> > > qs = Person.all_objects.filter(id__in=[62, 63, 66]).values('id', 'name')
+> > > list(qs)
+> > > ```
+> > >
+> > > [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]
+> 
+> <br>
+> 
+> 🔸 &nbsp;**Option 2: &nbsp;<ins>List of Tuples (id, name)</ins> using `list()` function and `.values_list()` method**
+> 
+> > ```
+> > list(Person.all_objects.filter(id__in=[62, 63, 66]).values_list('id', 'name'))
+> > ```
+> > 
+> > `[(62, 'K2'), (63, 'K3'), (66, 'K6')]`
+> 
+> <br>
+> 
+> 🔸 &nbsp;**Option 3: <ins>List of Strings (formatted)</ins> using <ins>list comprehenssion</ins>**
+> 
+> > ```
+> > [f"{p.id}: {p.name}" for p in Person.all_objects.filter(id__in=[62, 63, 66])]
+> > ```
+> > 
+> > `['62: K2', '63: K3', '66: K6']`
+
+
+
+
+
+
+<br>
+
 <h3>⬛ &nbsp;Filterset &nbsp;class</h3>
 
 <br>
