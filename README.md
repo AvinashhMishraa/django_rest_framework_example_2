@@ -4806,7 +4806,7 @@ Let's now first create some addresses and link them with some random persons (wh
 > > ```
 > > list(Person.all_objects.filter(id__in = [43, 48]).values("id", "is_deleted"))
 > > ```
-> > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;➜&nbsp; `[{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]`
+> > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]`
 > 
 > <br>
 > 
