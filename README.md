@@ -4783,7 +4783,7 @@ Now that you have verified this cascading effect of **soft delete**, **restore**
 But instead of verifying it on an instance, let's verify cascading effect of 
 - **bulk soft delete** &nbsp;&nbsp;&nbsp;through &nbsp;&nbsp;**API** &nbsp;&nbsp;`/api/person/bulk-soft-delete/`
 - **bulk restore**     &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;through &nbsp;&nbsp;**API** &nbsp;&nbsp;`/api/person/bulk-restore/`
-- **bulk hard delete** &nbsp;&nbsp;through &nbsp;&nbsp;**API** &Nbsp;&nbsp;`/api/person/bulk-hard-delete/`
+- **bulk hard delete** &nbsp;&nbsp;through &nbsp;&nbsp;**API** &nbsp;&nbsp;`/api/person/bulk-hard-delete/`
 
 
 
