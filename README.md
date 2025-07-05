@@ -4841,12 +4841,12 @@ Let's now first create some <ins>addresses</ins> and link them with some random 
 
 <br>
 
-`POST` &nbsp;&nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;&nbsp;`{"ids": [43, 48]}`
-```
-{
-    "message": "Soft deleted successfully."
-}
-```
+> `POST` &nbsp;&nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;&nbsp;`{"ids": [43, 48]}`
+> ```
+> {
+>     "message": "Soft deleted successfully."
+> }
+> ```
 
 <br>
 
