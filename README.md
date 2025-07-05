@@ -4842,7 +4842,7 @@ Let's now first create some <ins>addresses</ins> and link them with some random 
 <br>
 
 
-`POST` &nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;`{"ids": [43, 48]}`
+`POST` &nbsp;&nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;&nbsp;`{"ids": [43, 48]}`
 
 
 
