@@ -2275,9 +2275,9 @@ A mixin : <br>
 
 <h3>✅ &nbsp;Mixin Example in Django</h3>
 
-Django uses **mixins** heavily for views to add common functionality. It can combine behaviors by mixing them together.
+<ins>Django</ins> uses **mixins** heavily for views to add common functionality. It can combine behaviors by mixing them together.
 
-Django Rest Framework provides us with the **5 built-in mixins** to handle the common functionalities in our class-based views so that we do not have the repeat the code across the application.
+<ins>Django Rest Framework</ins> provides us with the **5 built-in mixins** to handle the common functionalities in our class-based views so that we do not have the repeat the code across the application.
 
 Here is how you can build your DRF view using Mixins :
 
