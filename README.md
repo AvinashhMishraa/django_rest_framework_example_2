@@ -4962,7 +4962,16 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 **✅ &nbsp;1. &nbsp;Serializers &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/home/serializers.py`
 
+```
+from rest_framework import serializers
+from .models import Address
 
+
+class AddressSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Address
+        fields = ['id', 'person', 'city', 'street', 'is_deleted']
+```
 
 
 
