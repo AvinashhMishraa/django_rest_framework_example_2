@@ -4862,7 +4862,7 @@ Let's now first create some <ins>addresses</ins> and link them with some random 
 > > > ```
 > > > list(Address.all_objects.filter(id__in = [3, 4, 5]).values("id", "is_deleted"))
 > > > ```
-> > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 3, 'is_deleted': True}, {'id': 4, 'is_deleted': True}, {'id': 5, 'is_deleted': True}]`
+> > > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 3, 'is_deleted': True}, {'id': 4, 'is_deleted': True}, {'id': 5, 'is_deleted': True}]`
 
 
 
