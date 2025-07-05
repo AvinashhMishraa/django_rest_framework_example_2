@@ -4841,6 +4841,7 @@ Let's now first create some <ins>addresses</ins> and link them with some random 
 
 <br>
 
+Now let's see what happens to the related addresses when some persons are <ins>**bulk soft-deleted**</ins> &nbsp;**:** &nbsp;⭐
 > > `POST` &nbsp;&nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;&nbsp;`{"ids": [43, 48]}`
 > > ```
 > > {
