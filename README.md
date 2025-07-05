@@ -4841,28 +4841,28 @@ Let's now first create some <ins>addresses</ins> and link them with some random 
 
 <br>
 
-> `POST` &nbsp;&nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;&nbsp;`{"ids": [43, 48]}`
-> ```
-> {
->     "message": "Soft deleted successfully."
-> }
-> ```
-
-<br>
-
-Now let's verify it through `shell` &nbsp;**:**
-
+> > `POST` &nbsp;&nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;&nbsp;`{"ids": [43, 48]}`
 > > ```
-> > list(Person.all_objects.filter(id__in = [43, 48]).values("id", "is_deleted"))
+> > {
+> >     "message": "Soft deleted successfully."
+> > }
 > > ```
-> > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 43, 'is_deleted': True}, {'id': 48, 'is_deleted': True}]`
 > 
 > <br>
 > 
-> > ```
-> > list(Address.all_objects.filter(id__in = [31, 32, 33]).values("id", "is_deleted"))
-> > ```
-> > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 31, 'is_deleted': True}, {'id': 32, 'is_deleted': True}, {'id': 33, 'is_deleted': True}]`
+> Now let's verify it through `shell` &nbsp;**:**
+> 
+> > > ```
+> > > list(Person.all_objects.filter(id__in = [43, 48]).values("id", "is_deleted"))
+> > > ```
+> > > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 43, 'is_deleted': True}, {'id': 48, 'is_deleted': True}]`
+> > 
+> > <br>
+> > 
+> > > ```
+> > > list(Address.all_objects.filter(id__in = [3, 4, 5]).values("id", "is_deleted"))
+> > > ```
+> > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 3, 'is_deleted': True}, {'id': 4, 'is_deleted': True}, {'id': 5, 'is_deleted': True}]`
 
 
 
