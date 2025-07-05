@@ -4960,7 +4960,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
-**✅ &nbsp;1. &nbsp;Serializers &nbsp;–&nbsp;** `person_api/home/serializers.py`
+**✅ &nbsp;1. &nbsp;Serializers &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/home/serializers.py`
 
 
 
