@@ -4791,7 +4791,7 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 <br>
 
-👉 &nbsp;Let's now first create some <ins>addresses</ins> and link them with some random <ins>persons</ins> (which are not soft-deleted) using `shell` &nbsp;**:**
+**👉** &nbsp;Let's now first create some <ins>addresses</ins> and link them with some random <ins>persons</ins> (which are not soft-deleted) using `shell` &nbsp;**:**
 > ```
 > p1, p2 = Person.all_objects.filter(id__in = [43, 48])
 > 
@@ -4841,7 +4841,7 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 <br>
 
-👉 &nbsp;Now let's see what happens to the related addresses when some persons are <ins>**bulk soft-deleted**</ins> &nbsp;**:**
+**👉** &nbsp;Now let's see what happens to the related addresses when some persons are <ins>**bulk soft-deleted**</ins> &nbsp;**:**
 > > `POST` &nbsp;&nbsp;http://localhost:8000/api/person/bulk-soft-delete/  &nbsp;&nbsp;`{"ids": [43, 48]}`
 > > ```
 > > {
@@ -4867,7 +4867,7 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 <br>
 
-👉 &nbsp;Now let's see what happens to the related addresses when some persons are <ins>**bulk restored**</ins> &nbsp;**:**
+**👉** &nbsp;Now let's see what happens to the related addresses when some persons are <ins>**bulk restored**</ins> &nbsp;**:**
 > > `POST` &nbsp;&nbsp;http://localhost:8000/api/person/bulk-restore/  &nbsp;&nbsp;`{"ids": [43, 48]}`
 > > ```
 > > {
