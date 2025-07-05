@@ -4793,6 +4793,8 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 **👉** &nbsp;Let's now first create some <ins>addresses</ins> and link them with some random <ins>persons</ins> (which are not soft-deleted) using `shell` &nbsp;**:**
 
+<br>
+
 > ```
 > p1, p2 = Person.all_objects.filter(id__in = [43, 48])
 > 
