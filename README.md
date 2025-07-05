@@ -4857,7 +4857,7 @@ But instead of verifying it on an instance, let's verify cascading effect of
 > 
 > <br>
 > 
-> Now let's verify it through `shell` &nbsp;**:**
+> let's verify it through `shell` &nbsp;**:**
 > 
 > > > ```
 > > > list(Person.all_objects.filter(id__in = [43, 48]).values("id", "is_deleted"))
@@ -4886,7 +4886,7 @@ But instead of verifying it on an instance, let's verify cascading effect of
 > 
 > <br>
 > 
-> Now let's verify it through `shell` &nbsp;**:**
+> let's verify it through `shell` &nbsp;**:**
 > 
 > > > ```
 > > > list(Person.all_objects.filter(id__in = [43, 48]).values("id", "is_deleted"))
@@ -4915,7 +4915,7 @@ But instead of verifying it on an instance, let's verify cascading effect of
 > 
 > <br>
 > 
-> Now let's verify it through `shell` &nbsp;**:**
+> let's verify it through `shell` &nbsp;**:**
 > 
 > ```
 > Person.all_objects.filter(id__in = [43, 48])                   # <SoftDeleteQuerySet []>
