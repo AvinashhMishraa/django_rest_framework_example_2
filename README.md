@@ -4921,6 +4921,7 @@ But instead of verifying it on an instance, let's verify cascading effect of
 > Person.all_objects.filter(id__in = [43, 48])                   # <SoftDeleteQuerySet []>
 > Address.all_objects.filter(id__in = [3, 4, 5])                 # <SoftDeleteQuerySet []>
 >
+> 
 > Person.all_objects.get(43)                                     # Person.DoesNotExist error
 > Person.all_objects.get(48)                                     # Person.DoesNotExist error
 > Address.all_objects.get(3)                                     # Address.DoesNotExist error
