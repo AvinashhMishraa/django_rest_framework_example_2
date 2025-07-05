@@ -4955,12 +4955,15 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 Before proceeding further, let's now set up a complete **Address API** in Django REST Framework that works with your `Address` model (which is already integrated with your `SoftDeleteModel` system).
 
+<br>
 
 <h4>🔥 &nbsp;Complete remaining set up of <ins>Address API</ins></h4>
 
 <br>
 
 **✅ &nbsp;1. &nbsp;Serializers &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/home/serializers.py`
+
+<br>
 
 ```
 from rest_framework import serializers
