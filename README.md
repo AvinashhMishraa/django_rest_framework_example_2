@@ -4939,13 +4939,35 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 🔹 &nbsp;This version is **production-ready** — DRY, scalable, and highly reusable.
 
-🔹 &nbsp;With this refactored architecture, you get :
+🔹 &nbsp;With this refactored architecture, you get &nbsp;**:**
 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ∎ &nbsp;Global cascade soft delete        <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ∎ &nbsp;Clean abstraction                 <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ∎ &nbsp;Scalable to N models              <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ∎ &nbsp;No repetitive model overrides     <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ∎ &nbsp;REST API-ready for production use
+
+<br>
+
+---
+
+Before proceeding further, let's now set up a complete **Address API** in Django REST Framework that works with your `Address` model (which is already integrated with your `SoftDeleteModel` system).
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
