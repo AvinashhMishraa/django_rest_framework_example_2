@@ -4931,13 +4931,6 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 <br>
 
-
-
-
-
-
-<br><br><br><br><br><br><br>
-
 <h3>🧠 &nbsp;Notes</h3>
 
 🔹 &nbsp;The `related_name='addresses'` on `Address.person` is **required** for auto-cascade.
