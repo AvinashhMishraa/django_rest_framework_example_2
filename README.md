@@ -5146,14 +5146,19 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > }
 > > ```
 
+<br>
+
+> `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/43/
+> 
+> <br>
+> 
+> **Output &nbsp;:** &nbsp;`{"id": 45, "person": 43, "city": "city", "street": "street", "is_deleted": false}`
 
 
 
 
 
-
-
-<br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br>
 
 
 
