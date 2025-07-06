@@ -5266,14 +5266,14 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > ```
 > 
 > let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**API** &nbsp;**:**
-> ```
-> http://localhost:8000/api/addresses/46/                           # no such address 
-> http://localhost:8000/api/addresses/47/                           # no such address
-> http://localhost:8000/api/addresses/48/                           # no such address
-> 
-> http://localhost:8000/api/addresses/                              # addresses with id = 46, 47 & 48 are not found
-> http://localhost:8000/api/addresses/?include_deleted=True         # addresses with id = 46, 47 & 48 are found
-> ```
+> > ```
+> > http://localhost:8000/api/addresses/46/                           # no such address 
+> > http://localhost:8000/api/addresses/47/                           # no such address
+> > http://localhost:8000/api/addresses/48/                           # no such address
+> > 
+> > http://localhost:8000/api/addresses/                              # addresses with id = 46, 47 & 48 are not found
+> > http://localhost:8000/api/addresses/?include_deleted=True         # addresses with id = 46, 47 & 48 are found
+> > ```
 >
 > let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**ORM** &nbsp;**:**
 > > ```
