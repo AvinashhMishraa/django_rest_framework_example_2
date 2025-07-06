@@ -5190,6 +5190,28 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > >
 > > ∎ &nbsp;**ORM** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `Address.all_objects.get(id=45).is_deleted` &nbsp;returns &nbsp;<ins>True</ins>
 
+<br>
+
+> > `POST` &nbsp;`/api/addresses/bulk_create/`
+> > ```
+> > [
+> >     {"person": 43, "city": "hjjj 1", "street": "hhhh", "is_deleted": "False"},
+> >     {"person": 43, "city": "hjjj 2", "street": "hhhh"},
+> >     {"person": 43, "city": "hjjj 3", "street": "hhhh", "is_deleted": "True"}
+> > ]
+> > ```
+> 
+> <br>
+>
+> **OUTPUT &nbsp;:**
+> ```
+> [
+>     {"id": 42, "person": 43, "city": "hjjj 1", "street": "hhhh", "is_deleted": "False"},
+>     {"id": 43, "person": 43, "city": "hjjj 2", "street": "hhhh", "is_deleted": "False"},
+>     {"id": 44, "person": 43, "city": "hjjj 3", "street": "hhhh", "is_deleted": "True"}
+> ]
+> ```
+
 
 
 
