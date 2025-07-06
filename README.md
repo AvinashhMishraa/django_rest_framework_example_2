@@ -5077,7 +5077,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
-> **<ins>Api Root</ins> / <ins>Address List</ins>** &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; `GET   /api/addresses` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses
+> **<ins>Api Root</ins> &nbsp;/&nbsp; <ins>Address List</ins>** &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; `GET   /api/addresses` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses
 >
 > 
 > API endpoints now you get &nbsp;:
