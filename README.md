@@ -5127,8 +5127,8 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > ```
 > > {
 > >     "person": 43,
-> >     "city": "city 45",
-> >     "street": "street 45",
+> >     "city": "city",
+> >     "street": "street",
 > >     "is_deleted": false                 # optional
 > > }
 > > ```
@@ -5140,8 +5140,8 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > {
 > >     "id": 45,
 > >     "person": 43,
-> >     "city": "city 45",
-> >     "street": "street 45",
+> >     "city": "city",
+> >     "street": "street",
 > >     "is_deleted": false
 > > }
 > > ```
