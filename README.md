@@ -5249,7 +5249,31 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > }
 > ```
 
+<br>
 
+> `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/bulk_soft_delete/
+> ```
+> {
+>     "ids": [46, 47, 48]                                         # address with id = 48 is already soft deleted
+> }
+> ```
+> 
+> **Output :**
+> ```
+> {
+>     "message": "Soft deleted successfully"
+> }
+> ```
+> 
+> > let's verify :
+> > ```
+> > http://localhost:8000/api/addresses/46/                         # {"detail": "No Address matches the given query."}
+> > http://localhost:8000/api/addresses/47/                         # {"detail": "No Address matches the given query."}
+> > http://localhost:8000/api/addresses/48/                         # {"detail": "No Address matches the given query."}
+> > 
+> > http://localhost:8000/api/addresses/                            # addresses with id = 46, 47 & 48 are not found
+> > http://localhost:8000/api/addresses/?include_deleted=True       # addresses with id = 46, 47 & 48 are found
+> > ```
 
 
 
