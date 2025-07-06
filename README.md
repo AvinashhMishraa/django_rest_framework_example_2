@@ -5018,7 +5018,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 >         errors = []
 >         for item in data:
 >             try:
->                 instance = Address.objects.get(id=item['id'])                            # update only available objects
+>                 instance = Address.objects.get(id=item['id'])                        # update only available objects
 >                 serializer = self.get_serializer(instance, data=item, partial=True)
 >                 if serializer.is_valid():
 >                     serializer.save()
