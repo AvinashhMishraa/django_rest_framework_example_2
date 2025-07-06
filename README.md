@@ -5112,7 +5112,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > 
 > > <br>
 > > 
-> > **Output &nbsp;:**
+> > **Output &nbsp;➜**
 > > ```
 > > {
 > >     "person": [
@@ -5135,7 +5135,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > 
 > > <br>
 > > 
-> > **Output &nbsp;:**
+> > **Output &nbsp;➜**
 > > ```
 > > {
 > >     "id": 45,
@@ -5151,7 +5151,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > `GET` &nbsp;&nbsp;http://localhost:8000/api/addresses/45/
 > 
 > 
-> **Output &nbsp;&nbsp;:** &nbsp;&nbsp;`{"id": 45, "person": 43, "city": "city", "street": "street", "is_deleted": false}`
+> **Output &nbsp;&nbsp;➜** &nbsp;&nbsp;`{"id": 45, "person": 43, "city": "city", "street": "street", "is_deleted": false}`
 
 
 
