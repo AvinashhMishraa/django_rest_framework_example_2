@@ -5183,7 +5183,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > `DELETE` &nbsp;&nbsp;http://localhost:8000/api/addresses/45/
 > >
 > > **Output &nbsp;&nbsp;➜** &nbsp;&nbsp;`{"message": "Soft deleted successfully"}`
->
+> <br>
 > 
 > > To verify &nbsp;&nbsp;:
 > >
