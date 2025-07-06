@@ -5075,8 +5075,23 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > }
 > ```
 
+<br>
 
-
+> **API endpoints now you get &nbsp;:**
+>
+> | Action                 | Method | URL                            |
+> | ---------------------- | ------ | ------------------------------ |
+> | List addresses         | GET    | `/addresses/`                  |
+> | Create address         | POST   | `/addresses/`                  |
+> | Retrieve address       | GET    | `/addresses/{id}/`             |
+> | Update address         | PUT    | `/addresses/{id}/`             |
+> | Partial update address | PATCH  | `/addresses/{id}/`             |
+> | Delete (soft) address  | DELETE | `/addresses/{id}/`             |
+> | **Bulk Create**        | POST   | `/addresses/bulk_create/`      |
+> | **Bulk Update**        | POST   | `/addresses/bulk_update/`      |
+> | **Bulk Soft Delete**   | POST   | `/addresses/bulk_soft_delete/` |
+> | **Bulk Restore**       | POST   | `/addresses/bulk_restore/`     |
+> | **Bulk Hard Delete**   | POST   | `/addresses/bulk_hard_delete/` |
 
 
 
