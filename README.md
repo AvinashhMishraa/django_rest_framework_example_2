@@ -5220,9 +5220,8 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > ]
 > > ```
 > 
-> <br>
 > 
-> **OUTPUT &nbsp;:**
+> **Output &nbsp;:**
 > ```
 > {
 >     "updated": [
