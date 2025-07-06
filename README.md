@@ -5293,7 +5293,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > **Output :**
 > ```
 > {
->     "message": "restored successfully"
+>     "message": "Restored successfully"
 > }
 > ```
 > 
@@ -5313,8 +5313,38 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > ```
 > > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 46, 'is_deleted': False}, {'id': 47, 'is_deleted': False}, {'id': 48, 'is_deleted': False}]`
 
+<br>
 
-
+> `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/bulk_restore/
+> ```
+> {
+>     "ids": [46, 47, 48]                                             # address with id = 48 is already soft deleted
+> }
+> ```
+> 
+> **Output :**
+> ```
+> {
+>     "message": "Hard deleted successfully"
+> }
+> ```
+> 
+> let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**API** &nbsp;**:**
+> > ```
+> > http://localhost:8000/api/addresses/46/                           # address not found 
+> > http://localhost:8000/api/addresses/47/                           # address not found
+> > http://localhost:8000/api/addresses/48/                           # address not found
+> > 
+> > http://localhost:8000/api/addresses/                              # addresses with id = 46, 47 & 48 are not found
+> > http://localhost:8000/api/addresses/?include_deleted=True         # addresses with id = 46, 47 & 48 are not found
+> > ```
+> 
+> let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**ORM** &nbsp;**:**
+> > ```
+> > Address.all_objects.get(46)                                       # Address.DoesNotExist error
+> > Address.all_objects.get(47)                                       # Address.DoesNotExist error
+> > Address.all_objects.get(48)                                       # Address.DoesNotExist error
+> > ```
 
 
 
