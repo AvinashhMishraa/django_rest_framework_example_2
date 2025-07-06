@@ -5099,51 +5099,51 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
-> `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/
-> ```
-> {
->     "person": 42,
->     "city": "city 45",
->     "street": "street 45",
->     "is_deleted": false                 # optional
-> }
-> ```
+> > `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/
+> > ```
+> > {
+> >     "person": 42,
+> >     "city": "city 45",
+> >     "street": "street 45",
+> >     "is_deleted": false                 # optional
+> > }
+> > ```
+> > 
+> > <br>
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "person": [
+> >         "Invalid pk \"42\" - object does not exist."
+> >     ]
+> > }
+> > ```
 > 
 > <br>
 > 
-> **Output &nbsp;:**
-> ```
-> {
->     "person": [
->         "Invalid pk \"42\" - object does not exist."
->     ]
-> }
-> ```
-> 
-> <br>
-> 
-> `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/
-> ```
-> {
->     "person": 43,
->     "city": "city 45",
->     "street": "street 45",
->     "is_deleted": false                 # optional
-> }
-> ```
-> 
-> <br>
-> 
-> **Output &nbsp;:**
-> ```
-> {
->     "id": 45,
->     "person": 43,
->     "city": "city 45",
->     "street": "street 45",
->     "is_deleted": false
-> }
-> ```
+> > `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/
+> > ```
+> > {
+> >     "person": 43,
+> >     "city": "city 45",
+> >     "street": "street 45",
+> >     "is_deleted": false                 # optional
+> > }
+> > ```
+> > 
+> > <br>
+> > 
+> > **Output &nbsp;:**
+> > ```
+> > {
+> >     "id": 45,
+> >     "person": 43,
+> >     "city": "city 45",
+> >     "street": "street 45",
+> >     "is_deleted": false
+> > }
+> > ```
 
 
 
