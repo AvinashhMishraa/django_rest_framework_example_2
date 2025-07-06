@@ -5214,9 +5214,9 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/bulk_update/
 > > ```
 > > [
-> >     {"id": 46, "person": 44, "city": "city 46", "street": "street 46", "is_deleted": "False"},     ✔️
-> >     {"id": 47, "person": 49, "city": "city 47", "street": "street 47", "is_deleted": "False"},     ✔️
-> >     {"id": 48, "person": 44, "city": "city 48", "street": "street 48", "is_deleted": "False"}      ❌ (soft deleted)
+> >     {"id": 46, "person": 44, "city": "city 46", "street": "street 46", "is_deleted": "False"},    ✔️
+> >     {"id": 47, "person": 49, "city": "city 47", "street": "street 47", "is_deleted": "False"},    ✔️
+> >     {"id": 48, "person": 44, "city": "city 48", "street": "street 48", "is_deleted": "False"}     ❌ (soft deleted)
 > > ]
 > > ```
 > 
