@@ -5195,9 +5195,9 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > `POST` &nbsp;`/api/addresses/bulk_create/`
 > > ```
 > > [
-> >     {"person": 43, "city": "hjjj 1", "street": "hhhh", "is_deleted": "False"},
-> >     {"person": 43, "city": "hjjj 2", "street": "hhhh"},
-> >     {"person": 43, "city": "hjjj 3", "street": "hhhh", "is_deleted": "True"}
+> >     {"person": 43, "city": "city 46", "street": "street 46", "is_deleted": "False"},
+> >     {"person": 43, "city": "city 47", "street": "street 47"},
+> >     {"person": 43, "city": "city 48", "street": "street 48", "is_deleted": "True"}
 > > ]
 > > ```
 > 
@@ -5206,9 +5206,9 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > **OUTPUT &nbsp;:**
 > ```
 > [
->     {"id": 42, "person": 43, "city": "hjjj 1", "street": "hhhh", "is_deleted": "False"},
->     {"id": 43, "person": 43, "city": "hjjj 2", "street": "hhhh", "is_deleted": "False"},
->     {"id": 44, "person": 43, "city": "hjjj 3", "street": "hhhh", "is_deleted": "True"}
+>     {"id": 46, "person": 43, "city": "city 46", "street": "street 46", "is_deleted": "False"},
+>     {"id": 47, "person": 43, "city": "city 47", "street": "street 47", "is_deleted": "False"},
+>     {"id": 48, "person": 43, "city": "city 48", "street": "street 48", "is_deleted": "True"}
 > ]
 > ```
 
