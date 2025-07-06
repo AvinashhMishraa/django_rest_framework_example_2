@@ -5155,7 +5155,8 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
-> `PUT` &nbsp;&nbsp;http://localhost:8000/api/addresses/45/ <br>
+> `PUT` &nbsp;&nbsp;http://localhost:8000/api/addresses/45/
+> 
 > `{"id": 45, "person": 43, "city": "city 45", "street": "street 45", "is_deleted": false}`
 > 
 > **Output &nbsp;&nbsp;➜** &nbsp;&nbsp;`{"id": 45, "person": 43, "city": "city 45", "street": "street 45", "is_deleted": false}`
