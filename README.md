@@ -4976,6 +4976,100 @@ class AddressSerializer(serializers.ModelSerializer):
         fields = ['id', 'person', 'city', 'street', 'is_deleted']
 ```
 
+<br>
+
+**✅ &nbsp;2. &nbsp;Views &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/home/views.py`
+
+<br>
+
+```
+from .models import Address
+from .serializers import AddressSerializer
+from rest_framework.decorators import action
+
+
+
+
+class AddressViewSet(viewsets.ModelViewSet):
+    serializer_class = AddressSerializer
+    # queryset = Address.objects.all()
+
+
+    def get_queryset(self):
+        include_deleted = self.request.query_params.get('include_deleted', 'false').lower() == 'true'
+
+        if include_deleted:
+            return Address.all_objects.all()
+        return Address.objects.all()
+
+
+    @action(detail=False, methods=['post'])
+    def bulk_create(self, request):
+        serializer = self.get_serializer(data=request.data, many=True)
+        serializer.is_valid(raise_exception=True)
+        serializer.save()
+        return Response(serializer.data, status=status.HTTP_201_CREATED)
+
+
+    @action(detail=False, methods=['post'])                                              # PUT  not  preferred 
+    def bulk_update(self, request):
+        data = request.data
+        response = []
+        errors = []
+        for item in data:
+            try:
+                instance = Address.objects.get(id=item['id'])                            # update only available objects
+                serializer = self.get_serializer(instance, data=item, partial=True)
+                if serializer.is_valid():
+                    serializer.save()
+                    response.append(serializer.data)
+                else:
+                    errors.append(serializer.errors)
+            except Address.DoesNotExist:
+                errors.append({'id': item['id'], 'error': 'Not found'})
+        return Response({'updated': response, 'errors': errors}, status=status.HTTP_207_MULTI_STATUS)
+
+
+    @action(detail=False, methods=['post'])                                              # PATCH  not  preferred
+    def bulk_soft_delete(self, request):
+        ids = request.data.get('ids', [])
+        Address.objects.filter(id__in=ids).delete()
+        return Response({'message': 'Soft deleted successfully'})
+
+
+    @action(detail=False, methods=['post'])                                              # PATCH  not  preferred
+    def bulk_restore(self, request):
+        ids = request.data.get('ids', [])
+        Address.all_objects.filter(id__in=ids).restore()
+        return Response({'message': 'Restored successfully'})
+
+
+    @action(detail=False, methods=['post'])                                              # DELETE  will  not  work
+    def bulk_hard_delete(self, request):
+        ids = request.data.get('ids', [])
+        Address.all_objects.filter(id__in=ids).hard_delete()
+        return Response({'message': 'Hard deleted successfully'})
+```
+
+<br>
+
+**✅ &nbsp;3. &nbsp;Router URLs &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/api/urls.py`
+
+<br>
+
+```
+from rest_framework.routers import DefaultRouter
+from django.urls import path, include
+from .views import AddressViewSet
+
+router = DefaultRouter()
+router.register(r'addresses', AddressViewSet, basename='address')
+
+urlpatterns = [
+    path('', include(router.urls)),
+]
+```
+
 
 
 
