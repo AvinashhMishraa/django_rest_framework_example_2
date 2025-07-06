@@ -4989,7 +4989,6 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > 
 > 
 > 
-> 
 > class AddressViewSet(viewsets.ModelViewSet):
 >     serializer_class = AddressSerializer
 >     # queryset = Address.objects.all()
