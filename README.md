@@ -4998,9 +4998,9 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 >         return Address.objects.all()
 > 
 > 
->     def destroy(self, request, *args, **kwargs):         # override default hard delete
+>     def destroy(self, request, *args, **kwargs):         # to override default hard delete method with model's soft delete logic
 >         instance = self.get_object()
->         instance.delete()                                # calls models's soft delete
+>         instance.delete()
 >         return Response({'message': 'Soft deleted successfully'}, status=status.HTTP_204_NO_CONTENT)
 > 
 > 
