@@ -5275,7 +5275,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > http://localhost:8000/api/addresses/?include_deleted=True         # addresses with id = 46, 47 & 48 are found
 > >
 > > list(Person.all_objects.filter(id__in = [46, 47, 48]).values("id", "is_deleted"))               # run it on shell
-> > OUTPUT ➜ `[{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]`
+> > # OUTPUT ➜ [{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]
 > > ```
 
 
