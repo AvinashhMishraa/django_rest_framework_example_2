@@ -5273,7 +5273,12 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > 
 > > http://localhost:8000/api/addresses/                              # addresses with id = 46, 47 & 48 are not found
 > > http://localhost:8000/api/addresses/?include_deleted=True         # addresses with id = 46, 47 & 48 are found
-> > ```
+> >
+> > `py mange.py shell`
+> > > list(Person.all_objects.filter(id__in = [46, 47, 48]).values("id", "is_deleted"))
+> > > 
+> > > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]`
+> > > ```
 
 
 
