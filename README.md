@@ -4963,8 +4963,6 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 > **✅ &nbsp;1. &nbsp;Serializers &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/home/serializers.py`
 > 
-> <br>
-> 
 > ```
 > from rest_framework import serializers
 > from .models import Address
@@ -4979,8 +4977,6 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > <br>
 > 
 > **✅ &nbsp;2. &nbsp;Views &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/home/views.py`
->  
-> <br>
 > 
 > ```
 > from .models import Address
