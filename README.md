@@ -5203,7 +5203,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > 
 > <br>
 >
-> **OUTPUT &nbsp;:**
+> **Output &nbsp;:**
 > ```
 > [
 >     {"id": 46, "person": 43, "city": "city 46", "street": "street 46", "is_deleted": "False"},
