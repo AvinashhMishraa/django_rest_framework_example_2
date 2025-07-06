@@ -5119,7 +5119,6 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > }
 > > ```
 > > 
-> > <br>
 > > 
 > > **Output &nbsp;➜**
 > > ```
@@ -5142,7 +5141,6 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > }
 > > ```
 > > 
-> > <br>
 > > 
 > > **Output &nbsp;➜**
 > > ```
