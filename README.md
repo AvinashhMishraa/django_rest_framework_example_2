@@ -5218,13 +5218,6 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > >     {"id": 47, "person": 49, "city": "city 47", "street": "street 47", "is_deleted": "False"},     ✔️
 > >     {"id": 48, "person": 44, "city": "city 48", "street": "street 48", "is_deleted": "False"}      ❌ (soft deleted)
 > > ]
-> >
-> > > > [
-> >     {"id": 46, "person": 44, "city": "city 46", "street": "street 46", "is_deleted": "False"},         # nothing to update
-> >     {"id": 47, "person": 49, "city": "city 47", "street": "street 47", "is_deleted": "False"},         # old value   ➜   person     = 44
-> >     {"id": 48, "person": 44, "city": "city 48", "street": "street 48", "is_deleted": "False"}          # old value   ➜   is_deleted = True   ➜   already soft deleted   ➜   update not allowed
-> > ]
-> > 
 > > ```
 > 
 > <br>
