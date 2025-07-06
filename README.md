@@ -5187,7 +5187,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > 
 > >
 > > ∎ &nbsp;API &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `GET` &nbsp;&nbsp;http://localhost:8000/api/addresses/?include_deleted=True <br>
-> > ∎ &nbsp;ORM &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `Address.all_objects.get(id=45).is_deleted`
+> > ∎ &nbsp;ORM &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `Address.all_objects.get(id=45).is_deleted` returns <ins>True</ins>
 
 
 
