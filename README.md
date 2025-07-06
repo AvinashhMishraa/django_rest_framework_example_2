@@ -5203,9 +5203,9 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > **Output &nbsp;:**
 > ```
 > [
->     {"id": 46, "person": 43, "city": "city 46", "street": "street 46", "is_deleted": "False"},
->     {"id": 47, "person": 43, "city": "city 47", "street": "street 47", "is_deleted": "False"},
->     {"id": 48, "person": 43, "city": "city 48", "street": "street 48", "is_deleted": "True"}
+>     {"id": 46, "person": 44, "city": "city 46", "street": "street 46", "is_deleted": "False"},
+>     {"id": 47, "person": 44, "city": "city 47", "street": "street 47", "is_deleted": "False"},
+>     {"id": 48, "person": 44, "city": "city 48", "street": "street 48", "is_deleted": "True"}
 > ]
 > ```
 
