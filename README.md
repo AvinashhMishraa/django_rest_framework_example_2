@@ -5265,21 +5265,21 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > }
 > ```
 > 
-> > let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**API** &nbsp;**:**
+> let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**API** &nbsp;**:**
+> ```
+> http://localhost:8000/api/addresses/46/                           # no such address 
+> http://localhost:8000/api/addresses/47/                           # no such address
+> http://localhost:8000/api/addresses/48/                           # no such address
+> 
+> http://localhost:8000/api/addresses/                              # addresses with id = 46, 47 & 48 are not found
+> http://localhost:8000/api/addresses/?include_deleted=True         # addresses with id = 46, 47 & 48 are found
+> ```
+>
+> let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**ORM** &nbsp;**:**
 > > ```
-> > http://localhost:8000/api/addresses/46/                           # no such address 
-> > http://localhost:8000/api/addresses/47/                           # no such address
-> > http://localhost:8000/api/addresses/48/                           # no such address
-> > 
-> > http://localhost:8000/api/addresses/                              # addresses with id = 46, 47 & 48 are not found
-> > http://localhost:8000/api/addresses/?include_deleted=True         # addresses with id = 46, 47 & 48 are found
+> > list(Person.all_objects.filter(id__in = [46, 47, 48]).values("id", "is_deleted"))
 > > ```
-> >
-> > let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**ORM** &nbsp;**:**
-> > > ```
-> > > list(Person.all_objects.filter(id__in = [46, 47, 48]).values("id", "is_deleted"))
-> > > ```
-> > > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]`
+> > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]`
 
 
 
