@@ -5185,10 +5185,10 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > **Output &nbsp;&nbsp;➜** &nbsp;&nbsp;`{"message": "Soft deleted successfully"}`
 >
 > 
-> > **To verify** &nbsp;&nbsp;:
+> > To verify &nbsp;&nbsp;:
 > >
-> > API &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `GET` &nbsp;&nbsp;http://localhost:8000/api/addresses/?include_deleted=True <br>
-> > ORM &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `Address.all_objects.get(id=45).is_deleted`
+> > ∎ &nbsp;API &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `GET` &nbsp;&nbsp;http://localhost:8000/api/addresses/?include_deleted=True <br>
+> > ∎ &nbsp;ORM &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `Address.all_objects.get(id=45).is_deleted`
 
 
 
