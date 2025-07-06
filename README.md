@@ -5080,7 +5080,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > **<ins>Api Root</ins> &nbsp;/&nbsp; <ins>Address List</ins>** &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; `GET   /api/addresses` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses
 >
 > 
-> API endpoints now you get &nbsp;:
+> API endpoints you get &nbsp;:
 >
 > 
 > | Action                 | Method | URL                            |
