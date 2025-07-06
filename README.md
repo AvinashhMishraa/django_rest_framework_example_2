@@ -5085,7 +5085,8 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > 
 > | Action                 | Method | URL                            |
 > | ---------------------- | ------ | ------------------------------ |
-> | List addresses         | GET    | `/addresses/`                  |
+> | List addresses - **Only active addresses**       | GET    | `/addresses/`                  |
+> | List addresses - **All addresses (active + soft-deleted)** | GET | `/api/address/?show_deleted=true`                  |
 > | Create address         | POST   | `/addresses/`                  |
 > | Retrieve address       | GET    | `/addresses/{id}/`             |
 > | Update address         | PUT    | `/addresses/{id}/`             |
