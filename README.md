@@ -5054,8 +5054,6 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > 
 > **✅ &nbsp;3. &nbsp;Router URLs &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/api/urls.py`
 > 
-> <br>
-> 
 > ```
 > from rest_framework.routers import DefaultRouter
 > from django.urls import path, include
