@@ -5281,7 +5281,37 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > ```
 > > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 46, 'is_deleted': True}, {'id': 47, 'is_deleted': True}, {'id': 48, 'is_deleted': True}]`
 
+<br>
 
+> `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/bulk_restore/
+> ```
+> {
+>     "ids": [46, 47, 48]                                             # address with id = 48 is already soft deleted
+> }
+> ```
+> 
+> **Output :**
+> ```
+> {
+>     "message": "restored successfully"
+> }
+> ```
+> 
+> let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**API** &nbsp;**:**
+> > ```
+> > http://localhost:8000/api/addresses/46/                           # address found with is_deleted = True 
+> > http://localhost:8000/api/addresses/47/                           # address found with is_deleted = True
+> > http://localhost:8000/api/addresses/48/                           # address found with is_deleted = True
+> > 
+> > http://localhost:8000/api/addresses/                              # addresses with id = 46, 47 & 48 are found
+> > http://localhost:8000/api/addresses/?include_deleted=True         # addresses with id = 46, 47 & 48 are found
+> > ```
+> 
+> let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**ORM** &nbsp;**:**
+> > ```
+> > list(Person.all_objects.filter(id__in = [46, 47, 48]).values("id", "is_deleted"))
+> > ```
+> > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 46, 'is_deleted': False}, {'id': 47, 'is_deleted': False}, {'id': 48, 'is_deleted': False}]`
 
 
 
