@@ -5184,7 +5184,6 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > >
 > > **Output &nbsp;&nbsp;➜** &nbsp;&nbsp;`{"message": "Soft deleted successfully"}`
 >
-> <br>
 > 
 > > **Verification &nbsp;&nbsp;➜**
 > >
