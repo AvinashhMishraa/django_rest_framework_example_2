@@ -5254,7 +5254,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/bulk_soft_delete/
 > ```
 > {
->     "ids": [46, 47, 48]                                         # address with id = 48 is already soft deleted
+>     "ids": [46, 47, 48]                                             # address with id = 48 is already soft deleted
 > }
 > ```
 > 
