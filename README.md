@@ -5065,7 +5065,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
-> **<ins>Api Root</ins>** &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; `GET   /api/` &nbsp;&nbsp;&nbsp;&nbsp;-&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/
+> **<ins>Api Root</ins>** &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; `GET   /api/` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/
 > 
 > **Output &nbsp;:**
 > ```
