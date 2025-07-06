@@ -5276,9 +5276,9 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > ```
 > >
 > > let's &nbsp;verify &nbsp;it &nbsp;through &nbsp;**ORM** &nbsp;**:**
-> > ```
-> > list(Person.all_objects.filter(id__in = [46, 47, 48]).values("id", "is_deleted"))               # run it on shell
-> > ```
+> > > ```
+> > > list(Person.all_objects.filter(id__in = [46, 47, 48]).values("id", "is_deleted"))               # run it on shell
+> > > ```
 > > > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 43, 'is_deleted': False}, {'id': 48, 'is_deleted': True}]`
 
 
