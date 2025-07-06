@@ -5083,20 +5083,20 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > API endpoints you get &nbsp;:
 >
 > 
-> | Action                                                                                      | Method | URL                               |
-> | ------------------------------------------------------------------------------------------- | ------ | --------------------------------- |
-> | List addresses &nbsp;&nbsp;-&nbsp;&nbsp; _Only active addresses_                            | GET    | `/addresses/`                     |
-> | List addresses &nbsp;&nbsp;-&nbsp;&nbsp; _All addresses (active &nbsp;+&nbsp; softdeleted)_ | GET    | `/api/address/?show_deleted=true` |
-> | Create address                                                                              | POST   | `/addresses/`                     |
-> | Retrieve address                                                                            | GET    | `/addresses/{id}/`                |
-> | Update address                                                                              | PUT    | `/addresses/{id}/`                |
-> | Partial update address                                                                      | PATCH  | `/addresses/{id}/`                |
-> | Delete (soft) address                                                                       | DELETE | `/addresses/{id}/`                |
-> | Bulk Create                                                                                 | POST   | `/addresses/bulk_create/`         |
-> | Bulk Update                                                                                 | POST   | `/addresses/bulk_update/`         |
-> | Bulk Soft Delete                                                                            | POST   | `/addresses/bulk_soft_delete/`    |
-> | Bulk Restore                                                                                | POST   | `/addresses/bulk_restore/`        |
-> | Bulk Hard Delete                                                                            | POST   | `/addresses/bulk_hard_delete/`    |
+> | Action                                                                                       | Method | URL                               |
+> | -------------------------------------------------------------------------------------------- | ------ | --------------------------------- |
+> | List addresses &nbsp;&nbsp;-&nbsp;&nbsp; _Only active addresses_                             | GET    | `/addresses/`                     |
+> | List addresses &nbsp;&nbsp;-&nbsp;&nbsp; _All addresses (active &nbsp;+&nbsp; soft deleted)_ | GET    | `/api/address/?show_deleted=true` |
+> | Create address                                                                               | POST   | `/addresses/`                     |
+> | Retrieve address                                                                             | GET    | `/addresses/{id}/`                |
+> | Update address                                                                               | PUT    | `/addresses/{id}/`                |
+> | Partial update address                                                                       | PATCH  | `/addresses/{id}/`                |
+> | Delete (soft) address                                                                        | DELETE | `/addresses/{id}/`                |
+> | Bulk Create                                                                                  | POST   | `/addresses/bulk_create/`         |
+> | Bulk Update                                                                                  | POST   | `/addresses/bulk_update/`         |
+> | Bulk Soft Delete                                                                             | POST   | `/addresses/bulk_soft_delete/`    |
+> | Bulk Restore                                                                                 | POST   | `/addresses/bulk_restore/`        |
+> | Bulk Hard Delete                                                                             | POST   | `/addresses/bulk_hard_delete/`    |
 
 <br>
 
