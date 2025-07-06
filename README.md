@@ -4961,7 +4961,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
-> **✅ &nbsp;1. &nbsp;Serializers &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/home/serializers.py`
+> **✅ &nbsp;1. &nbsp;Serializers &nbsp;&nbsp;➜&nbsp;&nbsp;** `person_api/home/serializers.py`
 > 
 > ```
 > from rest_framework import serializers
@@ -4976,7 +4976,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > 
 > <br>
 > 
-> **✅ &nbsp;2. &nbsp;Views &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/home/views.py`
+> **✅ &nbsp;2. &nbsp;Views &nbsp;&nbsp;➜&nbsp;&nbsp;** `person_api/home/views.py`
 > 
 > ```
 > from .models import Address
@@ -5048,7 +5048,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > 
 > <br>
 > 
-> **✅ &nbsp;3. &nbsp;Router URLs &nbsp;&nbsp;–&nbsp;&nbsp;** `person_api/api/urls.py`
+> **✅ &nbsp;3. &nbsp;Router URLs &nbsp;&nbsp;➜&nbsp;&nbsp;** `person_api/api/urls.py`
 > 
 > ```
 > from rest_framework.routers import DefaultRouter
