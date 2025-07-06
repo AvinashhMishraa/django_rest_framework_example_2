@@ -5267,9 +5267,9 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > 
 > > let's verify :
 > > ```
-> > http://localhost:8000/api/addresses/46/                         # {"detail": "No Address matches the given query."}
-> > http://localhost:8000/api/addresses/47/                         # {"detail": "No Address matches the given query."}
-> > http://localhost:8000/api/addresses/48/                         # {"detail": "No Address matches the given query."}
+> > http://localhost:8000/api/addresses/46/                         # no such address 
+> > http://localhost:8000/api/addresses/47/                         # no such address
+> > http://localhost:8000/api/addresses/48/                         # no such address
 > > 
 > > http://localhost:8000/api/addresses/                            # addresses with id = 46, 47 & 48 are not found
 > > http://localhost:8000/api/addresses/?include_deleted=True       # addresses with id = 46, 47 & 48 are found
