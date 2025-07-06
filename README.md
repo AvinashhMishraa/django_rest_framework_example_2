@@ -5265,7 +5265,7 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > }
 > ```
 > 
-> > let's verify :
+> > let's verify &nbsp;**:**
 > > ```
 > > http://localhost:8000/api/addresses/46/                           # no such address 
 > > http://localhost:8000/api/addresses/47/                           # no such address
