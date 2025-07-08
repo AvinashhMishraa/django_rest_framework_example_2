@@ -2212,11 +2212,13 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 
 <br>
 
-| Style          | Support for `/person/{id}` | Custom Soft Delete     | Notes                              |
-| -------------- | -------------------------- | ---------------------- | ---------------------------------- |
+**Primary key based operations:**
+
+| Style          | Support for `/person/{id}`   | Custom Soft Delete      | Notes                              |
+| -------------- | ---------------------------- | ----------------------- | ---------------------------------- |
 | Function-Based | ✅                          | ✅                      | Fully customized                   |
 | APIView        | ✅                          | ✅                      | Clean separation, reusable methods |
-| ModelViewSet   | ✅                          | ✅ (override `destroy`) | Automatically handles routes       |
+| ModelViewSet   | ✅                          | ✅ (override &nbsp;`destroy`) | Automatically handles routes |
 
 <br>
 
