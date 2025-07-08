@@ -2209,16 +2209,16 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 > | Performance     | Excellent                   | Excellent                    | Slightly more abstracted              |
 > | Testability     | Good                        | Very good                    | Excellent                             |
 > | Common Use Case | Prototypes, quick endpoints | Reusable views, custom logic | Full REST APIs with standard patterns |
-
-<br>
-
-**Primary key based operations:**
-
-| Style          | Support for `/person/{id}`   | Custom Soft Delete      | Notes                              |
-| -------------- | ---------------------------- | ----------------------- | ---------------------------------- |
-| Function-Based | ✅                          | ✅                      | Fully customized                   |
-| APIView        | ✅                          | ✅                      | Clean separation, reusable methods |
-| ModelViewSet   | ✅                          | ✅ (override &nbsp;`destroy`) | Automatically handles routes |
+>
+> <br>
+> 
+> > **Primary key based operations:**
+> >
+> > | Style          | Support for `/person/{id}`   | Custom Soft Delete      | Notes                              |
+> > | -------------- | ---------------------------- | ----------------------- | ---------------------------------- |
+> > | Function-Based | ✅                          | ✅                      | Fully customized                   |
+> > | APIView        | ✅                          | ✅                      | Clean separation, reusable methods |
+> > | ModelViewSet   | ✅                          | ✅ (override &nbsp;`destroy`) | Automatically handles routes |
 
 <br>
 
