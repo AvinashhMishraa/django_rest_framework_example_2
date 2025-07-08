@@ -2212,7 +2212,7 @@ Now that you have seen both function based view <code>@api_view()</code> and cla
 >
 > <br>
 > 
-> > **Primary key based operations:**
+> > **Primary key based operations &nbsp;:**
 > >
 > > | Style          | Support for `/person/{id}`   | Custom Soft Delete      | Notes                              |
 > > | -------------- | ---------------------------- | ----------------------- | ---------------------------------- |
