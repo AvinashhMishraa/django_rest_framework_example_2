@@ -4964,6 +4964,8 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 Let's now set up a complete **Address API** in Django REST Framework that works with your `Address` model (which is already integrated with your `SoftDeleteModel` system).
 
+<br>
+
 <h3>🔥 &nbsp;Complete remaining set up of <ins>Address API</ins></h3>
 
 <br>
