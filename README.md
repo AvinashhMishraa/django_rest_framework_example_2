@@ -2902,11 +2902,11 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-> ✅ &nbsp;Let's now customize the same api by <ins>**combining filters on multiple fields**</ins> of the <code>Person</code> model <br>
+> ✅ &nbsp;Let's now customize the same API by <ins>**combining filters on multiple fields**</ins> of the <code>Person</code> model <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; like <code>name</code> and <code>age</code> or it's related fields like <code>color__color_name</code>.
->
+> 
 > <br>
->
+> 
 > > 🔶 &nbsp;Find all the persons who have the letter **"r"** in both his <code>name</code> and <code>color</code>.
 > > 
 > > <br>
@@ -2946,7 +2946,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > > ```
 > > 
 > > <br>
-> >
+> > 
 > > **Output &nbsp;:**
 > > ```
 > > {
