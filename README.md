@@ -5109,6 +5109,8 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
+> 🔸 &nbsp;Create address
+>
 > > `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/
 > > ```
 > > {
