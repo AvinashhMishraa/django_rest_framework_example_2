@@ -5109,8 +5109,10 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
-> 🔸 &nbsp;Create address
->
+🔸 &nbsp;**Create address**
+
+<br>
+
 > > `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/
 > > ```
 > > {
@@ -5157,10 +5159,18 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
+🔸 &nbsp;**Retrieve address**
+
+<br>
+
 > `GET` &nbsp;&nbsp;http://localhost:8000/api/addresses/45/
 > 
 > 
 > **Output &nbsp;&nbsp;➜** &nbsp;&nbsp;`{"id": 45, "person": 44, "city": "city", "street": "street", "is_deleted": false}`
+
+<br>
+
+🔸 &nbsp;**Update address**
 
 <br>
 
@@ -5172,11 +5182,19 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
+🔸 &nbsp;**Partial update address**
+
+<br>
+
 > > `PATCH` &nbsp;&nbsp;http://localhost:8000/api/addresses/45/
 > > 
 > > `{"street": "street 45"}`
 > 
 > **Output &nbsp;&nbsp;➜** &nbsp;&nbsp;`{"id": 45, "person": 44, "city": "city 45", "street": "street 45", "is_deleted": false}`
+
+<br>
+
+🔸 &nbsp;**Delete (soft) address**
 
 <br>
 
@@ -5189,6 +5207,10 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > ∎ &nbsp;**API** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `GET` &nbsp;&nbsp;http://localhost:8000/api/addresses/?include_deleted=True
 > >
 > > ∎ &nbsp;**ORM** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; `Address.all_objects.get(id=45).is_deleted` &nbsp;returns &nbsp;<ins>True</ins>
+
+<br>
+
+🔸 &nbsp;**Bulk Create**
 
 <br>
 
@@ -5210,6 +5232,10 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 >     {"id": 48, "person": 44, "city": "city 48", "street": "street 48", "is_deleted": "True"}
 > ]
 > ```
+
+<br>
+
+🔸 &nbsp;**Bulk Update**
 
 <br>
 
@@ -5253,6 +5279,10 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
+🔸 &nbsp;**Bulk Soft Delete**
+
+<br>
+
 > `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/bulk_soft_delete/
 > ```
 > {
@@ -5285,6 +5315,10 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 
 <br>
 
+🔸 &nbsp;**Bulk Restore**
+
+<br>
+
 > `POST` &nbsp;&nbsp;http://localhost:8000/api/addresses/bulk_restore/
 > ```
 > {
@@ -5314,6 +5348,10 @@ Before proceeding further, let's now set up a complete **Address API** in Django
 > > list(Person.all_objects.filter(id__in = [46, 47, 48]).values("id", "is_deleted"))
 > > ```
 > > &nbsp;&nbsp;&nbsp;&nbsp;**OUTPUT** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; `[{'id': 46, 'is_deleted': False}, {'id': 47, 'is_deleted': False}, {'id': 48, 'is_deleted': False}]`
+
+<br>
+
+🔸 &nbsp;**Bulk Hard Delete**
 
 <br>
 
