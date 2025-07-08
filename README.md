@@ -4953,11 +4953,20 @@ But instead of verifying it on an instance, let's verify cascading effect of
 
 <br>
 
-Before proceeding further, let's now set up a complete **Address API** in Django REST Framework that works with your `Address` model (which is already integrated with your `SoftDeleteModel` system).
+> **Marking extra actions for routing** 
+> > If you have ad-hoc methods that should be routable, you can mark them as such with the `@action` decorator.
+> 
+> 
+> **Routing additional HTTP methods for extra actions**
+> > Extra actions can map additional HTTP methods to separate `ViewSet` methods.
 
 <br>
 
-<h4>🔥 &nbsp;Complete remaining set up of <ins>Address API</ins></h4>
+Let's now set up a complete **Address API** in Django REST Framework that works with your `Address` model (which is already integrated with your `SoftDeleteModel` system).
+
+<br>
+
+<h3>🔥 &nbsp;Complete remaining set up of <ins>Address API</ins></h3>
 
 <br>
 
