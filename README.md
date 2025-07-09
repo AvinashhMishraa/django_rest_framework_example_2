@@ -5421,7 +5421,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <b3>
 
-<h3>✅ &nbsp; Types of Pagination</h3>
+<h3>✅ &nbsp;Types of Pagination</h3>
 
 <br>
 
