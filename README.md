@@ -5514,7 +5514,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <br>
 
-You can also verify this pagination on yet another viewset `PeopleViewSet` &nbsp;&nbsp; - &nbsp;&nbsp; http://localhost:8000/api/people/
+**∎** &nbsp;You can verify this pagination on yet another viewset `PeopleViewSet` &nbsp; - &nbsp; http://localhost:8000/api/people/
 
 <br>
 
@@ -5604,6 +5604,9 @@ Consider you have 100 records in total.
 > 
 > It does not matter whether you give the query param `?include_deleted=True` in the start or in the end.
 
+<br>
+
+**∎** &nbsp;You can verify this pagination on yet another viewset `PeopleViewSet` &nbsp; - &nbsp; http://localhost:8000/api/people/
 
 
 
