@@ -5429,9 +5429,9 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > 
 > > It works only for `generic views` or `viewsets`. 
 > > 
-> > - &nbsp;**PageNumberPagination** &nbsp;&nbsp;&nbsp; ➜ &nbsp;&nbsp;&nbsp;&nbsp;`/persons/?page=10` ===> two parameters : <ins>page size</ins> & <ins>page number</ins>
+> > - &nbsp;**PageNumberPagination** &nbsp;&nbsp;&nbsp; ➜ &nbsp;&nbsp;&nbsp;&nbsp;`/persons/?page=10` ===> &nbsp;&nbsp;&nbsp;&nbsp;two parameters : <ins>page size</ins> & <ins>page number</ins>
 > > 
-> > - &nbsp;**LimitOffsetPagination** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ➜ &nbsp;&nbsp;&nbsp;&nbsp;`persons/?limit=10&offset=10` ===> two parameters : <ins>limit</ins> &nbsp;&&nbsp; <ins>offset</ins>
+> > - &nbsp;**LimitOffsetPagination** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ➜ &nbsp;&nbsp;&nbsp;&nbsp;`persons/?limit=10&offset=10` ===> &nbsp;&nbsp;&nbsp;&nbsp;two parameters : <ins>limit</ins> &nbsp;&&nbsp; <ins>offset</ins>
 > 
 > <br>
 >
@@ -5439,6 +5439,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > 
 > > It works only for `mixins` and `API views` &nbsp;(**class-based** or **function-based**)
 > > One need to create a separate pagination file to write all the logic and then import it for specific set of view(s).
+
 
 
 
