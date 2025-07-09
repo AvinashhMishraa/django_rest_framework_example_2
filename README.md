@@ -5409,6 +5409,8 @@ Let's now set up a complete **Address API** in Django REST Framework that works 
 > > Address.all_objects.get(48)                                       # Address.DoesNotExist error
 > > ```
 
+<br>
+
 <h1>Pagination</h1>
 
 <br>
