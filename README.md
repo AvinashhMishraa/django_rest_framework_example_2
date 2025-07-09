@@ -5415,7 +5415,7 @@ Let's now set up a complete **Address API** in Django REST Framework that works 
 
 <br>
 
-<h2>✅ &nbsp;Why pagination?</h2>
+<h2>✅ &nbsp;Why pagination ?</h2>
 
 <br>
 
