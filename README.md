@@ -5493,15 +5493,21 @@ REST_FRAMEWORK = {
 <br>
 
 You can also add `?include_deleted=True` in the url like :
-- http://localhost:8000/api/addresses/?include_delete=True&page=4
-- http://localhost:8000/api/addresses/?page=4&include_delete=True
+- `http://localhost:8000/api/addresses/?include_delete=True&page=4`
+- `http://localhost:8000/api/addresses/?page=4&include_delete=True`
+
+<br>
 
 It does not matter whether you give the query param `?include_deleted=True` in the start or in the end. The sequence does not really matter here.
 
 <br>
 
-- **Page 1** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?include_deleted=True &nbsp;&nbsp; or &nbsp;&nbsp; http://localhost:8000/api/addresses/?include_deleted=True&limit=3
-- **Page 2** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?include_deleted=True&page=2 &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?page=2&include_deleted=True
+- **Page 1**
+>  http://localhost:8000/api/addresses/?include_deleted=True &nbsp;&nbsp; <br>
+>  http://localhost:8000/api/addresses/?include_deleted=True&limit=3
+- **Page 2**
+> http://localhost:8000/api/addresses/?include_deleted=True&page=2 <br>
+> http://localhost:8000/api/addresses/?page=2&include_deleted=True
 
 
 
