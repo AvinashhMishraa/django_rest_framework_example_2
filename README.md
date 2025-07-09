@@ -5443,8 +5443,65 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > >
 > > One need to create a separate pagination file to write all the logic and then import it for a specific set of view(s).
 
+<br>
 
+<h2>✅ &nbsp;PageNumberPagination</h2>
 
+<br>
+
+```
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.Pagination',
+    'PAGE_SIZE': 3
+}
+```
+
+<br>
+
+> **Page 1** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/ &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?page=1
+> 
+> ```
+> {
+>     "count": 18,
+>     "next": "http://localhost:8000/api/addresses/?page=2",
+>     "previous": null,
+>     "results": [
+>         {"id": 2, "person": 35, "city": "city2", "street": "street2", "is_deleted": false},
+>         {"id": 6, "person": 35, "city": "city3", "street": "street3", "is_deleted": false},
+>         {"id": 28, "person": 80, "city": "city80", "street": "street80", "is_deleted": false}
+>     ]
+> }
+> ```
+> 
+> <br>
+> 
+> **Page 3** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?page=3
+> 
+> ```
+> {
+>     "count": 18,
+>     "next": "http://localhost:8000/api/addresses/?page=4",
+>     "previous": "http://localhost:8000/api/addresses/?page=2",
+>     "results": [
+>         {"id": 32, "person": 43, "city": "city32", "street": "street32", "is_deleted": false},
+>         {"id": 33, "person": 48, "city": "city33", "street": "street33", "is_deleted": false},
+>         {"id": 34, "person": 2, "city": "mmm", "street": "hhhh", "is_deleted": false}
+>     ]
+> }
+> ```
+
+<br>
+
+You can also add `?include_deleted=True` in the url like :
+- http://localhost:8000/api/addresses/?include_delete=True&page=4
+- http://localhost:8000/api/addresses/?page=4&include_delete=True
+
+It does not matter whether you give the query param `?include_deleted=True` in the start or in the end. The sequence does not really matter here.
+
+<br>
+
+- **Page 1** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?include_deleted=True &nbsp;&nbsp; or &nbsp;&nbsp; http://localhost:8000/api/addresses/?include_deleted=True&limit=3
+- **Page 2** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?include_deleted=True&page=2 &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?page=2&include_deleted=True
 
 
 
