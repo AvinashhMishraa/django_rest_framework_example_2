@@ -5578,7 +5578,27 @@ Consider you have 100 records in total.
 > }
 > ```
 
+<br>
 
+> You can also add &nbsp;`?include_deleted=True`&nbsp; in the URL like &nbsp;:
+> 
+> <br>
+> 
+> **Page 1**
+> > `http://localhost:8000/api/addresses/?include_deleted=True`         <br>
+> > `http://localhost:8000/api/addresses/?include_deleted=True&page=1` <br>
+> > `http://localhost:8000/api/addresses/?page=1&include_deleted=True`
+> 
+> <br>
+> 
+> **Page 2**
+> > `http://localhost:8000/api/addresses/?limit=3&offset=3&include_deleted=True`
+> > `http://localhost:8000/api/addresses/?include_deleted=True&limit=3&offset=3`
+> > `http://localhost:8000/api/addresses/?limit=3&include_deleted=True&offset=3`
+> 
+> <br>
+> 
+> It does not matter whether you give the query param `?include_deleted=True` in the start or in the end.
 
 
 
