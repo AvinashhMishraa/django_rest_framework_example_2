@@ -5425,7 +5425,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <br>
 
-> 🔶 &nbsp;**Global Pagination**
+> <h3>🔶 &nbsp;**Global Pagination**</h3>
 > 
 > > It works only for `generic views` or `viewsets`. 
 > > 
