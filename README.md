@@ -5543,8 +5543,7 @@ Consider you have 100 records in total.
 > `/person_api/core/settings.py`
 > ```
 > REST_FRAMEWORK = {
->     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
->     'PAGE_SIZE': 3
+>     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
 > }
 > ```
 
