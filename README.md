@@ -5514,6 +5514,10 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <br>
 
+You can also verify this pagination on yet another viewset `PeopleViewSet` &nbsp;&nbsp; - &nbsp;&nbsp; http://localhost:8000/api/people/
+
+<br>
+
 <h2>✅ &nbsp;LimitOffsetPagination</h2>
 
 <br>
