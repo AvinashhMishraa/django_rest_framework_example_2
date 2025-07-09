@@ -5514,7 +5514,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <br>
 
-**◼️** &nbsp;You can verify this PageNumberPagination on yet another viewset `PeopleViewSet` &nbsp; - &nbsp; http://localhost:8000/api/people/
+**◼️** &nbsp;You can verify this **PageNumberPagination** on yet another viewset `PeopleViewSet` &nbsp; - &nbsp; http://localhost:8000/api/people/
 
 <br>
 
