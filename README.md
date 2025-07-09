@@ -5413,7 +5413,7 @@ Let's now set up a complete **Address API** in Django REST Framework that works 
 
 <br>
 
-<h3>✅ &nbsp;Why pagination?</h3>
+<h2>✅ &nbsp;Why pagination?</h2>
 
 <br>
 
@@ -5421,11 +5421,11 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <br>
 
-<h3>✅ &nbsp;Types of Pagination</h3>
+<h2>✅ &nbsp;Types of Pagination</h2>
 
 <br>
 
-> <h3>🔶 &nbsp;**Global Pagination**</h3>
+> <h3>🔶 &nbsp;Global Pagination</h3>
 > 
 > > It works only for `generic views` or `viewsets`. 
 > > 
@@ -5435,7 +5435,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > 
 > <br>
 >
-> 🔶 &nbsp;**Custom Pagination**
+> <h3>🔶 &nbsp;Custom Pagination</h3>
 > 
 > > It works only for `mixins` and `API views` &nbsp;(**class-based** or **function-based**)
 > > One need to create a separate pagination file to write all the logic and then import it for specific set of view(s).
