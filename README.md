@@ -5493,8 +5493,8 @@ REST_FRAMEWORK = {
 <br>
 
 You can also add `?include_deleted=True` in the url like :
-- `http://localhost:8000/api/addresses/?include_delete=True&page=4`
-- `http://localhost:8000/api/addresses/?page=4&include_delete=True`
+- http://localhost:8000/api/addresses/?`include_delete=True`&page=4
+- http://localhost:8000/api/addresses/?page=4&`include_delete=True`
 
 <br>
 
