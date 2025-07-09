@@ -5549,7 +5549,7 @@ Consider you have 100 records in total.
 
 <br>
 
-> **Page 1** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/ &nbsp;&nbsp; or &nbsp;&nbsp; http://localhost:8000/api/addresses/?limit=3
+> **Page 1** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/ &nbsp;&nbsp; or &nbsp;&nbsp; http://localhost:8000/api/addresses/?limit=3
 > 
 > ```
 > {
@@ -5566,7 +5566,7 @@ Consider you have 100 records in total.
 > 
 > <br>
 > 
-> **Page 2** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3
+> **Page 2** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3
 > 
 > ```
 > {
