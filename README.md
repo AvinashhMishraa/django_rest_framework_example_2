@@ -5492,24 +5492,24 @@ REST_FRAMEWORK = {
 
 <br>
 
-You can also add &nbsp;`?include_deleted=True`&nbsp; in the URL like &nbsp;:
-
-<br>
-
+> You can also add &nbsp;`?include_deleted=True`&nbsp; in the URL like &nbsp;:
+> 
+> <br>
+> 
 > **Page 1**
 > > `http://localhost:8000/api/addresses/?include_deleted=True`         <br>
 > > `http://localhost:8000/api/addresses/?include_deleted=True&page=1` <br>
 > > `http://localhost:8000/api/addresses/?page=1&include_deleted=True`
->
+> 
 > <br>
->
+> 
 > **Page 3**
 > > `http://localhost:8000/api/addresses/?include_deleted=True&page=3` <br>
 > > `http://localhost:8000/api/addresses/?page=3&include_deleted=True`
-
-<br>
-
-It does not matter whether you give the query param `?include_deleted=True` in the start or in the end.
+> 
+> <br>
+> 
+> It does not matter whether you give the query param `?include_deleted=True` in the start or in the end.
 
 
 
