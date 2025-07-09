@@ -5518,7 +5518,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <br>
 
-Takes 2 parameters : <br>
+Takes 2 parameters &nbsp;: <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `limit` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; controls how many items you want to see in a single page <br>
 
