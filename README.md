@@ -5498,8 +5498,8 @@ You can also add &nbsp;`?include_deleted=True`&nbsp; in the URL like &nbsp;:
 
 > **Page 1**
 > > `http://localhost:8000/api/addresses/?include_deleted=True`         <br>
-> > `http://localhost:8000/api/addresses/?include_deleted=True&limit=3` <br>
-> > `http://localhost:8000/api/addresses/?limit=3&include_deleted=True`
+> > `http://localhost:8000/api/addresses/?include_deleted=True&page=1` <br>
+> > `http://localhost:8000/api/addresses/?page=1&include_deleted=True`
 >
 > <br>
 >
