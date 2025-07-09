@@ -5494,14 +5494,14 @@ REST_FRAMEWORK = {
 
 You can also add &nbsp;`?include_deleted=True`&nbsp; in the URL like :
 
-> - **Page 1**
+> **Page 1**
 > > `http://localhost:8000/api/addresses/?include_deleted=True`         <br>
 > > `http://localhost:8000/api/addresses/?include_deleted=True&limit=3` <br>
 > > `http://localhost:8000/api/addresses/?limit=3&include_deleted=True`
 >
 > <br>
 >
-> - **Page 2**
+> **Page 2**
 > > `http://localhost:8000/api/addresses/?include_deleted=True&page=2` <br>
 > > `http://localhost:8000/api/addresses/?page=2&include_deleted=True`
 
