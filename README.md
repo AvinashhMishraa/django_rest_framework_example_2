@@ -5419,7 +5419,7 @@ Let's now set up a complete **Address API** in Django REST Framework that works 
 
 If you have lakhs and crores of records, you can't show all those records in just one page or in one API endpoint. Because then it will be so heavy and unreadable to manage that thing. 
 
-<b3>
+<br>
 
 <h3>✅ &nbsp;Types of Pagination</h3>
 
