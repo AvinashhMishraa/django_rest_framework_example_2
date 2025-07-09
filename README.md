@@ -5449,12 +5449,13 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <br>
 
-```
-REST_FRAMEWORK = {
-    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.Pagination',
-    'PAGE_SIZE': 3
-}
-```
+> `/person_api/core/settings.py`
+> ```
+> REST_FRAMEWORK = {
+>     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.Pagination',
+>     'PAGE_SIZE': 3
+> }
+> ```
 
 <br>
 
