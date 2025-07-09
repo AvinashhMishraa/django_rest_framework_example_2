@@ -5511,6 +5511,69 @@ REST_FRAMEWORK = {
 > 
 > It does not matter whether you give the query param `?include_deleted=True` in the start or in the end.
 
+<br>
+
+<h2>✅ &nbsp;LimitOffsetPagination</h2>
+
+<br>
+
+Takes 2 parameters :
+- `limit` &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; controls how many items you want to see in a single page
+- `offset` &nbsp;&nbsp;===>&nbsp;&nbsp; tells the API where to start fetching the items from 
+
+<br>
+
+Consider you have 100 records in total.
+>
+> `/people/?limit=10&offset=0` &nbsp;&nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; If `offset=0`, you get the first 10 persons (items **1** to **10**)   <br>
+> `/people/?limit=10&offset=10` &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; If `offset=10`, you get the next 10 persons (items **11** to **20**)  <br>
+> `/people/?limit=10&offset=90` &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; If `offset=90`, you get the last 10 persons (items **91** to **100**)
+
+<br>
+
+`person_api/core/settings.py`
+```
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+    'PAGE_SIZE': 3
+}
+```
+
+<br>
+
+> **Page 1** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/ &nbsp;&nbsp; or &nbsp;&nbsp; http://localhost:8000/api/addresses/?limit=3
+> 
+> ```
+> {
+>     "count": 18,
+>     "next": "http://localhost:8000/api/addresses/?limit=3&offset=3",
+>     "previous": null,
+>     "results": [
+>         {"id": 2, "person": 35, "city": "city2", "street": "street2", "is_deleted": false},
+>         {"id": 6, "person": 35, "city": "city3", "street": "street3", "is_deleted": false},
+>         {"id": 28, "person": 80, "city": "city80", "street": "street80", "is_deleted": false}
+>     ]
+> }
+> ```
+> 
+> <br>
+> 
+> **Page 2** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3
+> 
+> ```
+> {
+>     "count": 18,
+>     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6",
+>     "previous": "http://localhost:8000/api/addresses/?limit=3",
+>     "results": [
+>         {"id": 29, "person": 80, "city": "city", "street": "street", "is_deleted": false},
+>         {"id": 30, "person": 82, "city": "city", "street": "street", "is_deleted": false},
+>         {"id": 31, "person": 43, "city": "city31", "street": "street31", "is_deleted": false}
+>     ]
+> }
+> ```
+
+
 
 
 
