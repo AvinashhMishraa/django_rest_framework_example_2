@@ -5503,11 +5503,11 @@ It does not matter whether you give the query param `?include_deleted=True` in t
 <br>
 
 - **Page 1**
->  http://localhost:8000/api/addresses/?include_deleted=True &nbsp;&nbsp; <br>
->  http://localhost:8000/api/addresses/?include_deleted=True&limit=3
+> `http://localhost:8000/api/addresses/?include_deleted=True` <br>
+> `http://localhost:8000/api/addresses/?include_deleted=True&limit=3`
 - **Page 2**
-> http://localhost:8000/api/addresses/?include_deleted=True&page=2 <br>
-> http://localhost:8000/api/addresses/?page=2&include_deleted=True
+> `http://localhost:8000/api/addresses/?include_deleted=True&page=2` <br>
+> `http://localhost:8000/api/addresses/?page=2&include_deleted=True`
 
 
 
