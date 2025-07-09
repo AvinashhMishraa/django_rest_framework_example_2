@@ -5493,8 +5493,8 @@ REST_FRAMEWORK = {
 <br>
 
 You can also add `?include_deleted=True` in the url like :
-- /api/addresses/?`include_delete=True`&page=4
-- /api/addresses/?page=4&`include_delete=True`
+- **/api/addresses/?**`include_delete=True`**&page=4**
+- **/api/addresses/?page=4**&`include_delete=True`
 
 <br>
 
