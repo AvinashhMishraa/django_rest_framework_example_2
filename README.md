@@ -5526,7 +5526,7 @@ Takes 2 parameters &nbsp;: <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `limit` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; controls how many items you want to see in a single page <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `offset` &nbsp;&nbsp;➜&nbsp;&nbsp; tells the API where to start fetching the items from 
+&nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `offset` &nbsp;&nbsp;➜&nbsp;&nbsp; tells the API how many records to be skipped i.e, exactly where to start fetching the records after
 
 <br>
 
