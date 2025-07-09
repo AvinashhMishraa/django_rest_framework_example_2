@@ -5440,7 +5440,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > <h3>🔶 &nbsp;Custom Pagination</h3>
 > 
 > > It works only for `mixins` and `API views` &nbsp;(**class-based** or **function-based**)
-> > One need to create a separate pagination file to write all the logic and then import it for specific set of view(s).
+> > One need to create a separate pagination file to write all the logic and then import it for a specific set of view(s).
 
 
 
