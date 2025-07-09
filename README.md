@@ -5509,7 +5509,7 @@ You can also add &nbsp;`?include_deleted=True`&nbsp; in the URL like &nbsp;:
 
 <br>
 
-It does not matter whether you give the query param `?include_deleted=True` in the start or in the end. The sequence does not really matter.
+It does not matter whether you give the query param `?include_deleted=True` in the start or in the end.
 
 
 
