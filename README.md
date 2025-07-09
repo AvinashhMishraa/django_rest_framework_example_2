@@ -5431,7 +5431,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > > 
 > > - &nbsp;**PageNumberPagination** &nbsp;&nbsp;&nbsp; ➜  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/persons/?page=10` ===> two parameters : <ins>page size</ins> & <ins>page number</ins>
 > > 
-> > - &nbsp;**LimitOffsetPagination** &nbsp;&nbsp;&nbsp;&nbsp; ➜  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `persons/?limit=10&offset=10` ===> two parameters : <ins>limit</ins> &nbsp;&&nbsp; <ins>offset</ins>
+> > - &nbsp;**LimitOffsetPagination** &nbsp;&nbsp;&nbsp; ➜  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `persons/?limit=10&offset=10` ===> two parameters : <ins>limit</ins> &nbsp;&&nbsp; <ins>offset</ins>
 > 
 > <br>
 >
