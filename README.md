@@ -5492,7 +5492,7 @@ REST_FRAMEWORK = {
 
 <br>
 
-You can also add &nbsp;`?include_deleted=True`&nbsp; in the URL like :
+You can also add &nbsp;`?include_deleted=True`&nbsp; in the URL like &nbsp;:
 
 <br>
 
