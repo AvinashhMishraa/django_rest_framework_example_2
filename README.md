@@ -5429,9 +5429,9 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > 
 > > It works only for `generic views` or `viewsets`. 
 > > 
-> > 🔹 &nbsp;**<ins>PageNumberPagination</ins>** &nbsp;&nbsp;&nbsp;&nbsp; ➜  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/persons/?page=10` ===> two parameters : **page size** & **page number**
+> > 🔹 &nbsp;**PageNumberPagination** &nbsp;&nbsp;&nbsp;&nbsp; ➜  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/persons/?page=10` ===> two parameters : <ins>page size</ins> & <ins>page number</ins>
 > > 
-> > 🔹 &nbsp;**<ins>LimitOffsetPagination</ins>** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ➜  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `persons/?limit=10&offset=10` ===> two parameters : **limit** & **offset**
+> > 🔹 &nbsp;**LimitOffsetPagination** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ➜  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; `persons/?limit=10&offset=10` ===> two parameters : `limit` &nbsp;&&nbsp; `offset`
 > 
 > <br>
 >
