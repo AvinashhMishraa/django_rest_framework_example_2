@@ -5458,7 +5458,7 @@ REST_FRAMEWORK = {
 
 <br>
 
-> **Page 1** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/ &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?page=1
+> **Page 1** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/ &nbsp;&nbsp;&nbsp; or &nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?page=1
 > 
 > ```
 > {
@@ -5475,7 +5475,7 @@ REST_FRAMEWORK = {
 > 
 > <br>
 > 
-> **Page 3** &nbsp;&nbsp;&nbsp;===>&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?page=3
+> **Page 3** &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; http://localhost:8000/api/addresses/?page=3
 > 
 > ```
 > {
