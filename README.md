@@ -5531,7 +5531,7 @@ Consider you have 100 records in total.
 >
 > `/people/?limit=10&offset=10` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; If &nbsp;`offset=10`&nbsp;, you get the <ins>next</ins> 10 persons (items **11** ⟶ **20**)  <br>
 >
-> `/people/?limit=10&offset=90` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; If &nbsp;`offset=90`&Nbsp;, you get the <ins>last</ins> 10 persons (items **91** ⟶ **100**)
+> `/people/?limit=10&offset=90` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; If &nbsp;`offset=90`&nbsp;, you get the <ins>last</ins> 10 persons (items **91** ⟶ **100**)
 
 <br>
 
