@@ -5527,7 +5527,7 @@ Takes 2 parameters : <br>
 
 Consider you have 100 records in total.
 >
-> `/people/?limit=10&offset=0 ` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; If &nbsp;`offset=0`&nbsp;, you get the <ins>firs</ins>t 10 persons (items **1** ⟶ **10**)   <br>
+> `/people/?limit=10&offset=0 ` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; If &nbsp;`offset=0 `&nbsp;, you get the <ins>firs</ins>t 10 persons (items **1** ⟶ **10**)   <br>
 >
 > `/people/?limit=10&offset=10` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; If &nbsp;`offset=10`&nbsp;, you get the <ins>next</ins> 10 persons (items **11** ⟶ **20**)  <br>
 >
