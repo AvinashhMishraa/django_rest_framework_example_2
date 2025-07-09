@@ -5519,7 +5519,7 @@ REST_FRAMEWORK = {
 
 Takes 2 parameters : <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `limit` &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; controls how many items you want to see in a single page <br>
+&nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `limit` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; controls how many items you want to see in a single page <br>
 
 &nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `offset` &nbsp;&nbsp;➜&nbsp;&nbsp; tells the API where to start fetching the items from 
 
