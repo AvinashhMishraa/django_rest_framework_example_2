@@ -5647,7 +5647,14 @@ Consider you have 100 records in total.
 
 **◼️** &nbsp;You can verify this **LimitOffsetPagination** on yet another viewset `PeopleViewSet` &nbsp; - &nbsp; http://localhost:8000/api/people/
 
+<br>
 
+🤔 Now what if you want `LimitOffsetPagination` as a default pagination class but 'PageNumberPagination` for `PeopleViewSet` only ? <br>
+&nbsp;&nbsp;&nbsp;&nbsp;Well that can be done through **Custom Pagination**.
+
+<br>
+
+<h2>✅ &nbsp;Custom Pagination</h2>
 
 
 
