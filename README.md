@@ -5664,11 +5664,11 @@ Consider you have 100 records in total.
 
 $$
 \text{Page Number}  \quad \quad \quad \quad \quad = \quad \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
-$$
 
-$$
 \text{Content Range for Each Page} \quad = \quad [\text{offset} + 1,\ \text{offset} + \text{limit}]
 $$
+
+
 
 
 
