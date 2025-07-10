@@ -5546,6 +5546,15 @@ Consider you have 100 records in total.
 >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
 > }
 > ```
+> 
+> <br>
+> 
+> ```
+> REST_FRAMEWORK = {
+>     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+>     'PAGE_SIZE': 3
+> }
+> ```
 
 <br>
 
