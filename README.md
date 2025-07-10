@@ -5663,12 +5663,12 @@ Consider you have 100 records in total.
 
 
 $$
-\hspace{2cm} \text{Page Number} \hspace{1.5cm} = \hspace{1cm} \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
+\hspace{2cm} \text{Page Number} \hspace{1cm} = \hspace{1cm} \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
 $$
 
 
 $$
-\text{Content Range for Each Page} \hspace{0.5cm} = \quad [\text{offset} + 1,\ \text{offset} + \text{limit}]
+\text{Content Range for Each Page} \hspace{1cm} = \hspace{1cm} [\text{offset} + 1,\ \text{offset} + \text{limit}]
 $$
 
 
