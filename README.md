@@ -5756,7 +5756,7 @@ Let's see how ?
 
 <br>
 
-> > **✔️** &nbsp;You can still customize the page size by passing the query param `page_size=` in the above `/people/` URL like :
+> > **✔️** &nbsp;You can still customize the page size by passing the query param &nbsp;`page_size=`&nbsp; in the above &nbsp;`/people/`&nbsp; URL like :
 > > 
 > > **People Page 2** &nbsp;-&nbsp; http://localhost:8000/api/people/?page_num=2&page_size=5
 > > ```
@@ -5778,7 +5778,7 @@ Let's see how ?
 > 
 > <br>
 > 
-> > **❌** &nbsp;But this is not applicable for the `/addresses/` class because it is not customizable.
+> > **❌** &nbsp;But this is not applicable for the &nbsp;`/addresses/`&nbsp; class because it is not customizable.
 > >
 > > **Address Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3&page_size=5
 > > ```
