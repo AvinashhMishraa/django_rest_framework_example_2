@@ -5651,6 +5651,10 @@ Consider you have 100 records in total.
 <br><br><br><br><br><br><br><br><br>
 
 
+$$
+\left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
+$$
+
 
 
 
