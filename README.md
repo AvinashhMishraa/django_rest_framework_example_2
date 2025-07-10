@@ -5553,7 +5553,7 @@ Now if you hit the URL &nbsp;http://localhost:8000/api/addresses/ , you will sti
 
 <br>
 
-Or you can also set the 'PAGE_SIZE' param globally like that in `PageNumberPagination`.
+Or you can also set the `PAGE_SIZE` param globally like that in `PageNumberPagination`.
 
 <br>
 
