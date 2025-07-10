@@ -5760,43 +5760,43 @@ Let's see how ?
 
 <br>
 
-> **✔️** &nbsp;You can still customize the page size by passing the query param `page_size=` in the above `/people/` URL like :
-> 
-> **People Page 2** &nbsp;-&nbsp; http://localhost:8000/api/people/?page_num=2&page_size=5
-> ```
-> {
->     "next": "http://localhost:8000/api/people/?page_num=3&page_size=5",
->     "previous": "http://localhost:8000/api/people/?page_size=5",
->     "count": 27,
->     "page_size": 3,
->     "total_number_of_pages": 6,
->     "results": [
->         {"id": 28, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false},
->         {"id": 29, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false},
->         {"id": 30, "name": "x", "age": x, "color": x, "color_info": null, "is_deleted": false},
->         {"id": 31, "name": "x", "age": x, "color": null, "color_info": null, "is_deleted": false},
->         {"id": 35, "name": "x", "age": x, "color": null, "color_info": null, "is_deleted": false}
->     ]
-> }
-> ```
+> > **✔️** &nbsp;You can still customize the page size by passing the query param `page_size=` in the above `/people/` URL like :
+> > 
+> > **People Page 2** &nbsp;-&nbsp; http://localhost:8000/api/people/?page_num=2&page_size=5
+> > ```
+> > {
+> >     "next": "http://localhost:8000/api/people/?page_num=3&page_size=5",
+> >     "previous": "http://localhost:8000/api/people/?page_size=5",
+> >     "count": 27,
+> >     "page_size": 3,
+> >     "total_number_of_pages": 6,
+> >     "results": [
+> >         {"id": 28, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false},
+> >         {"id": 29, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false},
+> >         {"id": 30, "name": "x", "age": x, "color": x, "color_info": null, "is_deleted": false},
+> >         {"id": 31, "name": "x", "age": x, "color": null, "color_info": null, "is_deleted": false},
+> >         {"id": 35, "name": "x", "age": x, "color": null, "color_info": null, "is_deleted": false}
+> >     ]
+> > }
+> > ```
 > 
 > <br>
 > 
-> **❌** &nbsp;But this is not applicable for the `/addresses/` class because it is not customizable.
->
-> **Address Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3&page_size=5
-> ```
-> {
->     "count": 18,
->     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6&page_size=5",
->     "previous": "http://localhost:8000/api/addresses/?limit=3&page_size=5",
->     "results": [
->         {"id": 29, "person": 80, "city": "x", "street": "x", "is_deleted": false},
->         {"id": 30, "person": 82, "city": "x", "street": "x", "is_deleted": false},
->         {"id": 31, "person": 43, "city": "x", "street": "x", "is_deleted": false}
->     ]
-> }
-> ```
+> > **❌** &nbsp;But this is not applicable for the `/addresses/` class because it is not customizable.
+> >
+> > **Address Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3&page_size=5
+> > ```
+> > {
+> >     "count": 18,
+> >     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6&page_size=5",
+> >     "previous": "http://localhost:8000/api/addresses/?limit=3&page_size=5",
+> >     "results": [
+> >         {"id": 29, "person": 80, "city": "x", "street": "x", "is_deleted": false},
+> >         {"id": 30, "person": 82, "city": "x", "street": "x", "is_deleted": false},
+> >         {"id": 31, "person": 43, "city": "x", "street": "x", "is_deleted": false}
+> >     ]
+> > }
+> > ```
 
 
 
