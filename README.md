@@ -5449,7 +5449,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 <br>
 
-> `/person_api/core/settings.py`
+> `/person_api/core/settings.py` &nbsp;⭐
 > ```
 > REST_FRAMEWORK = {
 >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.Pagination',
@@ -5498,7 +5498,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > <br>
 > 
 > **Page 1**
-> > `http://localhost:8000/api/addresses/?include_deleted=True`         <br>
+> > `http://localhost:8000/api/addresses/?include_deleted=True`        <br>
 > > `http://localhost:8000/api/addresses/?include_deleted=True&page=1` <br>
 > > `http://localhost:8000/api/addresses/?page=1&include_deleted=True`
 > 
@@ -5540,13 +5540,13 @@ Consider you have 100 records in total.
 
 <br>
 
-> > `/person_api/core/settings.py`
+> > `/person_api/core/settings.py` &nbsp;⭐
 > > ```
 > > REST_FRAMEWORK = {
 > >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
 > > }
 > > ```
->
+> 
 > <br>
 > 
 > Now if you hit the URL &nbsp;http://localhost:8000/api/addresses/ , &nbsp;you will still get all the records on a single page only. So to see the records in pages, you have to explicity append the query params &nbsp;`?limit=3`&nbsp; or &nbsp;`?limit=3&offset=0`&nbsp; to start from the **page 1**
@@ -5556,8 +5556,8 @@ Consider you have 100 records in total.
 > Or else you can also set the `PAGE_SIZE` param globally like that in `PageNumberPagination`
 > 
 > <br>
->
-> > `/person_api/core/settings.py`
+> 
+> > `/person_api/core/settings.py` &nbsp;⭐
 > > ```
 > > REST_FRAMEWORK = {
 > >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
