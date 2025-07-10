@@ -5418,7 +5418,7 @@ If you have lakhs and crores of records, you can't expose or show all those reco
 > 
 > > It is project-wide default pagination.
 > > 
-> > It works only for `generic views` or `viewsets`
+> > It works only for &nbsp;`GenericAPIView`s &nbsp;and &nbsp;`ViewSet`s
 > > 
 > > There are various types, some of which are :
 > > 
