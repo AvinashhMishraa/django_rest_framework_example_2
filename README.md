@@ -5680,10 +5680,10 @@ Let's see how ?
 > 
 > 
 > class CustomPagination(PageNumberPagination):
->     # page_size = 2                                                         # default
+>     # page_size = 2                                                   # default
 >     page_size_query_param = 'page_size'                               # overrideS default using <?page_size=>
 >     page_query_param = 'page_num'                                     # overrides default <?page=> with <?page_num=>
->     max_page_size = 50                                                      # cap to prevent abuse
+>     max_page_size = 50                                                # cap to prevent abuse
 > 
 >     def get_paginated_response(self, data):
 >         return Response({
