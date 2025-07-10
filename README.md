@@ -5658,6 +5658,65 @@ Consider you have 100 records in total.
 
 <br>
 
+Let's see how ?
+
+<br>
+
+> 🔶 &nbsp;Update `person_api/core/settings.py`
+> ```
+> REST_FRAMEWORK = {
+>     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+>     'PAGE_SIZE': 3
+> }
+> ```
+> 
+> <br>
+> 
+> 🔶 &nbsp;`person_api/home/paginations.py' &nbsp;**(create this file in your app)**
+> ```
+> from rest_framework.pagination import PageNumberPagination
+> from rest_framework.response import Response
+> 
+> 
+> 
+> class CustomPagination(PageNumberPagination):
+>     # page_size = 2                                                         # default
+>     page_size_query_param = 'page_size'                                     # overrideS default using <?page_size=>
+>     page_query_param = 'page_num'                                           # overrides default <?page=> with <?page_num=>
+>     max_page_size = 50                                                      # cap to prevent abuse
+> 
+>     def get_paginated_response(self, data):
+>         return Response({
+>             # 'current_page': self.page.number,
+>             'next': self.get_next_link(),                   
+>             'previous': self.get_previous_link(),
+>             'count': self.page.paginator.count,                             # total number of items
+>             'page_size': self.page_size,                                    # total number of items in each page
+>             'total_number_of_pages': self.page.paginator.num_pages,         # total number of pages
+>             'results': data
+>         })
+> ```
+> 
+> <br>
+> 
+> 🔶 &nbsp;`person_api/home/views.py` &nbsp;**(Use custom pagination class in specific viewset)**
+> ```
+> from .paginations import CustomPagination                                   # CustomPagination class imported
+> 
+> 
+> # /api/people/
+> class PeopleViewSet(viewsets.ModelViewSet):
+>     queryset = Person.objects.select_related('color').all()
+>     serializer_class = PersonSerializer
+> 
+>     filter_backends = [DjangoFilterBackend]
+>     filterset_class = PersonFilter
+> 
+>     pagination_class = CustomPagination                                     # CustomPagination class added
+> ```
+
+
+
 
 
 
