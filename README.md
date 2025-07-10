@@ -5704,6 +5704,7 @@ Let's see how ?
 > from .paginations import CustomPagination                                 # CustomPagination class imported
 > 
 > 
+> 
 > # /api/people/
 > class PeopleViewSet(viewsets.ModelViewSet):
 >     queryset = Person.objects.select_related('color').all()
