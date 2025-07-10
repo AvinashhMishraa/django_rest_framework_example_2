@@ -5451,9 +5451,9 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 Takes 2 parameters &nbsp;: <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `PAGE_SIZE` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; controls how many records to be displayed in each page. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `PAGE_SIZE` &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; controls how many records to be displayed in each page. <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `page` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; page number to be passed as query param in the URL
+&nbsp;&nbsp;&nbsp;&nbsp;🔸&nbsp;&nbsp; `page` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp; page number to be passed as query param in the URL
 
 <br>
 
