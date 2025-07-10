@@ -5701,7 +5701,7 @@ Let's see how ?
 > 
 > 🔶 &nbsp;`person_api/home/views.py` &nbsp;**(Use custom pagination class in specific viewset)**
 > ```
-> from .paginations import CustomPagination                                   # CustomPagination class imported
+> from .paginations import CustomPagination                                 # CustomPagination class imported
 > 
 > 
 > # /api/people/
@@ -5712,7 +5712,7 @@ Let's see how ?
 >     filter_backends = [DjangoFilterBackend]
 >     filterset_class = PersonFilter
 > 
->     pagination_class = CustomPagination                                     # CustomPagination class added
+>     pagination_class = CustomPagination                                   # CustomPagination class added
 > ```
 
 
