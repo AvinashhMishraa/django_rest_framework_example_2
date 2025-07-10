@@ -5663,7 +5663,7 @@ Consider you have 100 records in total.
 
 
 $$
-\hspace{1.8cm} \text{Page Number} \hspace{1.5cm} = \hspace{1cm} \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
+\hspace{1.9cm} \text{Page Number} \hspace{1.5cm} = \hspace{1cm} \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
 $$
 
 
