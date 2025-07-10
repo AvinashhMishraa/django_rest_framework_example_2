@@ -5549,11 +5549,11 @@ Consider you have 100 records in total.
 >
 > <br>
 > 
-> Now if you hit the URL &nbsp;http://localhost:8000/api/addresses/ , &nbsp;you will still get all the records on a single page only. So to see the records in pages, you have to explicity append the query params &nbsp;`?limit=3`&nbsp; or &nbsp;`?limit=3&offset=0`&nbsp; to start from the **page 1**.
+> Now if you hit the URL &nbsp;http://localhost:8000/api/addresses/ , &nbsp;you will still get all the records on a single page only. So to see the records in pages, you have to explicity append the query params &nbsp;`?limit=3`&nbsp; or &nbsp;`?limit=3&offset=0`&nbsp; to start from the **page 1**
 > 
 > <br>
 > 
-> Or else you can also set the `PAGE_SIZE` param globally like that in `PageNumberPagination`.
+> Or else you can also set the `PAGE_SIZE` param globally like that in `PageNumberPagination`
 > 
 > <br>
 >
