@@ -5668,7 +5668,7 @@ $$
 
 
 $$
-\text{Content Range for Each Page} \quad = \quad [\text{offset} + 1,\ \text{offset} + \text{limit}]
+\text{Content Range for Each Page} \hspace{1cm} = \quad [\text{offset} + 1,\ \text{offset} + \text{limit}]
 $$
 
 
