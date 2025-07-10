@@ -5672,7 +5672,7 @@ Let's see how ?
 > 
 > <br>
 > 
-> 🔶 &nbsp;`person_api/home/paginations.py' &nbsp;**(create this file in your app)**
+> 🔶 &nbsp;`person_api/home/paginations.py` &nbsp;**(create this file in your app)**
 > ```
 > from rest_framework.pagination import PageNumberPagination
 > from rest_framework.response import Response
