@@ -5652,7 +5652,7 @@ Consider you have 100 records in total.
 
 
 $$
-page number &nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp; \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
+page number   &nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp;&nbsp;   \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
 $$
 
 <br>
