@@ -5538,6 +5538,14 @@ Takes 2 parameters &nbsp;: <br>
 
 <br>
 
+$$
+\text{Page Number} \quad = \quad \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
+$$
+
+content range for each page : [offset + 1, offset + limit]
+
+<br>
+
 Consider you have 100 records in total.
 >
 > `/people/?limit=10&offset=0 ` &nbsp;&nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp;&nbsp; If &nbsp;`offset=0 `&nbsp;, you get the <ins>firs</ins>t 10 persons (items **1** ⟶ **10**)   <br>
@@ -5651,9 +5659,7 @@ Consider you have 100 records in total.
 <br><br><br><br><br><br><br><br><br>
 
 
-$$
-\text{Page Number} \quad = \quad \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
-$$
+
 
 
 
