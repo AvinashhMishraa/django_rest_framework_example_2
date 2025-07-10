@@ -5718,7 +5718,7 @@ Let's see how ?
 
 <br>
 
-> 🔶 &nbsp;Test &bbsp;**Address List** &nbsp;via &nbsp;API &nbsp;⭐
+> 🔶 &nbsp;Test &nbsp;**Address List** &nbsp;via &nbsp;API &nbsp;⭐
 > 
 > **Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3
 > ```
