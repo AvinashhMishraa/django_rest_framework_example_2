@@ -5729,9 +5729,9 @@ Let's see how ?
 >     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6",
 >     "previous": "http://localhost:8000/api/addresses/?limit=3",
 >     "results": [
->         {"id": 29, "person": 80, "city": "city", "street": "street", "is_deleted": false},
->         {"id": 30, "person": 82, "city": "city", "street": "street", "is_deleted": false},
->         {"id": 31, "person": 43, "city": "city31", "street": "street31", "is_deleted": false}
+>         {"id": 29, "person": 80, "city": "*", "street": "*", "is_deleted": false},
+>         {"id": 30, "person": 82, "city": "*", "street": "*", "is_deleted": false},
+>         {"id": 31, "person": 43, "city": "*", "street": "*", "is_deleted": false}
 >     ]
 > }
 > ```
@@ -5751,9 +5751,9 @@ Let's see how ?
 >     "page_size": 3,
 >     "total_number_of_pages": 9,
 >     "results": [
->         {"id": 25, "name": "Bina Mishra", "age": 50, "color": 2, "color_info": {"color_name": "BLUE", "hex_code": "#0000ff"}, "is_deleted": false},
->         {"id": 27, "name": "Test", "age": 32, "color": 2, "color_info": {"color_name": "BLUE", "hex_code": "#0000ff"}, "is_deleted": false},
->         {"id": 28, "name": "ABC", "age": 33, "color": 1, "color_info": {"color_name": "RED", "hex_code": "#ff0000"}, "is_deleted": false}
+>         {"id": 25, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false},
+>         {"id": 27, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false},
+>         {"id": 28, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false}
 >     ]
 > }
 > ```
@@ -5771,11 +5771,11 @@ Let's see how ?
 >     "page_size": 3,
 >     "total_number_of_pages": 6,
 >     "results": [
->         {"id": 28, "name": "ABC", "age": 33, "color": 1, "color_info": {"color_name": "RED", "hex_code": "#ff0000"}, "is_deleted": false},
->         {"id": 29, "name": "XYZ", "age": 27, "color": 3, "color_info": {"color_name": "GREEN", "hex_code": "#008000"}, "is_deleted": false},
->         {"id": 30, "name": "S7", "age": 27, "color": null, "color_info": null, "is_deleted": false},
->         {"id": 31, "name": "ABC", "age": 21, "color": null, "color_info": null, "is_deleted": false},
->         {"id": 35, "name": "Test35", "age": 27, "color": null, "color_info": null, "is_deleted": false}
+>         {"id": 28, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false},
+>         {"id": 29, "name": "x", "age": x, "color": x, "color_info": {"color_name": "x", "hex_code": "x"}, "is_deleted": false},
+>         {"id": 30, "name": "x", "age": x, "color": x, "color_info": null, "is_deleted": false},
+>         {"id": 31, "name": "x", "age": x, "color": null, "color_info": null, "is_deleted": false},
+>         {"id": 35, "name": "x", "age": x, "color": null, "color_info": null, "is_deleted": false}
 >     ]
 > }
 > ```
@@ -5791,9 +5791,9 @@ Let's see how ?
 >     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6&page_size=5",
 >     "previous": "http://localhost:8000/api/addresses/?limit=3&page_size=5",
 >     "results": [
->         {"id": 29, "person": 80, "city": "city", "street": "street", "is_deleted": false},
->         {"id": 30, "person": 82, "city": "city", "street": "street", "is_deleted": false},
->         {"id": 31, "person": 43, "city": "city31", "street": "street31", "is_deleted": false}
+>         {"id": 29, "person": 80, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 30, "person": 82, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 31, "person": 43, "city": "x", "street": "x", "is_deleted": false}
 >     ]
 > }
 > ```
