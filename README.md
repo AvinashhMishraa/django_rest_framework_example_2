@@ -5650,7 +5650,7 @@ Consider you have 100 records in total.
 <br>
 
 **🔥** &nbsp;Now what if you want `LimitOffsetPagination` as a default pagination class but 'PageNumberPagination` for `PeopleViewSet` only ? <br>
-&nbsp;&nbsp;&nbsp;&nbsp;Well that can be done through **Custom Pagination**.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Well that can be done through **Custom Pagination**.
 
 <br>
 
