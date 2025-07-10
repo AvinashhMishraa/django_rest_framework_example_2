@@ -5718,7 +5718,7 @@ Let's see how ?
 
 <br>
 
-> 🔶 &nbsp;Test **Address List** via API
+> 🔶 &nbsp;Test &bbsp;**Address List** &nbsp;via &nbsp;API &nbsp;⭐
 > 
 > **Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3
 > ```
@@ -5736,7 +5736,7 @@ Let's see how ?
 
 <br>
 
-> 🔶 &nbsp;Test **People List** via API
+> 🔶 &nbsp;Test &nbsp;**People List** &nbsp;via &nbsp;API &nbsp;⭐
 > 
 > **Page 2** &nbsp;-&nbsp; http://localhost:8000/api/people/?page_num=2
 > ```
