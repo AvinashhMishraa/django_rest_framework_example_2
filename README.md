@@ -5539,11 +5539,11 @@ Takes 2 parameters &nbsp;: <br>
 <br>
 
 $$
-\text{Page Number} \quad = \quad \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
+\hspace{0.4cm} \text{Page Number} \hspace{1cm} = \hspace{1cm} \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
 $$
 
 $$
-\text{Content Range for Each Page} \quad = \quad [\text{offset} + 1,\ \text{offset} + \text{limit}]
+\text{Content Range for Each Page} \hspace{1cm} = \hspace{1cm} [\text{offset} + 1,\ \text{offset} + \text{limit}]
 $$
 
 <br>
@@ -5662,14 +5662,7 @@ Consider you have 100 records in total.
 
 
 
-$$
-\hspace{0.4cm} \text{Page Number} \hspace{1cm} = \hspace{1cm} \left\lfloor \frac{\text{offset}}{\text{limit}} \right\rfloor + 1
-$$
 
-
-$$
-\text{Content Range for Each Page} \hspace{1cm} = \hspace{1cm} [\text{offset} + 1,\ \text{offset} + \text{limit}]
-$$
 
 
 
