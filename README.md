@@ -5680,19 +5680,19 @@ Let's see how ?
 > 
 > 
 > class CustomPagination(PageNumberPagination):
->     # page_size = 2                                                      # overrides global default
->     page_size_query_param = 'page_size'                                  # overrides default with ?page_size=
+>     # page_size = 2                                                       # overrides global default
+>     page_size_query_param = 'page_size'                                   # overrides default with ?page_size=
 >     page_query_param = 'page_num'                                         # overrides default ?page= with ?page_num=
->     max_page_size = 50                                                   # cap to prevent abuse
+>     max_page_size = 50                                                    # cap to prevent abuse
 > 
 >     def get_paginated_response(self, data):
 >         return Response({
 >             # 'current_page': self.page.number,
 >             'next': self.get_next_link(),                   
 >             'previous': self.get_previous_link(),
->             'count': self.page.paginator.count,                          # total number of items
->             'page_size': self.page_size,                                 # total number of items in each page
->             'total_number_of_pages': self.page.paginator.num_pages,      # total number of pages
+>             'count': self.page.paginator.count,                           # total number of items
+>             'page_size': self.page_size,                                  # total number of items in each page
+>             'total_number_of_pages': self.page.paginator.num_pages,       # total number of pages
 >             'results': data
 >         })
 > ```
