@@ -5662,7 +5662,7 @@ Let's see how ?
 
 <br>
 
-> 🔶 &nbsp;Update `person_api/core/settings.py`
+> 🔶 &nbsp;Update &nbsp;`person_api/core/settings.py`
 > ```
 > REST_FRAMEWORK = {
 >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
