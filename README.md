@@ -5549,7 +5549,7 @@ Consider you have 100 records in total.
 
 <br>
 
-Now if you hit the URL &nbsp;http://localhost:8000/api/addresses/ , you will still get all the records on one page. So you have to explicity append the query params &nbsp;`?limit=3`&nbsp; or &nbsp;`?limit=3&offset=0`&nbsp; to start from the **page 1**.
+Now if you hit the URL &nbsp;http://localhost:8000/api/addresses/ , &nbsp;you will still get all the records on one page. So you have to explicity append the query params &nbsp;`?limit=3`&nbsp; or &nbsp;`?limit=3&offset=0`&nbsp; to start from the **page 1**.
 
 <br>
 
