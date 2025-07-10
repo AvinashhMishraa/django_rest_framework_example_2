@@ -5429,7 +5429,7 @@ If you have lakhs and crores of records, you can't show all those records in jus
 
 > <h3>🔶 &nbsp;Global Pagination</h3>
 > 
-> > It works only for `generic views` or `viewsets`. 
+> > It is project-wide default pagination. It works only for `generic views` or `viewsets`. 
 > > 
 > > - &nbsp;**PageNumberPagination** &nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/people/?page=10` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp; parameters &nbsp;:&nbsp;&nbsp; <ins>page size</ins> &nbsp;&&nbsp; <ins>page number</ins>
 > > 
