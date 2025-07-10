@@ -5729,9 +5729,9 @@ Let's see how ?
 >     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6",
 >     "previous": "http://localhost:8000/api/addresses/?limit=3",
 >     "results": [
->         {"id": 29, "person": 80, "city": "*", "street": "*", "is_deleted": false},
->         {"id": 30, "person": 82, "city": "*", "street": "*", "is_deleted": false},
->         {"id": 31, "person": 43, "city": "*", "street": "*", "is_deleted": false}
+>         {"id": 29, "person": 80, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 30, "person": 82, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 31, "person": 43, "city": "x", "street": "x", "is_deleted": false}
 >     ]
 > }
 > ```
