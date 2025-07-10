@@ -5435,9 +5435,9 @@ If you have lakhs and crores of records, you can't show all those records in jus
 > > 
 > > There are various types, some of which are :
 > > 
-> > - &nbsp;**PageNumberPagination** &nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/people/?page=10` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp; parameters &nbsp;:&nbsp;&nbsp; <ins>page size</ins> &nbsp;&&nbsp; <ins>page number</ins>
-> > 
-> > - &nbsp;**LimitOffsetPagination** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/people/?limit=10&offset=10` &nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameters &nbsp;:&nbsp;&nbsp; <ins>limit</ins> &nbsp;&&nbsp; <ins>offset</ins>
+> > > - &nbsp;**PageNumberPagination** &nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/people/?page=10` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp; parameters &nbsp;:&nbsp;&nbsp; <ins>page size</ins> &nbsp;&&nbsp; <ins>page number</ins>
+> > > 
+> > > - &nbsp;**LimitOffsetPagination** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;`/people/?limit=10&offset=10` &nbsp;&nbsp;&nbsp;&nbsp; ⟶ &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;parameters &nbsp;:&nbsp;&nbsp; <ins>limit</ins> &nbsp;&&nbsp; <ins>offset</ins>
 > 
 > <br>
 >
