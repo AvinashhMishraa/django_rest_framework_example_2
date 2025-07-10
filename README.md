@@ -5246,7 +5246,6 @@ Let's now set up a complete **Address API** in Django REST Framework that works 
 > > ]
 > > ```
 > 
->
 > **Output &nbsp;:**
 > ```
 > [
@@ -5276,20 +5275,8 @@ Let's now set up a complete **Address API** in Django REST Framework that works 
 > ```
 > {
 >     "updated": [
->         {
->             "id": 46,
->             "person": 44,
->             "city": "city 46",
->             "street": "street 46",
->             "is_deleted": false
->         },
->         {
->             "id": 47,
->             "person": 49,
->             "city": "city 47",
->             "street": "street 47",
->             "is_deleted": false
->         }
+>         {"id": 46, "person": 44, "city": "city 46", "street": "street 46", "is_deleted": false},
+>         {"id": 47, "person": 49, "city": "city 47", "street": "street 47", "is_deleted": false}
 >     ],
 >     "errors": [
 >         {
@@ -5479,9 +5466,9 @@ Takes 2 parameters &nbsp;: <br>
 >     "next": "http://localhost:8000/api/addresses/?page=2",
 >     "previous": null,
 >     "results": [
->         {"id": 2, "person": 35, "city": "city2", "street": "street2", "is_deleted": false},
->         {"id": 6, "person": 35, "city": "city3", "street": "street3", "is_deleted": false},
->         {"id": 28, "person": 80, "city": "city80", "street": "street80", "is_deleted": false}
+>         {"id": 2, "person": 35, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 6, "person": 35, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 28, "person": 80, "city": "x", "street": "x", "is_deleted": false}
 >     ]
 > }
 > ```
@@ -5496,9 +5483,9 @@ Takes 2 parameters &nbsp;: <br>
 >     "next": "http://localhost:8000/api/addresses/?page=4",
 >     "previous": "http://localhost:8000/api/addresses/?page=2",
 >     "results": [
->         {"id": 32, "person": 43, "city": "city32", "street": "street32", "is_deleted": false},
->         {"id": 33, "person": 48, "city": "city33", "street": "street33", "is_deleted": false},
->         {"id": 34, "person": 2, "city": "mmm", "street": "hhhh", "is_deleted": false}
+>         {"id": 32, "person": 43, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 33, "person": 48, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 34, "person": 2, "city": "x", "street": "x", "is_deleted": false}
 >     ]
 > }
 > ```
@@ -5597,9 +5584,9 @@ Consider you have 100 records in total.
 >     "next": "http://localhost:8000/api/addresses/?limit=3&offset=3",
 >     "previous": null,
 >     "results": [
->         {"id": 2, "person": 35, "city": "city2", "street": "street2", "is_deleted": false},
->         {"id": 6, "person": 35, "city": "city3", "street": "street3", "is_deleted": false},
->         {"id": 28, "person": 80, "city": "city80", "street": "street80", "is_deleted": false}
+>         {"id": 2, "person": 35, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 6, "person": 35, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 28, "person": 80, "city": "x", "street": "x", "is_deleted": false}
 >     ]
 > }
 > ```
@@ -5614,9 +5601,9 @@ Consider you have 100 records in total.
 >     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6",
 >     "previous": "http://localhost:8000/api/addresses/?limit=3",
 >     "results": [
->         {"id": 29, "person": 80, "city": "city", "street": "street", "is_deleted": false},
->         {"id": 30, "person": 82, "city": "city", "street": "street", "is_deleted": false},
->         {"id": 31, "person": 43, "city": "city31", "street": "street31", "is_deleted": false}
+>         {"id": 29, "person": 80, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 30, "person": 82, "city": "x", "street": "x", "is_deleted": false},
+>         {"id": 31, "person": 43, "city": "x", "street": "x", "is_deleted": false}
 >     ]
 > }
 > ```
