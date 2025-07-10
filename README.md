@@ -5540,12 +5540,12 @@ Consider you have 100 records in total.
 
 <br>
 
-> `/person_api/core/settings.py`
-> ```
-> REST_FRAMEWORK = {
->     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
-> }
-> ```
+> > `/person_api/core/settings.py`
+> > ```
+> > REST_FRAMEWORK = {
+> >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
+> > }
+> > ```
 >
 > <br>
 > 
@@ -5557,13 +5557,13 @@ Consider you have 100 records in total.
 > 
 > <br>
 >
-> `/person_api/core/settings.py`
-> ```
-> REST_FRAMEWORK = {
->     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
->     'PAGE_SIZE': 3
-> }
-> ```
+> > `/person_api/core/settings.py`
+> > ```
+> > REST_FRAMEWORK = {
+> >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
+> >     'PAGE_SIZE': 3
+> > }
+> > ```
 
 <br>
 
