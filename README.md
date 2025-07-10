@@ -5546,9 +5546,18 @@ Consider you have 100 records in total.
 >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination'
 > }
 > ```
-> 
-> <br>
-> 
+
+<br>
+
+Now if you hit the URL http://localhost:8000/api/addresses/ or http://localhost:8000/api/people/ , you will still get all the records on one page. So you have to explicity append the query params `?limit=3` or `?limit=3&offset=0` to start from the **page 1**.
+
+<br>
+
+Or you can also set the 'PAGE_SIZE' param globally like that in `PageNumberPagination`.
+
+<br>
+
+> `/person_api/core/settings.py`
 > ```
 > REST_FRAMEWORK = {
 >     'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.LimitOffsetPagination',
