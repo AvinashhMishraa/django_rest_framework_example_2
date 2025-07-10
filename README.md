@@ -5756,7 +5756,7 @@ Let's see how ?
 
 <br>
 
-> > **✔️** &nbsp;You can still customize the page size by passing the query param &nbsp;`page_size=`&nbsp; in the above &nbsp;`/people/`&nbsp; URL like :
+> > **✔️** &nbsp;You can still customize the page size by passing the query param &nbsp;`page_size`&nbsp; in the above &nbsp;`/people/`&nbsp; URL like :
 > > 
 > > **People Page 2** &nbsp;-&nbsp; http://localhost:8000/api/people/?page_num=2&page_size=5
 > > ```
