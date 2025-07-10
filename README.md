@@ -5649,12 +5649,14 @@ Consider you have 100 records in total.
 
 <br>
 
+<h2>✅ &nbsp;Custom Pagination</h2>
+
+<br>
+
 **🔥** &nbsp;Now what if you want `LimitOffsetPagination` as a default pagination class but `PageNumberPagination` for `PeopleViewSet` only ? <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Well that can be done through **Custom Pagination**.
 
 <br>
-
-<h2>✅ &nbsp;Custom Pagination</h2>
 
 
 
