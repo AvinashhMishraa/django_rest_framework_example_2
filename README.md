@@ -5787,16 +5787,16 @@ Let's see how ?
 > **Address Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3&page_size=5
 > ```
 > {
-    "count": 18,
-    "next": "http://localhost:8000/api/addresses/?limit=3&offset=6&page_size=5",
-    "previous": "http://localhost:8000/api/addresses/?limit=3&page_size=5",
-    "results": [
-        {"id": 29, "person": 80, "city": "city", "street": "street", "is_deleted": false},
-        {"id": 30, "person": 82, "city": "city", "street": "street", "is_deleted": false},
-        {"id": 31, "person": 43, "city": "city31", "street": "street31", "is_deleted": false}
-    ]
-}
-
+>     "count": 18,
+>     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6&page_size=5",
+>     "previous": "http://localhost:8000/api/addresses/?limit=3&page_size=5",
+>     "results": [
+>         {"id": 29, "person": 80, "city": "city", "street": "street", "is_deleted": false},
+>         {"id": 30, "person": 82, "city": "city", "street": "street", "is_deleted": false},
+>         {"id": 31, "person": 43, "city": "city31", "street": "street31", "is_deleted": false}
+>     ]
+> }
+> ```
 
 
 
