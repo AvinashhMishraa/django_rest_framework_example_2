@@ -5910,7 +5910,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 
 
-> **Step 2**
+> <ins>**Step 2**</ins>
 >
 > Test the &nbsp;`api/persons/`&nbsp; API &nbsp;:
 > - You'll have to explicitly pass `?page=` as a query param in the URL to be able to access different different pages. 
