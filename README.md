@@ -5698,7 +5698,7 @@ Let's see how ?
 > 
 > # /api/people/
 > class PeopleViewSet(viewsets.ModelViewSet):
->     queryset = Person.objects.select_related('color').all().order_by('id')        # ⚠️ Explicit ordering here avoids the UnorderedObjectListWarning
+>     queryset = Person.objects.select_related('color').all().order_by('id')        # ⚠️ Explicit ordering
 >     serializer_class = PersonSerializer
 > 
 >     filter_backends = [DjangoFilterBackend]
@@ -5706,6 +5706,8 @@ Let's see how ?
 > 
 >     pagination_class = CustomPagination                                            # CustomPagination class added
 > ```
+> 
+> <br>
 > 
 > ⚠️ &nbsp;**Note** - DRF pagination relies on Django's paginator, which internally requires the queryset to be **ordered** to avoid inconsistency between pages.
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - <ins>**Explicit ordering**</ins> here avoids the `UnorderedObjectListWarning`
@@ -5831,7 +5833,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > class Persons(APIView):
 > > 
 > >     def get(self, request): 
-> >         objs = Person.objects.select_related('color').filter(color__isnull = False).order_by('id')        # ⚠️ Explicit ordering here avoids the UnorderedObjectListWarning
+> >         objs = Person.objects.select_related('color').filter(color__isnull = False).order_by('id')        # ⚠️ Explicit ordering
 > > 
 > >         paginator = CustomPagination()
 > >         paginated_qs = paginator.paginate_queryset(objs, request)
