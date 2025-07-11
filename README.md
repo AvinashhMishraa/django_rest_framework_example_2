@@ -5710,7 +5710,7 @@ Let's see how ?
 > <br>
 > 
 > ⚠️ &nbsp;**Note &nbsp;:** 
-> - DRF pagination relies on Django's paginator, which internally requires the queryset to be **ordered** to avoid inconsistency between pages.
+> - DRF pagination relies on Django's `paginator`, which internally requires the queryset to be **ordered** to avoid inconsistency between pages.
 > - <ins>**Explicit ordering**</ins> here avoids the &nbsp;`UnorderedObjectListWarning`
 
 <br>
