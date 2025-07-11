@@ -5692,19 +5692,19 @@ Let's see how ?
 > 
 > 🔶 &nbsp;`person_api/home/views.py` &nbsp;**(Use custom pagination class in specific viewset)**
 > ```
-> from .paginations import CustomPagination                                 # CustomPagination class imported
+> from .paginations import CustomPagination                                         # CustomPagination class imported
 > 
 > 
 > 
 > # /api/people/
 > class PeopleViewSet(viewsets.ModelViewSet):
->     queryset = Person.objects.select_related('color').all()
+>     queryset = Person.objects.select_related('color').all().order_by('id')        # ⚠️ Explicit ordering here avoids the UnorderedObjectListWarning
 >     serializer_class = PersonSerializer
 > 
 >     filter_backends = [DjangoFilterBackend]
 >     filterset_class = PersonFilter
 > 
->     pagination_class = CustomPagination                                   # CustomPagination class added
+>     pagination_class = CustomPagination                                            # CustomPagination class added
 > ```
 
 <br>
@@ -5828,7 +5828,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > class Persons(APIView):
 > > 
 > >     def get(self, request): 
-> >         objs = Person.objects.select_related('color').filter(color__isnull = False)
+> >         objs = Person.objects.select_related('color').filter(color__isnull = False).order_by('id')        # ⚠️ Explicit ordering here avoids the UnorderedObjectListWarning
 > > 
 > >         paginator = CustomPagination()
 > >         paginated_qs = paginator.paginate_queryset(objs, request)
