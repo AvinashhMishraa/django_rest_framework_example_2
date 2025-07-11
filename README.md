@@ -5907,9 +5907,25 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-```python
-assd
-```
+
+
+
+
+
+> Test the &nbsp;`api/persons/`&nbsp; API :
+> 
+> - You'll have to explicitly pass `?page=` as a query param in the URL to be able to access different different pages. 
+> - You will not get any previous page link or next page link unlike previous pagination methods we implemented earlier.
+> 
+> <br>
+> 
+> **1st page** &nbsp;&nbsp;-&nbsp;&nbsp; http://localhost:8000/api/persons/?page=1 &nbsp;&nbsp;or&nbsp;&nbsp; http://localhost:8000/api/persons/ <br>
+> **2nd page** &nbsp;&nbsp;-&nbsp;&nbsp; http://localhost:8000/api/persons/?page=2                                                               <br>
+>   .
+>   .
+>   .
+> **last page** &nbsp;&nbsp;-&nbsp;&nbsp; http://localhost:8000/api/persons/?page=n
+> **empty page** &nbsp;&nbsp;-&nbsp;&nbsp; http://localhost:8000/api/persons/?page=n+1 &nbsp;&nbsp;➜&nbsp;&nbsp; ERROR : django.core.paginator.EmptyPage: That page contains no results
 
 
 
