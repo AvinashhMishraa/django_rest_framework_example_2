@@ -5789,7 +5789,103 @@ Let's see how ?
 
 <h3>2️⃣ &nbsp;Custom Pagination in &nbsp;Function-based-view (FBV) &nbsp;and &nbsp;Class-based-view (CBV)</h3>
 
+<br>
 
+While Django REST Framework (DRF) automatically integrates pagination with &nbsp;`ViewSet`s and &nbsp;`GenericAPIView`s , for **Function-Based Views (FBVs)** or **Class-Based Views (CBVs)** that don't inherit from DRF `mixins`, you need to handle pagination manually using the `paginator` class.
+
+<br>
+
+<ins>**CASE-1**</ins> &nbsp;===>&nbsp; Assuming you're using your `CustomPagination` , here's how to integrate it :
+
+<br>
+
+> > `person_api/home/paginations.py`
+> > ```
+> > ●●●
+> > 
+> > 
+> > class CustomPagination(PageNumberPagination):
+> >     page_size = 2                                   # new default      
+> > 	                                                # it overrides global "PAGE_SIZE" in the settings file 
+> > 												    # however it gets overridden with the ?page_size= if explicitly passed in the URL
+> > 	
+> > 	
+> > 	●●●
+> > ```
+> 
+> <br>
+> 
+> > `person_api/home/views.py`
+> > ```
+> > # /api/persons/
+> > class Persons(APIView):
+> >     def get(self, request): 
+> >         objs = Person.objects.select_related('color').filter(color__isnull = False)
+> > 
+> >         paginator = CustomPagination()
+> >         paginated_qs = paginator.paginate_queryset(objs, request)
+> > 
+> >         serializer = PersonSerializer(paginated_qs, many = True)
+> >         # return Response(serializer.data)
+> >         return paginator.get_paginated_response(serializer.data)
+> >     
+> > 	
+> >     def post(self, request):
+> >         ●●●
+> >     
+> > 	
+> >     def put(self, request):
+> >         ●●●
+> >     
+> > 	
+> >     def patch(self, request):
+> >         ●●●
+> >     
+> > 	
+> >     def delete(self, request):
+> >         ●●●
+> > ```
+
+<br>
+
+> **<ins>API verification</ins> &nbsp;:**
+> 
+> <br>
+> 
+> > **`/api/persons/`**
+> > 
+> > **Page 2** &nbsp;-&nbsp; http://localhost:8000/api/persons/?page_num=2
+> > ```
+> > {
+> >     "next": "http://localhost:8000/api/persons/?page_num=3",
+> >     "previous": "http://localhost:8000/api/persons/",
+> >     "count": 21,
+> >     "page_size": 2,
+> >     "total_number_of_pages": 11,
+> >     "results": [
+> >         {"id": 25, "name": "Bina Mishra", "age": 50, "color": 2, "color_info": {"color_name": "BLUE", "hex_code": "#0000ff"}, "is_deleted": false},
+> >         {"id": 27, "name": "Test", "age": 32, "color": 2, "color_info": {"color_name": "BLUE", "hex_code": "#0000ff"}, "is_deleted": false}
+> >     ]
+> > }
+> > ```
+> 
+> <br>
+> 
+> > **`/api/addresses/`**
+> >
+> > **Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3
+> > ```
+> > {
+> >     "count": 18,
+> >     "next": "http://localhost:8000/api/addresses/?limit=3&offset=6",
+> >     "previous": "http://localhost:8000/api/addresses/?limit=3",
+> >     "results": [
+> >         {"id": 29, "person": 80, "city": "x", "street": "x", "is_deleted": false},
+> >         {"id": 30, "person": 82, "city": "x", "street": "x", "is_deleted": false},
+> >         {"id": 31, "person": 43, "city": "x", "street": "x", "is_deleted": false}
+> >     ]
+> > }
+> > ```
 
 
 
