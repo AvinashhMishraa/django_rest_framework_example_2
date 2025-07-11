@@ -5851,7 +5851,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> > **`/api/persons/`**
+> > ∎ &nbsp;`/api/persons/`
 > > 
 > > **Page 2** &nbsp;-&nbsp; http://localhost:8000/api/persons/?page_num=2
 > > ```
@@ -5870,7 +5870,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> > **`/api/addresses/`**
+> > ∎ &nbsp;`/api/addresses/`
 > >
 > > **Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3
 > > ```
