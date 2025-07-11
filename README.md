@@ -5847,7 +5847,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-> **<ins>API verification</ins> &nbsp;:**
+> **<ins>API &nbsp;verification</ins> &nbsp;:**
 > 
 > <br>
 > 
