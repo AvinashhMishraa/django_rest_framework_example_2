@@ -5820,6 +5820,10 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > > `person_api/home/views.py`
 > > ```
+> > from .paginations import CustomPagination
+> > 
+> > 
+> > 
 > > # /api/persons/
 > > class Persons(APIView):
 > > 
