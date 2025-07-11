@@ -5769,7 +5769,7 @@ Let's see how ?
 > 
 > <br>
 > 
-> > **❌** &nbsp;But this is not applicable for the &nbsp;`/addresses/`&nbsp; class because it is not customizable.
+> > **❌** &nbsp;But this is not applicable for the &nbsp;`/addresses/`&nbsp; because it is not customizable.
 > >
 > > **Address Page 2** &nbsp;-&nbsp; http://localhost:8000/api/addresses/?limit=3&offset=3&page_size=5
 > > ```
