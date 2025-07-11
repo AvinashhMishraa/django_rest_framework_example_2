@@ -5801,7 +5801,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-▇ &nbsp;For example, let's paginate the &nbsp;`Persons(APIView)`&nbsp; class-based view, or in other words the &nbsp;`/api/persons/`&nbsp; API &nbsp;:
+**▇** &nbsp;&nbsp;For example, let's paginate the &nbsp;`Persons(APIView)`&nbsp; class-based view, or in other words the &nbsp;`/api/persons/`&nbsp; API &nbsp;:
 
 <br>
 
