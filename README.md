@@ -5795,7 +5795,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-<ins>**CASE-1**</ins> &nbsp;===>&nbsp; Assuming you're using your `CustomPagination` , here's how to integrate it :
+👉 &nbsp;<ins>**CASE 1**</ins> &nbsp;➜&nbsp; Assuming you're using your `CustomPagination` , here's how to integrate it :
 
 <br>
 
@@ -5807,7 +5807,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > class CustomPagination(PageNumberPagination):
 > >     page_size = 2                                   # new default      
 > > 	                                                # it overrides global "PAGE_SIZE" in the settings file 
-> > 												    # however it gets overridden with the ?page_size= if explicitly passed in the URL
+> >                                                     # however it gets overridden with the ?page_size= if explicitly passed in the URL
 > > 	
 > > 	
 > > 	●●●
