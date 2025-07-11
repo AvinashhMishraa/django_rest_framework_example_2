@@ -5909,7 +5909,6 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 > > 🔸 &nbsp;<ins>**Step 1**</ins>
 > > 
-> > <br>
 > > 
 > > `person_api/home/views.py`
 > > ```
@@ -5948,7 +5947,6 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > > 🔸 &nbsp;<ins>**Step 2**</ins>
 > >
-> > <br>
 > > 
 > > Test the &nbsp;`api/persons/`&nbsp; API &nbsp;:
 > > - You'll have to explicitly pass `?page=` as a query param in the URL to be able to access different different pages. 
@@ -5965,7 +5963,6 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > > 🔸 &nbsp;<ins>**Step 3**</ins>
 > > 
-> > <br>
 > > 
 > > Use `try exception` block :
 > > 
