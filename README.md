@@ -5953,10 +5953,10 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > - You will not get any previous page link or next page link unlike previous pagination methods we implemented earlier.
 > > 
 > > 
-> > **1st &nbsp;page**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=1 &nbsp;or&nbsp; http://localhost:8000/api/persons/ <br>
-> > **2nd &nbsp;page** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=2   <br>
-> > **last &nbsp;page** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n <br>
-> > **empty &nbsp;page** &nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n+1 &nbsp;&nbsp;❌&nbsp; `django.core.paginator.EmptyPage: That page contains no results`
+> > <ins>1st page</ins> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=1 &nbsp;or&nbsp; http://localhost:8000/api/persons/ <br>
+> > <ins>2nd page</ins> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=2   <br>
+> > <ins>last page</ins> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n <br>
+> > <ins>empty page</ins> &nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n+1 &nbsp;&nbsp;❌&nbsp; `django.core.paginator.EmptyPage: That page contains no results`
 > 
 > <br>
 > 
