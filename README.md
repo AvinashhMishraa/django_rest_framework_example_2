@@ -5640,7 +5640,7 @@ Consider you have 100 records in total.
 
 <br>
 
-<h3>1️⃣ &nbsp;Custom Pagination in &nbsp;`Viewset`s &nbsp;and &nbsp;`GenericApiView`s</h3>
+<h3>1️⃣ &nbsp;Custom Pagination in &nbsp;Viewset &nbsp;and &nbsp;GenericApiView</h3>
 
 <br>
 
@@ -5787,7 +5787,7 @@ Let's see how ?
 
 <br>
 
-<h3>2️⃣ &nbsp;Custom Pagination in &nbsp;`Viewset`s &nbsp;and &nbsp;`GenericApiView`s</h3>
+<h3>2️⃣ &nbsp;Custom Pagination in &nbsp;Viewset &nbsp;and &nbsp;GenericApiView</h3>
 
 
 
