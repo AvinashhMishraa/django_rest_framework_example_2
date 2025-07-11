@@ -5801,6 +5801,8 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 > **🔸 &nbsp;<ins>Code &nbsp;changes</ins>**
 >
+>  <br>
+> 
 > > `person_api/home/paginations.py`
 > > ```
 > > ●●●
