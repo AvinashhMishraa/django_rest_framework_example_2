@@ -5787,7 +5787,7 @@ Let's see how ?
 
 <br>
 
-<h3>2️⃣ &nbsp;Custom Pagination in &nbsp;Viewset &nbsp;and &nbsp;GenericApiView</h3>
+<h3>2️⃣ &nbsp;Custom Pagination in &nbsp;Function-based-view (FBV) &nbsp;and &nbsp;Class-based-view (CBV)</h3>
 
 
 
