@@ -5795,7 +5795,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-👉 &nbsp;<ins>**CASE 1**</ins> &nbsp;&nbsp;➜&nbsp;&nbsp; Assuming you're using your `CustomPagination` , here's how to integrate it &nbsp;:
+👉 &nbsp;<ins>**CASE 1**</ins> &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; Assuming you're using your `CustomPagination` , here's how to integrate it &nbsp;:
 
 <br>
 
