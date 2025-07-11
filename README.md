@@ -5907,7 +5907,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-> > <ins>**Step 1**</ins>
+> > 🔸 &nbsp;<ins>**Step 1**</ins>
 > > 
 > > <br>
 > > 
@@ -5946,7 +5946,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> > <ins>**Step 2**</ins>
+> > 🔸 &nbsp;<ins>**Step 2**</ins>
 > >
 > > <br>
 > > 
@@ -5963,7 +5963,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> > <ins>**Step 3**</ins>
+> > 🔸 &nbsp;<ins>**Step 3**</ins>
 > > 
 > > <br>
 > > 
