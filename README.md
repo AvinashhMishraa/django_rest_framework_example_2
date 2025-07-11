@@ -5640,6 +5640,10 @@ Consider you have 100 records in total.
 
 <br>
 
+<h3>1️⃣ &nbsp;Custom Pagination in &nbsp;`Viewset`s &nbsp;and &nbsp;`GenericApiView`s</h3>
+
+<br>
+
 **🔥** &nbsp;Now what if you want &nbsp;`LimitOffsetPagination`&nbsp; as a default pagination class but &nbsp;`PageNumberPagination`&nbsp; for &nbsp;`PeopleViewSet`&nbsp; only ? <br>
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Well that can be done through **Custom Pagination**.
 
@@ -5783,7 +5787,7 @@ Let's see how ?
 
 <br>
 
-
+<h3>2️⃣ &nbsp;Custom Pagination in &nbsp;`Viewset`s &nbsp;and &nbsp;`GenericApiView`s</h3>
 
 
 
