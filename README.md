@@ -5822,6 +5822,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > ```
 > > # /api/persons/
 > > class Persons(APIView):
+> > 
 > >     def get(self, request): 
 > >         objs = Person.objects.select_related('color').filter(color__isnull = False)
 > > 
@@ -5832,19 +5833,15 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > >         # return Response(serializer.data)
 > >         return paginator.get_paginated_response(serializer.data)
 > >     
-> > 	
 > >     def post(self, request):
 > >         ●●●
 > >     
-> > 	
 > >     def put(self, request):
 > >         ●●●
 > >     
-> > 	
 > >     def patch(self, request):
 > >         ●●●
 > >     
-> > 	
 > >     def delete(self, request):
 > >         ●●●
 > > ```
