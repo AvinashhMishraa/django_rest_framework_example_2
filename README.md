@@ -5833,7 +5833,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > class Persons(APIView):
 > > 
 > >     def get(self, request): 
-> >         objs = Person.objects.select_related('color').filter(color__isnull = False).order_by('id')        # ⚠️ Explicit ordering
+> >         objs = Person.objects.select_related('color').filter(color__isnull = False).order_by('id')
 > > 
 > >         paginator = CustomPagination()
 > >         paginated_qs = paginator.paginate_queryset(objs, request)
