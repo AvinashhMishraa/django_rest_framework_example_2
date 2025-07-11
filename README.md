@@ -5889,7 +5889,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-**👉** &nbsp;&nbsp;<ins>**CASE 2**</ins> &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; **Assuming you <ins>do not have</ins> a seperate reusable file containg &nbsp;`CustomPagination`&nbsp; class &nbsp;:**
+**👉** &nbsp;&nbsp;<ins>**CASE 2**</ins> &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; **Assuming you <ins>do not have</ins> a seperate reusable file containg** &nbsp;`CustomPagination`&nbsp; **class &nbsp;:**
 
 
 
