@@ -5963,7 +5963,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > 🔸 &nbsp;<ins>**Step 3**</ins>
 > > 
 > > 
-> > Use `try exception` block :
+> > Use `try exception` block &nbsp;:
 > > 
 > > `person_api/home/views.py`
 > > ```
