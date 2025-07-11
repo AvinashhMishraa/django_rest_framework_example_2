@@ -5810,7 +5810,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > 
 > > class CustomPagination(PageNumberPagination):
 > >     page_size = 2                                   # new default      
-> > 	                                              # it overrides global "PAGE_SIZE" in the settings file 
+> > 	                                            # it overrides global "PAGE_SIZE" in the settings file 
 > >                                                     # however it gets overridden with the ?page_size= if explicitly passed in the URL
 > > 	
 > > 	●●●
