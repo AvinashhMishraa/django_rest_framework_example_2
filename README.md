@@ -5799,6 +5799,8 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
+> **🔸 &nbsp;<ins>Code &nbsp;changes</ins>**
+>
 > > `person_api/home/paginations.py`
 > > ```
 > > ●●●
@@ -5844,10 +5846,10 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > >     def delete(self, request):
 > >         ●●●
 > > ```
-
-<br>
-
-> **<ins>API &nbsp;verification</ins> &nbsp;:**
+> 
+> <br>
+> 
+> 🔸 &nbsp;**<ins>API &nbsp;verification</ins> &nbsp;:**
 > 
 > <br>
 > 
