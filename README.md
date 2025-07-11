@@ -5706,6 +5706,9 @@ Let's see how ?
 > 
 >     pagination_class = CustomPagination                                            # CustomPagination class added
 > ```
+> 
+> ⚠️ &nbsp;**Note** - DRF pagination relies on Django's paginator, which internally requires the queryset to be **ordered** to avoid inconsistency between pages.
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; - <ins>**Explicit ordering**</ins> here avoids the `UnorderedObjectListWarning`
 
 <br>
 
