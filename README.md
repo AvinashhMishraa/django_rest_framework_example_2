@@ -5907,23 +5907,104 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-
-
-
-> <ins>**Step 2**</ins>
->
+> > <ins>**Step 1**</ins>
+> > 
+> > <br>
+> > 
+> > `person_api/home/views.py`
+> > ```
+> > from django.core.paginator import Paginator
+> > 
+> > 
+> > 
+> > # /api/persons/
+> > class Persons(APIView):
+> > 
+> >     def get(self, request): 
+> >         objs = Person.objects.select_related('color').filter(color__isnull = False).order_by('id') 
+> > 
+> >         page = request.GET.get('page', 1)
+> >         page_size=3
+> > 
+> >         paginator = Paginator(objs, page_size)
+> > 
+> >         serializer = PersonSerializer(paginator.page(page), many = True)
+> >         return Response(serializer.data)
+> >     
+> >     def post(self, request):
+> >         ●●●
+> >     
+> >     def put(self, request):
+> >         ●●●
+> >     
+> >     def patch(self, request):
+> >         ●●●
+> >     
+> >     def delete(self, request):
+> >         ●●●
+> > ```
+> 
 > <br>
 > 
-> Test the &nbsp;`api/persons/`&nbsp; API &nbsp;:
-> - You'll have to explicitly pass `?page=` as a query param in the URL to be able to access different different pages. 
-> - You will not get any previous page link or next page link unlike previous pagination methods we implemented earlier.
+> > <ins>**Step 2**</ins>
+> >
+> > <br>
+> > 
+> > Test the &nbsp;`api/persons/`&nbsp; API &nbsp;:
+> > - You'll have to explicitly pass `?page=` as a query param in the URL to be able to access different different pages. 
+> > - You will not get any previous page link or next page link unlike previous pagination methods we implemented earlier.
+> > 
+> > <br>
+> > 
+> > **1st &nbsp;page**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=1 &nbsp;or&nbsp; http://localhost:8000/api/persons/ <br>
+> > **2nd &nbsp;page** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=2   <br>
+> > **last &nbsp;page** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n <br>
+> > **empty &nbsp;page** &nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n+1 &nbsp;&nbsp;❌&nbsp; `django.core.paginator.EmptyPage: That page contains no results`
 > 
 > <br>
 > 
-> **1st &nbsp;page**&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=1 &nbsp;or&nbsp; http://localhost:8000/api/persons/ <br>
-> **2nd &nbsp;page** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=2   <br>
-> **last &nbsp;page** &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n <br>
-> **empty &nbsp;page** &nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n+1 &nbsp;&nbsp;❌&nbsp; `django.core.paginator.EmptyPage: That page contains no results`
+> > <ins>**Step 3**</ins>
+> > 
+> > <br>
+> > 
+> > Use `try exception` block :
+> > 
+> > `person_api/home/views.py`
+> > ```
+> > # /api/persons/
+> > class Persons(APIView):
+> > 
+> >     def get(self, request):
+> >         try:
+> >             objs = Person.objects.select_related('color').filter(color__isnull = False).order_by('id')
+> > 
+> >             page = request.GET.get('page', 1)
+> >             page_size=3
+> > 
+> >             paginator = Paginator(objs, page_size)
+> > 
+> >             serializer = PersonSerializer(paginator.page(page), many = True)
+> >             return Response(serializer.data)
+> >         except Exception as e:
+> >             return Response({
+> >                 'status' : False,
+> >                 'message' : 'invalid page'
+> >             })
+> >     
+> >     def post(self, request):
+> >         ●●●
+> >     
+> >     def put(self, request):
+> >         ●●●
+> >     
+> >     def patch(self, request):
+> >         ●●●
+> >     
+> >     def delete(self, request):
+> >         ●●●
+> > ```
+
+
 
 
 
