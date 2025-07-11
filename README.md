@@ -5956,7 +5956,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > <ins>1st page</ins> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=1 &nbsp;or&nbsp; http://localhost:8000/api/persons/ <br>
 > > <ins>2nd page</ins> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=2   <br>
 > > <ins>last page</ins> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n <br>
-> > <ins>empty page</ins> &nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n+1 &nbsp;&nbsp;❌&nbsp; `django.core.paginator.EmptyPage: That page contains no results`
+> > <ins>empty page</ins> &nbsp;-&nbsp; http://localhost:8000/api/persons/?page=n+1  -  `django.core.paginator.EmptyPage: That page contains no results`
 > 
 > <br>
 > 
