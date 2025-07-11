@@ -5791,7 +5791,7 @@ Let's see how ?
 
 <br>
 
-While Django REST Framework (DRF) automatically integrates pagination with &nbsp;`ViewSet`s and &nbsp;`GenericAPIView`s, for **Function-Based Views (FBVs)** or **Class-Based Views (CBVs)** that don't inherit from DRF `mixins`, you need to handle pagination manually using the `paginator` class.
+While Django REST Framework (DRF) automatically integrates pagination with &nbsp;`ViewSet`s &nbsp;and &nbsp;`GenericAPIView`s, for **Function-Based Views (FBVs)** or **Class-Based Views (CBVs)** that don't inherit from DRF `mixins`, you need to handle pagination manually using the `paginator` class.
 
 <br>
 
