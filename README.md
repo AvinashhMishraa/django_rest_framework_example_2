@@ -3286,7 +3286,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<h3>⬛ &nbsp;filterset_fields   &   filterset_class</h3>
+<h3>⬛ &nbsp;filterset_fields &nbsp;&nbsp;&nbsp;&&nbsp;&nbsp;&nbsp; filterset_class</h3>
 
 <br>
 
