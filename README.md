@@ -3378,9 +3378,10 @@ Since `Color` is a related model, therefore
 >     serializer_class = PersonSerializer
 > 
 >     filter_backends = [DjangoFilterBackend]
->     # filterset_fields = ['name', 'color']                    # ✔️ filter by person name and the color id
->     # filterset_fields = ['name', 'color_name']               # ❌ ERROR - 'Meta.fields' must not contain non-model field names: color_name
->     filterset_fields = ['name', 'color__color_name']          # ✔️ filter by person name and the color name
+> 
+>     # filterset_fields = ['name', 'color']                   # ✔️ filter by person name and the color id
+>     # filterset_fields = ['name', 'color_name']              # ❌ ERROR - 'Meta.fields' must not contain non-model field names: color_name
+>     filterset_fields = ['name', 'color__color_name']         # ✔️ filter by person name and color name
 > ```
 > 
 > <br>
@@ -3480,7 +3481,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=gopal_krisna_jha
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=gopal+krisna+ha
 > > ```
 > > {
 > > 	"id": 21,
