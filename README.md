@@ -3316,7 +3316,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 <br>
 
 ⭐ &nbsp;`filterset_fields` filters a field successfully only if given the exact value. <br>
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It can't filter out a string value in a field when there is a lowercase or uppercase mismatch for any character in the string.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It can't filter out a string value in a field when there is a lowercase or uppercase mismatch for any character in the string.
 
 <br>
 
@@ -3404,7 +3404,7 @@ Since `Color` is a related model, therefore
 
 <br>
 
-<ins>**Note**</ins> &nbsp;➜&nbsp; If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file like :
+<ins>**Note**</ins> &nbsp;➜&nbsp; If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file :
 > 
 > ```
 > REST_FRAMEWORK = {
