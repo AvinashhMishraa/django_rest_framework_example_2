@@ -3342,15 +3342,15 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > Now let's search the required name in the API http://localhost:8000/api/people/?name=Gopal+Krisna+Jha
 > ```
 > {
-> 	"id": 21,
-> 	"name": "Gopal Krisna Jha",
-> 	"age": 35,
-> 	"color": 3,
-> 	"color_info": {
+>     "id": 21,
+>     "name": "Gopal Krisna Jha",
+>     "age": 35,
+>     "color": 3,
+>     "color_info": {
 > 		"color_name": "GREEN",
 > 		"hex_code": "#008000"
-> 	},
-> 	"is_deleted": false
+>     },
+>     "is_deleted": false
 > }
 > ```
 
@@ -3389,15 +3389,15 @@ Since `Color` is a related model, therefore
 > let's verify it &nbsp;&nbsp; - &nbsp;&nbsp; http://localhost:8000/api/people/?name=Gopal+Krisna+Jha&color__color_name=GREEN
 > ```
 > {
-> 	"id": 21,
-> 	"name": "Gopal Krisna Jha",
-> 	"age": 35,
-> 	"color": 3,
-> 	"color_info": {
+>     "id": 21,
+>     "name": "Gopal Krisna Jha",
+>     "age": 35,
+>     "color": 3,
+>     "color_info": {
 > 		"color_name": "GREEN",
 > 		"hex_code": "#008000"
-> 	},
-> 	"is_deleted": false
+>     },
+>     "is_deleted": false
 > }
 > ```
 
