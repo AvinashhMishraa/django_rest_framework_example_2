@@ -3422,8 +3422,8 @@ Since `Color` is a related model, therefore
 > ```
 > 
 > <br>
->
-> However, it's recommended to use `filter_backends = [DjangoFilterBackend]` in each view to increase code-readability. This makes even more sense when you use **search filter**.
+> 
+> However, it's recommended to use `filter_backends = [DjangoFilterBackend]` in each view to increase code-readability. This makes even more sense when you use **search filter**. So let's not set it globally.
 
 <br>
 
