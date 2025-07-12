@@ -3339,7 +3339,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 
 > <br>
 > 
-> Now let's search the required name in the API http://localhost:8000/api/people/?name=Gopal+Krisna+Jha
+> Now let's search the required name in the API &nbsp; http://localhost:8000/api/people/?name=Gopal+Krisna+Jha
 > ```
 > {
 >     "id": 21,
