@@ -3403,7 +3403,7 @@ Since `Color` is a related model, therefore
 
 <br>
 
-<ins>**Note**</ins> &nbsp;➜&nbsp; If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file :
+<ins>**Note**</ins> &nbsp;➜&nbsp; If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file.
 > 
 > ```
 > REST_FRAMEWORK = { 
@@ -3411,6 +3411,16 @@ Since `Color` is a related model, therefore
 > }
 > ```
 >
+> <br>
+>
+> Now you don't have to even import this `DjangoFilterBackend` in this view file. So just **remove** both of these lines :
+> ```
+> from django_filters.rest_framework import DjangoFilterBackend        # ❌ remove it
+>
+> class PeopleViewSet(viewsets.ModelViewSet):
+>     filter_backends = [DjangoFilterBackend]                          # ❌ remove it
+> ```
+> 
 > <br>
 >
 > However, it's recommended to use `filter_backends = [DjangoFilterBackend]` in each view to increase code-readability. This makes even more sense when you use **search filter**.
