@@ -3347,8 +3347,8 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 >     "age": 35,
 >     "color": 3,
 >     "color_info": {
-> 		"color_name": "GREEN",
-> 		"hex_code": "#008000"
+>         "color_name": "GREEN",
+>         "hex_code": "#008000"
 >     },
 >     "is_deleted": false
 > }
@@ -3394,8 +3394,8 @@ Since `Color` is a related model, therefore
 >     "age": 35,
 >     "color": 3,
 >     "color_info": {
-> 		"color_name": "GREEN",
-> 		"hex_code": "#008000"
+>         "color_name": "GREEN",
+>         "hex_code": "#008000"
 >     },
 >     "is_deleted": false
 > }
@@ -3499,8 +3499,8 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > >     "age": 35,
 > >     "color": 3,
 > >     "color_info": {
-> > 		"color_name": "GREEN",
-> > 		"hex_code": "#008000"
+> >         "color_name": "GREEN",
+> >         "hex_code": "#008000"
 > > 	},
 > > 	"is_deleted": false
 > > }
