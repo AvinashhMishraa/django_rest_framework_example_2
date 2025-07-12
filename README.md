@@ -2834,7 +2834,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 
 > <br>
 > 
-> > 🔸 &nbsp;List of **<ins>Strings</ins>** (formatted) using _list comprehenssion_
+> > 🔸 &nbsp;List of **<ins>Strings</ins>** (formatted) using <ins>list comprehenssion</ins>
 > > ```
 > > [f"{p.id}: {p.name}" for p in Person.objects.filter(id__in=[62, 63, 66, 70])]
 > > ```
