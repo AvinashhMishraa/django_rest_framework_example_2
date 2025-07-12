@@ -3286,11 +3286,11 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<h3>⬛ &nbsp;Filterset &nbsp;class</h3>
+<h3>⬛ &nbsp;filterset_fields   &   filterset_class</h3>
 
 <br>
 
-In Django REST Framework, <code>filterset_class</code> allows you to **create reusable, customizable filtering logic** using **Django Filter**. <br>This is far cleaner than writing raw <code>.filter()</code> queries in your views.
+**✅ &nbsp;Initial Setup**
 
 <br>
 
@@ -3308,13 +3308,29 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 >     'django_filters',
 > ]
 > ```
-> 
-> <br>
-> 
-> 🔸 &nbsp;The <code>Person</code> model and the related models like <code>Color</code> are already in place. &nbsp;So nothing to do on that file.
-> 
-> <br>
-> 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br>
+
 > 🔸 &nbsp;Create a new file <code>person_api/home/filters.py</code> 
 > ```
 > from django_filters import rest_framework as filters
