@@ -3418,7 +3418,7 @@ Since `Color` is a related model, therefore
 
 <br>
 
-**⚠️** &nbsp;However there is a **limitation** in using `fieldset_fields` &nbsp;**:**
+**⚠️** However there is a **limitation** in using `fieldset_fields` &nbsp;**:**
 - If you try to search a person name in the lower case ("gopal krisna jha") like http://localhost:8000/api/people/?name=gopal+krisna+jha, you will not be able to find the person.
 - If you try to search the color name 'RED' with 'red' or 'Red', you won't be able to do it.
 
