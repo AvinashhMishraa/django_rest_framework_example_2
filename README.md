@@ -3436,7 +3436,8 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-**◼️** &nbsp;Now we can search "Gopal Krisna Jha" with "gopal krisna jha" by using lookup expression `icontains` in a custom filter class. Let's see how to do it.
+**◼️** &nbsp;Now we can search "Gopal Krisna Jha" with "gopal krisna jha" by using lookup expression `icontains` in a custom filter class. <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's see how to do it.
 
 <br>
 
