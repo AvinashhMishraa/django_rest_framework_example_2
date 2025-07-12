@@ -2781,6 +2781,64 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
+
+<h4>Basic `.filter()` in Django ORM</h4>
+
+<br>
+
+> Person.objects.filter(age__gte=30, name__icontains='B')
+> > `<QuerySet [<Person: Person object (22)>, <Person: Person object (25)>]>`
+> 
+> <br>
+> 
+> Person.objects.filter(age__gte=30, name__icontains='B').values('id', 'name')
+> > `<QuerySet [{'id': 22, 'name': 'Bechan Mishra'}, {'id': 25, 'name': 'Bina Mishra'}]>`
+
+<br>
+
+> Collect **names** of **persons** with a **list of specific ids**
+> 
+> <br>
+> 
+> 🔸 &nbsp;List of **<ins>Dictionaries</ins>** using Django's `.values()`
+> 
+> > ```
+> > Person.objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
+> > ```
+> > 
+> > `<QuerySet [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]>`
+> 
+> <br>
+> 
+> > ```
+> > qs = Person.objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
+> > list(qs)
+> > ```
+> >
+> > `[{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]`
+> 
+> <br>
+> 
+> 🔸 &nbsp;List of **<ins>Tuples</ins>** (id, name) using `.values_list()` method
+> 
+> > ```
+> > list(Person.objects.filter(id__in=[62, 63, 66, 70]).values_list('id', 'name'))
+> > ```
+> > 
+> > `[(62, 'K2'), (63, 'K3'), (66, 'K6')]`
+> 
+> <br>
+> 
+> 🔸 &nbsp;List of **<ins>Strings</ins>** (formatted) using _list comprehenssion_
+> 
+> > ```
+> > [f"{p.id}: {p.name}" for p in Person.objects.filter(id__in=[62, 63, 66, 70])]
+> > ```
+> > 
+> > `['62: K2', '63: K3', '66: K6']`
+
+<br>
+
 > ✅ &nbsp;Let's first build a <code>search</code> api around a **single field** of the <code>Person</code> model in <code>PeopleViewSet</code>.
 > 
 > <br> 
@@ -3218,53 +3276,6 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > >     ]
 > > }
 > > ```
-
-<br>
-
-> <h4>✅ &nbsp;Practice Example</h4>
-> 
-> <br>
-> 
-> ⭐ &nbsp;Collect **names** of **persons** with a **list of specific ids**
-> 
-> <br>
-> 
-> 🔸 &nbsp;List of **<ins>Dictionaries</ins>** using Django's `.values()`
-> 
-> > ```
-> > Person.all_objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
-> > ```
-> > 
-> > `<SoftDeleteQuerySet [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]>`
-> 
-> <br>
-> 
-> > ```
-> > qs = Person.all_objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
-> > list(qs)
-> > ```
-> >
-> > `[{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]`
-> 
-> <br>
-> 
-> 🔸 &nbsp;List of **<ins>Tuples</ins>** (id, name) using `.values_list()` method
-> 
-> > ```
-> > list(Person.all_objects.filter(id__in=[62, 63, 66, 70]).values_list('id', 'name'))
-> > ```
-> > 
-> > `[(62, 'K2'), (63, 'K3'), (66, 'K6')]`
-> 
-> <br>
-> 
-> 🔸 &nbsp;List of **<ins>Strings</ins>** (formatted) using _list comprehenssion_
-> 
-> > ```
-> > [f"{p.id}: {p.name}" for p in Person.all_objects.filter(id__in=[62, 63, 66, 70])]
-> > ```
-> > 
-> > `['62: K2', '63: K3', '66: K6']`
 
 <br>
 
