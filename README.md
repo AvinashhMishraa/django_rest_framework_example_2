@@ -3292,14 +3292,14 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-> 🔸 &nbsp;Install <code>django-filter</code> &nbsp;(if not already installed) :
+> 🔸 &nbsp;Install <code>django-filter</code> &nbsp;(if not already installed) &nbsp;**:**
 > ```
 > pip install django-filter
 > ```
 > 
 > <br>
 > 
-> 🔸 &nbsp;And in <code>person_api/core/settings.py</code> , add :
+> 🔸 &nbsp;And in <code>person_api/core/settings.py</code> , add &nbsp;**:**
 > ```
 > INSTALLED_APPS = [
 >     ●●●
@@ -3320,7 +3320,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-**Example 1** &nbsp;:&nbsp; Retrive all persons with name 'Gopal Krisna Jha'
+**Example 1** &nbsp;➜&nbsp; Retrive all persons with name 'Gopal Krisna Jha'
 
 <br>
 
@@ -3358,7 +3358,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-**Example 2** &nbsp;:&nbsp; Retrive all persons with name 'Gopal Krisna Jha' and color 'RED'
+**Example 2** &nbsp;➜&nbsp; Retrive all persons with name 'Gopal Krisna Jha' and color 'RED'
 
 <br>
 
