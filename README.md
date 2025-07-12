@@ -3366,7 +3366,6 @@ Since `Color` is a related model, therefore
 - if you want to filter by it's primary key `id` , use &nbsp;`<modelname>` in **lowercase** like `<color>`
 - if you want to filter by `color_name` , use &nbsp;`<modelname__fieldname>` in **lowercase** like `<color_color_name>`
 
-
 <br>
 
 > 🔸 &nbsp;`person_api/home/views.py` &nbsp;**(ViewSet)**
@@ -3408,8 +3407,7 @@ Since `Color` is a related model, therefore
 <ins>**Note**</ins> &nbsp;➜&nbsp; If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file :
 > 
 > ```
-> REST_FRAMEWORK = {
->     'PAGE_SIZE': 3,         
+> REST_FRAMEWORK = { 
 >     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
 > }
 > ```
