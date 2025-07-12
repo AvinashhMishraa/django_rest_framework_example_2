@@ -3387,7 +3387,7 @@ Since `Color` is a related model, therefore
 > 
 > <br>
 > 
-> let's verify it &nbsp;&nbsp - &nbsp;&nbsp http://localhost:8000/api/people/?name=Gopal+Krisna+Jha&color__color_name=GREEN
+> let's verify it &nbsp;&nbsp; - &nbsp;&nbsp; http://localhost:8000/api/people/?name=Gopal+Krisna+Jha&color__color_name=GREEN
 > ```
 > {
 > 	"id": 21,
