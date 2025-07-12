@@ -3309,8 +3309,6 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<br>
-
 <h3>✅ &nbsp;filterset_fileds</h3>
 
 <br>
@@ -3482,7 +3480,20 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-> Now you can veirfy your filters.
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=gopal_krisna_jha
+> > ```
+> > {
+> > 	"id": 21,
+> > 	"name": "Gopal Krisna Jha",
+> > 	"age": 35,
+> > 	"color": 3,
+> > 	"color_info": {
+> > 		"color_name": "GREEN",
+> > 		"hex_code": "#008000"
+> > 	},
+> > 	"is_deleted": false
+> > }
+> > ```
 >
 > <br>
 >
