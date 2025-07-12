@@ -3403,8 +3403,7 @@ Since `Color` is a related model, therefore
 
 <br>
 
-**⭐** If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file.
-> 
+**⭐** &nbsp;If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file.
 > ```
 > REST_FRAMEWORK = { 
 >     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
