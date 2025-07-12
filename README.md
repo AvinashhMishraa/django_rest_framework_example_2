@@ -3153,7 +3153,6 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > | `regex`       | Regular expression match       | `name__regex=r'^[A-Z][a-z]+$'` |
 > | `iregex`      | Case-insensitive regex match   | `name__iregex=r'^[a-z]+$'`     |
 
-
 <br>
 
 > 🔢 &nbsp;**Numeric Field Filters** ( <code>IntegerField</code> , <code>FloatField</code> , etc. )
@@ -3168,7 +3167,6 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > | `gt`    | Greater than          | `age__gt=30`       |
 > | `gte`   | Greater than or equal | `age__gte=18`      |
 > | `in`    | In a list             | `age__in=[18, 21]` |
-
 
 <br>
 
@@ -3318,7 +3316,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 <br>
 
 ⭐ &nbsp;`filterset_fields` filters a field successfully only if given the exact value. <br>
-&nbsp;&nbsp;&nbsp;It can't filter out a string value in a field when there is a lowercase or uppercase mismatch for any character in the string.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;It can't filter out a string value in a field when there is a lowercase or uppercase mismatch for any character in the string.
 
 <br>
 
@@ -3384,7 +3382,7 @@ Since `Color` is a related model, therefore
 >     filter_backends = [DjangoFilterBackend]
 > 	  # filterset_fields = ['name', 'color']                      # ✔️ filter by person name and the color id
 > 	  # filterset_fields = ['name', 'color_name']                 # ❌ ERROR - 'Meta.fields' must not contain non-model field names: color_name
->     filterset_fields = ['name', 'color__color_name']            # ✔️ filter by person name and the color name
+>         filterset_fields = ['name', 'color__color_name']            # ✔️ filter by person name and the color name
 > ```
 > 
 > <br>
