@@ -3380,9 +3380,9 @@ Since `Color` is a related model, therefore
 >     serializer_class = PersonSerializer
 > 
 >     filter_backends = [DjangoFilterBackend]
->        # filterset_fields = ['name', 'color']                    # ✔️ filter by person name and the color id
->        # filterset_fields = ['name', 'color_name']               # ❌ ERROR - 'Meta.fields' must not contain non-model field names: color_name
->        filterset_fields = ['name', 'color__color_name']          # ✔️ filter by person name and the color name
+>     # filterset_fields = ['name', 'color']                    # ✔️ filter by person name and the color id
+>     # filterset_fields = ['name', 'color_name']               # ❌ ERROR - 'Meta.fields' must not contain non-model field names: color_name
+>     filterset_fields = ['name', 'color__color_name']          # ✔️ filter by person name and the color name
 > ```
 > 
 > <br>
