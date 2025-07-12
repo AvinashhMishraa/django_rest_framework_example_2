@@ -6050,7 +6050,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 
 
-<h3>⌛</h3>
+<h3>⌛⚙️</h3>
 
 
 
