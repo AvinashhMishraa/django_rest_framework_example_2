@@ -2781,18 +2781,25 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-
 <h4>Basic `.filter()` in Django ORM</h4>
 
 <br>
 
+> > Collect **ids** & **names** of **persons** with **age greater than 30**
+> 
+> <br>
+>
+> ```
 > Person.objects.filter(age__gte=30, name__icontains='B')
-> > `<QuerySet [<Person: Person object (22)>, <Person: Person object (25)>]>`
+> ```
+> > **OUTPUT &nbsp;-**&nbsp; `<QuerySet [<Person: Person object (22)>, <Person: Person object (25)>]>`
 > 
 > <br>
 > 
+> ```
 > Person.objects.filter(age__gte=30, name__icontains='B').values('id', 'name')
-> > `<QuerySet [{'id': 22, 'name': 'Bechan Mishra'}, {'id': 25, 'name': 'Bina Mishra'}]>`
+> ```
+> > **OUTPUT &nbsp;-**&nbsp; `<QuerySet [{'id': 22, 'name': 'Bechan Mishra'}, {'id': 25, 'name': 'Bina Mishra'}]>`
 
 <br>
 
@@ -2801,12 +2808,11 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > <br>
 > 
 > 🔸 &nbsp;List of **<ins>Dictionaries</ins>** using Django's `.values()`
-> 
 > > ```
 > > Person.objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
 > > ```
 > > 
-> > `<QuerySet [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]>`
+> > **OUTPUT &nbsp;-**&nbsp; `<QuerySet [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]>`
 > 
 > <br>
 > 
@@ -2815,27 +2821,25 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > > list(qs)
 > > ```
 > >
-> > `[{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]`
+> > **OUTPUT &nbsp;-**&nbsp; `[{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]`
 > 
 > <br>
 > 
 > 🔸 &nbsp;List of **<ins>Tuples</ins>** (id, name) using `.values_list()` method
-> 
 > > ```
 > > list(Person.objects.filter(id__in=[62, 63, 66, 70]).values_list('id', 'name'))
 > > ```
 > > 
-> > `[(62, 'K2'), (63, 'K3'), (66, 'K6')]`
+> > **OUTPUT &nbsp;-**&nbsp; `[(62, 'K2'), (63, 'K3'), (66, 'K6')]`
 > 
 > <br>
 > 
 > 🔸 &nbsp;List of **<ins>Strings</ins>** (formatted) using _list comprehenssion_
-> 
 > > ```
 > > [f"{p.id}: {p.name}" for p in Person.objects.filter(id__in=[62, 63, 66, 70])]
 > > ```
 > > 
-> > `['62: K2', '63: K3', '66: K6']`
+> > **OUTPUT &nbsp;-**&nbsp; `['62: K2', '63: K3', '66: K6']`
 
 <br>
 
