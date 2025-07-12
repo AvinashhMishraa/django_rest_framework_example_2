@@ -3403,7 +3403,7 @@ Since `Color` is a related model, therefore
 
 <br>
 
-<ins>**Note**</ins> &nbsp;➜&nbsp; If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file.
+<ins>**⭐**</ins> If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file.
 > 
 > ```
 > REST_FRAMEWORK = { 
