@@ -2816,13 +2816,12 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > > ```
 > > **OUTPUT &nbsp;-**&nbsp; `<QuerySet [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]>`
 > >
-> <br>
+> > <br>
 > >
 > > ```
 > > qs = Person.objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
 > > list(qs)
 > > ```
-> >
 > > **OUTPUT &nbsp;-**&nbsp; `[{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]`
 > 
 > <br>
