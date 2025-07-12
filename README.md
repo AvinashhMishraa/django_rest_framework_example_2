@@ -3320,7 +3320,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-**∎ &nbsp;Example 1** &nbsp;➜&nbsp; Retrive all persons with name 'Gopal Krisna Jha'
+**◼️ &nbsp;Example 1** &nbsp;➜&nbsp; Retrive all persons with name 'Gopal Krisna Jha'
 
 <br>
 
@@ -3358,7 +3358,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-**∎ &nbsp;Example 2** &nbsp;➜&nbsp; Retrive all persons with name 'Gopal Krisna Jha' and color 'RED'
+**◼️ &nbsp;Example 2** &nbsp;➜&nbsp; Retrive all persons with name 'Gopal Krisna Jha' and color 'RED'
 
 <br>
 
@@ -3437,7 +3437,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-∎ &nbsp;Now we can search "Gopal Krisna Jha" with "gopal krisna jha" by using lookup expression `icontains` in a custom filter class. Let's see how to do it.
+**◼️** &nbsp;Now we can search "Gopal Krisna Jha" with "gopal krisna jha" by using lookup expression `icontains` in a custom filter class. Let's see how to do it.
 
 <br>
 
