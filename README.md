@@ -2781,7 +2781,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<h4>Basic `.filter()` in Django ORM</h4>
+<h4>👉 &nbsp;Basic `.filter()` in Django ORM</h4>
 
 <br>
 
@@ -2789,16 +2789,16 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 
 > <br>
 >
-> ```
-> Person.objects.filter(age__gte=30, name__icontains='B')
-> ```
+> > ```
+> > Person.objects.filter(age__gte=30, name__icontains='B')
+> > ```
 > > **OUTPUT &nbsp;-**&nbsp; `<QuerySet [<Person: Person object (22)>, <Person: Person object (25)>]>`
 > 
 > <br>
 > 
-> ```
-> Person.objects.filter(age__gte=30, name__icontains='B').values('id', 'name')
-> ```
+> > ```
+> > Person.objects.filter(age__gte=30, name__icontains='B').values('id', 'name')
+> > ```
 > > **OUTPUT &nbsp;-**&nbsp; `<QuerySet [{'id': 22, 'name': 'Bechan Mishra'}, {'id': 25, 'name': 'Bina Mishra'}]>`
 
 <br>
@@ -2807,29 +2807,29 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 
 > <br>
 > 
-> 🔸 &nbsp;List of **<ins>Dictionaries</ins>** using Django's `.values()`
+> > 🔸 &nbsp;List of **<ins>Dictionaries</ins>** using Django's `.values()`
+> > 
+> > <br>
+> >
 > > ```
 > > Person.objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
 > > ```
-> > 
 > > **OUTPUT &nbsp;-**&nbsp; `<QuerySet [{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]>`
-> 
+> >
 > <br>
-> 
+> >
 > > ```
 > > qs = Person.objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
 > > list(qs)
 > > ```
-> >
 > > **OUTPUT &nbsp;-**&nbsp; `[{'id': 62, 'name': 'K2'}, {'id': 63, 'name': 'K3'}, {'id': 66, 'name': 'K6'}]`
 > 
 > <br>
 > 
-> 🔸 &nbsp;List of **<ins>Tuples</ins>** (id, name) using `.values_list()` method
+> > 🔸 &nbsp;List of **<ins>Tuples</ins>** (id, name) using `.values_list()` method
 > > ```
 > > list(Person.objects.filter(id__in=[62, 63, 66, 70]).values_list('id', 'name'))
 > > ```
-> > 
 > > **OUTPUT &nbsp;-**&nbsp; `[(62, 'K2'), (63, 'K3'), (66, 'K6')]`
 > 
 > <br>
@@ -2838,8 +2838,11 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > > ```
 > > [f"{p.id}: {p.name}" for p in Person.objects.filter(id__in=[62, 63, 66, 70])]
 > > ```
-> > 
 > > **OUTPUT &nbsp;-**&nbsp; `['62: K2', '63: K3', '66: K6']`
+
+<br>
+
+<h4>👉 &nbsp;Using `.filter()` in the Django application</h4>
 
 <br>
 
