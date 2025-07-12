@@ -2781,7 +2781,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<h4>👉 &nbsp;Basic `.filter()` in Django ORM</h4>
+**▶️ &nbsp;Basic `.filter()` in Django ORM**
 
 <br>
 
@@ -2842,7 +2842,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<h4>👉 &nbsp;Using `.filter()` in the Django application</h4>
+**▶️ &nbsp;Using `.filter()` in the Django application**
 
 <br>
 
