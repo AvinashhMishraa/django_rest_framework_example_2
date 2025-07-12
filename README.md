@@ -2785,7 +2785,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-> > Collect **ids** & **names** of **persons** with **age greater than 30**
+> Collect **ids** & **names** of **persons** with **age greater than 30**
 > 
 > <br>
 >
@@ -2834,7 +2834,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > 
 > <br>
 > 
-> 🔸 &nbsp;List of **<ins>Strings</ins>** (formatted) using _list comprehenssion_
+> > 🔸 &nbsp;List of **<ins>Strings</ins>** (formatted) using _list comprehenssion_
 > > ```
 > > [f"{p.id}: {p.name}" for p in Person.objects.filter(id__in=[62, 63, 66, 70])]
 > > ```
