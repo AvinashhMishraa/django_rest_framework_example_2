@@ -3491,7 +3491,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 <br>
 
 > > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=gopal+krisna+jha <br>
-> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=Gopal+Krisna+Jha&min_age=&max_age=&color=
+> > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=gopal+krisna+jha&min_age=&max_age=&color=
 > > ```
 > > {
 > > 	"id": 21,
