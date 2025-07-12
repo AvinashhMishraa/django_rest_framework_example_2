@@ -3286,7 +3286,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<h3>⬛ 1⃣ &nbsp;filterset_fields &nbsp;&nbsp;&nbsp;&&nbsp;&nbsp;&nbsp; filterset_class</h3>
+<h3>⚙️🔎 &nbsp;filterset_fields &nbsp;&nbsp;&nbsp;&&nbsp;&nbsp;&nbsp; filterset_class</h3>
 
 <br>
 
@@ -3309,25 +3309,137 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > ]
 > ```
 
+<br>
 
+<br>
 
+**✅ &nbsp;`filterset_fileds`**
 
+<br>
 
+⭐ &nbsp;`filterset_fields` filters a field successfully only if given the exact value. <br>
+&nbsp;&nbsp;&nbsp;It can't filter out a string value in a field when there is a lowercase or uppercase mismatch for any character in the string.
 
+<br>
 
+**Example 1** &nbsp;:&nbsp; Retrive all persons with name 'Gopal Krisna Jha'
 
+<br>
 
+> 🔸 &nbsp;`person_api/home/views.py` &nbsp;**(ViewSet)**
+> ```
+> from django_filters.rest_framework import DjangoFilterBackend
+> 
+> 
+> 
+> # /api/people/
+> class PeopleViewSet(viewsets.ModelViewSet):
+>     queryset = Person.objects.select_related('color').all()
+>     serializer_class = PersonSerializer
+> 
+>     filter_backends = [DjangoFilterBackend]
+>     filterset_fields = ['name']
+> ```
+> 
+> <br>
+> 
+> Now let's search the required name in the API http://localhost:8000/api/people/?name=Gopal+Krisna+Jha
+> ```
+> {
+> 	"id": 21,
+> 	"name": "Gopal Krisna Jha",
+> 	"age": 35,
+> 	"color": 3,
+> 	"color_info": {
+> 		"color_name": "GREEN",
+> 		"hex_code": "#008000"
+> 	},
+> 	"is_deleted": false
+> }
+> ```
 
+<br>
 
+**Example 2** &nbsp;:&nbsp; Retrive all persons with name 'Gopal Krisna Jha' and color 'RED'
 
+<br>
 
+Since `Color` is a related model, therefore 
+- if you want to filter by it's primary key `id`, use `<color>`
+- if you want to filter by `color_name`, use `<modelname__fieldname>`
 
+<br>
 
+> 🔸 &nbsp;`person_api/home/views.py` &nbsp;**(ViewSet)**
+> ```
+> from django_filters.rest_framework import DjangoFilterBackend
+> 
+> 
+> 
+> # /api/people/
+> class PeopleViewSet(viewsets.ModelViewSet):
+>     queryset = Person.objects.select_related('color').all()
+>     serializer_class = PersonSerializer
+> 
+>     filter_backends = [DjangoFilterBackend]
+> 	  # filterset_fields = ['name', 'color']                      # ✔️ filter by person name and the color id
+> 	  # filterset_fields = ['name', 'color_name']                 # ❌ ERROR - 'Meta.fields' must not contain non-model field names: color_name
+>     filterset_fields = ['name', 'color__color_name']            # ✔️ filter by person name and the color name
+> ```
+> 
+> <br>
+> 
+> let's verify it &nbsp;&nbsp - &nbsp;&nbsp http://localhost:8000/api/people/?name=Gopal+Krisna+Jha&color__color_name=GREEN
+> ```
+> {
+> 	"id": 21,
+> 	"name": "Gopal Krisna Jha",
+> 	"age": 35,
+> 	"color": 3,
+> 	"color_info": {
+> 		"color_name": "GREEN",
+> 		"hex_code": "#008000"
+> 	},
+> 	"is_deleted": false
+> }
+> ```
 
+<br>
 
+<ins>**Note**</ins> &nbsp;➜&nbsp; If you do not want to always use `filter_backends = [DjangoFilterBackend]` in each view, just set it globally in the `settings.py` file like :
+> 
+> ```
+> REST_FRAMEWORK = {
+>     'PAGE_SIZE': 3,         
+>     'DEFAULT_FILTER_BACKENDS': ['django_filters.rest_framework.DjangoFilterBackend'],
+> }
+> ```
+>
+> <br>
+>
+> However, it's recommended to use `filter_backends = [DjangoFilterBackend]` in each view to increase code-readability. This makes even more sense when you use **search filter**.
 
+<br>
 
+**⚠️** However there is a **limitation** in using `fieldset_fields` &nbsp;**:**
+> If you try to search a person name in the lower case ("gopal krisna jha") like http://localhost:8000/api/people/?name=gopal+krisna+jha, you will not be able to find the person.
+> If you try to search the color name 'RED' with 'red' or 'Red', you won't be able to do it.
 
+<br>
+
+To fix this limitation, we have something called `fieldset_class`.
+
+<br>
+
+**✅ &nbsp;filterset_class**
+
+<br>
+
+In Django REST Framework, <code>filterset_class</code> allows you to **create reusable, customizable filtering logic** using **Django Filter**. <br>This is far cleaner than writing raw <code>.filter()</code> queries in your views.
+
+<br>
+
+Now we can search "Gopal Krisna Jha" with "gopal krisna jha" by using lookup expression `icontains` in a custom filter class. Let's see how to do it.
 
 <br>
 
@@ -6050,7 +6162,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 
 
-<h3>⚙️🔎</h3>
+
 
 
 
