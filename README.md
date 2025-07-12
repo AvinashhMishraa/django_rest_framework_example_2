@@ -3494,11 +3494,11 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > > <code>GET</code> &nbsp;&nbsp;http://localhost:8000/api/people/?name=gopal+krisna+jha&min_age=&max_age=&color=
 > > ```
 > > {
-> > 	"id": 21,
-> > 	"name": "Gopal Krisna Jha",
-> > 	"age": 35,
-> > 	"color": 3,
-> > 	"color_info": {
+> >     "id": 21,
+> >     "name": "Gopal Krisna Jha",
+> >     "age": 35,
+> >     "color": 3,
+> >     "color_info": {
 > > 		"color_name": "GREEN",
 > > 		"hex_code": "#008000"
 > > 	},
