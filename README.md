@@ -3379,9 +3379,9 @@ Since `Color` is a related model, therefore
 > 
 >     filter_backends = [DjangoFilterBackend]
 > 
->     # filterset_fields = ['name', 'color']                   # ✔️ filter by person name and the color id
+>     # filterset_fields = ['name', 'color']                   # ✔️ exact match filter by person name & the color id
 >     # filterset_fields = ['name', 'color_name']              # ❌ ERROR - 'Meta.fields' must not contain non-model field names: color_name
->     filterset_fields = ['name', 'color__color_name']         # ✔️ filter by person name and color name
+>     filterset_fields = ['name', 'color__color_name']         # ✔️ exact match filter by person name & color name
 > ```
 > 
 > <br>
@@ -3471,7 +3471,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 >     serializer_class = PersonSerializer
 > 
 >     filter_backends = [DjangoFilterBackend]
->     filterset_class = PersonFilter
+>     filterset_class = PersonFilter                                   # custom filter by name, min age, max age, color
 > ```
 > 
 > <br>
