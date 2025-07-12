@@ -3363,8 +3363,8 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 <br>
 
 Since `Color` is a related model, therefore 
-- if you want to filter by it's primary key `id` , use &nbsp;`<modelname>` in lowercase like &nbsp;⟶&nbsp; <color>
-- if you want to filter by `color_name` , use &nbsp;`<modelname__fieldname>` in lowercase like &nbsp;⟶&nbsp; <color_color_name>
+- if you want to filter by it's primary key `id` , use &nbsp;`<modelname>` in **lowercase** like `<color>`
+- if you want to filter by `color_name` , use &nbsp;`<modelname__fieldname>` in **lowercase** like `<color_color_name>`
 
 
 <br>
