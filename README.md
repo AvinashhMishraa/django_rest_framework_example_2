@@ -2810,7 +2810,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 > > 🔸 &nbsp;List of **<ins>Dictionaries</ins>** using Django's `.values()`
 > > 
 > > <br>
-> >
+> > 
 > > ```
 > > Person.objects.filter(id__in=[62, 63, 66, 70]).values('id', 'name')
 > > ```
