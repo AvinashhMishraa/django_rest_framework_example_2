@@ -2777,7 +2777,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<h3>⬛ &nbsp;&nbsp;.filter(&nbsp;)</h3>
+<h2>⬛ &nbsp;&nbsp;.filter(&nbsp;)</h2>
 
 <br>
 
@@ -3284,11 +3284,11 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-<h3>⬛ &nbsp;&nbsp;filterset_fields &nbsp;&nbsp;&nbsp;&&nbsp;&nbsp;&nbsp; filterset_class</h3>
+<h2>⬛ &nbsp;&nbsp;filterset_fields &nbsp;&nbsp;&nbsp;&&nbsp;&nbsp;&nbsp; filterset_class</h2>
 
 <br>
 
-**✅ &nbsp;Initial Setup**
+<h3>✅ &nbsp;Initial Setup</h3>
 
 <br>
 
@@ -3311,7 +3311,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 
 <br>
 
-**✅ &nbsp;`filterset_fileds`**
+<h3>✅ &nbsp;filterset_fileds</h3>
 
 <br>
 
@@ -3429,7 +3429,7 @@ To fix this limitation, we have something called `fieldset_class`.
 
 <br>
 
-**✅ &nbsp;filterset_class**
+<h3>✅ &nbsp;filterset_class</h3>
 
 <br>
 
