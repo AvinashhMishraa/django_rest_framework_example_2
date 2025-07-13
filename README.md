@@ -3349,8 +3349,7 @@ Instead of forcing you to rewrite similar code in every view, DRF gives you **Mi
 >     "color_info": {
 >         "color_name": "GREEN",
 >         "hex_code": "#008000"
->     },
->     "is_deleted": false
+>     }
 > }
 > ```
 
@@ -3396,8 +3395,7 @@ Since `Color` is a related model, therefore
 >     "color_info": {
 >         "color_name": "GREEN",
 >         "hex_code": "#008000"
->     },
->     "is_deleted": false
+>     }
 > }
 > ```
 
@@ -3501,8 +3499,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > >     "color_info": {
 > >         "color_name": "GREEN",
 > >         "hex_code": "#008000"
-> > 	},
-> > 	"is_deleted": false
+> > 	}
 > > }
 > > ```
 >
@@ -3634,6 +3631,30 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > >     }
 > > ]
 > > ```
+
+<br>
+
+Types of **Django Filter** with respect to `DjangoFilterBackend` (from `django-filter`) &nbsp;:
+&nbsp;&nbsp;◼️ FilterSet
+&nbsp;&nbsp;◼️ Filter Types
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `NumberFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `CharFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `RangeFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `DateFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `BooleanFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `ChoiceFilter`
+
+<br>
+
+Let's take an example of `RangeFilter`.
+- Instead of creating 2 diiferent fileds `min_age` and `max_age` like we did earlier in `PersonFilter` class, we can have a `RangeFilter` on `age` column which will automatically create `age_min` & `age_max` filter under the hood.
+- Similarly we can have `RangeFilter` on the `id` column of the `Person` model.
+
+<br>
+
+
+
+
 
 <br>
 
