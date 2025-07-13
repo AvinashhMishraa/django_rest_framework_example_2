@@ -3634,15 +3634,15 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-Types of **Django Filter** with respect to `DjangoFilterBackend` (from `django-filter`) &nbsp;:
-&nbsp;&nbsp;◼️ FilterSet
-&nbsp;&nbsp;◼️ Filter Types
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `NumberFilter`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `CharFilter`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `RangeFilter`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `DateFilter`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `BooleanFilter`
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `ChoiceFilter`
+👉 &nbsp;Types of **Django Filter** with respect to `DjangoFilterBackend` (from `django-filter`) &nbsp;:
+&nbsp;&nbsp;&nbsp;&nbsp;◼️ FilterSet
+&nbsp;&nbsp;&nbsp;&nbsp;◼️ Filter Types
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `NumberFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `CharFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `RangeFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `DateFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `BooleanFilter`
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;● `ChoiceFilter`
 
 <br>
 
