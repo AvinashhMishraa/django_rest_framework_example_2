@@ -3656,9 +3656,92 @@ Let's take an example of `RangeFilter`.
 
 <br>
 
-
-
-
+> 🔸 &nbsp;`person_api/home/filters.py`
+> ```
+> class PersonFilter(filters.FilterSet):
+> 	id = filters.RangeFilter(field_name='id')
+> 	age = filters.RangeFilter(field_name='age')
+>     name = filters.CharFilter(lookup_expr='icontains')
+>     color = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
+> 
+>     class Meta:
+>         model = Person
+>         fields = ['id', 'age', 'name','color'] 
+> ```
+> 
+> <br>
+> 
+> 🔸 &nbsp;No change in `person_api/home/views.py`. &nbsp;All well and good on that page.
+> ```
+> from django_filters.rest_framework import DjangoFilterBackend
+> 
+> 
+> # /api/people/
+> class PeopleViewSet(viewsets.ModelViewSet):
+>     queryset = Person.objects.select_related('color').all()
+>     serializer_class = PersonSerializer
+> 
+>     filter_backends = [DjangoFilterBackend]
+>     filterset_class = PersonFilter                              # custom filter by name, min age, max age, color
+> ```
+> 
+> <br>
+> 
+> `GET` &nbsp; http://localhost:8000/api/people/?age_min=50&age_max=60 <br>
+> `GET` &nbsp; http://localhost:8000/api/people/?id_min=&id_max=&age_min=50&age_max=60&name=&color= <br>
+> ```
+> [
+> 	{
+> 		"id": 22,
+> 		"name": "Bechan Mishra",
+> 		"age": 54,
+> 		"color": 1,
+> 		"color_info": {
+> 			"color_name": "RED",
+> 			"hex_code": "#ff0000"
+> 		}
+> 	},
+> 	{
+> 		"id": 25,
+> 		"name": "Bina Mishra",
+> 		"age": 50,
+> 		"color": 2,
+> 		"color_info": {
+> 			"color_name": "BLUE",
+> 			"hex_code": "#0000ff"
+> 		}
+> 	}
+> ]
+> ```
+>
+> <br>
+>  
+> `GET` &nbsp; http://localhost:8000/api/people/?id_min=18&id_max=30
+> `GET` &nbsp; http://localhost:8000/api/people/?id_min=18&id_max=30&age_min=&age_max=&name=&color=
+> ```
+> [
+> 	{
+> 		"id": 21,
+> 		"name": "Gopal Krisna Jha",
+> 		"age": 35,
+> 		"color": 3,
+> 		"color_info": {
+> 			"color_name": "GREEN",
+> 			"hex_code": "#008000"
+> 		}
+> 	},
+> 	{
+> 		"id": 22,
+> 		"name": "Bechan Mishra",
+> 		"age": 54,
+> 		"color": 1,
+> 		"color_info": {
+> 			"color_name": "RED",
+> 			"hex_code": "#ff0000"
+> 		}
+> 	}
+> ]
+> ```
 
 <br>
 
