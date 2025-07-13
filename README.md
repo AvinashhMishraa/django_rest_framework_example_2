@@ -3457,7 +3457,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 >     name = filters.CharFilter(lookup_expr='icontains')
 >     min_age = filters.NumberFilter(field_name='age', lookup_expr='gte')
 >     max_age = filters.NumberFilter(field_name='age', lookup_expr='lte')
->     color = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
+>     color = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')            # label='color'
 > 
 >     class Meta:
 >         model = Person
@@ -3668,10 +3668,10 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > 
 > 
 > class PersonFilter(filters.FilterSet):
->     id = filters.RangeFilter(field_name='id')
->     age = filters.RangeFilter(field_name='age')
->     name = filters.CharFilter(lookup_expr='icontains')
->     color = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
+>     id = filters.RangeFilter()
+>     age = filters.RangeFilter()
+>     name = filters.CharFilter(lookup_expr='icontains', label='name')
+>     color = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains', label='color')
 > 
 >     class Meta:
 >         model = Person
