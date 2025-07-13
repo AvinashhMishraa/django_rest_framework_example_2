@@ -3654,7 +3654,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-> Let's take an example of `RangeFilter` &nbsp;:
+> Let's take an example of `RangeFilter` which works only on integer type fields &nbsp;:
 > - Instead of creating 2 diiferent fileds `min_age` and `max_age` like we did earlier in `PersonFilter` class, we can have a `RangeFilter` on `age` column which will automatically create `age_min` & `age_max` filter under the hood.
 > - Similarly we can have `RangeFilter` on the `id` column of the `Person` model.
 > 
