@@ -3652,22 +3652,19 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; `BooleanFilter` <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;●&nbsp;&nbsp; `ChoiceFilter`
 
-
-
-
 <br>
 
-Let's take an example of `RangeFilter`.
-- Instead of creating 2 diiferent fileds `min_age` and `max_age` like we did earlier in `PersonFilter` class, we can have a `RangeFilter` on `age` column which will automatically create `age_min` & `age_max` filter under the hood.
-- Similarly we can have `RangeFilter` on the `id` column of the `Person` model.
-
-<br>
-
+> 🔸 &nbsp;Let's take an example of `RangeFilter`.
+> - Instead of creating 2 diiferent fileds `min_age` and `max_age` like we did earlier in `PersonFilter` class, we can have a `RangeFilter` on `age` column which will automatically create `age_min` & `age_max` filter under the hood.
+> - Similarly we can have `RangeFilter` on the `id` column of the `Person` model.
+> 
+> <br>
+>
 > 🔸 &nbsp;`person_api/home/filters.py`
 > ```
 > class PersonFilter(filters.FilterSet):
-> 	id = filters.RangeFilter(field_name='id')
-> 	age = filters.RangeFilter(field_name='age')
+>     id = filters.RangeFilter(field_name='id')
+>     age = filters.RangeFilter(field_name='age')
 >     name = filters.CharFilter(lookup_expr='icontains')
 >     color = filters.CharFilter(field_name='color__color_name', lookup_expr='icontains')
 > 
