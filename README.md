@@ -3720,7 +3720,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 >
 > <br>
 >  
-> `GET` &nbsp; http://localhost:8000/api/people/?id_min=18&id_max=30
+> `GET` &nbsp; http://localhost:8000/api/people/?id_min=18&id_max=30 <br>
 > `GET` &nbsp; http://localhost:8000/api/people/?id_min=18&id_max=30&age_min=&age_max=&name=&color=
 > ```
 > [
