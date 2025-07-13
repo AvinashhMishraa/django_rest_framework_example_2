@@ -3662,6 +3662,11 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 > 
 > 🔸 &nbsp;`person_api/home/filters.py`
 > ```
+> from django_filters import rest_framework as filters
+> from .models import Person
+> 
+> 
+> 
 > class PersonFilter(filters.FilterSet):
 >     id = filters.RangeFilter(field_name='id')
 >     age = filters.RangeFilter(field_name='age')
@@ -3671,22 +3676,6 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 >     class Meta:
 >         model = Person
 >         fields = ['id', 'age', 'name','color'] 
-> ```
-> 
-> <br>
-> 
-> 🔸 &nbsp;No change in `person_api/home/views.py`. &nbsp;All well and good on that page.
-> ```
-> from django_filters.rest_framework import DjangoFilterBackend
-> 
-> 
-> # /api/people/
-> class PeopleViewSet(viewsets.ModelViewSet):
->     queryset = Person.objects.select_related('color').all()
->     serializer_class = PersonSerializer
-> 
->     filter_backends = [DjangoFilterBackend]
->     filterset_class = PersonFilter                              # custom filter by name, min age, max age, color
 > ```
 > 
 > <br>
