@@ -3774,16 +3774,15 @@ Let's see how.
 > <br>
 > 
 > 🔸 &nbsp;**Sample usage &nbsp;:**
-> - **GET** &nbsp;`/api/persons/?age_range=30-40` &nbsp;&nbsp;→&nbsp;&nbsp; Returns persons with age between 30 and 40
-> - **GET** &nbsp;`/api/persons/?age_range=40-30` &nbsp;&nbsp;→&nbsp;&nbsp; Still works, returns persons between 30 and 40 (you can add sort if needed)
-> - **GET** &nbsp;`/api/persons/?age_range=abc` &nbsp;&nbsp;→&nbsp;&nbsp; No filter applied (returns all)
+> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=30-40` &nbsp;&nbsp;⟶&nbsp;&nbsp; Returns persons with age between 30 and 40
+> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=40-30` &nbsp;&nbsp;⟶&nbsp;&nbsp; Still works, returns persons between 30 and 40 (you can add sort if needed)
+> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=abc` &nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; No filter applied (returns all)
 > 
 > <br>
 > 
 > 🔸 &nbsp;why &nbsp;`fileds=[]` &nbsp;not &nbsp;`fields=['age_range']` &nbsp;?
 > - You must be thinking why the custom filter `age_range = filters.CharFilter(...)` still works even though it's not mentioned in fields.
-> - The fields in the Meta class is only used to **auto-generate filters** for model fields.
-> - **Custom filters** like `age_range = filters.CharFilter(...)` are defined *explicitly**, so they **do not need to be listed** in `Meta.fields`.
+> - The fields in the Meta class is only used to **auto-generate filters** for model fields. &nbsp;**Custom filters** like &nbsp;`age_range = filters.CharFilter(...)`&nbsp; are defined **explicitly**, so they **do not need to be listed** in &nbsp;`Meta.fields`.
 
 
 
