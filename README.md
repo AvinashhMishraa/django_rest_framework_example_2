@@ -3827,26 +3827,26 @@ Let's see how.
 > 🔸 &nbsp;**<ins>Example URL</ins> &nbsp;:** <br>
 > 
 > **GET** &nbsp;`/api/persons/?age_range=50-60&color_name=red`
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; http://localhost:8000/api/people/?name=&age_range=50-80&color_name=red
 > ```
 > WHERE age BETWEEN 20 AND 40 AND color.color_name ILIKE '%red%'
 > ```
 > 
-> > **GET** &nbsp;&nbsp;http://localhost:8000/api/people/?name=&age_range=50-80&color_name=red
-> > ```
-> > [
-> > 	{
-> > 	    "id": 22,
-> > 	    "name": "Bechan Mishra",
-> > 	    "age": 54,
-> > 	    "color": 1,
-> > 	    "color_info": {
-> > 		"color_name": "RED",
-> > 		"hex_code": "#ff0000"
-> > 	    },
-> > 	    "is_deleted": false
-> > 	}
-> > ]
-> > ```
+> ```
+> [
+> 	{
+> 	    "id": 22,
+> 	    "name": "Bechan Mishra",
+> 	    "age": 54,
+> 	    "color": 1,
+> 	    "color_info": {
+> 		"color_name": "RED",
+> 		"hex_code": "#ff0000"
+> 	    },
+> 	    "is_deleted": false
+> 	}
+> ]
+> ```
 
 
 
