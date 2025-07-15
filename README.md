@@ -3774,8 +3774,8 @@ Let's see how.
 > <br>
 > 
 > 🔸 &nbsp;**Sample usage &nbsp;:**
-> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=30-40` &nbsp;&nbsp;⟶&nbsp;&nbsp; Returns persons with age between 30 and 40
-> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=40-30` &nbsp;&nbsp;⟶&nbsp;&nbsp; Still works, returns persons between 30 and 40 (you can add sort if needed)
+> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=50-60` &nbsp;&nbsp;⟶&nbsp;&nbsp; Returns persons with age between 30 and 40
+> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=50-60` &nbsp;&nbsp;⟶&nbsp;&nbsp; Still works, returns persons between 30 and 40 (you can add sort if needed)
 > - &nbsp;**GET** &nbsp;`/api/persons/?age_range=abc` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; No filter applied (returns all)
 > 
 > <br>
