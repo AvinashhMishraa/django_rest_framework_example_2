@@ -3740,7 +3740,54 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <h2>⬛ &nbsp;&nbsp;Advanced Filtering</h2>
 
+<br>
 
+Now that you have seen custom filtering, let's go for an advanced filtering technique where you can have **different custom methods in the custom flter class** `PersonFilter`.
+
+Let's see how.
+
+<br>
+
+> ✅ &nbsp;**Example 1:** &nbsp;Filter `Person` based on a specific age range of `age`
+> 
+> <br>
+> 
+> `person_api/home/filters.py`
+> ```
+> from django_filters import rest_framework as filters
+> from .models import Person
+> 
+> 
+> 
+> class PersonFilter(filters.FilterSet):
+>     age_range = filters.CharFilter(method='filter_age_range')
+> 
+>     class Meta:
+>         model = Person
+>         fields = []
+> 
+>     def filter_age_range(self, queryset, name, value):
+>         min_age, max_age = sorted(map(int, value.split('-')))
+>         return queryset.filter(age__gte=min_age, age__lte=max_age)
+> ```
+> 
+> <br>
+> 
+✅ &nbsp;**Sample usage &nbsp;:**
+> 
+> <br>
+>
+> **GET** &nbsp;`/api/persons/?age_range=30-40` &nbsp;&nbsp;→&nbsp;&nbsp; Returns persons with age between 30 and 40
+> 
+> **GET** &nbsp;`/api/persons/?age_range=40-30` &nbsp;&nbsp;→&nbsp;&nbsp; Still works, returns persons between 30 and 40 (you can add sort if needed)
+> 
+> **GET** &nbsp;`/api/persons/?age_range=abc` &nbsp;&nbsp;→&nbsp;&nbsp; No filter applied (returns all)
+> 
+> <br>
+> 
+> ✅ &nbsp;You must be thinking why the custom filter `age_range = filters.CharFilter(...)` still works even though it's not mentioned in fields.
+> The fields in the Meta class is only used to **auto-generate filters** for model fields.
+> **Custom filters** like `age_range = filters.CharFilter(...)` are defined *explicitly**, so they **do not need to be listed** in `Meta.fields`.
 
 
 
