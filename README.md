@@ -3748,7 +3748,7 @@ Let's see how.
 
 <br>
 
-> ✅ &nbsp;**<ins>Example 1</ins> &nbsp;➜** &nbsp;Filter `Person` based on a specific range of `age`
+> ✅ &nbsp;**<ins>Example 1</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Filter `Person` based on a specific range of `age`
 > 
 > <br>
 > 
