@@ -3804,20 +3804,15 @@ Let's see how.
 > 
 >     class Meta:
 >         model = Person
->         fields = ['name']                                                  # fields = ['name', 'age_range', 'color_name']
+>         fields = ['name']                                              # fields = ['name', 'age_range', 'color_name']
 > 
 >     def filter_age_range(self, queryset, name, value):
->         try:
->             min_age, max_age = sorted(map(int, value.split('-')))          # expecting a format like "50-60"
->             return queryset.filter(age__gte=min_age, age__lte=max_age)
->         except Exception:
->             return queryset
+>         min_age, max_age = sorted(map(int, value.split('-')))          # expecting a format like "50-60"
+>         return queryset.filter(age__gte=min_age, age__lte=max_age)
 > 
 >     def filter_color_name(self, queryset, name, value):
 >         value = value.strip()
->         if value:
->             return queryset.filter(color__color_name__icontains=value)
->         return queryset                                                    # If value is not in the correct format, return unfiltered queryset
+>         return queryset.filter(color__color_name__icontains=value)
 > ```
 > 
 > <br>
