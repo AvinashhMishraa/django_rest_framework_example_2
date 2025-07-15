@@ -3823,14 +3823,14 @@ Let's see how.
 > <br>
 >
 > 🔸 &nbsp;**What it does &nbsp;:**
-> - `?age_range=25-35` → filters people whose age is between 25 and 35.
-> - `?color_name=Red` → filters people related to a Color model whose color_name contains "Red".
+> - `?age_range=25-35` &nbsp;&nbsp;⟶&nbsp;&nbsp; filters people whose age is between 25 and 35.
+> - `?color_name=Red` &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; filters people related to a Color model whose color_name contains "Red".
 > - Both can be used together.
 > 
 > <br>
 >
 > 🔸 &nbsp;**Example URL &nbsp;:** <br>
-> *GET** &nbsp;`/api/persons/?age_range=20-40&color_name=blue`
+> **GET** &nbsp;`/api/persons/?age_range=20-40&color_name=blue`
 > ```
 > WHERE age BETWEEN 20 AND 40 AND color.color_name ILIKE '%blue%'
 > ```
