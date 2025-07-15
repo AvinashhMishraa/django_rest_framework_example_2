@@ -6205,7 +6205,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > > 	                                            # it overrides global "PAGE_SIZE" in the settings file 
 > >                                                     # however it gets overridden with the ?page_size= if explicitly passed in the URL
 > > 	
-> > 	●●●
+> >     ●●●
 > > ```
 > 
 > <br>
