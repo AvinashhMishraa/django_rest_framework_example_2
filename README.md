@@ -3830,6 +3830,7 @@ Let's see how.
 > <br>
 >
 > 🔸 &nbsp;**Example URL &nbsp;:** <br>
+> 
 > **GET** &nbsp;`/api/persons/?age_range=20-40&color_name=blue`
 > ```
 > WHERE age BETWEEN 20 AND 40 AND color.color_name ILIKE '%blue%'
