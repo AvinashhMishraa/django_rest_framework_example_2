@@ -3774,8 +3774,8 @@ Let's see how.
 > <br>
 > 
 > 🔸 &nbsp;**Sample usage &nbsp;:**
-> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=50-60` &nbsp;&nbsp;⟶&nbsp;&nbsp; Returns persons with age between 30 and 40
-> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=50-60` &nbsp;&nbsp;⟶&nbsp;&nbsp; Still works, returns persons between 30 and 40 (you can add sort if needed)
+> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=50-60` &nbsp;&nbsp;⟶&nbsp;&nbsp; Returns persons with age between 50 and 60
+> - &nbsp;**GET** &nbsp;`/api/persons/?age_range=50-60` &nbsp;&nbsp;⟶&nbsp;&nbsp; Still works, returns persons between 50 and 60 (you can add sort if needed)
 > - &nbsp;**GET** &nbsp;`/api/persons/?age_range=abc` &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; No filter applied (returns all)
 > 
 > <br>
@@ -3783,6 +3783,57 @@ Let's see how.
 > 🔸 &nbsp;**Why using** &nbsp;`fileds=[]` **, and &nbsp;not** &nbsp;`fields=['age_range']` &nbsp;**?**
 > - You must be thinking why the custom filter &nbsp;`age_range = filters.CharFilter(...)`&nbsp; still works even though it's not mentioned in fields.
 > - The fields in the **Meta class** is only used to **auto-generate filters** for model fields. <br>**Custom filters** like &nbsp;`age_range = filters.CharFilter(...)`&nbsp; are defined **explicitly**, so they **do not need to be listed** in &nbsp;`Meta.fields`
+
+<br>
+
+> ✅ **Example 2 &nbsp;:** &nbsp;Filter `Person` based on a specific age range of `age` and `Color` name (related via foreign key).
+>
+> <br>
+>
+> 🔸 &nbsp;`person_api/home/filters.py`
+> ```
+> from django_filters import rest_framework as filters
+> from .models import Person
+> 
+> 
+> 
+> class PersonFilter(filters.FilterSet):
+> 	name = filters.CharFilter(lookup_expr='icontains')
+>     age_range = filters.CharFilter(method='filter_age_range')
+>     color_name = filters.CharFilter(method='filter_color_name')
+> 
+>     class Meta:
+>         model = Person
+>         fields = ['name']                                               # fields = ['name', 'age_range', 'color_name']
+> 
+>     def filter_age_range(self, queryset, name, value):
+>         try:
+>             min_age, max_age = sorted(map(int, value.split('-')))
+>             return queryset.filter(age__gte=min_age, age__lte=max_age)
+>         except Exception:
+>             return queryset
+> 
+>     def filter_color_name(self, queryset, name, value):
+>         value = value.strip()
+>         if value:
+>             return queryset.filter(color__color_name__icontains=value)
+>         return queryset
+> ```
+>
+> <br>
+>
+> 🔸 &nbsp;**What it does &nbsp;:**
+> - `?age_range=25-35` → filters people whose age is between 25 and 35.
+> - `?color_name=Red` → filters people related to a Color model whose color_name contains "Red".
+> - Both can be used together.
+> 
+> <br>
+>
+> 🔸 &nbsp;**Example URL &nbsp;:** <br>
+> *GET** &nbsp;`/api/persons/?age_range=20-40&color_name=blue`
+> ```
+> WHERE age BETWEEN 20 AND 40 AND color.color_name ILIKE '%blue%'
+> ```
 
 
 
