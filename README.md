@@ -3783,6 +3783,34 @@ Let's see how.
 > 🔸 &nbsp;**Why using** &nbsp;`fileds=[]` **, and &nbsp;not** &nbsp;`fields=['age_range']` &nbsp;**?**
 > - You must be thinking why the custom filter &nbsp;`age_range = filters.CharFilter(...)`&nbsp; still works even though it's not mentioned in fields.
 > - The fields in the **Meta class** is only used to **auto-generate filters** for model fields. <br>**Custom filters** like &nbsp;`age_range = filters.CharFilter(...)`&nbsp; are defined **explicitly**, so they **do not need to be listed** in &nbsp;`Meta.fields`
+>
+> <br>
+>
+> 🔸 &nbsp;**GET** &nbsp;&nbsp;http://localhost:8000/api/people/?name=B&age_range=50-60
+> ```
+> [
+>         {
+>             "id": 22,
+>             "name": "Bechan Mishra",
+>             "age": 54,
+>             "color": 1,
+>             "color_info": {
+>                 "color_name": "RED",
+>                 "hex_code": "#ff0000"
+>             }
+>         },
+>         {
+>             "id": 25,
+>             "name": "Bina Mishra",
+>             "age": 50,
+>             "color": 2,
+>             "color_info": {
+>                 "color_name": "BLUE",
+>                 "hex_code": "#0000ff"
+>             }
+>         }
+>     ]
+> ```
 
 <br>
 
