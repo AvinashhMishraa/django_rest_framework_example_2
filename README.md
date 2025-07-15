@@ -3781,8 +3781,8 @@ Let's see how.
 > <br>
 > 
 > 🔸 &nbsp;**Why using** &nbsp;`fileds=[]` **, and &nbsp;not** &nbsp;`fields=['age_range']` &nbsp;**?**
-> - You must be thinking why the custom filter `age_range = filters.CharFilter(...)` still works even though it's not mentioned in fields.
-> - The fields in the Meta class is only used to **auto-generate filters** for model fields. <br>**Custom filters** like &nbsp;`age_range = filters.CharFilter(...)`&nbsp; are defined **explicitly**, so they **do not need to be listed** in &nbsp;`Meta.fields`
+> - You must be thinking why the custom filter &nbsp;`age_range = filters.CharFilter(...)`&nbsp; still works even though it's not mentioned in fields.
+> - The fields in the **Meta class** is only used to **auto-generate filters** for model fields. <br>**Custom filters** like &nbsp;`age_range = filters.CharFilter(...)`&nbsp; are defined **explicitly**, so they **do not need to be listed** in &nbsp;`Meta.fields`
 
 
 
