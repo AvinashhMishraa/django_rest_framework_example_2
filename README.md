@@ -3786,7 +3786,7 @@ Let's see how.
 
 <br>
 
-> ✅ **Example 2 &nbsp;:** &nbsp;Filter `Person` based on a specific age range of `age` and `Color` name (related via foreign key).
+> ✅ **Example 2 &nbsp;:** &nbsp;Filter `Person` based on a specific age range of `age` and `Color` name (related via <ins>foreign key</ins>).
 >
 > <br>
 >
