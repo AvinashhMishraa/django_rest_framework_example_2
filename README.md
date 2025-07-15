@@ -3817,7 +3817,7 @@ Let's see how.
 >         value = value.strip()
 >         if value:
 >             return queryset.filter(color__color_name__icontains=value)
->         return queryset                                                    # return unfiltered queryset if not in the correct format
+>         return queryset                                                    # return unfiltered if incorrect
 > ```
 > 
 > <br>
