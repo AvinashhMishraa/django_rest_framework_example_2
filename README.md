@@ -3831,11 +3831,22 @@ Let's see how.
 > WHERE age BETWEEN 20 AND 40 AND color.color_name ILIKE '%red%'
 > ```
 >
-> http://localhost:8000/api/people/?name=&age_range=50-80&color_name=red
-> 
-> ```
-
-> ```
+> > **GET** &nbsp;http://localhost:8000/api/people/?name=&age_range=50-80&color_name=red
+> > ```
+> > [
+> > 	{
+> > 	    "id": 22,
+> > 	    "name": "Bechan Mishra",
+> > 	    "age": 54,
+> > 	    "color": 1,
+> > 	    "color_info": {
+> > 		"color_name": "RED",
+> > 		"hex_code": "#ff0000"
+> > 	    },
+> > 	    "is_deleted": false
+> > 	}
+> > ]
+> > ```
 
 
 
