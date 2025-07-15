@@ -3799,8 +3799,8 @@ Let's see how.
 > 
 > class PersonFilter(filters.FilterSet):
 >     name = filters.CharFilter(lookup_expr='icontains')
->     age_range = filters.CharFilter(method='filter_age_range')
->     color_name = filters.CharFilter(method='filter_color_name')
+>     age_range = filters.CharFilter(method='filter_age_range', label='age_range')
+>     color_name = filters.CharFilter(method='filter_color_name', label='color_name')
 > 
 >     class Meta:
 >         model = Person
