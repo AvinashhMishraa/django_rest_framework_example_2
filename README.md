@@ -3760,7 +3760,7 @@ Let's see how.
 > 
 > 
 > class PersonFilter(filters.FilterSet):
->     age_range = filters.CharFilter(method='filter_age_range')
+>     age_range = filters.CharFilter(method='filter_age_range', label='age_range')
 > 
 >     class Meta:
 >         model = Person
