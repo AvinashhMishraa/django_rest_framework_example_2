@@ -3824,7 +3824,7 @@ Let's see how.
 >
 > 🔸 &nbsp;**What it does &nbsp;:**
 > - `?age_range=25-35` &nbsp;&nbsp;⟶&nbsp;&nbsp; filters people whose age is between 25 and 35.
-> - `?color_name=Red` &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; filters people related to a Color model whose color_name contains "Red".
+> - `?color_name=Red` &nbsp;&nbsp;&nbsp;&nbsp;⟶&nbsp;&nbsp; filters people related to a `Color` model whose `color_name contains "Red"`.
 > - Both can be used together.
 > 
 > <br>
