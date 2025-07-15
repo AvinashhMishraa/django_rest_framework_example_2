@@ -3738,7 +3738,33 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-<h3>⬛ &nbsp;Summary of Different Kinds of Filters</h3>
+<h2>⬛ &nbsp;&nbsp;Advanced Filtering</h2>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<br><br><br><br><br><br><br><br><br><br>
+
+<h2>⬛ &nbsp;Summary of Different Kinds of Filters</h2>
 
 <br>
 
