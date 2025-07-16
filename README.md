@@ -3888,7 +3888,8 @@ Let's see how.
 > 
 > 🔸 &nbsp;**Objective &nbsp;:**
 > 
-> `GET  /api/people/?age_range=50-60&color_name=blue` &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; All persons whose age is between 50–60 **OR** whose color name contains “blue”
+> **GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` <br>
+> All persons whose age is between 50–60 **OR** whose color name contains 'blue'
 > 
 > <br>
 > 
