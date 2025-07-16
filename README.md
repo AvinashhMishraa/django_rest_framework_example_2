@@ -3893,7 +3893,7 @@ Let's see how.
 > 
 > <br>
 > 
-> 🔸 &nbsp;`person_api/home/filters.py`
+> 🔸 &nbsp;`person_api/home/filters.py` &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; **Parse search manually and extract key-value pairs**
 > ```
 > from django_filters import rest_framework as filters
 > from django.db.models import Q                                                           # imported for flexible Q filters
