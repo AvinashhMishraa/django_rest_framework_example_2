@@ -3948,7 +3948,7 @@ Let's see how.
 > 
 > <br>
 > 
-> 🔸 &nbsp;`GET &nbsp;&nbsp;http://localhost:8000/api/people/?search=age_range=50-60&color_name=blue
+> 🔸 &nbsp;`GET &nbsp;&nbsp;http://localhost:8000/api/people/?search=age_range=50-60&color_name=blue <br>
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve all persons <ins>whose age is between 50–60</ins> **OR** <ins>whose color name contains "blue"</ins>
 > ```
 > [
