@@ -3878,22 +3878,24 @@ Let's see how.
 
 <br>
 
-> > ✅ &nbsp;**<ins>Example 3</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Filter `Person` based on a specific age range of `age` **or** `Color` name (related via <ins>foreign key</ins>).
-> > 
-> > <br>
-> > 
-> > By default, **DjangoFilterBackend** uses `AND` (`&`) to combine multiple filters. To use an `OR` (`|`) condition across filters like `age_range=50-60` **OR** `color_name=blue` , you need to override the default queryset logic in a custom filter class.
-> > 
-> > <br>
-> > 
-> > 🔸 &nbsp;**Objective &nbsp;:**
-> > 
-> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` <br>
-> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All persons <ins>whose age is between 50–60</ins> **OR** <ins>whose color name contains 'blue'</ins>
-> > 
-> > <br>
-> > 
-> > 🔸 &nbsp;`person_api/home/filters.py` &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; **Parse search manually and extract key-value pairs**
+> ✅ &nbsp;**<ins>Example 3</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Filter `Person` based on a specific age range of `age` **or** `Color` name (related via <ins>foreign key</ins>).
+> 
+> <br>
+> 
+> By default, **DjangoFilterBackend** uses `AND` (`&`) to combine multiple filters. To use an `OR` (`|`) condition across filters like `age_range=50-60` **OR** `color_name=blue` , you need to override the default queryset logic in a custom filter class.
+> 
+> <br>
+> 
+> 🔸 &nbsp;**Objective &nbsp;:**
+> 
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` <br>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All persons <ins>whose age is between 50–60</ins> **OR** <ins>whose color name contains 'blue'</ins>
+> 
+> <br>
+> 
+> > 🔸 &nbsp;**Parse search manually and extract key-value pairs**
+> >
+> > `person_api/home/filters.py`
 > > ```
 > > from django_filters import rest_framework as filters
 > > from django.db.models import Q                                                           # imported for flexible Q filters
