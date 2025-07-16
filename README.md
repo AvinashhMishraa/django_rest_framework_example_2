@@ -3960,8 +3960,7 @@ Let's see how.
 >             "color_info": {
 >                 "color_name": "RED",
 >                 "hex_code": "#ff0000"
->             },
->             "is_deleted": false
+>             }
 >         },
 >         {
 >             "id": 25,
@@ -3971,8 +3970,7 @@ Let's see how.
 >             "color_info": {
 >                 "color_name": "BLUE",
 >                 "hex_code": "#0000ff"
->             },
->             "is_deleted": false
+>             }
 >         }
 > ]
 > ```
