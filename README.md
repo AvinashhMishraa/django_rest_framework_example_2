@@ -3882,12 +3882,11 @@ Let's see how.
 > 
 > <br>
 > 
-> By default, **DjangoFilterBackend** uses `AND` (`&`) to combine multiple filters. <br>
-> To use an `OR` (`|`) condition across filters like `age_range=50-60` **OR** `color_name=blue` , you need to override the default queryset logic in a custom filter class.
+> By default, **DjangoFilterBackend** uses `AND` (`&`) to combine multiple filters. To use an `OR` (`|`) condition across filters like `age_range=50-60` **OR** `color_name=blue` , you need to override the default queryset logic in a custom filter class.
 > 
 > <br>
 > 
-> **Objective &nbsp;:**
+> 🔸 &nbsp;**Objective &nbsp;:**
 > 
 > `GET  /api/people/?age_range=50-60&color_name=blue` &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; All persons whose age is between 50–60 **OR** whose color name contains “blue”
 > 
