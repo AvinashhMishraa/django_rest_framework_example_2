@@ -3876,7 +3876,106 @@ Let's see how.
 > ]
 > ```
 
+<br>
 
+> ✅ &nbsp;**<ins>Example 3</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Filter `Person` based on a specific age range of `age` or `Color` name (related via <ins>foreign key</ins>).
+> 
+> <br>
+> 
+> By default, **DjangoFilterBackend** uses `AND` (`&`) to combine multiple filters. <br>
+> To use an `OR` (`|`) condition across filters like `age_range=50-60` **OR** `color_name=blue` , you need to override the default queryset logic in a custom filter class.
+> 
+> <br>
+> 
+> **Objective &nbsp;:**
+> 
+> `GET  /api/people/?age_range=50-60&color_name=blue` &nbsp;&nbsp;&nbsp;➜&nbsp;&nbsp;&nbsp; All persons whose age is between 50–60 **OR** whose color name contains “blue”
+> 
+> <br>
+> 
+> 🔸 &nbsp;`person_api/home/filters.py`
+> ```
+> from django_filters import rest_framework as filters
+> from django.db.models import Q                                                           # imported for flexible Q filters
+> from urllib.parse import parse_qs                                                        # imported for parsing a string
+> from .models import Person
+> 
+> 
+> 
+> class PersonFilter(filters.FilterSet):
+>     search = filters.CharFilter(method='filter_or_combined', label='search params')      # {'search': ['age_range=50-60&color_name=blue']}
+> 
+>     class Meta:
+>         model = Person
+>         fields = []
+> 
+>     def filter_or_combined(self, queryset, name, value):                                 # value = "age_range=50-60&color_name=blue"
+>         """
+>         Parse combined query string in the form:
+>         search=age_range=50-60&color_name=blue
+>         and apply OR filtering on the parsed fields.
+>         """
+> 
+>         parsed = parse_qs(value)                                                         # {'age_range': ['50-60'], 'color_name': ['blue']}
+>         filter_q = Q()
+> 
+>         age_range = parsed.get('age_range', [None])[0]
+>         color_name = parsed.get('color_name', [None])[0]
+> 
+>         if age_range:
+>             try:
+>                 min_age, max_age = sorted(map(int, age_range.split('-')))
+>                 filter_q |= Q(age__gte=min_age, age__lte=max_age)
+>             except ValueError:
+>                 pass                                                                     # Skip invalid format
+> 
+>         if color_name:
+>             filter_q |= Q(color__color_name__icontains=color_name)
+> 
+>         return queryset.filter(filter_q) if filter_q else queryset
+> ```
+> 
+> <br>
+> 
+> 🔸 &nbsp;`Verify it in ORM &nbsp;**:**  <br>
+> 
+> `python manage.py shell`
+> ```
+> self.request.query_params                             # <QueryDict: {'search': ['age_range=50-60&color_name=blue']}>
+> value = self.request.query_params.get("search")       # 'age_range=50-60&color_name=blue'
+> parsed = parse_qs(value)                              # {'age_range': ['50-60'], 'color_name': ['blue']}
+> ```
+> 
+> <br>
+> 
+> 🔸 &nbsp;`GET &nbsp;&nbsp;http://localhost:8000/api/people/?search=age_range=50-60&color_name=blue
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve all persons whose age is between 50–60 **OR** whose color name contains “blue”
+> ```
+> [
+>         {
+>             "id": 22,
+>             "name": "Bechan Mishra",
+>             "age": 54,
+>             "color": 1,
+>             "color_info": {
+>                 "color_name": "RED",
+>                 "hex_code": "#ff0000"
+>             },
+>             "is_deleted": false
+>         },
+>         {
+>             "id": 25,
+>             "name": "Bina Mishra",
+>             "age": 50,
+>             "color": 2,
+>             "color_info": {
+>                 "color_name": "BLUE",
+>                 "hex_code": "#0000ff"
+>             },
+>             "is_deleted": false
+>         }
+> ]
+> ```
 
 
 
