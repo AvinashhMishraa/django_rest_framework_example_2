@@ -3949,7 +3949,7 @@ Let's see how.
 > <br>
 > 
 > 🔸 &nbsp;`GET &nbsp;&nbsp;http://localhost:8000/api/people/?search=age_range=50-60&color_name=blue
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve all persons whose age is between 50–60 **OR** whose color name contains “blue”
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve all persons whose <ins>age is between 50–60</ins> **OR** whose <ins>color name contains "blue"</ins>
 > ```
 > [
 >         {
