@@ -3941,7 +3941,7 @@ Let's see how.
 > > 
 > > `python manage.py shell`
 > > ```
-> > self.request.query_params                             # <QueryDict: {'search': ['age_range=50-60&color_name=blue']}>
+> > self.request.query_params                             # {'search': ['age_range=50-60&color_name=blue']}>
 > > value = self.request.query_params.get("search")       # 'age_range=50-60&color_name=blue'
 > > parsed = parse_qs(value)                              # {'age_range': ['50-60'], 'color_name': ['blue']}
 > > ```
