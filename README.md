@@ -3889,7 +3889,7 @@ Let's see how.
 > 🔸 &nbsp;**Objective &nbsp;:**
 > 
 > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` <br>
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All persons <ins>whose age is between 50–60</ins> **OR** <ins>whose color name contains 'blue'</ins>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains 'blue'</ins>
 > 
 > <br>
 > 
@@ -3952,7 +3952,7 @@ Let's see how.
 > 
 > 🔸 &nbsp;GET &nbsp;&nbsp;http://localhost:8000/api/people/?search=age_range=50-60&color_name=blue <br>
 >
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve all persons <ins>whose age is between 50–60</ins> **OR** <ins>whose color name contains "blue"</ins>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve all persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains "blue"</ins>
 > ```
 > [
 >         {
