@@ -4039,7 +4039,7 @@ Let's see how.
 > 
 > <br>
 > 
-> **🔶** &nbsp;To populate the new `person_id` field in the `Person` model for existing records via **Django shell**, follow these steps &nbsp;**:**
+> <h3>🔶</h3> &nbsp;To populate the new `person_id` field in the `Person` model for existing records via **Django shell**, follow these steps &nbsp;**:**
 > 
 > <br>
 > 
