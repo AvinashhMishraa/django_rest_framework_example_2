@@ -4022,7 +4022,7 @@ Let's see how.
 >         if age_range:
 >             try:
 >                 min_age, max_age = sorted(map(int, age_range.split('-')))
->                 or_filter |= Q(age__gte=min_age, age__lte=max_age)
+>                 filter_q |= Q(age__gte=min_age, age__lte=max_age)
 >             except ValueError:
 >                 pass
 > 
