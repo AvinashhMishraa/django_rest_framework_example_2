@@ -3893,7 +3893,7 @@ Let's see how.
 > 
 > <br>
 > 
-> > <h3>1️⃣ &nbsp;Parse search manually and extract key-value pairs</h3>
+> > **1️⃣ &nbsp;Parse search manually and extract key-value pairs**
 > >
 > > `person_api/home/filters.py`
 > > ```
@@ -3993,7 +3993,7 @@ Let's see how.
 > 
 > <br>
 >
-> <h3>1️⃣ &nbsp;Cleaned-Up Solution &nbsp;(No need to parse "search")</h3>
+> <h3>2️⃣ &nbsp;Cleaned-Up Solution &nbsp;(No need to parse "search")</h3>
 > 
 > <br>
 > 
