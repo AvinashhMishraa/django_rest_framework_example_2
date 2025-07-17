@@ -3980,12 +3980,12 @@ Let's see how.
 > 
 > <br>
 > 
-> > 🔸 &nbsp;**NOTE &nbsp;:**
-> > 
-> > While the above solution works, ideally you should avoid parsing parameter manually (like `?search=age_range=30-45&color_name=blue`) and pass these filters **separately** in the URL like **standard query parameters** &nbsp;:
-> > ```
-> > /api/people/?age_range=30-45&color_name=blue
-> > ```
+> 🔸 &nbsp;**NOTE &nbsp;:**
+> 
+> While the above solution works, ideally you should avoid parsing parameter manually (like `?search=age_range=30-45&color_name=blue`) and pass these filters **separately** in the URL like **standard query parameters** &nbsp;:
+> ```
+> /api/people/?age_range=30-45&color_name=blue
+> ```
 > 
 > <br>
 > 
