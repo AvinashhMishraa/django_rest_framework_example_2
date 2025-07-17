@@ -3893,49 +3893,49 @@ Let's see how.
 > 
 > <br>
 > 
-> > **1️⃣ &nbsp;Parse search manually and extract key-value pairs**
-> >
-> > `person_api/home/filters.py`
-> > ```
-> > from django_filters import rest_framework as filters
-> > from django.db.models import Q                                                           # imported for flexible Q filters
-> > from urllib.parse import parse_qs                                                        # imported for parsing a string
-> > from .models import Person
-> > 
-> > 
-> > 
-> > class PersonFilter(filters.FilterSet):
-> >     search = filters.CharFilter(method='filter_or_combined', label='search params')      # {'search': ['age_range=50-60&color_name=blue']}
-> > 
-> >     class Meta:
-> >         model = Person
-> >         fields = []                                                                      # custom filtering only
-> > 
-> >     def filter_or_combined(self, queryset, name, value):                                 # value = "age_range=50-60&color_name=blue"
-> >         """
-> >         Parse combined query string in the form:
-> >         search=age_range=50-60&color_name=blue
-> >         and apply OR filtering on the parsed fields.
-> >         """
-> > 
-> >         parsed = parse_qs(value)                                                         # {'age_range': ['50-60'], 'color_name': ['blue']}
-> >         filter_q = Q()
-> > 
-> >         age_range = parsed.get('age_range', [None])[0]
-> >         color_name = parsed.get('color_name', [None])[0]
-> > 
-> >         if age_range:
-> >             try:
-> >                 min_age, max_age = sorted(map(int, age_range.split('-')))
-> >                 filter_q |= Q(age__gte=min_age, age__lte=max_age)
-> >             except ValueError:
-> >                 pass                                                                     # Skip invalid format
-> > 
-> >         if color_name:
-> >             filter_q |= Q(color__color_name__icontains=color_name)
-> > 
-> >         return queryset.filter(filter_q) if filter_q else queryset
-> > ```
+> **1️⃣ &nbsp;Parse search manually and extract key-value pairs**
+>
+> `person_api/home/filters.py`
+> ```
+> from django_filters import rest_framework as filters
+> from django.db.models import Q                                                           # imported for flexible Q filters
+> from urllib.parse import parse_qs                                                        # imported for parsing a string
+> from .models import Person
+> 
+> 
+> 
+> class PersonFilter(filters.FilterSet):
+>     search = filters.CharFilter(method='filter_or_combined', label='search params')      # {'search': ['age_range=50-60&color_name=blue']}
+> 
+>     class Meta:
+>         model = Person
+>         fields = []                                                                      # custom filtering only
+> 
+>     def filter_or_combined(self, queryset, name, value):                                 # value = "age_range=50-60&color_name=blue"
+>         """
+>         Parse combined query string in the form:
+>         search=age_range=50-60&color_name=blue
+>         and apply OR filtering on the parsed fields.
+>         """
+> 
+>         parsed = parse_qs(value)                                                         # {'age_range': ['50-60'], 'color_name': ['blue']}
+>         filter_q = Q()
+> 
+>         age_range = parsed.get('age_range', [None])[0]
+>         color_name = parsed.get('color_name', [None])[0]
+> 
+>         if age_range:
+>             try:
+>                 min_age, max_age = sorted(map(int, age_range.split('-')))
+>                 filter_q |= Q(age__gte=min_age, age__lte=max_age)
+>             except ValueError:
+>                 pass                                                                     # Skip invalid format
+> 
+>         if color_name:
+>             filter_q |= Q(color__color_name__icontains=color_name)
+> 
+>         return queryset.filter(filter_q) if filter_q else queryset
+> ```
 > > 
 > > <br>
 > > 
@@ -3993,7 +3993,7 @@ Let's see how.
 > 
 > <br>
 >
-> <h3>2️⃣ &nbsp;Cleaned-Up Solution &nbsp;(No need to parse "search")</h3>
+> **2️⃣ &nbsp;Cleaned-Up Solution &nbsp;(No need to parse "search")**
 > 
 > <br>
 > 
