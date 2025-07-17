@@ -4039,67 +4039,67 @@ Let's see how.
 > 
 > <br>
 > 
-> <h3>🔶</h3> &nbsp;To populate the new `person_id` field in the `Person` model for existing records via **Django shell**, follow these steps &nbsp;**:**
-> 
-> <br>
-> 
-> **1️⃣  &nbsp;Step 1: &nbsp;Add the Field to Your Model**
-> 
-> `person_api/home/models.py`
-> ```
-> ●●●
-> 
-> 
-> class Person(SoftDeleteModel):
->     name = models.CharField(max_length=100)
->     age = models.IntegerField()
->     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")
->     person_id = models.CharField(max_length=20, unique=True, null=True, blank=True)
-> 	
->     objects = SoftDeleteManager()                                             # only active
->     all_objects = SoftDeleteQuerySet.as_manager()                             # all (including soft-deleted)
-> 	
-> 
-> ●●●
-> ```
-> 
-> <br>
-> 
-> **2️⃣  &nbsp;Step 2: &nbsp;Customize the order in the PersonSerializer (Optional)**
-> 
-> `person_api/home/serializers.py`    
-> ```
-> class PersonSerializer(serializers.ModelSerializer):
-> 
->     ●●●
-> 
->     class Meta:
->         model = Person
->         fields = ['id', 'person_id', 'name', 'age', 'color', 'color_info']                   # custom order
->     
->     ●●●
-> ```
-> 
-> <br>
-> 
-> **3️⃣  &nbsp;Step 3: &nbsp;Run Migrations**
-> 
-> <br>
-> 
-> ```
-> py manage.py makemigrations
-> py manage.py migrate
-> ```
-> 
-> <br>
-> 
-> Well you can now verify if the the `person_id` is created or not
-> 
-> **GET** &nbsp; http://localhost:8000/api/people/      <br>
-> **GET** &nbsp; http://localhost:8000/api/persons/     <br>
-> **GET** &nbsp; http://localhost:8000/api/person/      <br>
-> 
-> <br>
+> > **1️⃣** &nbsp;To populate the new `person_id` field in the `Person` model for existing records via **Django shell**, follow these steps &nbsp;**:**
+> > 
+> > <br>
+> > 
+> > **🔶** &nbsp;Step 1: &nbsp;Add the Field to Your Model
+> > 
+> > `person_api/home/models.py`
+> > ```
+> > ●●●
+> > 
+> > 
+> > class Person(SoftDeleteModel):
+> >     name = models.CharField(max_length=100)
+> >     age = models.IntegerField()
+> >     color = models.ForeignKey(Color, null=True, blank=True, on_delete=models.CASCADE, related_name="people")
+> >     person_id = models.CharField(max_length=20, unique=True, null=True, blank=True)
+> > 	
+> >     objects = SoftDeleteManager()                                             # only active
+> >     all_objects = SoftDeleteQuerySet.as_manager()                             # all (including soft-deleted)
+> > 	
+> > 
+> > ●●●
+> > ```
+> > 
+> > <br>
+> > 
+> > **🔶** &nbsp;Step 2: &nbsp;Customize the order in the PersonSerializer (Optional)
+> > 
+> > `person_api/home/serializers.py`    
+> > ```
+> > class PersonSerializer(serializers.ModelSerializer):
+> > 
+> >     ●●●
+> > 
+> >     class Meta:
+> >         model = Person
+> >         fields = ['id', 'person_id', 'name', 'age', 'color', 'color_info']                   # custom order
+> >     
+> >     ●●●
+> > ```
+> > 
+> > <br>
+> > 
+> > **🔶** &nbsp;Step 3: &nbsp;Run Migrations
+> > 
+> > <br>
+> > 
+> > ```
+> > py manage.py makemigrations
+> > py manage.py migrate
+> > ```
+> > 
+> > <br>
+> > 
+> > Well you can now verify if the the `person_id` is created or not
+> > 
+> > **GET** &nbsp; http://localhost:8000/api/people/      <br>
+> > **GET** &nbsp; http://localhost:8000/api/persons/     <br>
+> > **GET** &nbsp; http://localhost:8000/api/person/      <br>
+> > 
+> > <br>
 
 
 
