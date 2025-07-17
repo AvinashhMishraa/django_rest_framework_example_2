@@ -3893,7 +3893,7 @@ Let's see how.
 > 
 > <br>
 > 
-> > 🔸 &nbsp;**Parse search manually and extract key-value pairs**
+> > <h3>1️⃣ &nbsp;Parse search manually and extract key-value pairs</h3>
 > >
 > > `person_api/home/filters.py`
 > > ```
@@ -3993,6 +3993,44 @@ Let's see how.
 > 
 > <br>
 >
+> <h3>1️⃣ &nbsp;Cleaned-Up Solution &nbsp;(No need to parse "search")</h3>
+> 
+> <br>
+> 
+> `person_api/home/filters.py`
+> ```
+> from django_filters import rest_framework as filters
+> from django.db.models import Q
+> from .models import Person
+> 
+> 
+> class PersonFilter(filters.FilterSet):
+>     age_range = filters.CharFilter(method='filter_combined')
+>     color_name = filters.CharFilter(method='filter_combined')
+> 
+>     class Meta:
+>         model = Person
+>         fields = []  	# Custom filtering only
+> 
+>     def filter_combined(self, queryset, name, value):
+>         request = self.request
+>         age_range = request.query_params.get('age_range')
+>         color_name = request.query_params.get('color_name')
+> 
+>         or_filter = Q()
+> 
+>         if age_range:
+>             try:
+>                 min_age, max_age = sorted(map(int, age_range.split('-')))
+>                 or_filter |= Q(age__gte=min_age, age__lte=max_age)
+>             except ValueError:
+>                 pass
+> 
+>         if color_name:
+>             or_filter |= Q(color__color_name__icontains=color_name)
+> 
+>         return queryset.filter(or_filter) if or_filter else queryset
+> ```
 
 
 
