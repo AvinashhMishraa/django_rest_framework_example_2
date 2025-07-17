@@ -3936,47 +3936,47 @@ Let's see how.
 > 
 >         return queryset.filter(filter_q) if filter_q else queryset
 > ```
-> > 
-> > <br>
-> > 
-> > 🔸 &nbsp;Verify it in ORM &nbsp;**:**  <br>
-> > 
-> > `python manage.py shell`
-> > ```
-> > self.request.query_params                             # {'search': ['age_range=50-60&color_name=blue']}>
-> > value = self.request.query_params.get("search")       # 'age_range=50-60&color_name=blue'
-> > parsed = parse_qs(value)                              # {'age_range': ['50-60'], 'color_name': ['blue']}
-> > ```
-> > 
-> > <br>
-> > 
-> > 🔸 &nbsp;GET &nbsp;&nbsp;http://localhost:8000/api/people/?search=age_range=50-60&color_name=blue <br>
-> >
-> > &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve all persons <ins>whose age is between 50–60</ins> **OR** <ins>whose color name contains "blue"</ins>
-> > ```
-> > [
-> >         {
-> >             "id": 22,
-> >             "name": "Bechan Mishra",
-> >             "age": 54,
-> >             "color": 1,
-> >             "color_info": {
-> >                 "color_name": "RED",
-> >                 "hex_code": "#ff0000"
-> >             }
-> >         },
-> >         {
-> >             "id": 25,
-> >             "name": "Bina Mishra",
-> >             "age": 50,
-> >             "color": 2,
-> >             "color_info": {
-> >                 "color_name": "BLUE",
-> >                 "hex_code": "#0000ff"
-> >             }
-> >         }
-> > ]
-> > ```
+> 
+> <br>
+> 
+> 🔸 &nbsp;Verify it in ORM &nbsp;**:**  <br>
+> 
+> `python manage.py shell`
+> ```
+> self.request.query_params                             # {'search': ['age_range=50-60&color_name=blue']}>
+> value = self.request.query_params.get("search")       # 'age_range=50-60&color_name=blue'
+> parsed = parse_qs(value)                              # {'age_range': ['50-60'], 'color_name': ['blue']}
+> ```
+> 
+> <br>
+> 
+> 🔸 &nbsp;GET &nbsp;&nbsp;http://localhost:8000/api/people/?search=age_range=50-60&color_name=blue <br>
+>
+> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Retrieve all persons <ins>whose age is between 50–60</ins> **OR** <ins>whose color name contains "blue"</ins>
+> ```
+> [
+>         {
+>             "id": 22,
+>             "name": "Bechan Mishra",
+>             "age": 54,
+>             "color": 1,
+>             "color_info": {
+>                 "color_name": "RED",
+>                 "hex_code": "#ff0000"
+>             }
+>         },
+>         {
+>             "id": 25,
+>             "name": "Bina Mishra",
+>             "age": 50,
+>             "color": 2,
+>             "color_info": {
+>                 "color_name": "BLUE",
+>                 "hex_code": "#0000ff"
+>             }
+>         }
+> ]
+> ```
 > 
 > <br>
 > 
