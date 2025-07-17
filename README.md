@@ -3992,7 +3992,7 @@ Let's see how.
 > Let's see how to do this in the next example &nbsp;**:**
 > 
 > <br>
->
+> 
 > **2️⃣ &nbsp;Cleaned-Up Solution &nbsp;(No need to parse "search")**
 > 
 > <br>
@@ -4017,7 +4017,7 @@ Let's see how.
 >         age_range = request.query_params.get('age_range')
 >         color_name = request.query_params.get('color_name')
 > 
->         or_filter = Q()
+>         filter_q = Q()
 > 
 >         if age_range:
 >             try:
@@ -4027,9 +4027,9 @@ Let's see how.
 >                 pass
 > 
 >         if color_name:
->             or_filter |= Q(color__color_name__icontains=color_name)
+>             filter_q |= Q(color__color_name__icontains=color_name)
 > 
->         return queryset.filter(or_filter) if or_filter else queryset
+>         return queryset.filter(filter_q) if filter_q else queryset
 > ```
 
 
