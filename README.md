@@ -4043,7 +4043,7 @@ Let's see how.
 > > 
 > > <br>
 > > 
-> > **🔶** &nbsp;Step 1: &nbsp;Add the Field to Your Model
+> > **🔶 &nbsp;Step 1.1** &nbsp;➜&nbsp; &nbsp;Add the Field to Your Model
 > > 
 > > `person_api/home/models.py`
 > > ```
@@ -4065,9 +4065,9 @@ Let's see how.
 > > 
 > > <br>
 > > 
-> > **🔶** &nbsp;Step 2: &nbsp;Customize the order in the PersonSerializer (Optional)
+> > **🔶 &nbsp;Step 1.2** &nbsp;➜&nbsp; &nbsp;Customize the order in the PersonSerializer (Optional)
 > > 
-> > `person_api/home/serializers.py`    
+> > `person_api/home/serializers.py`  
 > > ```
 > > class PersonSerializer(serializers.ModelSerializer):
 > > 
@@ -4082,7 +4082,7 @@ Let's see how.
 > > 
 > > <br>
 > > 
-> > **🔶** &nbsp;Step 3: &nbsp;Run Migrations
+> > **🔶 &nbsp;Step 1.3** &nbsp;➜&nbsp; &nbsp;Run Migrations
 > > 
 > > <br>
 > > 
