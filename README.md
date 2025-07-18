@@ -6681,9 +6681,9 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 >     person.save(update_fields=["person_id"])                             # N queries problem    ===>   go for bulk update         
 > ```
 > 
-> You can also go for **UUID** format like `person.person_id = uuid.uuid4().hex[:10].upper()`
+> - You can also go for **UUID** format like `person.person_id = uuid.uuid4().hex[:10].upper()`
 >
-> To avoid **N queries problem** and improve performance, you can go for `bulk_update()` which doesn't call `.save()` on each instance (no signals), thus making it very fast. We will see this later.
+> - To avoid **N queries problem** and improve performance, you can go for `bulk_update()` which doesn't call `.save()` on each instance (no signals), thus making it very fast. We will see this later.
 
 <br>
 
