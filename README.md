@@ -4084,8 +4084,6 @@ Let's see how.
 > > 
 > > **🔶 &nbsp;Step 1.3** &nbsp;➜&nbsp; &nbsp;Run Migrations
 > > 
-> > <br>
-> > 
 > > ```
 > > py manage.py makemigrations
 > > py manage.py migrate
