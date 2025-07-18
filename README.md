@@ -6691,7 +6691,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 >
-> **🔹 &nbsp;Step 1: Generate Payload in Django Shell**
+> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Generate Payload in Django Shell
 > ```
 > from home.models import Person
 > 
@@ -6715,7 +6715,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> **🔹 &nbsp;Step 2: Send to API &nbsp;(via Postman or requests)**
+> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Send to API &nbsp;(via Postman or requests)**
 > 
 > <br>
 > 
