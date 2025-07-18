@@ -6715,7 +6715,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Send to API &nbsp;(via Postman or requests)
+> **🔹 &nbsp;Step 2 &nbsp;➜&nbsp;** Send to API &nbsp;(via Postman or requests)
 > 
 > <br>
 > 
