@@ -6715,11 +6715,11 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Send to API &nbsp;(via Postman or requests)**
+> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Send to API &nbsp;(via Postman or requests)
 > 
 > <br>
 > 
-> **◼️ &nbsp;Option A &nbsp;:** &nbsp;Using curl from command line
+> **◼️ &nbsp;<ins>Option A</ins> &nbsp;:** &nbsp;Using curl from command line
 > ```
 > curl -X PUT http://localhost:8000/api/person/bulk-update/ \
 >   -H "Content-Type: application/json" \
@@ -6728,7 +6728,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> **◼️ &nbsp;Option B :** &nbsp;using Python `requests`
+> **◼️ &nbsp;<ins>Option B</ins> :** &nbsp;using Python `requests`
 > ```
 > import requests
 > from home.models import Person
