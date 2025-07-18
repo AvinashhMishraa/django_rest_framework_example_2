@@ -4089,8 +4089,6 @@ Let's see how.
 > > py manage.py migrate
 > > ```
 > > 
-> > <br>
-> > 
 > > Well you can now verify if the the `person_id` is created or not
 > > 
 > > **GET** &nbsp; http://localhost:8000/api/people/      <br>
