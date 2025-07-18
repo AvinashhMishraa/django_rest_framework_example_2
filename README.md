@@ -6678,7 +6678,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > for person in Person.all_objects.filter(person_id__isnull=True):         # Populate only if not already set
 >     person.person_id = f"PID-{person.id:05d}"                            # Example: PID-00001 , PID-00023
->     person.save(update_fields=["person_id"])                             # N queries problem    ===>   go for bulk update         
+>     person.save(update_fields=["person_id"])                             # N queries problem         
 > ```
 > 
 > - You can also go for **UUID** format like `person.person_id = uuid.uuid4().hex[:10].upper()`
