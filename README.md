@@ -6667,5 +6667,96 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 
 
+**2️⃣** &nbsp;Different ways of populating the new `person_id` field in the `Person` model for existing records &nbsp;**:**
+
+<br>
+
+> **🔶 &nbsp;Method-1 &nbsp;(Django Shell ==> `py manage.py shell`)**
+> 
+> 
+> ```
+> from home.models import Person
+> 
+> for person in Person.all_objects.filter(person_id__isnull=True):         # Populate only if not already set
+>     person.person_id = f"PID-{person.id:05d}"                            # Example: PID-00001 , PID-00023
+>     person.save(update_fields=["person_id"])                             # N queries problem    ===>   go for bulk update         
+> ```
+> 
+> You can also go for **UUID** format like `person.person_id = uuid.uuid4().hex[:10].upper()`
+>
+> To avoid **N queries problem** and improve performance, you can go for `bulk_update()` which doesn't call `.save()` on each instance (no signals), thus making it very fast. We will see this later.
+
+<br>
+
+> **🔶 &nbsp;Method-2 &nbsp;(bulk update `person_id` using your existing API endpoint `/api/person/bulk-update/`)**
+> 
+> <br>
+>
+> **🔹 &nbsp;Step 1: Generate Payload in Django Shell**
+> ```
+> from home.models import Person
+> 
+> payload = [
+>     {
+>         "id": person.id,
+>         "person_id": f"PID-{person.id:05d}"
+>     }
+>     for person in Person.objects.filter(person_id__isnull=True)
+> ]
+> ```
+>
+> This creates a list of dicts like :
+> ```
+> [
+>     {"id": 1, "person_id": "PID-00001"},
+>     {"id": 2, "person_id": "PID-00002"},
+>     ...
+> ]
+> ```
+> 
+> <br>
+> 
+> **🔹 &nbsp;Step 2: Send to API &nbsp;(via Postman or requests)**
+> 
+> <br>
+> 
+> ⏹ &nbsp;Option A: Using curl from command line
+> ```
+> curl -X PUT http://localhost:8000/api/person/bulk-update/ \
+>   -H "Content-Type: application/json" \
+>   -d '[{"id": 1, "person_id": "PID-00001"}, {"id": 2, "person_id": "PID-00002"}]'
+> ```
+> 
+> <br>
+> 
+> ⏹ &nbsp;Option B: using Python `requests`
+> ```
+> import requests
+> from home.models import Person
+> 
+> 
+> payload = [
+>     {
+>         "id": person.id,
+>         "person_id": f"PID-{person.id:05d}"
+>     }
+>     for person in Person.objects.filter(person_id__isnull=True)
+> ]
+> 
+> 
+> url = "http://localhost:8000/api/person/bulk-update/"
+> headers = {
+>     "Content-Type": "application/json",
+> }
+> response = requests.put(url, json=payload, headers=headers)
+> 
+> 
+> print("Status Code:", response.status_code)
+> print("Response:", response.json())
+> ```
+
+
+
+
 
 
