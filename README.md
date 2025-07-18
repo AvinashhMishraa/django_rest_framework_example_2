@@ -6671,8 +6671,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-> **🔶 &nbsp;Method-1 &nbsp;(Django Shell ==> `py manage.py shell`)**
-> 
+> **🔶 &nbsp;Method-1** &nbsp;&nbsp;(Django Shell &nbsp;⟶&nbsp; `py manage.py shell`)
 > 
 > ```
 > from home.models import Person
@@ -6688,7 +6687,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 <br>
 
-> **🔶 &nbsp;Method-2 &nbsp;(bulk update `person_id` using your existing API endpoint `/api/person/bulk-update/`)**
+> **🔶 &nbsp;Method-2** &nbsp;&nbsp;(bulk update `person_id` using your existing API endpoint `/api/person/bulk-update/`)
 > 
 > <br>
 >
