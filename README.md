@@ -4384,7 +4384,7 @@ Let's see how.
 > > > 
 > > > <br>
 > > > 
-> > > **◼️ &nbsp;<ins>Option A</ins> &nbsp;:** &nbsp;Directly Execute SQL Updates
+> > > **◼️ &nbsp;<ins>Option B</ins> &nbsp;:** &nbsp;Directly Execute SQL Updates
 > > > ```
 > > > python manage.py generate_person_id_sql --execute
 > > > ```
