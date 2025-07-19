@@ -4165,7 +4165,7 @@ Let's see how.
 > > > 
 > > > **◼️ &nbsp;<ins>Option B</ins> :** &nbsp;using Python `requests`
 > > > ```
-> > > import requests
+> > > import requests                                                  # <pip install requests>
 > > > from home.models import Person
 > > > 
 > > > 
