@@ -6872,7 +6872,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 >
 > <br>
 > 
-> To extend the management command to support a `--execute` flag so you can <ins>either generate the SQL file</ins> or <ins>execute it directly within Django</ins>.
+> To extend the management command to support a &nbsp;`--execute`&nbsp; flag so you can <ins>either generate the SQL file</ins> or <ins>execute it directly within Django</ins>.
 > 
 > <br>
 > 
