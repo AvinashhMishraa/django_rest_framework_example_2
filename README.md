@@ -4108,7 +4108,7 @@ Let's see how.
 > > > ```
 > > > from home.models import Person
 > > > 
-> > > for person in Person.all_objects.filter(person_id__isnull=True):         # Populate only if not already set
+> > > for person in Person.objects.filter(person_id__isnull=True):             # Populate only if not already set
 > > >     person.person_id = f"PID-{person.id:05d}"                            # Example: PID-00001 , PID-00023
 > > >     person.save(update_fields=["person_id"])                             # N queries problem         
 > > > ```
