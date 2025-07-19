@@ -6876,11 +6876,11 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** 📄 File: Final Management Command (generate & optionally execute)
+> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Final Management Command (generate & optionally execute)
 >
 > <br>
 >
-> `home/management/commands/generate_person_id_sql.py`
+> **📄 File:** &nbsp;`home/management/commands/generate_person_id_sql.py`
 > ```
 > from django.core.management.base import BaseCommand
 > from django.db import connection
@@ -6944,7 +6944,6 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > ```
 > python manage.py generate_person_id_sql --execute
 > ```
-
 
 
 
