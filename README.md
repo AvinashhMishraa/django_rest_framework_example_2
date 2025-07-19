@@ -4096,7 +4096,282 @@ Let's see how.
 > > **GET** &nbsp; http://localhost:8000/api/person/      <br>
 > > 
 > > <br>
-
+> >
+> > **2️⃣** &nbsp;Different ways of populating the new `person_id` field in the `Person` model for existing records &nbsp;**:**
+> > 
+> > <br>
+> > 
+> > > **🔶 &nbsp;<ins>Method-1</ins>** &nbsp;&nbsp;(Django Shell &nbsp;⟶&nbsp; `py manage.py shell`)
+> > > 
+> > > ```
+> > > from home.models import Person
+> > > 
+> > > for person in Person.all_objects.filter(person_id__isnull=True):         # Populate only if not already set
+> > >     person.person_id = f"PID-{person.id:05d}"                            # Example: PID-00001 , PID-00023
+> > >     person.save(update_fields=["person_id"])                             # N queries problem         
+> > > ```
+> > > 
+> > > - You can also go for **UUID** format like `person.person_id = uuid.uuid4().hex[:10].upper()`
+> > >
+> > > - To avoid **N queries problem** and improve performance, you can go for `bulk_update()` instead of calling `.save()` on each instance (no signals), thus making it very fast. We will see this later.
+> > 
+> > <br>
+> > 
+> > > **🔶 &nbsp;<ins>Method-2</ins>** &nbsp;&nbsp;(bulk update `person_id` using your existing API endpoint `/api/person/bulk-update/`)
+> > > 
+> > > <br>
+> > >
+> > > **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Generate Payload in Django Shell
+> > > ```
+> > > from home.models import Person
+> > > 
+> > > payload = [
+> > >     {
+> > >         "id": person.id,
+> > >         "person_id": f"PID-{person.id:05d}"
+> > >     }
+> > >     for person in Person.objects.filter(person_id__isnull=True)
+> > > ]
+> > > ```
+> > > 
+> > > This creates a list of dicts like :
+> > > ```
+> > > [
+> > >     {"id": 1, "person_id": "PID-00001"},
+> > >     {"id": 2, "person_id": "PID-00002"},
+> > >     ...
+> > > ]
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > **🔹 &nbsp;Step 2 &nbsp;➜&nbsp;** Send to API &nbsp;(via Postman or requests)
+> > > 
+> > > <br>
+> > > 
+> > > **◼️ &nbsp;<ins>Option A</ins> &nbsp;:** &nbsp;Using curl from command line
+> > > ```
+> > > curl -X PUT http://localhost:8000/api/person/bulk-update/ \
+> > >   -H "Content-Type: application/json" \
+> > >   -d '[{"id": 1, "person_id": "PID-00001"}, {"id": 2, "person_id": "PID-00002"}]'
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > **◼️ &nbsp;<ins>Option B</ins> :** &nbsp;using Python `requests`
+> > > ```
+> > > import requests
+> > > from home.models import Person
+> > > 
+> > > 
+> > > payload = [
+> > >     {
+> > >         "id": person.id,
+> > >         "person_id": f"PID-{person.id:05d}"
+> > >     }
+> > >     for person in Person.objects.filter(person_id__isnull=True)
+> > > ]
+> > > 
+> > > 
+> > > url = "http://localhost:8000/api/person/bulk-update/"
+> > > headers = {
+> > >     "Content-Type": "application/json",
+> > > }
+> > > response = requests.put(url, json=payload, headers=headers)
+> > > 
+> > > 
+> > > print("Status Code:", response.status_code)
+> > > print("Response:", response.json())
+> > > ```
+> > 
+> > <br>
+> > 
+> > > **🔶 &nbsp;<ins>Method-3</ins>** &nbsp;&nbsp;(using `.sql` file)
+> > > 
+> > > <br>
+> > > 
+> > > If you want to generate a `.sql` file to update the `person_id` column for all existing records in the `Person` model, you can write a script that generates `UPDATE` SQL statements and saves them to a file.
+> > > 
+> > > <br>
+> > > 
+> > > **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Python Script to Generate `.sql` File
+> > > ```
+> > > from home.models import Person
+> > > 
+> > > with open("update_person_ids.sql", "w") as file:
+> > >     for person in Person.objects.filter(person_id__isnull=True):
+> > >         new_pid = f"PID-{person.id:05d}"
+> > >         sql = f"UPDATE home_person SET person_id = '{new_pid}' WHERE id = {person.id};\n"
+> > >         file.write(sql)
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > This script will generate a file `update_person_ids.sql` in your project root. Let's see a sample output &nbsp;:
+> > > ```
+> > > UPDATE home_person SET person_id = 'PID-00001' WHERE id = 1;
+> > > UPDATE home_person SET person_id = 'PID-00002' WHERE id = 2;
+> > > UPDATE home_person SET person_id = 'PID-00003' WHERE id = 3;
+> > > ...
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > **🔹 &nbsp;Step 2 &nbsp;➜&nbsp;** Run this `.sql` file
+> > > 
+> > > <br>
+> > > 
+> > > You can execute this SQL file using your database CLI or any DB client (like MySQL Workbench):
+> > > 
+> > > <br>
+> > > 
+> > > For MySQL:
+> > > ```
+> > > mysql -u username -p database_name < update_person_ids.sql
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > For PostgreSQL:
+> > > ```
+> > > psql -U username -d database_name -f update_person_ids.sql
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > ---
+> > >
+> > > <br>
+> > >
+> > > You can also create a **Django management command** that generates a `.sql` file to update the `person_id` field for all existing `Person` records.
+> > > 
+> > > <br>
+> > > 
+> > > **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Create the command file
+> > > 
+> > > In your Django app (let's say `home`), create the folder structure:
+> > > 
+> > > ```
+> > > home/
+> > > ├── management/
+> > > │   └── commands/
+> > > │       └── generate_person_id_sql.py
+> > > ```
+> > > If `management` or `commands` folders don’t exist, create them manually.
+> > > 
+> > > <br>
+> > > 
+> > > **🔹 &nbsp;Step 2 &nbsp;➜&nbsp;** Write the Command
+> > > 
+> > > **📄 File:** &nbsp;`home/management/commands/generate_person_id_sql.py`
+> > > ```
+> > > from django.core.management.base import BaseCommand
+> > > from home.models import Person
+> > > import os
+> > > 
+> > > 
+> > > 
+> > > class Command(BaseCommand):
+> > >     help = "Generate SQL script to update person_id field for existing records"
+> > > 
+> > >     def handle(self, *args, **options):
+> > >         file_path = os.path.join(os.getcwd(), "update_person_ids.sql")
+> > >         with open(file_path, "w") as file:
+> > >             for person in Person.objects.filter(person_id__isnull=True):
+> > >                 new_pid = f"PID-{person.id:05d}"
+> > >                 sql = f"UPDATE home_person SET person_id = '{new_pid}' WHERE id = {person.id};\n"
+> > >                 file.write(sql)
+> > > 
+> > >         self.stdout.write(self.style.SUCCESS(f"SQL file generated at: {file_path}"))
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > **🔹 &nbsp;Step 3 &nbsp;➜&nbsp;** Run the Command
+> > > 
+> > > From your terminal:
+> > > ```
+> > > python manage.py generate_person_id_sql
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > ---
+> > >
+> > > <br>
+> > > 
+> > > To extend the management command to support a `--execute` flag so you can <ins>either generate the SQL file</ins> or <ins>execute it directly within Django</ins>.
+> > > 
+> > > <br>
+> > > 
+> > > **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Final Management Command (generate & optionally execute)
+> > >
+> > > <br>
+> > >
+> > > **📄 File:** &nbsp;`home/management/commands/generate_person_id_sql.py`
+> > > ```
+> > > from django.core.management.base import BaseCommand
+> > > from django.db import connection
+> > > from home.models import Person
+> > > import os
+> > > 
+> > > 
+> > > 
+> > > class Command(BaseCommand):
+> > >     help = "Generate or execute SQL script to update person_id field for existing records"
+> > > 
+> > >     def add_arguments(self, parser):
+> > >         parser.add_argument(
+> > >             '--execute',
+> > >             action='store_true',
+> > >             help='Execute the generated SQL instead of just writing to file'
+> > >         )
+> > > 
+> > >     def handle(self, *args, **options):
+> > >         execute = options['execute']
+> > >         sql_statements = []
+> > > 
+> > >         # Generate SQL statements
+> > >         for person in Person.objects.filter(person_id__isnull=True):
+> > >            new_pid = f"PID-{person.id:05d}"
+> > >             sql = f"UPDATE home_person SET person_id = '{new_pid}' WHERE id = {person.id};"
+> > >             sql_statements.append(sql)
+> > > 
+> > >         if not sql_statements:
+> > >             self.stdout.write(self.style.WARNING("No person records require person_id update."))
+> > >             return
+> > > 
+> > >         if execute:
+> > >             # Run SQL directly via Django connection
+> > >             with connection.cursor() as cursor:
+> > >                 for sql in sql_statements:
+> > >                     cursor.execute(sql)
+> > >             self.stdout.write(self.style.SUCCESS("Successfully executed SQL updates for person_id."))
+> > >         else:
+> > >             # Write to file
+> > >             file_path = os.path.join(os.getcwd(), "update_person_ids.sql")
+> > >             with open(file_path, "w") as file:
+> > >                 file.write("\n".join(sql_statements) + "\n")
+> > >             self.stdout.write(self.style.SUCCESS(f"SQL file generated at: {file_path}"))
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > **🔹 &nbsp;Step 2 &nbsp;➜&nbsp;** Now you have two options 
+> > > 
+> > > <br>
+> > >
+> > > <ins>Option 1</ins> &nbsp;:&nbsp;&nbsp; Just Generate SQL File
+> > > ```
+> > > python manage.py generate_person_id_sql
+> > > ```
+> > > 
+> > > <br>
+> > > 
+> > > <ins>Option 2</ins> &nbsp;:&nbsp;&nbsp; Directly Execute SQL Updates
+> > > ```
+> > > python manage.py generate_person_id_sql --execute
+> > > ```
 
 
 
