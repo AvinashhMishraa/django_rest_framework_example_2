@@ -4121,7 +4121,10 @@ Let's see how.
 > > > 
 > > > <br>
 > > >
-> > > **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Generate Payload in Django Shell
+> > > **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Generate Payload in Django Shell (&nbsp;`py manage.py shell`&nbsp;)
+> > >
+> > > <br>
+> > >
 > > > ```
 > > > from home.models import Person
 > > > 
@@ -4195,6 +4198,9 @@ Let's see how.
 > > > <br>
 > > > 
 > > > **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Python Script to Generate `.sql` File
+> > >
+> > > <br>
+> > > 
 > > > ```
 > > > from home.models import Person
 > > > 
@@ -4249,6 +4255,8 @@ Let's see how.
 > > > 
 > > > **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Create the command file
 > > > 
+> > > <br>
+> > >
 > > > In your Django app (let's say `home`), create the folder structure:
 > > > 
 > > > ```
@@ -4262,7 +4270,9 @@ Let's see how.
 > > > <br>
 > > > 
 > > > **🔹 &nbsp;Step 2 &nbsp;➜&nbsp;** Write the Command
-> > > 
+> > >
+> > > <br>
+> > >
 > > > **📄 File:** &nbsp;`home/management/commands/generate_person_id_sql.py`
 > > > ```
 > > > from django.core.management.base import BaseCommand
@@ -4288,6 +4298,8 @@ Let's see how.
 > > > <br>
 > > > 
 > > > **🔹 &nbsp;Step 3 &nbsp;➜&nbsp;** Run the Command
+> > >
+> > > <br>
 > > > 
 > > > From your terminal:
 > > > ```
