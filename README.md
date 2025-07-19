@@ -4103,6 +4103,8 @@ Let's see how.
 > > 
 > > > **🔶 &nbsp;<ins>Method-1</ins>** &nbsp;&nbsp;(Django Shell &nbsp;⟶&nbsp; `py manage.py shell`)
 > > > 
+> > > <br>
+> > > 
 > > > ```
 > > > from home.models import Person
 > > > 
