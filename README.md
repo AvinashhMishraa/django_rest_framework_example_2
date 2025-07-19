@@ -4165,7 +4165,7 @@ Let's see how.
 > > > 
 > > > **◼️ &nbsp;<ins>Option B</ins> :** &nbsp;using Python `requests`
 > > >
-> > > You need to start your Django server (&nbsp;`py manage.py runserver`&nbsp;) and then in a separate terminal, run the Django shell (&nbsp;`py manage.py shell`&nbsp;) &nbsp;**:**
+> > > You need to start your Django server (&nbsp;`py manage.py runserver`&nbsp;) and then in a **separate terminal** , run the Django shell (&nbsp;`py manage.py shell`&nbsp;) &nbsp;**:**
 > > > ```
 > > > import requests                                                  # <pip install requests>
 > > > from home.models import Person
