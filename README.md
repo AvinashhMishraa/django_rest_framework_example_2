@@ -4164,6 +4164,8 @@ Let's see how.
 > > > <br>
 > > > 
 > > > **◼️ &nbsp;<ins>Option B</ins> :** &nbsp;using Python `requests`
+> > >
+> > > You need to start your Django server (&nbsp;`py manage.py runserver`&nbsp;) and then in a separate terminal, run the Django shell (&nbsp;`py manage.py shell`&nbsp;) &nbsp;**:**
 > > > ```
 > > > import requests                                                  # <pip install requests>
 > > > from home.models import Person
@@ -4188,7 +4190,7 @@ Let's see how.
 > > > print("Status Code:", response.status_code)
 > > > print("Response:", response.json())
 > > > ```
-> > 
+> >
 > > <br>
 > > 
 > > > **🔶 &nbsp;<ins>Method-3</ins>** &nbsp;&nbsp;(using `.sql` file)
@@ -4375,14 +4377,14 @@ Let's see how.
 > > > 
 > > > <br>
 > > >
-> > > <ins>Option 1</ins> &nbsp;:&nbsp;&nbsp; Just Generate SQL File
+> > > **◼️ &nbsp;<ins>Option A</ins> &nbsp;:** &nbsp;Just Generate SQL File
 > > > ```
 > > > python manage.py generate_person_id_sql
 > > > ```
 > > > 
 > > > <br>
 > > > 
-> > > <ins>Option 2</ins> &nbsp;:&nbsp;&nbsp; Directly Execute SQL Updates
+> > > **◼️ &nbsp;<ins>Option A</ins> &nbsp;:** &nbsp;Directly Execute SQL Updates
 > > > ```
 > > > python manage.py generate_person_id_sql --execute
 > > > ```
