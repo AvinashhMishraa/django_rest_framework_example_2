@@ -6667,6 +6667,8 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 
 
+
+
 **2️⃣** &nbsp;Different ways of populating the new `person_id` field in the `Person` model for existing records &nbsp;**:**
 
 <br>
@@ -6817,7 +6819,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> Step 1: Create the command file
+> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** Create the command file
 > 
 > In your Django app (let's say `home`), create the folder structure:
 > 
@@ -6831,7 +6833,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> Step 2: Write the Command
+> **🔹 &nbsp;Step 2 &nbsp;➜&nbsp;** Write the Command
 > 
 > **📄 File:** &nbsp;`home/management/commands/generate_person_id_sql.py`
 > ```
@@ -6857,7 +6859,7 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> Step 3: Run the Command
+> **🔹 &nbsp;Step 3 &nbsp;➜&nbsp;** Run the Command
 > 
 > From your terminal:
 > ```
@@ -6866,10 +6868,19 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
+> ---
+>
+> <br>
+> 
 > To extend the management command to support a `--execute` flag so you can <ins>either generate the SQL file</ins> or <ins>execute it directly within Django</ins>.
 > 
-> **Final Management Command (generate & optionally execute)**
-> 📄 File: Final Management Command (generate & optionally execute)
+> <br>
+> 
+> **🔹 &nbsp;Step 1 &nbsp;➜&nbsp;** 📄 File: Final Management Command (generate & optionally execute)
+>
+> <br>
+>
+> `home/management/commands/generate_person_id_sql.py`
 > ```
 > from django.core.management.base import BaseCommand
 > from django.db import connection
@@ -6918,17 +6929,22 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 > 
 > <br>
 > 
-> Option 1: Just Generate SQL File
+> **🔹 &nbsp;Step 2 &nbsp;➜&nbsp;** Now you have two options 
+> 
+> <br>
+>
+> <ins>Option 1</ins> &nbsp;:&nbsp;&nbsp; Just Generate SQL File
 > ```
 > python manage.py generate_person_id_sql
 > ```
 > 
 > <br>
 > 
-> Option 2: Directly Execute SQL Updates
+> <ins>Option 2</ins> &nbsp;:&nbsp;&nbsp; Directly Execute SQL Updates
 > ```
 > python manage.py generate_person_id_sql --execute
 > ```
+
 
 
 
