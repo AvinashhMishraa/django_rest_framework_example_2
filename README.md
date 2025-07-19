@@ -4097,7 +4097,7 @@ Let's see how.
 > > 
 > > <br>
 > >
-> > **2️⃣** &nbsp;Different ways of populating the new `person_id` field in the `Person` model for existing records &nbsp;**:**
+> > **2️⃣** &nbsp;Populate the new field `person_id` in the `Person` model for existing records &nbsp;**:**
 > > 
 > > <br>
 > > 
