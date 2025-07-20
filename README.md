@@ -6945,7 +6945,144 @@ While Django REST Framework (DRF) automatically integrates pagination with &nbsp
 
 
 
-<br><br><br><br><br><br><br><br><br>
+<br><br><br><br><br><br><br><br><br><br><br><br>
+
+
+
+
+
+
+
+
+
+**3️⃣** &nbsp;Finally let's now filter persons by `person_id` range  &nbsp;**:**
+
+<br>
+
+**❌ &nbsp;Attempt - 1**
+
+<br>
+
+`person_api/home/filters.py`
+```
+from django_filters import rest_framework as filters
+from django.db.models import Q
+from .models import Person
+
+
+class PersonFilter(filters.FilterSet):
+    age_range = filters.CharFilter(method='filter_combined', label='age_range')
+    color_name = filters.CharFilter(method='filter_combined', label='color_name')
+    person_id = filters.RangeFilter(field_name='person_id')                              # inbuilt range filter added
+
+    class Meta:
+        model = Person
+        fields = ['person_id']
+
+    def filter_combined(self, queryset, name, value):
+        request = self.request
+        age_range = request.query_params.get('age_range')
+        color_name = request.query_params.get('color_name')
+
+        filter_q = Q()
+
+        if age_range:
+            try:
+                min_age, max_age = sorted(map(int, age_range.split('-')))
+                filter_q |= Q(age__gte=min_age, age__lte=max_age)
+            except ValueError:
+                pass
+
+        if color_name:
+            filter_q |= Q(color__color_name__icontains=color_name)
+
+        return queryset.filter(filter_q) if filter_q else queryset
+```
+
+<br>
+
+**Output &nbsp;:**
+
+- http://localhost:8000/api/people/?age_range=&color_name=&person_id_min=PID-00020&person_id_max=PID-00025
+- http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025 <br>
+
+<br>
+
+```
+{
+    "person_id": [
+        "Enter a number."
+    ]
+}
+```
+
+<br>
+
+You have to write a **custom filter method** for this to work. Let's see how.
+
+<br>
+
+**✔️ &nbsp;Attempt - 2**
+
+<br>
+
+```
+class PersonFilter(filters.FilterSet):
+    age_range = filters.CharFilter(method='filter_combined', label='age_range')
+    color_name = filters.CharFilter(method='filter_combined', label='color_name')
+    person_id_min = filters.CharFilter(method='filter_by_id_range', label='From person_id')
+    person_id_max = filters.CharFilter(method='filter_by_id_range', label='To Person_id')
+
+    class Meta:
+        model = Person
+        fields = []         
+        # fields = ['age_range', 'color_name', 'person_id_min', 'person_id_max']
+
+    def filter_combined(self, queryset, name, value):
+        request = self.request
+        age_range = request.query_params.get('age_range')
+        color_name = request.query_params.get('color_name')
+
+        filter_q = Q()
+
+        if age_range:
+            try:
+                min_age, max_age = sorted(map(int, age_range.split('-')))
+                filter_q |= Q(age__gte=min_age, age__lte=max_age)
+            except ValueError:
+                pass
+
+        if color_name:
+            filter_q |= Q(color__color_name__icontains=color_name)
+
+        return queryset.filter(filter_q) if filter_q else queryset
+
+    def filter_by_id_range(self, queryset, name, value):
+        if name == 'person_id_min':
+            return queryset.filter(person_id__gte=value)
+        elif name == 'person_id_max':
+            return queryset.filter(person_id__lte=value)
+```
+
+<br>
+
+- http://localhost:8000/api/people/?age_range=&color_name=&person_id_min=PID-00020&person_id_max=PID-00025 <br>
+- **GET** &nbsp;&nbsp;`/api/people/?age_range=&color_name=&person_id_min=PID-00020&person_id_max=PID-00025`
+
+- http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025 <br>
+- **GET** &nbsp;&nbsp;`/api/people/?person_id_min=PID-00020&person_id_max=PID-00025`
+
+**OUTPUT &nbsp;:** 
+```
+[
+	{"id": 21, "person_id": "PID-00021", "name": "Gopal Krisna Jha", "age": 35, "color": 3, "color_info": {"color_name": "GREEN", "hex_code": "#008000"}, "is_deleted": false},
+	{"id": 22, "person_id": "PID-00022", "name": "Bechan Mishra", "age": 54, "color": 1, "color_info": {"color_name": "RED", "hex_code": "#ff0000"}, "is_deleted": false},
+	{"id": 25, "person_id": "PID-00025", "name": "Bina Mishra", "age": 50, "color": 2, "color_info": {"color_name": "BLUE", "hex_code": "#0000ff"}, "is_deleted": false}
+]
+```
+
+
+
 
 
 
