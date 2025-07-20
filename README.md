@@ -4049,16 +4049,19 @@ Let's see how.
 > class PersonFilter(filters.FilterSet):
 >     age_range = filters.CharFilter(method='filter_combined', label='age_range')
 >     color_name = filters.CharFilter(method='filter_combined', label='color_name')
->     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
+>     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')       # custom boolean filter
 > 
+>
 >     class Meta:
 >         model = Person
 >         fields = []
 >         # fields = ['age_range', 'color_name', has_color']
+>
 > 
 >     def filter_combined(self, queryset, name, value):
 > 		●●●
-> 
+>
+>  
 >     def filter_has_color(self, queryset, name, value):
 >         if value:
 >             return queryset.filter(color__isnull=False)
@@ -4067,7 +4070,7 @@ Let's see how.
 > 
 > <br>
 >
-> *Sample URLs to verify &nbsp;:** 
+> **Sample URLs to verify &nbsp;:** 
 > 
 > > **GET** &nbsp;&nbsp;http://localhost:8000/api/people/?has_color=false <br>
 > > **GET** &nbsp;&nbsp;http://localhost:8000/api/people/?has_color=true  <br>
@@ -4458,11 +4461,14 @@ Let's see how.
 > > > class PersonFilter(filters.FilterSet):
 > > >     age_range = filters.CharFilter(method='filter_combined', label='age_range')
 > > >     color_name = filters.CharFilter(method='filter_combined', label='color_name')
+> > >     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
 > > >     person_id = filters.RangeFilter(field_name='person_id')                              # inbuilt range filter added
+> > > 
 > > > 
 > > >     class Meta:
 > > >         model = Person
 > > >         fields = ['person_id']
+> > > 
 > > > 
 > > >     def filter_combined(self, queryset, name, value):
 > > >         request = self.request
@@ -4482,6 +4488,12 @@ Let's see how.
 > > >             filter_q |= Q(color__color_name__icontains=color_name)
 > > > 
 > > >         return queryset.filter(filter_q) if filter_q else queryset
+> > >
+> > > 
+> > >     def filter_has_color(self, queryset, name, value):
+> > >         if value:
+> > >             return queryset.filter(color__isnull=False)
+> > >         return queryset.filter(color__isnull=True)
 > > > ```
 > > > 
 > > > <br>
