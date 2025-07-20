@@ -3746,7 +3746,7 @@ In Django REST Framework, <code>filterset_class</code> allows you to **create re
 
 <br>
 
-Now that you have seen custom filtering, let's go for an advanced filtering technique involving <ins>custom method filters</ins> where you can have **different custom methods in the flter class** `PersonFilter`
+Now that you have seen custom filtering, let's go for an advanced filtering technique involving **<ins>custom method filters</ins>** where you can have **different custom methods in the flter class** &nbsp;`PersonFilter`
 
 Let's see how.
 
