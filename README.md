@@ -4500,7 +4500,8 @@ Let's see how.
 > > > 
 > > > **GET** &nbsp;`/api/people/?age_range=&color_name=&has_color=&person_id_min=PID-00020&person_id_max=PID-00025` <br>
 > > > 
-> > > http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025 <br>
+> > > http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025 
+> > >
 > > > Output :
 > > > ```
 > > > {
@@ -4578,7 +4579,8 @@ Let's see how.
 > > > **GET** &nbsp;&nbsp;`/api/people/?age_range=&color_name=&has_color=&person_id_min=PID-00020&person_id_max=PID-00025` <br>
 > > > **GET** &nbsp;&nbsp;`/api/people/?person_id_min=PID-00020&person_id_max=PID-00025`
 > > > 
-> > > http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025  <br>
+> > > http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025 
+> > >
 > > > <ins>Output</ins> &nbsp;:
 > > > ```
 > > > [
