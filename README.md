@@ -4096,6 +4096,10 @@ Let's see how.
 > > **GET** &nbsp; http://localhost:8000/api/person/      <br>
 > > 
 > > <br>
+> > 
+> > ---
+> > 
+> > <br>
 > >
 > > **2️⃣ &nbsp;Populate the new field** `person_id` **in the** `Person` **model for existing records &nbsp;:**
 > > 
@@ -4388,6 +4392,10 @@ Let's see how.
 > > > ```
 > > > python manage.py generate_person_id_sql --execute
 > > > ```
+> > 
+> > <br>
+> > 
+> > ---
 > > 
 > > <br>
 > > 
