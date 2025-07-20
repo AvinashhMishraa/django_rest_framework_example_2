@@ -7072,7 +7072,7 @@ So, you have to write a **custom filter method** for this to work. Let's see how
 > http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025 <br>
 > **GET** &nbsp;&nbsp;`/api/people/?person_id_min=PID-00020&person_id_max=PID-00025`
 > 
-> **OUTPUT &nbsp;:** 
+> OUTPUT &nbsp;:
 > ```
 > [
 > 	{"id": 21, "person_id": "PID-00021", "name": "Gopal Krisna Jha", "age": 35, "color": 3, "color_info": {"color_name": "GREEN", "hex_code": "#008000"}, "is_deleted": false},
