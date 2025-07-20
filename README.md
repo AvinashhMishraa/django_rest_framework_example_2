@@ -4035,7 +4035,48 @@ Let's see how.
 
 <br>
 
-> ✅ &nbsp;**<ins>Example 4</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Filter persons by ID range &nbsp;(Retrieve all persons with IDs between "PID-00050" and  "PID-00060")
+> ✅ &nbsp;**<ins>Example 4</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Retrieve all persons having colors or not having colors.
+> 
+> <br>
+> 
+> `person_api/home/filters.py`
+> ```
+> from django_filters import rest_framework as filters
+> from django.db.models import Q
+> from .models import Person
+> 
+> 
+> class PersonFilter(filters.FilterSet):
+>     age_range = filters.CharFilter(method='filter_combined', label='age_range')
+>     color_name = filters.CharFilter(method='filter_combined', label='color_name')
+>     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
+> 
+>     class Meta:
+>         model = Person
+>         fields = []
+>         # fields = ['age_range', 'color_name', has_color']
+> 
+>     def filter_combined(self, queryset, name, value):
+> 		●●●
+> 
+>     def filter_has_color(self, queryset, name, value):
+>         if value:
+>             return queryset.filter(color__isnull=False)
+>         return queryset.filter(color__isnull=True)
+> ```
+> 
+> <br>
+>
+> *Sample URLs to verify &nbsp;:** 
+> 
+> > **GET** &nbsp;&nbsp;http://localhost:8000/api/people/?has_color=false <br>
+> > **GET** &nbsp;&nbsp;http://localhost:8000/api/people/?has_color=true  <br>
+> > **GET** &nbsp;&nbsp;http://localhost:8000/api/people/?age_range=50-60&has_color=true <br>
+> > **GET** &nbsp;&nbsp;http://localhost:8000/api/people/?age_range=50-60&color_name=red&has_color=true
+
+<br>
+
+> ✅ &nbsp;**<ins>Example 5</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Filter persons by ID range &nbsp;(Retrieve all persons with IDs between "PID-00050" and  "PID-00060")
 > 
 > <br>
 > 
@@ -4471,16 +4512,24 @@ Let's see how.
 > > > <br>
 > > > 
 > > > ```
+> > > from django_filters import rest_framework as filters
+> > > from django.db.models import Q
+> > > from .models import Person
+> > > 
+> > > 
 > > > class PersonFilter(filters.FilterSet):
 > > >     age_range = filters.CharFilter(method='filter_combined', label='age_range')
 > > >     color_name = filters.CharFilter(method='filter_combined', label='color_name')
+> > >     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
 > > >     person_id_min = filters.CharFilter(method='filter_by_id_range', label='From person_id')
 > > >     person_id_max = filters.CharFilter(method='filter_by_id_range', label='To Person_id')
 > > > 
+> > > 
 > > >     class Meta:
 > > >         model = Person
-> > >         fields = []         
-> > >         # fields = ['age_range', 'color_name', 'person_id_min', 'person_id_max']
+> > >         fields = []
+> > >         # fields = ['age_range', 'color_name', 'has_color', 'person_id_min', 'person_id_max']
+> > > 
 > > > 
 > > >     def filter_combined(self, queryset, name, value):
 > > >         request = self.request
@@ -4500,6 +4549,13 @@ Let's see how.
 > > >             filter_q |= Q(color__color_name__icontains=color_name)
 > > > 
 > > >         return queryset.filter(filter_q) if filter_q else queryset
+> > > 
+> > > 
+> > >     def filter_has_color(self, queryset, name, value):
+> > >         if value:
+> > >             return queryset.filter(color__isnull=False)
+> > >         return queryset.filter(color__isnull=True)
+> > > 
 > > > 
 > > >     def filter_by_id_range(self, queryset, name, value):
 > > >         if name == 'person_id_min':
