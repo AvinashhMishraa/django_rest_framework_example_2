@@ -4462,7 +4462,7 @@ Let's see how.
 > > >     age_range = filters.CharFilter(method='filter_combined', label='age_range')
 > > >     color_name = filters.CharFilter(method='filter_combined', label='color_name')
 > > >     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
-> > >     person_id = filters.RangeFilter(field_name='person_id')                              # inbuilt range filter added
+> > >     person_id = filters.RangeFilter(field_name='person_id')                            # inbuilt range filter added
 > > > 
 > > > 
 > > >     class Meta:
@@ -4533,8 +4533,8 @@ Let's see how.
 > > >     age_range = filters.CharFilter(method='filter_combined', label='age_range')
 > > >     color_name = filters.CharFilter(method='filter_combined', label='color_name')
 > > >     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
-> > >     person_id_min = filters.CharFilter(method='filter_by_id_range', label='From person_id')
-> > >     person_id_max = filters.CharFilter(method='filter_by_id_range', label='To Person_id')
+> > >     person_id_min = filters.CharFilter(method='filter_by_id_range', label='From person_id')      # custom range filter
+> > >     person_id_max = filters.CharFilter(method='filter_by_id_range', label='To Person_id')        # custom range filter
 > > > 
 > > > 
 > > >     class Meta:
