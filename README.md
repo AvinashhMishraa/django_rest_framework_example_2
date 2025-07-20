@@ -3432,9 +3432,9 @@ Since `Color` is a related model, therefore
 
 **⭐** &nbsp;To fix this limitation, we have something called `fieldset_class` which enables both <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◆ &nbsp;&nbsp;**Advanced Field-Level Filters** &nbsp;(using lookup expressions) &nbsp;& <br>
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◆ &nbsp;&nbsp;**Advanced &nbsp;Field-Level &nbsp;Filters** &nbsp;(using lookup expressions) &nbsp;& <br>
 
-&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◆ &nbsp;&nbsp;**Custom Method Filters**
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;◆ &nbsp;&nbsp;**Custom &nbsp;Method &nbsp;Filters**
 
 <br>
 
