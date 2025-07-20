@@ -4049,7 +4049,7 @@ Let's see how.
 > class PersonFilter(filters.FilterSet):
 >     age_range = filters.CharFilter(method='filter_combined', label='age_range')
 >     color_name = filters.CharFilter(method='filter_combined', label='color_name')
->     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
+>     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')              👈
 > 
 >
 >     class Meta:
@@ -4462,7 +4462,7 @@ Let's see how.
 > > >     age_range = filters.CharFilter(method='filter_combined', label='age_range')
 > > >     color_name = filters.CharFilter(method='filter_combined', label='color_name')
 > > >     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
-> > >     person_id = filters.RangeFilter(field_name='person_id') 
+> > >     person_id = filters.RangeFilter(field_name='person_id')                                     👈
 > > > 
 > > > 
 > > >     class Meta:
@@ -4500,7 +4500,7 @@ Let's see how.
 > > > 
 > > > **Output &nbsp;:**
 > > > 
-> > > http://localhost:8000/api/people/?age_range=&color_name=&person_id_min=PID-00020&person_id_max=PID-00025 <br>
+> > > http://localhost:8000/api/people/?age_range=&color_name=&has_color=&person_id_min=PID-00020&person_id_max=PID-00025 <br>
 > > > http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025 <br>
 > > > 
 > > > <br>
@@ -4533,8 +4533,8 @@ Let's see how.
 > > >     age_range = filters.CharFilter(method='filter_combined', label='age_range')
 > > >     color_name = filters.CharFilter(method='filter_combined', label='color_name')
 > > >     has_color = filters.BooleanFilter(method='filter_has_color', label='has_color')
-> > >     person_id_min = filters.CharFilter(method='filter_by_id_range', label='From person_id') 
-> > >     person_id_max = filters.CharFilter(method='filter_by_id_range', label='To Person_id') 
+> > >     person_id_min = filters.CharFilter(method='filter_by_id_range', label='From person_id')         👈
+> > >     person_id_max = filters.CharFilter(method='filter_by_id_range', label='To Person_id')           👈
 > > > 
 > > > 
 > > >     class Meta:
@@ -4578,8 +4578,8 @@ Let's see how.
 > > > 
 > > > <br>
 > > > 
-> > > http://localhost:8000/api/people/?age_range=&color_name=&person_id_min=PID-00020&person_id_max=PID-00025 <br>
-> > > **GET** &nbsp;&nbsp;`/api/people/?age_range=&color_name=&person_id_min=PID-00020&person_id_max=PID-00025`
+> > > http://localhost:8000/api/people/?age_range=&color_name=&has_color=&person_id_min=PID-00020&person_id_max=PID-00025 <br>
+> > > **GET** &nbsp;&nbsp;`/api/people/?age_range=&color_name=&has_color=&person_id_min=PID-00020&person_id_max=PID-00025`
 > > > 
 > > > http://localhost:8000/api/people/?person_id_min=PID-00020&person_id_max=PID-00025 <br>
 > > > **GET** &nbsp;&nbsp;`/api/people/?person_id_min=PID-00020&person_id_max=PID-00025`
