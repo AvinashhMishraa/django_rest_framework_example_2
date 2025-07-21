@@ -4109,7 +4109,7 @@ Let's see how.
 
 > ✅ &nbsp;**<ins>Example 5</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Filter persons by ID range &nbsp;(Retrieve all persons with IDs between "PID-00050" and  "PID-00060")
 > 
-> <br><br>
+> <br>
 > 
 > > 🎯 &nbsp;**Objective** &nbsp;➜&nbsp; Multiple custom filters with `OR` & `AND` comined
 > > ```
@@ -4118,7 +4118,7 @@ Let's see how.
 > > However the URL will actually look like &nbsp; ➜ 
 > > > **GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue&has_color=True&person_id_min=PID-00020&person_id_max=PID-00025`
 > 
-> <br><br>
+> <br>
 >
 > > **1️⃣ &nbsp;Create the new field** `person_id` **in the** `Person` **model &nbsp;:**
 > > 
