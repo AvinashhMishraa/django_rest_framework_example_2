@@ -4619,6 +4619,85 @@ Let's see how.
 > > > ]
 > > > ```
 
+<br>
+
+<h2>⬛ &nbsp;&nbsp;Search Filter</h2>
+
+<br>
+
+> **✅ &nbsp;Search Filter &nbsp;(Keyword Search)**
+> 
+> <br>
+> 
+> Enables search backend &nbsp;:
+> - Full Search & Partial Search
+> - Case Insensitive
+> 
+> <br>
+> 
+> > `person_api/home/views.py`
+> > ```
+> > from rest_framework.filters import SearchFilter
+> > ●●●
+> >
+> > 
+> > 
+> > # /api/people/
+> > class PersonViewSet(viewsets.ModelViewSet):
+> >     queryset = Person.objects.all()
+> >     serializer_class = PersonSerializer
+> >     filter_backends = [DjangoFilterBackend, SearchFilter]
+> >     filterset_class = PersonFilter                                 # custom filter
+> >     search_fields = ['name', 'color__color_name']                  # inbuilt search filter    👈
+> > ```
+> 
+> <br>
+> 
+> > Usage :
+> > ```
+> > /api/people/?search=mishra        ----->       all persons having either person name or color name containing "mishra"
+> > /api/people/?search=mis           ----->       all persons having either person name or color name containing "mis"
+> >
+> > /api/people/?search=blue          ----->       all persons having either person name or color name containing "blue"
+> > /api/people/?search=blu           ----->       all persons having either person name or color name containing "blu"
+> > ```
+>
+> <br>
+>
+> **Note** &nbsp;-&nbsp; 
+> 
+> > If you want to replace the search param `search` with another search param `q`, just pass it in the global scope like &nbsp;**:**
+> >
+> > `person_api/core/settings.py`
+> > ```
+> > REST_FRAMEWORK = {
+> >     'SEARCH_PARAM': 'q',
+> > }
+> > ```
+> >
+> > ```
+> > /api/people/?q=mishra              ----->       all persons having either person name or color name containing "mishra"
+> > /api/people/?q=mis                 ----->       all persons having either person name or color name containing "mis"
+> >
+> > /api/people/?q=blue                ----->       all persons having either person name or color name containing "blue"
+> > /api/people/?q=blu                 ----->       all persons having either person name or color name containing "blu"
+> > ```
+>
+> <br>
+>
+> > If you want to search only the first word of the person name, just append `^` symbol in the `name` filter like 
+> > ```
+> > search_fields = ['^name', 'color__color_name']
+> > ```
+> > 
+> > Let's verify &nbsp;:
+> > ```
+> > /api/people/?q=mishra              ----->       all persons having either first name or color name containing "mishra"  ===> return nothing
+> > /api/people/?q=aman                ----->       all persons having either first name or color name containing "aman"    ===> return all persons with first name "aman"
+> > /api/people/?q=blue                ----->       all persons having either first name or color name containing "blue"    ===> return blue persons
+> > ```
+
+
 
 
 
