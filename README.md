@@ -4176,8 +4176,6 @@ Let's see how.
 > > **GET** &nbsp; http://localhost:8000/api/persons/     <br>
 > > **GET** &nbsp; http://localhost:8000/api/person/      <br>
 > > 
-> > <br>
-> > 
 > > ---
 > > 
 > > <br>
@@ -4307,7 +4305,7 @@ Let's see how.
 > > > UPDATE home_person SET person_id = 'PID-00001' WHERE id = 1;
 > > > UPDATE home_person SET person_id = 'PID-00002' WHERE id = 2;
 > > > UPDATE home_person SET person_id = 'PID-00003' WHERE id = 3;
-> > > ...
+> > > ●●●
 > > > ```
 > > > 
 > > > <br>
@@ -4331,8 +4329,6 @@ Let's see how.
 > > > ```
 > > > psql -U username -d database_name -f update_person_ids.sql
 > > > ```
-> > > 
-> > > <br>
 > > > 
 > > > ---
 > > >
@@ -4394,8 +4390,6 @@ Let's see how.
 > > > ```
 > > > python manage.py generate_person_id_sql
 > > > ```
-> > > 
-> > > <br>
 > > > 
 > > > ---
 > > >
@@ -4473,8 +4467,6 @@ Let's see how.
 > > > ```
 > > > python manage.py generate_person_id_sql --execute
 > > > ```
-> > 
-> > <br>
 > > 
 > > ---
 > > 
