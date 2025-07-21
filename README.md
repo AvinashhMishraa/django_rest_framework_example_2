@@ -3890,11 +3890,16 @@ Let's see how.
 > 
 > <br>
 > 
-> 🔸 &nbsp;**Objective &nbsp;:**
+> 🎯 &nbsp;**OBJECTIVE &nbsp;:**
 > 
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` <br>
+> <br>
 >
-> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;All persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains 'blue'</ins>
+> Multiple custom filters with `OR` condition using single param <search>
+> ```
+> ? search="<age_range>OR<color_name>"
+> ```
+> However the URL will actually look like &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` <br>
+> > All persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains 'blue'</ins>
 > 
 > <br>
 > 
@@ -4002,6 +4007,15 @@ Let's see how.
 > 
 > <br>
 > 
+> Multiple custom filters with *OR* condition in multiple params
+> ```
+> ? <age_range> OR <color_name>
+> ```
+> However the URL will actually look like &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` 
+> > All persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains 'blue'</ins>
+>
+> <br>
+> 
 > `person_api/home/filters.py`
 > ```
 > from django_filters import rest_framework as filters
@@ -4041,6 +4055,17 @@ Let's see how.
 
 > ✅ &nbsp;**<ins>Example 4</ins> &nbsp;&nbsp;➜** &nbsp;&nbsp;Retrieve all persons having colors or not having colors.
 > 
+> <br>
+> 
+> **🎯** &nbsp;OBJECTIVE &nbsp;:
+> >
+> > &nbsp;Multiple custom filters with `OR` & `AND` comined
+> > ```
+> > ? <age_range> OR <color_name> AND <has_color>
+> > ```
+> > However the URL will actually look like &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue&has_color=True`
+> > > Retrieve all persons having either age range varying from 50 to 60 or color name blue or both. But ensure all persons must have a color.
+> > 
 > <br>
 > 
 > `person_api/home/filters.py`
@@ -4087,10 +4112,12 @@ Let's see how.
 > 
 > <br>
 > 
-> **🎯 &nbsp;Multiple custom filters with** `OR` **&** `AND` **comined**
-> ```
-> ? <age_range> OR <color_name> AND <has_color> AND <person_id_min> AND <person_id_max>
-> ```
+> **🎯** &nbsp;OBJECTIVE &nbsp;:
+> >
+> > &nbsp;Multiple custom filters with `OR` & `AND` comined
+> > ```
+> > ? <age_range> OR <color_name> AND <has_color> AND <person_id_min> AND <person_id_max>
+> > ```
 >
 > <br>
 >
