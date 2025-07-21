@@ -3905,6 +3905,8 @@ Let's see how.
 > 
 > **1️⃣ &nbsp;Parse search manually and extract key-value pairs**
 >
+> <br>
+>
 > `person_api/home/filters.py`
 > ```
 > from django_filters import rest_framework as filters
@@ -4058,6 +4060,8 @@ Let's see how.
 > <br>
 > 
 > **🎯** &nbsp;OBJECTIVE &nbsp;:
+> >
+> > <br>
 > >
 > > &nbsp;Multiple custom filters with `OR` & `AND` comined
 > > ```
