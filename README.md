@@ -3890,21 +3890,17 @@ Let's see how.
 > 
 > <br>
 > 
-> 🎯 &nbsp;**OBJECTIVE &nbsp;:**
-> 
-> <br>
->
-> Multiple custom filters with `OR` condition using single param <search>
-> ```
-> ? search="<age_range>OR<color_name>"
-> ```
-> However the URL will actually look like &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` <br>
-> > All persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains 'blue'</ins>
-> 
-> <br>
-> 
 > **1️⃣ &nbsp;Parse search manually and extract key-value pairs**
 >
+> <br>
+>
+> > **Objective** &nbsp;➜&nbsp; Multiple custom filters with `OR` condition using single param <search>
+> > ```
+> > ? search="<age_range>OR<color_name>"
+> > ```
+> > However the URL will actually look like &nbsp; ➜ &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` <br>
+> > All persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains 'blue'</ins>
+> 
 > <br>
 >
 > `person_api/home/filters.py`
@@ -4009,11 +4005,11 @@ Let's see how.
 > 
 > <br>
 > 
-> Multiple custom filters with *OR* condition in multiple params
-> ```
-> ? <age_range> OR <color_name>
-> ```
-> However the URL will actually look like &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` 
+> > **Objective** &nbsp;➜&nbsp; Multiple custom filters with *OR* condition in multiple params
+> > ```
+> > ? <age_range> OR <color_name>
+> > ```
+> > However the URL will actually look like &nbsp; ➜ &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue` 
 > > All persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains 'blue'</ins>
 >
 > <br>
@@ -4067,7 +4063,7 @@ Let's see how.
 > > ```
 > > ? <age_range> OR <color_name> AND <has_color>
 > > ```
-> > However the URL will actually look like &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue&has_color=True`
+> > However the URL will actually look like &nbsp; ➜ &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue&has_color=True`
 > > > Retrieve all persons having either age range varying from 50 to 60 or color name blue or both. But ensure all persons must have a color.
 > > 
 > <br>
