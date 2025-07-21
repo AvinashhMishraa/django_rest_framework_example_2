@@ -4115,6 +4115,7 @@ Let's see how.
 > > ```
 > > ? <age_range> OR <color_name> AND <has_color> AND <person_id_min> AND <person_id_max>
 > > ```
+> > However the URL will actually look like &nbsp; ➜ &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue&has_color=True&person_id_min=PID-00020&person_id_max=PID-00025`
 >
 > <br>
 >
