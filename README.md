@@ -3898,7 +3898,7 @@ Let's see how.
 > > ```
 > > ? search="<age_range>OR<color_name>"
 > > ```
-> > However the URL will actually look like &nbsp; ➜ &nbsp;**GET** &nbsp; `/api/people/?age_range=50-60&color_name=blue`
+> > However the URL will actually look like &nbsp; ➜ &nbsp;**GET** &nbsp; `/api/people/?search=age_range=50-60&color_name=blue`
 > >
 > > All persons <ins>whose age is between 50–60</ins> &nbsp;**OR**&nbsp; <ins>whose color name contains 'blue'</ins>
 > 
