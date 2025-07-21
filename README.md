@@ -4087,6 +4087,13 @@ Let's see how.
 > 
 > <br>
 > 
+> **🎯 &nbsp;Multiple custom filters with** `OR` **&** `AND` **comined**
+> ```
+> ? <age_range> OR <color_name> AND <has_color> AND <person_id_min> AND <person_id_max>
+> ```
+>
+> <br>
+>
 > > **1️⃣ &nbsp;Create the new field** `person_id` **in the** `Person` **model &nbsp;:**
 > > 
 > > <br>
