@@ -4655,11 +4655,11 @@ Let's see how.
 > 
 > > Usage :
 > > ```
-> > /api/people/?search=mishra        ----->       all persons having either person name or color name containing "mishra"
-> > /api/people/?search=mis           ----->       all persons having either person name or color name containing "mis"
+> > /api/people/?search=mishra    --->    all persons having either person name or color name containing "mishra"
+> > /api/people/?search=mis       --->    all persons having either person name or color name containing "mis"
 > >
-> > /api/people/?search=blue          ----->       all persons having either person name or color name containing "blue"
-> > /api/people/?search=blu           ----->       all persons having either person name or color name containing "blu"
+> > /api/people/?search=blue      --->    all persons having either person name or color name containing "blue"
+> > /api/people/?search=blu       --->    all persons having either person name or color name containing "blu"
 > > ```
 >
 > <br>
@@ -4676,11 +4676,11 @@ Let's see how.
 > > ```
 > >
 > > ```
-> > /api/people/?q=mishra              ----->       all persons having either person name or color name containing "mishra"
-> > /api/people/?q=mis                 ----->       all persons having either person name or color name containing "mis"
+> > /api/people/?q=mishra     --->     all persons having either person name or color name containing "mishra"
+> > /api/people/?q=mis        --->     all persons having either person name or color name containing "mis"
 > >
-> > /api/people/?q=blue                ----->       all persons having either person name or color name containing "blue"
-> > /api/people/?q=blu                 ----->       all persons having either person name or color name containing "blu"
+> > /api/people/?q=blue       --->     all persons having either person name or color name containing "blue"
+> > /api/people/?q=blu        --->     all persons having either person name or color name containing "blu"
 > > ```
 >
 > <br>
@@ -4692,9 +4692,9 @@ Let's see how.
 > > 
 > > Let's verify &nbsp;:
 > > ```
-> > /api/people/?q=mishra              ----->       all persons having either first name or color name containing "mishra"  ===> return nothing
-> > /api/people/?q=aman                ----->       all persons having either first name or color name containing "aman"    ===> return all persons with first name "aman"
-> > /api/people/?q=blue                ----->       all persons having either first name or color name containing "blue"    ===> return blue persons
+> > /api/people/?q=mishra     --->     all persons having either first name or color name containing "mishra"
+> > /api/people/?q=aman       --->     all persons having either first name or color name containing "aman"
+> > /api/people/?q=blue       --->     all persons having either first name or color name containing "blue"
 > > ```
 
 
