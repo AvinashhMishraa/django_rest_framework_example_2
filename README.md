@@ -4701,7 +4701,38 @@ Let's see how.
 
 <br>
 
-
+> **✅ &nbsp;Custom Search Filter**
+>
+> <br>
+>
+> > Define your own `SearchFilter` class &nbsp;:
+> > 
+> > `person_api/home/filters.py`
+> > ```
+> > from rest_framework.filters import BaseFilterBackend
+> > 
+> > class CustomSearchFilter(BaseFilterBackend):
+> >     def filter_queryset(self, request, queryset, view):
+> >         keyword = request.query_params.get('q')
+> >         if keyword:
+> >             return queryset.filter(name__icontains=keyword)
+> >         return queryset
+> > ```
+>
+> <br>
+> 
+> Now usse it in your viewset with &nbsp;`filter_backends = [CustomSearchFilter]` &nbsp;:
+> >
+> > `person_api/home/views.py`
+> > ``` 
+> > # /api/people/
+> > class PersonViewSet(viewsets.ModelViewSet):
+> >     queryset = Person.objects.all()
+> >     serializer_class = PersonSerializer
+> >     filter_backends = [DjangoFilterBackend, CustomSearchFilter]            # custom search filter     👈
+> >     filterset_class = PersonFilter                                         # custom filter
+> >     search_fields = ['name', 'color__color_name']                          # inbuilt search filter
+> > ```
 
 
 
