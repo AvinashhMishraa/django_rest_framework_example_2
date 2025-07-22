@@ -4705,7 +4705,7 @@ Let's see how.
 >
 > <br>
 >
-> > Define your own `SearchFilter` class &nbsp;:
+> 🔸 &nbsp;Define your own `SearchFilter` class &nbsp;:
 > > 
 > > `person_api/home/filters.py`
 > > ```
@@ -4721,7 +4721,7 @@ Let's see how.
 >
 > <br>
 > 
-> Now usse it in your viewset with &nbsp;`filter_backends = [CustomSearchFilter]` &nbsp;:
+> 🔸 &nbsp;Now use it in your viewset with &nbsp;`filter_backends = [CustomSearchFilter]` &nbsp;:
 > >
 > > `person_api/home/views.py`
 > > ``` 
@@ -4731,7 +4731,7 @@ Let's see how.
 > >     serializer_class = PersonSerializer
 > >     filter_backends = [DjangoFilterBackend, CustomSearchFilter]            # custom search filter     👈
 > >     filterset_class = PersonFilter                                         # custom filter
-> >     search_fields = ['name', 'color__color_name']                          # inbuilt search filter
+> >     # search_fields = ['name', 'color__color_name']                        # inbuilt search filter
 > > ```
 
 
